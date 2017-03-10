@@ -89,7 +89,7 @@ class selenium_webdriver(object):
         ################################################################################### TESTS ###########################################################################
         
     def test_get_followers(self):
-        self.login_user('look_its_dimson', '')
+        self.login_user('studio7day', 'Nopasaran')
         print 'loggined'
         time.sleep(3)
         self.make_screenshot()
@@ -99,7 +99,7 @@ class selenium_webdriver(object):
         print str(followers)
         
     def test_get_following(self):
-        self.login_user('look_its_dimson', '')
+        self.login_user('studio7day', 'Nopasaran')
         print 'loggined'
         time.sleep(3)
         self.make_screenshot()

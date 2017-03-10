@@ -62,7 +62,7 @@ def follow_info(request):
         #logger.log('VIEW:follow_info: Create selenium_bot')
         time.sleep(3)
         #logger.log('Try to login')
-        selenium_bot.login_user('look_its_dimson', 'Nopasaran')
+        selenium_bot.login_user('studio7day', 'Nopasaran')
         time.sleep(3)
         #logger.log('Try get names')
         user_names = selenium_bot.get_follow_names(username, direction,  15)
@@ -94,7 +94,7 @@ def follow(request):
     #logger.log('VIEW:follow: Create selenium_bot')
     time.sleep(3)
     #logger.log('Try to login')
-    selenium_bot.login_user('look_its_dimson', '')
+    selenium_bot.login_user('studio7day', 'Nopasaran')
     time.sleep(3)
     #logger.log('Try follow')
     
@@ -128,7 +128,7 @@ def follow_form(request):
         direction = request.POST['direction']
         selenium_bot = selenium_webdriver()
         time.sleep(3)
-        selenium_bot.login_user('look_its_dimson', 'Nopasaran')
+        selenium_bot.login_user('studio7day', 'Nopasaran')
         time.sleep(3)
         user_names = selenium_bot.get_follow_names(username, direction,  15)
         
@@ -435,7 +435,7 @@ def insta_comment_photos(request):
             user         = find_users_by_name(user_name, token)['data'][0]['id']
             photos_json  = find_media_by_user(user, token)
 
-        comments_list = ['cool', 'great', 'Hello my name is @look_its_dimson', 'awesome', 'nice', 'I like it!']            
+        comments_list = ['cool', 'great', 'Hello my name is @studio7day', 'awesome', 'nice', 'I like it!']            
         i = 0
         for media in photos_json['data'][0:6]:
             res = requests.post("https://api.instagram.com/v1/media/{}/comments".format(media['id']), {'access_token' : token,
