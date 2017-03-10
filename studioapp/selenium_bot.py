@@ -5,12 +5,12 @@ import time
 import re
 import platform
 from local_conf import *
-from logger import Logger
+#from logger import Logger
 
 class selenium_webdriver(object):
     
     def __init__(self):
-        self.logger = Logger('selenium_bot')
+        ##self.logger = Logger('selenium_bot')
         if platform.system() == 'Winows':  
             self.binary = FirefoxBinary(r'C:\Program Files (x86)\Mozilla Firefox\firefox.exe')
             self.driver = webdriver.Firefox(firefox_binary=self.binary)
@@ -26,7 +26,7 @@ class selenium_webdriver(object):
         self.driver.find_element_by_xpath("//input[@name='username']").send_keys(username)
         self.driver.find_element_by_xpath("//input[@name='password']").send_keys(password)
         self.driver.find_element_by_css_selector("button").click()
-        self.logger.log('login_user %s' % username)
+        #self.logger.log('login_user %s' % username)
         time.sleep(3)
 
     def make_screenshot(self):
@@ -63,7 +63,7 @@ class selenium_webdriver(object):
         
 
     def get_follow_names(self, username, direction = 'followers' ,  max_value = 500):
-        self.logger.log('Try to get %d  %s for %s' % (max_value, direction, username))
+        #self.logger.log('Try to get %d  %s for %s' % (max_value, direction, username))
         self.get_follow_info(username, direction,  max_value)
         follow_users_links = self.driver.find_elements_by_css_selector('a')
         regex = re.compile(r'https://www.instagram.com/([^/]+)/$')
