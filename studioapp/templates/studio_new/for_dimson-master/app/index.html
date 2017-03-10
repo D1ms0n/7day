@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="application">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proba pera</title>
+    <!-- styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/default.css" rel="stylesheet">
+</head>
+    <body>
+        <div class="wrapper">
+            <div ui-view="header"></div>
+            <div ui-view="content"></div>
+            <div ui-view="footer"></div>
+        </div>
+    </body>
+    <!--scripts-->
+    <script src="scripts/libs/angular.min.js"></script>
+    <script src="scripts/libs/angular-ui-router.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/contollers.js"></script>
+    <script src="scripts/services.js"></script>
+</html>

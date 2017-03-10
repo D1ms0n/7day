@@ -1,0 +1,46 @@
+{% extends "studio/insta_base.html" %}
+{% load static from staticfiles %}
+
+{% block title %}Users{% endblock title %}
+
+{% block content %}
+    <div class="row">
+      <form action="/insta/users/" method="post">
+        {% csrf_token %}
+        {{ search_form }}
+        <button type="submit" value="Search" class="btn btn-default">Find users</button>
+      </form>
+
+    </div>
+        
+    <div class="row">
+      {% for user in users_founded %}
+        <div class="col-md-4">
+          <img class= "image" src="{{user.profile_picture}}">
+          <p>Name: {{user.username}}</p>
+          <p>Name: {{user.id}}</p>
+        </div>
+        <div class="col-md-4">
+          <img class= "image" src="{{user.profile_picture}}">
+          <p>Name: {{user.username}}</p>
+        </div>
+        <div class="col-md-4">
+          <img class= "image" src="{{user.profile_picture}}">
+          <p>Name: {{user.username}}</p>
+        </div>
+        <div class="col-md-4">
+          <img class= "image" src="{{user.profile_picture}}">
+          <p>Name: {{user.username}}</p>
+        </div>
+        <div class="col-md-4">
+          <img class= "image" src="{{user.profile_picture}}">
+          <p>Name: {{user.username}}</p>
+        </div>
+      {% endfor %}
+    </div>
+
+              
+
+{% endblock content %}
+{% block footer %}{% endblock footer %}
+

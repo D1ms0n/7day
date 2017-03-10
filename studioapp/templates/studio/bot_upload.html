@@ -1,0 +1,22 @@
+{% extends "studio/insta_base.html" %}
+{% load static from staticfiles %}
+
+{% block title %}Insta{% endblock title %}
+
+{% block content %}
+  TOKEN: {{ token }}
+  
+
+  <div class="row">
+    <form action="/bot_upload/" method="post">
+      {% csrf_token %}
+      {{ follow_form }}
+      <button type="submit" value="Search" class="btn btn-default">Unfollow</button>
+    </form>
+  </div>
+
+
+{{ follow_list }} 
+
+{% endblock content %}
+{% block footer %}{% endblock footer %}

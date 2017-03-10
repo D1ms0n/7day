@@ -1,0 +1,27 @@
+{% extends "studio/insta_base.html" %}
+{% load static from staticfiles %}
+
+{% block title %}Insta{% endblock title %}
+
+{% block content %}
+  
+  <div class="row">
+    <div class="col-md-3">
+      <img  src="{{ logo_url }}" class="img-circle">
+    </div>
+    <div class="col-md-9">
+      <h1>{{ username }}</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    {% for item in my_images_json.data %}
+      <div class="col-md-4">
+        <img class= "image" src="{{item.images.standard_resolution.url}}">
+        <p>Likes: {{item.likes.count}}</p>
+      </div>
+    {% endfor %}
+  </div>
+
+{% endblock content %}
+{% block footer %}{% endblock footer %}

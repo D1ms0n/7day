@@ -1,0 +1,32 @@
+{% extends "studio/insta_base.html" %}
+{% load static from staticfiles %}
+
+{% block title %}Insta{% endblock title %}
+
+{% block content %}
+
+
+
+
+{% csrf_token %}
+
+User name:<br>
+<input type="text" name="username"><br>
+<button id = 'followers' >Get followers</button>
+<button id = 'following' >Get following</button>
+
+<table class="table  test_table ">
+      <tr>
+        <th ></td>
+        <th >#</td>
+        <th >User name</td>
+        <th >Full name</td>
+        <th >Logo</td>
+      </tr>
+    </table>
+
+
+
+
+{% endblock content %}
+{% block footer %}{% endblock footer %}

@@ -1,0 +1,43 @@
+{% extends "studio/insta_base.html" %}
+{% load static from staticfiles %}
+
+{% block title %}Insta{% endblock title %}
+
+{% block content %}
+  TOKEN: {{ token }}
+  <div class="row">
+    <form action="/insta/tags/" method="post">
+      {% csrf_token %}
+      {{ search_form }}
+      <button type="submit" value="Search" class="btn btn-default">Find tags</button>
+    </form>
+  </div>
+        
+  <div class="row">        
+    <strong>{{tags_count_to_copy}}</strong> tags_to_copy : {{ tags_to_copy }}
+  </div>
+  
+  <div class="row">
+    <table class="table  table-bordered ">
+      <tr>
+        <th ></td>
+        <th >#</td>
+        <th >Tag</td>
+        <th >Count</td>
+        <th >Found by</td>
+      </tr>
+      
+      {% for tag in tags_founded %}
+      <tr>
+        <td ><input type="checkbox" aria-label="..."></td>
+        <td >{{ forloop.counter }}</td>
+        <td >#{{tag.tag_title}}</td>
+        <td >{{tag.tag_images_count}}</td>
+        <td >{{ tag.tag_id }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+ </div>
+
+{% endblock content %}
+{% block footer %}{% endblock footer %}

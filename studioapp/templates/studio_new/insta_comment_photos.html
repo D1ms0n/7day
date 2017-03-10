@@ -1,0 +1,31 @@
+{% extends "studio/insta_base.html" %}
+{% load static from staticfiles %}
+
+{% block title %}Comments{% endblock title %}
+
+{% block content %}
+  
+  <div class="row">
+    <div class="col-md-3">
+      <form action="/insta/commentphotos/" method="post">
+        {% csrf_token %}
+        {{ search_form }}
+        <button type="submit" value="Search" class="btn btn-default">Like photos by tag</button>
+      </form>      
+    </div>
+    <div class="col-md-9">
+      
+    </div>
+  </div>
+
+  <div class="row">
+    <p>RESULT: {{ result }} </p>
+
+    {% for item in photos_json.data %}
+      <p>{{ item.id }}</p>>
+    {% endfor %}
+  </div>
+
+{% endblock content %}
+{% block footer %}{% endblock footer %}
+

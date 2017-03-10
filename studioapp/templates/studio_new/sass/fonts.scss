@@ -1,0 +1,31 @@
+/*----------------------- Fonts ------------------------*/
+
+
+@font-face {
+  font-family: "Arsenal-Regular";
+  src: url("../fonts/Arsenal-Regular.otf") format("truetype");
+}
+
+
+@font-face{
+  font-family: "Arsenal-Bold";
+  src: url("../fonts/Arsenal-Bold.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+@font-face {
+  font-family: "Arsenal-Italic";
+  src: url("../fonts/Arsenal-italic.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Arsenal-Bold-Italic";
+  src: url("../fonts/Arsenal-BoldItalic.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+

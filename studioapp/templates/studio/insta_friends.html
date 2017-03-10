@@ -1,0 +1,46 @@
+{% extends "studio/insta_base.html" %}
+{% load static from staticfiles %}
+
+{% block title %}Insta{% endblock title %}
+
+{% block content %}
+  TOKEN: {{ token }}
+  <div class="row">
+    <form action="/insta/friends/" method="post">
+      {% csrf_token %}
+      {{ search_form }}
+      <button type="submit" value="Search" class="btn btn-default">Find friends</button>
+    </form>
+  </div>
+        <p>lalala</p>
+        
+        
+        
+        {{search_request.user.username}}
+
+<table class="table  table-bordered ">
+      <tr>
+        <th ></td>
+        <th >#</td>
+        <th >Username</td>
+        <th >Followed by me</td>
+        <th >Follows me</td>
+      </tr>
+      
+
+
+      {% for user in search_request %}
+      <tr>
+        <td ><input type="checkbox" aria-label="..."></td>
+        <td >{{ forloop.counter }}</td>
+        <td >{{ user.user.username }}</td>
+        <td >{{ user.user.followed_by_viewer }}</td>
+        <td >{{ user.user.follows_viewer }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+
+
+{% endblock content %}
+{% block footer %}{% endblock footer %}
