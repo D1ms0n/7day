@@ -1,3 +1,0 @@
-#!/bin/bash
-
-python ~/app-root/runtime/repo/wsgi/studio/studioapp/start_bot.py
