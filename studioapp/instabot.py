@@ -1,5 +1,5 @@
 from local_conf import *
-from logger import Logger
+#from logger import Logger
 import requests
 import json
 import random
@@ -20,7 +20,7 @@ class Bot(object):
 
         self.url = 'https://www.instagram.com/'
         self.url_login = 'https://www.instagram.com/accounts/login/ajax/'
-        self.logger = Logger('instabot')
+        #self.logger = Logger('instabot')
 
 #    def logger(self, text):
 #        log_file = open('%slog' % path, 'a')
@@ -53,7 +53,7 @@ class Bot(object):
         time.sleep(5 * random.random())
 
     def get_info(self, name):
-        self.logger.log('Try to get info for %s' % name)
+        #self.logger.log('Try to get info for %s' % name)
         link   = 'https://www.instagram.com/%s/?__a=1'
         answer = ''
         answer = requests.get(link % name).text
@@ -63,16 +63,16 @@ class Bot(object):
                 info = json.loads(answer)
             except:
                 info = None
-        if info== None:
-            self.logger.log('DONE: %s is NONE' % name)
-        else:
-            self.logger.log('DONE: %s' % name)                
+        #if info== None:
+        #    #self.logger.log('DONE: %s is NONE' % name)
+        #else:
+        #    #self.logger.log('DONE: %s' % name)                
         return info
 
 
     def user_request(self, reqs, r_type = 'get'):
         answer = {}
-        self.logger.log('req' + str(reqs))
+        #self.logger.log('req' + str(reqs))
         if r_type == 'get':
 
             answer = self.s.get(reqs['link'] % reqs['id']).text
@@ -81,16 +81,16 @@ class Bot(object):
         elif r_type == 'post':
 
             rst = self.s.post(reqs['link'] % reqs['id'])
-            self.logger.log(rst.status_code)
+            #self.logger.log(rst.status_code)
             answer =rst.text
 
             if rst.status_code != 200:
-                self.logger.log('bad' + reqs['link'] % reqs['id'])
-                self.logger.log('\nFAILED' + str(reqs['id']))
+                #self.logger.log('bad' + reqs['link'] % reqs['id'])
+                #self.logger.log('\nFAILED' + str(reqs['id']))
                 return rst
 
             else:
-                self.logger.log('good ' + reqs['id'] +  str(time.strftime('%X %x %Z')))
+                #self.logger.log('good ' + reqs['id'] +  str(time.strftime('%X %x %Z')))
                 time.sleep(55 + random.randint(1, 5))
 
             return rst
