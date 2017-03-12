@@ -44,22 +44,23 @@ class selenium_webdriver(object):
         button.click()
         time.sleep(3)
         follow_buttons_list = self.driver.find_elements_by_css_selector('button')
-        while len(follow_buttons_list) < max_value:
-            old_len = len(follow_buttons_list)
-            divs_followers = self.driver.find_elements_by_xpath("//div[text()='F%s']" % direction[1:])[0]                              
-            divs = self.driver.find_elements_by_css_selector('div')
-            div_to_scroll_index = divs.index(divs_followers) + 1  
-            div_to_scroll_class = divs[div_to_scroll_index].get_attribute('class')
-            time.sleep(1)
-            try:
-                self.driver.execute_script("document.getElementsByClassName('%s')[0].scrollTo(0, 300500)" % div_to_scroll_class)
-            except:
-                print 'SCROLL'
-            time.sleep(1)
-            follow_buttons_list = self.driver.find_elements_by_css_selector('button')
-            new_len = len(follow_buttons_list)
-            if new_len == old_len:
-                break
+        
+        #while len(follow_buttons_list) < max_value:
+        #    old_len = len(follow_buttons_list)
+        #    divs_followers = self.driver.find_elements_by_xpath("//div[text()='F%s']" % direction[1:])[0]                              
+        #    divs = self.driver.find_elements_by_css_selector('div')
+        #    div_to_scroll_index = divs.index(divs_followers) + 1  
+        #    div_to_scroll_class = divs[div_to_scroll_index].get_attribute('class')
+        #    time.sleep(1)
+        #    try:
+        #        self.driver.execute_script("document.getElementsByClassName('%s')[0].scrollTo(0, 300500)" % div_to_scroll_class)
+        #    except:
+        #        print 'SCROLL'
+        #    time.sleep(1)
+        #    follow_buttons_list = self.driver.find_elements_by_css_selector('button')
+        #    new_len = len(follow_buttons_list)
+        #    if new_len == old_len:
+        #        break
         
 
     def get_follow_names(self, username, direction = 'followers' ,  max_value = 8):
