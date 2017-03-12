@@ -130,7 +130,7 @@ def follow_form(request):
         time.sleep(3)
         selenium_bot.login_user('studio7day', 'Nopasaran')
         time.sleep(3)
-        user_names = selenium_bot.get_follow_names(username, direction,  15)
+        user_names = selenium_bot.get_follow_names(username, direction,  5)
         
         bot = Bot()
         

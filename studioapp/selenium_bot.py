@@ -36,7 +36,7 @@ class selenium_webdriver(object):
         screenshot_file.write(screenshot)
         screenshot_file.close()
 
-    def get_follow_info(self, username, direction = 'followers' ,  max_value = 500):
+    def get_follow_info(self, username, direction = 'followers' ,  max_value = 8):
         self.driver.get("https://www.instagram.com/%s/" % username)
         time.sleep(3)
         button = self.driver.find_element_by_xpath("//a[@href='/%s/%s/']" % (username, direction))
@@ -62,7 +62,7 @@ class selenium_webdriver(object):
                 break
         
 
-    def get_follow_names(self, username, direction = 'followers' ,  max_value = 500):
+    def get_follow_names(self, username, direction = 'followers' ,  max_value = 8):
         #self.logger.log('Try to get %d  %s for %s' % (max_value, direction, username))
         self.get_follow_info(username, direction,  max_value)
         follow_users_links = self.driver.find_elements_by_css_selector('a')
@@ -80,7 +80,7 @@ class selenium_webdriver(object):
 
         return follow_names
 
-    def get_follow_buttons(self, username, direction = 'followers' ,  max_value = 500):
+    def get_follow_buttons(self, username, direction = 'followers' ,  max_value = 8):
         self.get_follow_info(username, direction,  max_value)
         follow_buttons_list = self.driver.find_elements_by_css_selector('button')
         return follow_buttons_list
