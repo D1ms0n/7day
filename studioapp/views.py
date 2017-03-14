@@ -23,7 +23,7 @@ import time
 from local_conf import *
 from selenium_bot import selenium_webdriver
 from instabot import Bot
-#from logger import Logger
+from logger import Logger
 
 
 def main(request):
@@ -36,16 +36,16 @@ def main(request):
 
 @csrf_exempt    
 def insta_api(request, target):
-    ##logger = Logger('view')
-    ##logger.log("insta_api: " + target)
+    logger = Logger('view')
+    logger.log("insta_api: " + target)
     if target == 'follow_info':
         return follow_info(request)
         
 
 def follow_info(request):
     
-    ##logger = Logger('view')
-    ##logger.log('VIEW:follow_info: start')
+    logger = Logger('view')
+    logger.log('VIEW:follow_info: start')
     
     if request.method == 'GET':
         return render(request, 'studio/test_front.html', {})
@@ -56,15 +56,15 @@ def follow_info(request):
         username     = request_json['username']
         direction    = request_json['direction']
         
-        ##logger.log('VIEW:follow_info: Try to get %s_info for %s' % (username, direction) )
+        logger.log('VIEW:follow_info: Try to get %s_info for %s' % (username, direction) )
         
         selenium_bot = selenium_webdriver()
-        #logger.log('VIEW:follow_info: Create selenium_bot')
+        logger.log('VIEW:follow_info: Create selenium_bot')
         time.sleep(3)
-        #logger.log('Try to login')
+        logger.log('VIEW:selenium_bot: Try to login')
         selenium_bot.login_user('studio7day', 'Nopasaran')
         time.sleep(3)
-        #logger.log('Try get names')
+        logger.log('VIEW:selenium_bot: Try get names')
         user_names = selenium_bot.get_follow_names(username, direction,  15)
         
         bot = Bot()
@@ -76,7 +76,7 @@ def follow_info(request):
             response.append(info)
         
         selenium_bot.driver.close()
-
+        logger.log('VIEW:selenium_bot: FINISH')
         return HttpResponse(json.dumps(response),
                             content_type="application/json")
 

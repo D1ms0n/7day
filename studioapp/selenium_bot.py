@@ -5,6 +5,7 @@ import time
 import re
 import platform
 from local_conf import *
+import os
 #from logger import Logger
 
 class selenium_webdriver(object):
@@ -15,7 +16,10 @@ class selenium_webdriver(object):
             self.binary = FirefoxBinary(r'C:\Program Files (x86)\Mozilla Firefox\firefox.exe')
             self.driver = webdriver.Firefox(firefox_binary=self.binary)
         else:
-            self.driver = webdriver.PhantomJS(service_log_path='%sphantomlog' % path)
+            BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            path = os.path.join(BASE_DIR, 'studioapp', 'logs')
+            
+            self.driver = webdriver.PhantomJS(service_log_path='%s/phantomlog' % path)
             self.driver.set_window_size(1120, 550)
         time.sleep(3)
 

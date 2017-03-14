@@ -119,3 +119,31 @@
  Try to login
  Try get names
  VIEW:follow_info: start
+ VIEW:follow_info: start
+ VIEW:follow_info: start
+ VIEW:follow_info: start
+ insta_api: follow_info
+ VIEW:follow_info: start
+ VIEW:follow_info: Try to get fursty_info for following
+ VIEW:follow_info: start
+ VIEW:follow_info: start
+ VIEW:follow_info: start
+ insta_api: follow_info
+ VIEW:follow_info: start
+ VIEW:follow_info: Try to get fursty_info for following
+ VIEW:follow_info: start
+ insta_api: follow_info
+ VIEW:follow_info: start
+ VIEW:follow_info: Try to get fursty_info for following
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:selenium_bot: FINISH
+ insta_api: follow_info
+ VIEW:follow_info: start
+ VIEW:follow_info: Try to get fursty_info for following
+ VIEW:follow_info: start
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:selenium_bot: FINISH
