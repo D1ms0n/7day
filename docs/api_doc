@@ -49,7 +49,7 @@ response: HTML page 'tasks.html'
 View task
 
 
-url : /tasks/<id>  
+url : /task/<id>  
 type: GET
 
 response: HTML page 'task.html'   - page for task
