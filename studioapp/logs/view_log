@@ -438,3 +438,150 @@
  VIEW:add_task: start17_17_32_03_19_17
  insta_api: del_task
  VIEW:add_task: start17_21_05_03_19_17
+ VIEW:follow_info: start19_11_16_03_19_17
+ VIEW:follow_info: start20_11_22_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start20_11_29_03_19_17
+ VIEW:follow_info: start20_12_36_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start20_12_45_03_19_17
+ VIEW:follow_info: start20_15_24_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start20_15_32_03_19_17
+ VIEW:follow_info: start20_16_18_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start20_16_26_03_19_17
+ VIEW:follow_info: start20_16_44_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start20_16_51_03_19_17
+ VIEW:follow_info: start20_17_54_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start20_18_02_03_19_17
+ VIEW:follow_info: start20_21_59_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start20_22_09_03_19_17
+ VIEWtest:follow_info: start20_25_26_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start20_25_33_03_19_17
+ VIEWtest:follow_info: start20_27_56_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start20_28_10_03_19_17
+ VIEWtest:follow_info: start20_28_39_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start20_28_56_03_19_17
+ VIEW:follow_info: Try to get following_info for fursty
+ VIEW:selenium_bot: FINISH
+ VIEWtest:follow_info: start20_28_56_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start20_31_50_03_19_17
+ VIEW:follow_info: Try to get following_info for look_its_dimson
+ VIEW:selenium_bot: FINISH
+ VIEWtest:follow_info: start20_35_51_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start20_35_56_03_19_17
+ VIEW:follow_info: Try to get following_info for fursty
+ VIEW:selenium_bot: FINISH
+ VIEWtest:follow_info: start20_35_56_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start20_36_30_03_19_17
+ VIEW:follow_info: Try to get following_info for fursty
+ VIEW:selenium_bot: FINISH
+ insta_api: follow_info
+ VIEWtest:follow_info: start20_37_23_03_19_17
+ VIEW:follow_info: Try to get following_info for fursty
+ VIEW:selenium_bot: FINISH
+ VIEWtest:follow_info: start20_38_04_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start20_38_08_03_19_17
+ VIEW:follow_info: Try to get following_info for look_its_dimson
+ VIEW:selenium_bot: FINISH
+ VIEWtest:follow_info: start20_38_08_03_19_17
+ VIEWtest:follow_info: start20_38_51_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start20_38_54_03_19_17
+ VIEW:follow_info: Try to get followers_info for fursty
+ VIEW:selenium_bot: FINISH
+ VIEWtest:follow_info: start20_38_54_03_19_17
+ VIEWtest:follow_info: start20_46_38_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start20_46_42_03_19_17
+ VIEW:follow_info: Try to get following_info for fursty
+ VIEW:selenium_bot: FINISH
+ VIEWtest:follow_info: start20_46_43_03_19_17
+ VIEWtest:follow_info: start20_47_22_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start20_47_27_03_19_17
+ VIEW:follow_info: Try to get following_info for look_its_dimson
+ VIEW:selenium_bot: FINISH
+ VIEWtest:follow_info: start20_47_28_03_19_17
+ VIEWtest:follow_info: start20_49_11_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start20_49_15_03_19_17
+ VIEWtest:follow_info: start20_49_55_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start20_50_00_03_19_17
+ VIEW:follow_info: Try to get following_info for fursty
+ VIEW:selenium_bot: FINISH
+ VIEWtest:follow_info: start20_50_00_03_19_17
+ VIEWtest:follow_info: start20_51_10_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start20_51_15_03_19_17
+ VIEW:follow_info: Try to get following_info for look_its_dimson
+ VIEW:selenium_bot: FINISH
+ VIEWtest:follow_info: start20_51_15_03_19_17
+ VIEWtest:follow_info: start20_56_56_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start20_57_01_03_19_17
+ VIEWtest:follow_info: start20_57_34_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start20_58_08_03_19_17
+ VIEW:follow_info: Try to get following_info for fursty
+ VIEW:selenium_bot: FINISH
+ VIEWtest:follow_info: start20_58_08_03_19_17
+ VIEWtest:follow_info: start20_59_25_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start20_59_29_03_19_17
+ VIEW:follow_info: Try to get following_info for look_its_dimson
+ VIEW:selenium_bot: FINISH
+ VIEWtest:follow_info: start20_59_29_03_19_17
+ VIEWtest:follow_info: start21_00_51_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start21_00_56_03_19_17
+ VIEWtest:follow_info: start21_01_40_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start21_01_44_03_19_17
+ VIEWtest:follow_info: start21_03_33_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start21_03_36_03_19_17
+ VIEWtest:follow_info: start21_04_42_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start21_04_45_03_19_17
+ VIEW:follow_info: Try to get following_info for fursty
+ VIEW:selenium_bot: FINISH
+ VIEWtest:follow_info: start21_04_45_03_19_17
+ VIEWtest:follow_info: start21_07_18_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start21_07_23_03_19_17
+ VIEW:follow_info: 127
+ VIEW:follow_info: Try to get following_info for fursty
+ VIEW:selenium_bot: FINISH
+ VIEWtest:follow_info: start21_07_23_03_19_17
+ VIEWtest:follow_info: start21_08_53_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start21_09_00_03_19_17
+ VIEWtest:follow_info: start21_09_59_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start21_10_02_03_19_17
+ VIEWtest:follow_info: start21_14_27_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start21_14_31_03_19_17
+ VIEWtest:follow_info: start21_15_05_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start21_15_09_03_19_17
+ VIEW:follow_info: done
+ VIEW:follow_info: Try to get following_info for fursty
+ VIEW:selenium_bot: FINISH
+ VIEWtest:follow_info: start21_15_09_03_19_17
+ VIEWtest:follow_info: start21_16_18_03_19_17
+ insta_api: follow_info
+ VIEWtest:follow_info: start21_16_22_03_19_17

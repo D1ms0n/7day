@@ -64,28 +64,28 @@ class selenium_webdriver(object):
         except:
             pass
 
-        time.sleep(120)
+        #time.sleep(120)
         
-        follow_buttons_list = self.driver.find_elements_by_css_selector('button')
-        self.logger.log('Len of list ' + str(len(follow_buttons_list)) )
-        self.logger.log('Try to scroll')
-        try:
-            self.driver.execute_script("document.getElementsByClassName('%s')[0].scrollTo(0, 2000000)" % div_to_scroll_class)
-        except:
+        #follow_buttons_list = self.driver.find_elements_by_css_selector('button')
+        #self.logger.log('Len of list ' + str(len(follow_buttons_list)) )
+        #self.logger.log('Try to scroll')
+        #try:
+        #    self.driver.execute_script("document.getElementsByClassName('%s')[0].scrollTo(0, 2000000)" % div_to_scroll_class)
+        #except:
             pass
 
-        time.sleep(60)
+        #time.sleep(60)
 
-        follow_buttons_list = self.driver.find_elements_by_css_selector('button')
-        self.logger.log('Len of list ' + str(len(follow_buttons_list)) )
-        self.logger.log('Try to scroll')
+        #follow_buttons_list = self.driver.find_elements_by_css_selector('button')
+        #self.logger.log('Len of list ' + str(len(follow_buttons_list)) )
+        #self.logger.log('Try to scroll')
         
-        try:
-            self.driver.execute_script("document.getElementsByClassName('%s')[0].scrollTo(0, 2000000)" % div_to_scroll_class)
-        except:
-            pass
+        #try:
+        #    self.driver.execute_script("document.getElementsByClassName('%s')[0].scrollTo(0, 2000000)" % div_to_scroll_class)
+        #except:
+        #    pass
         
-        time.sleep(60)
+        time.sleep(3)
         follow_buttons_list = self.driver.find_elements_by_css_selector('button')
 
         self.logger.log('Len of list ' + str(len(follow_buttons_list)) )
