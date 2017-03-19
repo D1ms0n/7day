@@ -11,5 +11,5 @@ while 1==1:
 	logger.log(t)	
 	a = open('studioapp/data/tasks', 'r')
 	line = a.readlines()[0]
-	print a
-	logger.log(a)
+	print line
+	logger.log(line)
