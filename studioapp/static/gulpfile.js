@@ -9,29 +9,29 @@ var gulp        = require('gulp'),
 
 //SASS
 gulp.task('sass', function(){
-    return gulp.src('app/sass/default.+(scss|sass)') //
+    return gulp.src('/sass/default.+(scss|sass)') //
         .pipe(sass())
-        .pipe(gulp.dest('app/css'))
+        .pipe(gulp.dest('/css'))
         .pipe(browserSync.reload({stream: true}))
 });
 //css
 gulp.task('css-libs', ['sass'], function(){
-    return gulp.src('app/css/default.css')
+    return gulp.src('/css/default.css')
         .pipe(cssnano())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('app/css'));
+        .pipe(gulp.dest('/css'));
 });
 //autoprefixer
 gulp.task('auto', function () {
-    return gulp.src('app/app.css')
+    return gulp.src('/app.css')
         .pipe(auto({
             browsers: ['last 8 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('app/css'));
+        .pipe(gulp.dest('/css'));
 });
 gulp.task('watch', ['css-libs', 'sass', 'auto'], function(){
-    gulp.watch('app/sass/**/*.scss', ['sass']);
-    gulp.watch('app/**/*.html', browserSync.reload);
+    gulp.watch('/sass/**/*.scss', ['sass']);
+    gulp.watch('/**/*.html', browserSync.reload);
     // gulp.watch('app/js/**/*.js', browserSync.reload);
 });
