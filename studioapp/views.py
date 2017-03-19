@@ -43,12 +43,14 @@ def insta_api(request, target):
     if target == 'follow_info':
         return follow_info(request)
     elif target == 'add_task':
-        return add_task(request)
+        return manage_task(request, 'add')
     elif target == 'del_task':
-        return del_task(request)
+        return manage_task(request, 'del')
+    elif target == 'get_tasks':
+        return manage_task(request, 'get_list')
 
         
-def add_task(request):
+def manage_task(request, action):
     
     logger = Logger('view')
     time_now =  time.strftime('%X %x').replace(' ', '_').replace('/', '_').replace(':', '_')
@@ -59,6 +61,7 @@ def add_task(request):
  
     task_list_file    = open('%s/tasks' % path , 'r')
     task_list_lines = task_list_file.readlines()
+    
     if task_list_lines:
         task_list_content = task_list_lines[0]
     else:
@@ -71,23 +74,33 @@ def add_task(request):
         return render(request, 'studio/tasks.html', {'task_list_json': task_list_json})
     
     elif request.method == 'POST':
-        
         task_list_file = open('%s/tasks' % path , 'w')
-
         request_json = json.loads(request.body)
-        username     = request_json['username']
-        direction    = request_json['direction']
-        
-        if len(task_list_json) == 0:
-            task_id = 0
-        else:
-            task_id = len(task_list_json) + 1 
+        if action == 'add':
+            username     = request_json['username']
+            direction    = request_json['direction']
+            
+            if len(task_list_json) == 0:
+                task_id = 0
+            else:
+                task_id = len(task_list_json) + 1 
 
-        task_list_json[task_id] = {'username': username, 'direction' : direction}
+            task_list_json[task_id] = {'username': username, 'direction' : direction}
+        elif action == 'del':
+            id_to_del    = request_json['id']
+            if id_to_del in task_list_json:
+                task_list_json.pop(id_to_del)
+
+        elif action == 'get_list':
+            return HttpResponse(task_list_content,
+                            content_type="application/json")
+
         task_list_content = json.dumps(task_list_json)
 
-
         task_list_file.write(task_list_content)
+        task_list_file.close()
+        
+
 
         return HttpResponse(task_list_content,
                             content_type="application/json")
@@ -146,6 +159,10 @@ def tasks(request):
 
     task_list_file.close()  
     return render(request, 'studio/tasks.html', {'task_list' : task_list_content})
+
+def task(request, id):
+     
+    return render(request, 'studio/task.html', {})
 
 
 def follow(request):
