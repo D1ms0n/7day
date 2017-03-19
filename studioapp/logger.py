@@ -12,4 +12,5 @@ class Logger(object):
     	path = os.path.join(BASE_DIR, 'studioapp', 'logs')
         log_file = open('%s/%s_log' % (path, self.name) , 'a')
         log_file.write('\n ' + str(text))
+        log_file.close()
 

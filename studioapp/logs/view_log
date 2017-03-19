@@ -147,3 +147,279 @@
  VIEW:selenium_bot: Try to login
  VIEW:selenium_bot: Try get names
  VIEW:selenium_bot: FINISH
+ VIEW:follow_info: start20_48_04_03_16_17
+ insta_api: follow_info
+ VIEW:follow_info: start20_48_23_03_16_17
+ VIEW:follow_info: Try to get fursty_info for following
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:selenium_bot: FINISH
+ VIEW:follow_info: start20_49_45_03_16_17
+ insta_api: follow_info
+ VIEW:follow_info: start21_00_20_03_16_17
+ insta_api: follow_info
+ VIEW:follow_info: start21_00_25_03_16_17
+ insta_api: follow_info
+ VIEW:follow_info: start21_00_48_03_16_17
+ insta_api: follow_info
+ VIEW:follow_info: start21_01_48_03_16_17
+ insta_api: follow_info
+ VIEW:follow_info: start21_01_59_03_16_17
+ WORKER:follow_info: start23_04_50_03_16_17
+ WORKER:follow_info: start23_05_31_03_16_17
+ WORKER:follow_info: start23_05_50_03_16_17
+ WORKER::follow_info: Create selenium_bot
+ WORKER::selenium_bot: Try to login
+ VIEW:follow_info: start21_06_59_03_16_17
+ insta_api: follow_info
+ VIEW:follow_info: start21_07_06_03_16_17
+ insta_api: follow_info
+ VIEW:follow_info: start21_08_32_03_16_17
+ VIEW:follow_info: start21_08_43_03_16_17
+ insta_api: follow_info
+ VIEW:follow_info: start21_08_50_03_16_17
+ VIEW:follow_info: start21_10_52_03_16_17
+ insta_api: follow_info
+ VIEW:follow_info: start21_11_05_03_16_17
+ VIEW:follow_info: start21_13_56_03_16_17
+ insta_api: follow_info
+ VIEW:follow_info: start21_14_00_03_16_17
+ VIEW:follow_info: start21_15_17_03_16_17
+ insta_api: follow_info
+ VIEW:follow_info: start21_15_24_03_16_17
+ VIEW:follow_info: start21_17_40_03_16_17
+ insta_api: follow_info
+ VIEW:follow_info: start21_17_45_03_16_17
+ VIEW:follow_info: start21_21_54_03_16_17
+ insta_api: follow_info
+ VIEW:follow_info: start21_21_59_03_16_17
+ insta_api: follow_info
+ VIEW:follow_info: start21_25_51_03_16_17
+ VIEW:follow_info: start23_08_42_03_16_17
+ insta_api: follow_info
+ VIEW:follow_info: start23_08_53_03_16_17
+ VIEW:follow_info: start23_10_07_03_16_17
+ insta_api: follow_info
+ VIEW:follow_info: start23_10_11_03_16_17
+ VIEW:follow_info: start23_20_04_03_18_17
+ insta_api: follow_info
+ VIEW:follow_info: start23_20_25_03_18_17
+ VIEW:follow_info: start23_22_52_03_18_17
+ insta_api: follow_info
+ VIEW:follow_info: start23_23_05_03_18_17
+ VIEW:follow_info: Try to get following_info for fursty
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:follow_info: start23_26_56_03_18_17
+ insta_api: follow_info
+ VIEW:follow_info: start23_27_05_03_18_17
+ VIEW:follow_info: Try to get following_info for fursty
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:selenium_bot: FINISH
+ VIEW:follow_info: start23_30_44_03_18_17
+ insta_api: follow_info
+ VIEW:follow_info: start23_31_31_03_18_17
+ VIEW:follow_info: Try to get following_info for look_its_dimson
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:selenium_bot: FINISH
+ VIEW:follow_info: start23_35_50_03_18_17
+ insta_api: follow_info
+ VIEW:follow_info: start23_35_57_03_18_17
+ VIEW:follow_info: Try to get following_info for look_its_dimson
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:selenium_bot: FINISH
+ VIEW:follow_info: start23_36_29_03_18_17
+ VIEW:follow_info: start23_39_20_03_18_17
+ insta_api: follow_info
+ VIEW:follow_info: start23_39_28_03_18_17
+ VIEW:follow_info: Try to get following_info for fursty
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:selenium_bot: FINISH
+ VIEW:follow_info: start23_39_50_03_18_17
+ VIEW:follow_info: start23_46_14_03_18_17
+ insta_api: follow_info
+ VIEW:follow_info: start23_46_23_03_18_17
+ VIEW:follow_info: Try to get following_info for look_its_dimson
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:selenium_bot: FINISH
+ VIEW:follow_info: start23_46_49_03_18_17
+ VIEW:follow_info: start23_48_46_03_18_17
+ insta_api: follow_info
+ VIEW:follow_info: start23_48_53_03_18_17
+ VIEW:follow_info: Try to get following_info for fursty
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:selenium_bot: FINISH
+ VIEW:follow_info: start23_49_18_03_18_17
+ VIEW:follow_info: start23_50_18_03_18_17
+ insta_api: follow_info
+ VIEW:follow_info: start23_50_28_03_18_17
+ VIEW:follow_info: Try to get following_info for fursty
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:selenium_bot: FINISH
+ VIEW:follow_info: start23_50_59_03_18_17
+ VIEW:follow_info: start23_52_35_03_18_17
+ insta_api: follow_info
+ VIEW:follow_info: start23_52_40_03_18_17
+ VIEW:follow_info: Try to get following_info for fursty
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:selenium_bot: FINISH
+ VIEW:follow_info: start23_53_03_03_18_17
+ VIEW:follow_info: start23_54_05_03_18_17
+ insta_api: follow_info
+ VIEW:follow_info: start23_54_09_03_18_17
+ VIEW:follow_info: Try to get following_info for fursty
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:selenium_bot: FINISH
+ VIEW:follow_info: start23_54_41_03_18_17
+ VIEW:follow_info: start23_55_20_03_18_17
+ insta_api: follow_info
+ VIEW:follow_info: start23_55_24_03_18_17
+ VIEW:follow_info: Try to get following_info for fursty
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:selenium_bot: FINISH
+ VIEW:follow_info: start23_56_05_03_18_17
+ VIEW:follow_info: start23_59_28_03_18_17
+ insta_api: follow_info
+ VIEW:follow_info: start23_59_31_03_18_17
+ VIEW:follow_info: Try to get following_info for look_its_dimson
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:follow_info: start00_04_18_03_19_17
+ insta_api: follow_info
+ VIEW:follow_info: start00_04_30_03_19_17
+ VIEW:follow_info: Try to get following_info for look_its_dimson
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:selenium_bot: FINISH
+ VIEW:follow_info: start00_05_38_03_19_17
+ VIEW:follow_info: start00_06_53_03_19_17
+ insta_api: follow_info
+ VIEW:follow_info: start00_07_05_03_19_17
+ VIEW:follow_info: Try to get following_info for look_its_dimson
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:selenium_bot: FINISH
+ VIEW:follow_info: start00_08_05_03_19_17
+ VIEW:follow_info: start00_08_29_03_19_17
+ insta_api: follow_info
+ VIEW:follow_info: start00_08_44_03_19_17
+ VIEW:follow_info: Try to get following_info for look_its_dimson
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:selenium_bot: FINISH
+ VIEW:follow_info: start00_10_34_03_19_17
+ VIEW:follow_info: start00_10_58_03_19_17
+ insta_api: follow_info
+ VIEW:follow_info: start00_11_02_03_19_17
+ VIEW:follow_info: Try to get following_info for look_its_dimson
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:selenium_bot: FINISH
+ VIEW:follow_info: start00_12_54_03_19_17
+ VIEW:follow_info: start00_12_59_03_19_17
+ VIEW:follow_info: start00_13_27_03_19_17
+ insta_api: follow_info
+ VIEW:follow_info: start00_13_34_03_19_17
+ VIEW:follow_info: Try to get following_info for look_its_dimson
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:selenium_bot: FINISH
+ VIEW:follow_info: start00_18_15_03_19_17
+ VIEW:follow_info: start00_19_32_03_19_17
+ insta_api: follow_info
+ VIEW:follow_info: start00_19_42_03_19_17
+ VIEW:follow_info: Try to get following_info for look_its_dimson
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:selenium_bot: FINISH
+ VIEW:follow_info: start00_28_10_03_19_17
+ VIEW:follow_info: start00_35_50_03_19_17
+ insta_api: follow_info
+ VIEW:follow_info: start00_36_11_03_19_17
+ VIEW:follow_info: Try to get following_info for look_its_dimson
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:follow_info: start00_47_33_03_19_17
+ VIEW:follow_info: start01_02_59_03_19_17
+ insta_api: follow_info
+ VIEW:follow_info: start01_03_11_03_19_17
+ VIEW:follow_info: Try to get following_info for look_its_dimson
+ VIEW:follow_info: Create selenium_bot
+ VIEW:selenium_bot: Try to login
+ VIEW:selenium_bot: Try get names
+ VIEW:follow_info: start01_04_15_03_19_17
+ VIEW:follow_info: start01_06_48_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start01_07_13_03_19_17
+ VIEW:follow_info: start01_08_55_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start01_08_59_03_19_17
+ VIEW:follow_info: start01_09_57_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start01_10_03_03_19_17
+ VIEW:follow_info: start01_11_18_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start01_11_22_03_19_17
+ VIEW:follow_info: start01_12_37_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start01_12_42_03_19_17
+ VIEW:follow_info: start01_14_08_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start01_14_13_03_19_17
+ VIEW:follow_info: start01_14_47_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start01_14_51_03_19_17
+ VIEW:follow_info: start01_18_37_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start01_18_44_03_19_17
+ VIEW:follow_info: start01_19_51_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start01_19_56_03_19_17
+ VIEW:follow_info: start01_22_58_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start01_23_03_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start01_23_17_03_19_17
+ VIEW:follow_info: start01_33_46_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start01_33_50_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start01_33_59_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start01_34_11_03_19_17
+ VIEW:follow_info: start01_37_19_03_19_17
+ VIEW:follow_info: start14_01_49_03_19_17
+ VIEW:follow_info: start14_31_44_03_19_17
+ VIEW:follow_info: start15_02_38_03_19_17
+ insta_api: add_task
+ VIEW:add_task: start15_02_52_03_19_17

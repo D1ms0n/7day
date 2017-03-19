@@ -1,5 +1,5 @@
 from local_conf import *
-#from logger import Logger
+from logger import Logger
 import requests
 import json
 import random
@@ -20,11 +20,11 @@ class Bot(object):
 
         self.url = 'https://www.instagram.com/'
         self.url_login = 'https://www.instagram.com/accounts/login/ajax/'
-        #self.logger = Logger('instabot')
+        self.logger = Logger('instabot')
 
 #    def logger(self, text):
-#        log_file = open('%slog' % path, 'a')
-#        log_file.write('\n ' + str(text))
+ #       log_file = open('%slog' % path, 'a')
+ #       log_file.write('\n ' + str(text))
 
     def login_user(self):
         self.s = requests.Session()
@@ -53,20 +53,20 @@ class Bot(object):
         time.sleep(5 * random.random())
 
     def get_info(self, name):
-        #self.logger.log('Try to get info for %s' % name)
+        self.logger.log('Try to get info for %s' % name)
         link   = 'https://www.instagram.com/%s/?__a=1'
         answer = ''
         answer = requests.get(link % name).text
-        time.sleep(1)
+        #time.sleep(1)
         if answer:
             try:
                 info = json.loads(answer)
             except:
                 info = None
-        #if info== None:
-        #    #self.logger.log('DONE: %s is NONE' % name)
-        #else:
-        #    #self.logger.log('DONE: %s' % name)                
+        if info== None:
+            self.logger.log('DONE: %s is NONE' % name)
+        else:
+            self.logger.log('DONE: %s' % name)                
         return info
 
 

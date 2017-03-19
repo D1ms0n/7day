@@ -1,0 +1,55 @@
+Add task:
+
+url : /insta_api/add_task
+type: POST
+content (json): {"username": "dimson", "direction": "following", "count": 50}
+
+response (new list of tasks):
+
+
+{"0": {"username": "look_its_dimson", "direction": "following", "create_time":"11:19:19", "status": "35/50"},"1": {"username": "look_its_dimson", "direction": "following", "create_time":"11:19:19", "status": "34/50"}}
+
+where 0, 1 - IDs
+
+###################################################################################################
+
+
+Del task:
+
+url : /insta_api/del_task
+type: POST
+content (json): list of IDs
+
+response (new list of tasks):
+{"0": {"username": "look_its_dimson", "direction": "following", "create_time":"11:19:19", "status": "35/50"},"1": {"username": "look_its_dimson", "direction": "following", "create_time":"11:19:19", "status": "34/50"}}
+
+###################################################################################################
+
+
+Get  list of tasks:
+
+url : /insta_api/get_tasks
+type: GET
+
+response (list of tasks):
+{"0": {"username": "look_its_dimson", "direction": "following", "create_time":"11:19:19", "status": "35/50"},"1": {"username": "look_its_dimson", "direction": "following", "create_time":"11:19:19", "status": "34/50"}}
+
+###################################################################################################
+
+View a list of tasks page:
+
+url : /tasks
+type: GET
+
+response: HTML page 'tasks.html'
+
+
+###################################################################################################
+
+View task
+
+
+url : /tasks/<id>  
+type: GET
+
+response: HTML page 'task.html'   - page for task

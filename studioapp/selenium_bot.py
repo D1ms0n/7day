@@ -6,12 +6,12 @@ import re
 import platform
 from local_conf import *
 import os
-#from logger import Logger
+from logger import Logger
 
 class selenium_webdriver(object):
     
     def __init__(self):
-        ##self.logger = Logger('selenium_bot')
+        self.logger = Logger('selenium_bot')
         if platform.system() == 'Winows':  
             self.binary = FirefoxBinary(r'C:\Program Files (x86)\Mozilla Firefox\firefox.exe')
             self.driver = webdriver.Firefox(firefox_binary=self.binary)
@@ -25,7 +25,7 @@ class selenium_webdriver(object):
 
     def login_user(self,  username, password):                                                                             #TO DO: SAVE and return cookie
         self.driver.get("https://www.instagram.com/accounts/login/")
-        time.sleep(3)
+        #time.sleep(3)
         self.my_user_name = username
         self.driver.find_element_by_xpath("//input[@name='username']").send_keys(username)
         self.driver.find_element_by_xpath("//input[@name='password']").send_keys(password)
@@ -42,26 +42,58 @@ class selenium_webdriver(object):
 
     def get_follow_info(self, username, direction = 'followers' ,  max_value = 8):
         self.driver.get("https://www.instagram.com/%s/" % username)
-        time.sleep(3)
+        time.sleep(1)
         button = self.driver.find_element_by_xpath("//a[@href='/%s/%s/']" % (username, direction))
-        time.sleep(3)
         button.click()
-        time.sleep(3)
-        follow_buttons_list = self.driver.find_elements_by_css_selector('button')
+        time.sleep(1)
+        #follow_buttons_list = self.driver.find_elements_by_css_selector('button')
         
         #while len(follow_buttons_list) < max_value:
         #    old_len = len(follow_buttons_list)
-        #    divs_followers = self.driver.find_elements_by_xpath("//div[text()='F%s']" % direction[1:])[0]                              
-        #    divs = self.driver.find_elements_by_css_selector('div')
-        #    div_to_scroll_index = divs.index(divs_followers) + 1  
-        #    div_to_scroll_class = divs[div_to_scroll_index].get_attribute('class')
+        divs_followers = self.driver.find_elements_by_xpath("//div[text()='F%s']" % direction[1:])[0]                              
+        divs = self.driver.find_elements_by_css_selector('div')
+        div_to_scroll_index = divs.index(divs_followers) + 1  
+        div_to_scroll_class = divs[div_to_scroll_index].get_attribute('class')
         #    time.sleep(1)
-        #    try:
-        #        self.driver.execute_script("document.getElementsByClassName('%s')[0].scrollTo(0, 300500)" % div_to_scroll_class)
-        #    except:
-        #        print 'SCROLL'
-        #    time.sleep(1)
-        #    follow_buttons_list = self.driver.find_elements_by_css_selector('button')
+
+        
+        
+        self.logger.log('Try to scroll')
+        try:
+            self.driver.execute_script("document.getElementsByClassName('%s')[0].scrollTo(0, 2000000)" % div_to_scroll_class)
+        except:
+            pass
+
+        time.sleep(120)
+        
+        follow_buttons_list = self.driver.find_elements_by_css_selector('button')
+        self.logger.log('Len of list ' + str(len(follow_buttons_list)) )
+        self.logger.log('Try to scroll')
+        try:
+            self.driver.execute_script("document.getElementsByClassName('%s')[0].scrollTo(0, 2000000)" % div_to_scroll_class)
+        except:
+            pass
+
+        time.sleep(60)
+
+        follow_buttons_list = self.driver.find_elements_by_css_selector('button')
+        self.logger.log('Len of list ' + str(len(follow_buttons_list)) )
+        self.logger.log('Try to scroll')
+        
+        try:
+            self.driver.execute_script("document.getElementsByClassName('%s')[0].scrollTo(0, 2000000)" % div_to_scroll_class)
+        except:
+            pass
+        
+        time.sleep(60)
+        follow_buttons_list = self.driver.find_elements_by_css_selector('button')
+
+        self.logger.log('Len of list ' + str(len(follow_buttons_list)) )
+        
+
+
+
+        
         #    new_len = len(follow_buttons_list)
         #    if new_len == old_len:
         #        break
@@ -76,7 +108,6 @@ class selenium_webdriver(object):
 
         for link in follow_users_links:
             link_attr = link.get_attribute('href')
-            print str(link)
             username_search = re.search(regex, link_attr)
             if username_search:
                 username = username_search.group(1)

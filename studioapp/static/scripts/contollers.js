@@ -29,7 +29,7 @@ angular.module('application')
             console.log(username,direction) ;
             $http({
                 method: 'POST',
-                url: '/insta_api/follow_info',
+                url: '/insta_api/add_task',
                 data : {
                     'username'  : username,
                     'direction' : direction

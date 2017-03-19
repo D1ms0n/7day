@@ -19,6 +19,8 @@ import signal
 import itertools
 import sys
 import time
+import subprocess
+import os
 
 from local_conf import *
 from selenium_bot import selenium_webdriver
@@ -40,12 +42,62 @@ def insta_api(request, target):
     logger.log("insta_api: " + target)
     if target == 'follow_info':
         return follow_info(request)
+    elif target == 'add_task':
+        return add_task(request)
+    elif target == 'del_task':
+        return del_task(request)
+
         
+def add_task(request):
+    
+    logger = Logger('view')
+    time_now =  time.strftime('%X %x').replace(' ', '_').replace('/', '_').replace(':', '_')
+    logger.log('VIEW:add_task: start' + str(time_now))
+    
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    path = os.path.join(BASE_DIR, 'studioapp', 'data')
+ 
+    task_list_file    = open('%s/tasks' % path , 'r')
+    task_list_lines = task_list_file.readlines()
+    if task_list_lines:
+        task_list_content = task_list_lines[0]
+    else:
+        task_list_content = '{}'
+
+    task_list_json    = json.loads(task_list_content)
+    task_list_file.close()    
+
+    if request.method == 'GET':
+        return render(request, 'studio/tasks.html', {'task_list_json': task_list_json})
+    
+    elif request.method == 'POST':
+        
+        task_list_file = open('%s/tasks' % path , 'w')
+
+        request_json = json.loads(request.body)
+        username     = request_json['username']
+        direction    = request_json['direction']
+        
+        if len(task_list_json) == 0:
+            task_id = 0
+        else:
+            task_id = len(task_list_json) + 1 
+
+        task_list_json[task_id] = {'username': username, 'direction' : direction}
+        task_list_content = json.dumps(task_list_json)
+
+
+        task_list_file.write(task_list_content)
+
+        return HttpResponse(task_list_content,
+                            content_type="application/json")
+
 
 def follow_info(request):
     
     logger = Logger('view')
-    logger.log('VIEW:follow_info: start')
+    time_now =  time.strftime('%X %x').replace(' ', '_').replace('/', '_').replace(':', '_')
+    logger.log('VIEW:follow_info: start' + str(time_now))
     
     if request.method == 'GET':
         return render(request, 'studio/test_front.html', {})
@@ -56,14 +108,14 @@ def follow_info(request):
         username     = request_json['username']
         direction    = request_json['direction']
         
-        logger.log('VIEW:follow_info: Try to get %s_info for %s' % (username, direction) )
+        logger.log('VIEW:follow_info: Try to get %s_info for %s' % (direction, username) )
         
         selenium_bot = selenium_webdriver()
         logger.log('VIEW:follow_info: Create selenium_bot')
-        time.sleep(3)
+        #time.sleep(3)
         logger.log('VIEW:selenium_bot: Try to login')
         selenium_bot.login_user('studio7day', 'Nopasaran')
-        time.sleep(3)
+        #time.sleep(3)
         logger.log('VIEW:selenium_bot: Try get names')
         user_names = selenium_bot.get_follow_names(username, direction,  15)
         
@@ -71,14 +123,29 @@ def follow_info(request):
         
         
         response = []
-        for name in user_names[3:10]:
-            info = bot.get_info(name)
-            response.append(info)
+        #for name in user_names[3:5]:
+        #    info = bot.get_info(name)
+        #    response.append(info)
         
         selenium_bot.driver.close()
         logger.log('VIEW:selenium_bot: FINISH')
-        return HttpResponse(json.dumps(response),
+        return HttpResponse(json.dumps(user_names),
                             content_type="application/json")
+
+
+def tasks(request):
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    path = os.path.join(BASE_DIR, 'studioapp', 'data')
+ 
+    task_list_file    = open('%s/tasks' % path , 'r')
+    task_list_lines = task_list_file.readlines()
+    if task_list_lines:
+        task_list_content = task_list_lines[0]
+    else:
+        task_list_content = '{}'
+
+    task_list_file.close()  
+    return render(request, 'studio/tasks.html', {'task_list' : task_list_content})
 
 
 def follow(request):
