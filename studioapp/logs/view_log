@@ -434,3 +434,7 @@
  VIEW:add_task: start16_55_05_03_19_17
  insta_api: add_task
  VIEW:add_task: start16_55_50_03_19_17
+ insta_api: get_tasks
+ VIEW:add_task: start17_17_32_03_19_17
+ insta_api: del_task
+ VIEW:add_task: start17_21_05_03_19_17
