@@ -10,6 +10,16 @@ while 1==1:
 	print t
 	logger.log(t)	
 	a = open('studioapp/data/tasks', 'r')
+	b = open('studioapp/data/tasks2', 'a')
 	line = a.readlines()[0]
 	print line
 	logger.log(line)
+	b.write(line + '\n')
+	b.close()
+	print 'sleep2'
+	time.sleep(1)
+	try:
+		c = open('studioapp/data/tasks2', 'r')
+		print(c.readlines()[0])
+	except:
+		pass
