@@ -76,17 +76,24 @@ def manage_task(request, action):
     elif request.method == 'POST':
         task_list_file = open('%s/tasks' % path , 'w')
         request_json = json.loads(request.body)
+        
         if action == 'add':
             username     = request_json['username']
             direction    = request_json['direction']
-            
-            if len(task_list_json) == 0:
-                task_id = 0
+            if 'count' in request_json:
+                count        = request_json['count']
             else:
-                task_id = len(task_list_json) + 1 
+                count = 50
 
-            task_list_json[task_id] = {'username': username, 'direction' : direction}
+
+            time_now     =  time.strftime('%X %x').replace(' ', '_').replace('/', '_')
+
+            task_id = abs(hash(time_now + username + direction + str(count)))
+
+            task_list_json[task_id] = {'username': username, 'direction' : direction, 'count': count,  'create_time' : time_now}
+        
         elif action == 'del':
+            
             id_to_del    = request_json['id']
             if id_to_del in task_list_json:
                 task_list_json.pop(id_to_del)
