@@ -9,3 +9,7 @@ while 1==1:
 	t = time.strftime('%X %x').replace(' ', '_').replace('/', '_')
 	print t
 	logger.log(t)	
+	a = open('studioapp/data/tasks', 'r')
+	line = a.readlines()[0]
+	print a
+	logger.log(a)
