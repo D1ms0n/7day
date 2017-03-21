@@ -1,5 +1,6 @@
 
 
+
 <div id="preloader">
     <div id="preloader_bg">
         <div class="waiting-text">
@@ -12,25 +13,26 @@
     <div class="row main-page">
         <div class="col-md-12">
             <div class="search-block">
-                <form name="searchForm" ng-submit="getFollowers(username,direction)">
-                    <input type="text" name="search" class="main-input" ng-model="username" />
-                    <label for="followers">
-                        <input type="radio" id="followers" name="direction" value="followers" ng-model="direction" checked  />
-                        Get followers
-                    </label>
-                    <label for="following">
-                        <input type="radio" id="following" name="direction" value="following" ng-model="direction" />
-                        Get following
-                    </label>
-                    <button type="submit" class="submit-btn"> Search </button>
-                </form>
-            </div>
-            <div class="actions">
-                <button class="submit-btn">Subscribe</button>
-                <button class="submit-btn" ng-click="unSubscribe()">UnSubscribe</button>
-                <span class="error-massage">{{errorMss}}</span>
-                <button class="submit-btn pull-right" ng-click="checkAll()">Select all</button>
-                <button class="submit-btn pull-right" ng-click="unCheckAll()">Unselect all</button>
+
+                <input type="text" name="search" class="main-input" ng-model="username" />
+                <label for="followers">
+                    <input type="radio" id="followers" name="direction" value="followers" ng-model="direction" checked  />
+                    Get followers
+                </label>
+                <label for="follows">
+                    <input type="radio" id="follows" name="direction" value="follows" ng-model="direction" />
+                    Get follows
+                </label>
+                <button ng-click="getFollowers(username,direction)" class="submit-btn">Search</button>
+
+                <div class="actions">
+                    <button class="submit-btn" ng-click="Subscribe()">Subscribe</button>
+                    <button class="submit-btn" ng-click="unSubscribe()">UnSubscribe</button>
+                    <span class="error-massage">{{errorMss}}</span>
+                    <button class="submit-btn pull-right" ng-click="checkAll()">Select all</button>
+                    <button class="submit-btn pull-right" ng-click="unCheckAll()">Unselect all</button>
+                </div>
+
             </div>
             <ul class="users-list">
                 <li ng-repeat="user in users | filter : testFilter" class="users-list-block">
@@ -46,8 +48,6 @@
                     <label for="{{user.user.id}}" class="checkbox-label"></label>
                 </li>
             </ul>
-
-            <button type="submit" class="get-more">Get more</button>
         </div>
     </div>
 </div>

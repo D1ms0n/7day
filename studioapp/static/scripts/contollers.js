@@ -82,7 +82,30 @@ angular.module('application')
                     preloader.style.display='none';
                 });
         };
+
+//send list of users id-s for subscribe
+        $scope.Subscribe =function () {
+            preloader.style.display='block';
+            var usersList = document.querySelectorAll('.checkbox:checked');
+            for( var i = 0; i < usersList.length; i++){
+                usersId.push(usersList[i].value);
+            }
+            var usersIdJs = JSON.stringify(usersId);
+            console.log(usersIdJs);
+            $http({
+                method: 'POST',
+                url: 'http://example.com',
+                data : usersIdJs
+            }).then(
+                function successCallback(response) {
+                    preloader.style.display='none';
+                },
+                function errorCallback(response) {
+                    preloader.style.display='none';
+                });
+        };
     }])
+
 
     .controller('getTasksController', ['$scope','$http', function($scope,$http) {
 //get tasks
