@@ -60,27 +60,51 @@ angular.module('application')
                 elements[i].checked = false;
             }
         };
-//send list of users id-s
+//send list of users id-s for unsubscribe
         var usersId = [];
         $scope.unSubscribe =function () {
+            preloader.style.display='block';
             var usersList = document.querySelectorAll('.checkbox:checked');
             for( var i = 0; i < usersList.length; i++){
                 usersId.push(usersList[i].value);
             }
+            var usersIdJs = JSON.stringify(usersId);
+            console.log(usersIdJs);
             $http({
                 method: 'POST',
                 url: 'http://example.com',
-                data : usersId
+                data : usersIdJs
             }).then(
                 function successCallback(response) {
-                    console.log(typeof(usersId),usersId);
+                    preloader.style.display='none';
                 },
                 function errorCallback(response) {
-                    console.log(typeof(usersId),usersId);
-            });
+                    preloader.style.display='none';
+                });
         };
+    }])
+
+    .controller('getTasksController', ['$scope','$http', function($scope,$http) {
+//get tasks
+        function getTasks(){
+            $http({
+                method: 'GET',
+                url: '/insta_api/get_tasks'
+            }).then(
+                function successCallback(response) {
+                    $scope.tasks = response.data;
+                });
+        }
+        setInterval(function(){
+            getTasks();
+            console.log('get times')
+        }, 5000);
+    }])
+
+    .controller('getTaskController', ['$scope','$http', function($scope,$http) {
 
     }])
+
 ;
 
 

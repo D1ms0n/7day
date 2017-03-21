@@ -82,6 +82,9 @@ button[disabled], html input[disabled] {
     cursor: pointer;
   }
 }
+.actions{
+  margin-top: 20px;
+}
 .search-block{
   margin-bottom: 30px;
 }
@@ -226,4 +229,20 @@ form{
   z-index: 101;
   text-align: center;
   font-size: 14px;
+}
+
+.title{
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.taskslist{
+  margin-bottom: 20px;
+  li{
+    border-bottom: 1px solid #000000;
+    .col-md-3{
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
 }

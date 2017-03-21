@@ -1,0 +1,23 @@
+{
+  "0":
+    {
+      "username": "look_its_dimson",
+      "direction": "following",
+      "create_time":"11:30:19",
+      "status": "10/50"
+    },
+  "1":
+    {
+      "username": "look_its_dimson",
+      "direction": "unfollowing",
+      "create_time":"14:00:19",
+      "status": "35/50"
+    },
+  "2":
+    {
+      "username": "look_its_dimson",
+      "direction": "following",
+      "create_time":"18:15:00",
+      "status": "40/50"
+    }
+}

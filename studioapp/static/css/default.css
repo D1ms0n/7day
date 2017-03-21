@@ -157,6 +157,12 @@ header {
   padding-top: 20px;
   border-bottom: 4px solid #3897f0; }
 
+.menu li {
+  display: inline-block;
+  margin-right: 15px;
+  border-right: 1px solid #000000;
+  padding-right: 10px; }
+
 *::selection {
   color: #fff;
   background: #3897f0; }
@@ -209,9 +215,9 @@ body {
   height: 30px;
   box-sizing: border-box;
   margin-left: 5px; }
-  .submit-btn:hover {
-    color: #fff;
-    background-color: #3897f0; }
+.submit-btn:hover {
+  color: #fff;
+  background-color: #3897f0; }
 
 span.required {
   font-family: "Arsenal-Light", sans-serif;
@@ -235,8 +241,11 @@ button[disabled], html input[disabled] {
   font-family: "Arsenal-Bold", sans-serif;
   font-size: 20px;
   float: right; }
-  .menu li {
-    cursor: pointer; }
+.menu li {
+  cursor: pointer; }
+
+.actions {
+  margin-top: 20px; }
 
 .search-block {
   margin-bottom: 30px; }
@@ -246,48 +255,48 @@ a {
 
 .users-list {
   margin-top: 30px; }
-  .users-list .users-list-block {
-    position: relative;
-    padding-left: 120px;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    font-family: "Arsenal-Regular", sans-serif;
-    border-bottom: 1px solid #6c6c6c; }
-    .users-list .users-list-block .user-avatar {
-      width: 100px;
-      height: 100px;
-      position: absolute;
-      left: 0;
-      top: 0;
-      background-image: url("../images/zaglushka.jpg");
-      background-repeat: no-repeat;
-      -webkit-background-size: cover;
-      background-size: cover;
-      border-radius: 50%; }
-    .users-list .users-list-block .name {
-      font-family: "Arsenal-Bold", sans-serif; }
-    .users-list .users-list-block div {
-      margin-bottom: 5px; }
-    .users-list .users-list-block .main-link {
-      color: #3897f0; }
-    .users-list .users-list-block .action-btn {
-      border: 2px solid #3897f0;
-      color: #3897f0;
-      background-color: #ffffff;
-      outline-color: #fff;
-      border-radius: 4px;
-      margin-right: 10px;
-      text-align: center;
-      padding-left: 10px;
-      padding-right: 10px;
-      font-size: 14px;
-      text-transform: uppercase; }
-    .users-list .users-list-block .checkbox {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 20px;
-      height: 20px; }
+.users-list .users-list-block {
+  position: relative;
+  padding-left: 120px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  font-family: "Arsenal-Regular", sans-serif;
+  border-bottom: 1px solid #6c6c6c; }
+.users-list .users-list-block .user-avatar {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url("../images/zaglushka.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  border-radius: 50%; }
+.users-list .users-list-block .name {
+  font-family: "Arsenal-Bold", sans-serif; }
+.users-list .users-list-block div {
+  margin-bottom: 5px; }
+.users-list .users-list-block .main-link {
+  color: #3897f0; }
+.users-list .users-list-block .action-btn {
+  border: 2px solid #3897f0;
+  color: #3897f0;
+  background-color: #ffffff;
+  outline-color: #fff;
+  border-radius: 4px;
+  margin-right: 10px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  text-transform: uppercase; }
+.users-list .users-list-block .checkbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px; }
 
 form label {
   cursor: pointer; }
@@ -369,6 +378,19 @@ form label {
   z-index: 101;
   text-align: center;
   font-size: 14px; }
+
+.title {
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+.taskslist {
+  margin-bottom: 20px; }
+.taskslist li {
+  border-bottom: 1px solid #000000; }
+.taskslist li .col-md-3 {
+  padding-top: 15px;
+  padding-bottom: 15px; }
 
 footer {
   min-height: 70px;

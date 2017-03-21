@@ -5,3 +5,11 @@ header{
   padding-top: 20px;
   border-bottom: 4px solid #3897f0;
 }
+.menu{
+  li{
+    display: inline-block;
+    margin-right: 15px;
+    border-right: 1px solid #000000;
+    padding-right: 10px;
+  }
+}

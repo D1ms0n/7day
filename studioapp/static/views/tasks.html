@@ -1,0 +1,49 @@
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="container" ng-controller="mainController">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title">LIST OF TASKS</div>
+                    <ul class="taskslist"  ng-controller="getTasksController">
+                        <li>
+                            <div class="row">
+                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                    Name
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                    task
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                    start time
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                    progress
+                                </div>
+                            </div>
+                        </li>
+                        <li  ng-repeat="task in tasks">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                    {{task.username}}
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                    {{task.direction}}
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                    {{task.create_time}}
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                    {{task.status}}
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
