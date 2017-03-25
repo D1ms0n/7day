@@ -1,0 +1,293 @@
+PhantomJS is launching GhostDriver...
+[INFO  - 2017-03-25T14:37:24.320Z] GhostDriver - Main - running on port 46738
+[INFO  - 2017-03-25T14:37:24.493Z] Session [8fcbab50-1168-11e7-b3f8-ab515da59faf] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2017-03-25T14:37:24.493Z] Session [8fcbab50-1168-11e7-b3f8-ab515da59faf] - page.customHeaders:  - {}
+[INFO  - 2017-03-25T14:37:24.493Z] Session [8fcbab50-1168-11e7-b3f8-ab515da59faf] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"linux-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-03-25T14:37:24.494Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 8fcbab50-1168-11e7-b3f8-ab515da59faf
+[ERROR - 2017-03-25T14:37:51.113Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1490452671105
+[INFO  - 2017-03-25T14:42:24.317Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-03-25T14:47:24.317Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-03-25T14:52:24.317Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-03-25T14:57:24.734Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-03-25T15:02:24.324Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-03-25T15:07:24.323Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-03-25T15:12:24.325Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-03-25T15:17:24.325Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-03-25T15:22:24.329Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-03-25T15:27:24.329Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-03-25T15:32:24.332Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-03-25T15:37:24.332Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-03-25T15:42:24.335Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+get follows_info for fursty
+ VIEW:follow_info: Create selenium_bot
+ VIEW:follow_info: Try to login
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:login_user: Try to get login look_its_dimson
+ SELENIUM_BOT:login_user: look_its_dimson loggined
+ VIEW:follow_info: Try get names
+ SELENIUM_BOT:get_follow_names: Try to get 15  follows for fursty
+ SELENIUM_BOT:get_follow_info: Try to get 15  follows for fursty
+ SELENIUM_BOT:get_follow_info: Try to get user page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 14_50_42_03_25_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:get_follow_info: Try to find button
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 14_50_55_03_25_17 in /var/www/7day/studioapp/scr 
+ VIEWS:insta_api: add_task
+ VIEW:add_task: start 14_53_11_03_25_17
+ VIEW:follow_info: POST 14_53_11_03_25_178296799430604316075
+ VIEW:follow_info: Create result file /var/www/7day/studioapp/results/s
+ VIEW:follow_info: Try to get followers_info for fursty
+ VIEW:follow_info: Create selenium_bot
+ VIEW:follow_info: Try to login
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:login_user: Try to get login look_its_dimson
+ SELENIUM_BOT:login_user: look_its_dimson loggined
+ VIEW:follow_info: Try get names
+ SELENIUM_BOT:get_follow_names: Try to get 15  followers for fursty
+ SELENIUM_BOT:get_follow_info: Try to get 15  followers for fursty
+ SELENIUM_BOT:get_follow_info: Try to get user page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 14_53_34_03_25_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:get_follow_info: Try to find button
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 14_53_47_03_25_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:get_follow_info: Try to click button
+ SELENIUM_BOT:get_follow_info: Try to find divs
+ SELENIUM_BOT:get_follow_info: Try to find follow buttons
+ SELENIUM_BOT:get_follow_info: Len of list 84
+ VIEW:follow_info: Got user_names
+ Try to get info for margaret_dp
+ DONE: margaret_dp
+ Try to get info for geisinaldo
+ DONE: geisinaldo
+ VIEW:selenium_bot: FINISH
+ VIEWS:insta_api: add_task
+ VIEW:add_task: start 14_56_16_03_25_17
+ VIEW:follow_info: POST 14_56_16_03_25_175701680471110203847
+ VIEW:follow_info: Create result file /var/www/7day/studioapp/results/s
+ VIEW:follow_info: Try to get followers_info for fursty
+ VIEW:follow_info: Create selenium_bot
+ VIEW:follow_info: Try to login
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:login_user: Try to get login look_its_dimson
+ SELENIUM_BOT:login_user: look_its_dimson loggined
+ VIEW:follow_info: Try get names
+ SELENIUM_BOT:get_follow_names: Try to get 15  followers for fursty
+ SELENIUM_BOT:get_follow_info: Try to get 15  followers for fursty
+ SELENIUM_BOT:get_follow_info: Try to get user page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 14_56_39_03_25_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:get_follow_info: Try to find button
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 14_56_56_03_25_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:get_follow_info: Try to click button
+ SELENIUM_BOT:get_follow_info: Try to find divs
+ SELENIUM_BOT:get_follow_info: Try to find follow buttons
+ SELENIUM_BOT:get_follow_info: Len of list 74
+ VIEW:follow_info: Got user_names
+ Try to get info for pink_smoke99
+ DONE: pink_smoke99
+ Try to get info for lorenapenez
+ DONE: lorenapenez
+ VIEW:selenium_bot: FINISH
+ VIEWS:insta_api: add_task
+ VIEW:add_task: start 14_57_20_03_25_17
+ VIEW:follow_info: POST 14_57_20_03_25_173877158050733550252
+ VIEW:follow_info: Create result file /var/www/7day/studioapp/results/s
+ VIEW:follow_info: Try to get follows_info for fursty
+ VIEW:follow_info: Create selenium_bot
+ VIEW:follow_info: Try to login
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:login_user: Try to get login look_its_dimson
+ SELENIUM_BOT:login_user: look_its_dimson loggined
+ VIEW:follow_info: Try get names
+ SELENIUM_BOT:get_follow_names: Try to get 15  follows for fursty
+ SELENIUM_BOT:get_follow_info: Try to get 15  follows for fursty
+ SELENIUM_BOT:get_follow_info: Try to get user page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 14_57_46_03_25_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:get_follow_info: Try to find button
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 14_57_59_03_25_17 in /var/www/7day/studioapp/scr 
+ VIEW:follow_info: GET 14_59_46_03_25_17
+ VIEWS:insta_api: add_task
+ VIEW:add_task: start 14_59_59_03_25_17
+ VIEW:follow_info: POST 14_59_59_03_25_176792447730887697875
+ VIEW:follow_info: Create result file /var/www/7day/studioapp/results/s
+ VIEW:follow_info: Try to get following_info for fursty
+ VIEW:follow_info: Create selenium_bot
+ VIEW:follow_info: Try to login
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:login_user: Try to get login look_its_dimson
+ SELENIUM_BOT:login_user: look_its_dimson loggined
+ VIEW:follow_info: Try get names
+ SELENIUM_BOT:get_follow_names: Try to get 15  following for fursty
+ SELENIUM_BOT:get_follow_info: Try to get 15  following for fursty
+ SELENIUM_BOT:get_follow_info: Try to get user page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 15_00_22_03_25_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:get_follow_info: Try to find button
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 15_00_39_03_25_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:get_follow_info: Try to click button
+ SELENIUM_BOT:get_follow_info: Try to find divs
+ SELENIUM_BOT:get_follow_info: Try to find follow buttons
+ SELENIUM_BOT:get_follow_info: Len of list 84
+ VIEW:follow_info: Got user_names
+ Try to get info for thurstonphoto
+ DONE: thurstonphoto
+ Try to get info for li0nsmane
+ DONE: li0nsmane
+ VIEW:selenium_bot: FINISH
+ VIEW:follow_info: GET 15_03_06_03_25_17
+ VIEWS:insta_api: add_task
+ VIEW:add_task: start 15_03_15_03_25_17
+ VIEW:follow_info: POST 15_03_15_03_25_178683382541719310409
+ VIEW:follow_info: Create result file /var/www/7day/studioapp/results/8683382541719310409
+ VIEW:follow_info: Try to get followers_info for fursty
+ VIEW:follow_info: Create selenium_bot
+ VIEW:follow_info: Try to login
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:login_user: Try to get login look_its_dimson
+ SELENIUM_BOT:login_user: look_its_dimson loggined
+ VIEW:follow_info: Try get names
+ SELENIUM_BOT:get_follow_names: Try to get 15  followers for fursty
+ SELENIUM_BOT:get_follow_info: Try to get 15  followers for fursty
+ SELENIUM_BOT:get_follow_info: Try to get user page
+ SELENIUM_BOT:get_follow_info: Try to find button
+ SELENIUM_BOT:get_follow_info: Try to click button
+ SELENIUM_BOT:get_follow_info: Try to find divs
+ SELENIUM_BOT:get_follow_info: Try to find follow buttons
+ SELENIUM_BOT:get_follow_info: Len of list 84
+ VIEW:follow_info: Got user_names
+ Try to get info for son1i
+ DONE: son1i
+ Try to get info for gustav.pretorius
+ DONE: gustav.pretorius
+ VIEW:selenium_bot: FINISH
+ VIEW:follow_info: GET 15_04_50_03_25_17
+ VIEWS:insta_api: add_task
+ VIEW:add_task: start 15_05_02_03_25_17
+ VIEW:follow_info: POST 15_05_02_03_25_177848061898128734193
+ VIEW:follow_info: Create result file /var/www/7day/studioapp/results/7848061898128734193
+ VIEW:follow_info: Try to get following_info for fursty
+ VIEW:follow_info: Create selenium_bot
+ VIEW:follow_info: Try to login
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:login_user: Try to get login studio7day
+ SELENIUM_BOT:login_user: studio7day loggined
+ VIEW:follow_info: Try get names
+ SELENIUM_BOT:get_follow_names: Try to get 15  following for fursty
+ SELENIUM_BOT:get_follow_info: Try to get 15  following for fursty
+ SELENIUM_BOT:get_follow_info: Try to get user page
+ SELENIUM_BOT:get_follow_info: Try to find button
+ SELENIUM_BOT:get_follow_info: Try to click button
+ SELENIUM_BOT:get_follow_info: Try to find divs
+ SELENIUM_BOT:get_follow_info: Try to find follow buttons
+ SELENIUM_BOT:get_follow_info: Len of list 84
+ VIEW:follow_info: Got user_names
+ Try to get info for thurstonphoto
+ DONE: thurstonphoto
+ Try to get info for li0nsmane
+ DONE: li0nsmane
+ VIEW:selenium_bot: FINISH
+ VIEWS:insta_api: get_tasks
+ VIEW:add_task: start 15_17_47_03_25_17
+ VIEWS:insta_api: get_tasks
+ VIEW:add_task: start 15_18_01_03_25_17
+ VIEW:follow_info: GET 15_20_45_03_25_17
+ VIEWS:insta_api: add_task
+ VIEW:add_task: start 15_20_53_03_25_17
+ VIEW:follow_info: POST 15_20_53_03_25_176033216567183752748
+ VIEW:follow_info: Create result file /var/www/7day/studioapp/results/6033216567183752748
+ VIEW:follow_info: Try to get followers_info for fursty
+ VIEW:follow_info: Create selenium_bot
+ VIEW:follow_info: Try to login
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:login_user: Try to get login studio7day
+ VIEWS:insta_api: get_tasks
+ VIEW:add_task: start 15_21_09_03_25_17
+ VIEWS:insta_api: get_tasks
+ VIEW:add_task: start 15_21_22_03_25_17
+ VIEWS:insta_api: add_task
+ VIEW:add_task: start 15_23_30_03_25_17
+ VIEW:follow_info: POST 15_23_30_03_25_171621072339392465740
+ VIEW:follow_info: Create result file /var/www/7day/studioapp/results/1621072339392465740
+ VIEW:follow_info: Try to get followers_info for fursty
+ VIEW:follow_info: Create selenium_bot
+ VIEW:follow_info: Try to login
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:login_user: Try to get login studio7day
+ VIEW:follow_info: GET 15_24_30_03_25_17
+ VIEWS:insta_api: add_task
+ VIEW:add_task: start 15_24_37_03_25_17
+ VIEW:follow_info: POST 15_24_37_03_25_173872893947763895918
+ VIEW:follow_info: Create result file /var/www/7day/studioapp/results/3872893947763895918
+ VIEW:follow_info: Try to get followers_info for fursty
+ VIEW:follow_info: Create selenium_bot
+ VIEW:follow_info: Try to login
+ SELENIUM_BOT:login_user: Try to get login page
+ VIEWS:insta_api: get_tasks
+ VIEW:add_task: start 15_24_48_03_25_17
+ SELENIUM_BOT:login_user: Try to get login studio7day
+ VIEWS:insta_api: get_tasks
+ VIEW:add_task: start 15_25_10_03_25_17
+ VIEWS:insta_api: get_tasks
+ VIEW:add_task: start 15_28_49_03_25_17
+ VIEW:follow_info: GET 15_29_05_03_25_17
+ VIEWS:insta_api: get_tasks
+ VIEW:add_task: start 15_29_35_03_25_17
+ VIEWS:insta_api: add_task
+ VIEW:add_task: start 15_29_51_03_25_17
+ VIEW:follow_info: POST 15_29_51_03_25_176748244060683861716
+ VIEW:follow_info: Create result file /var/www/7day/studioapp/results/6748244060683861716
+ VIEW:follow_info: Try to get followers_info for look_its_dimson
+ VIEW:follow_info: Create selenium_bot
+ VIEWS:insta_api: get_tasks
+ VIEW:add_task: start 15_29_58_03_25_17
+ VIEW:follow_info: Try to login
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:login_user: Try to get login studio7day
+ VIEWS:insta_api: add_task
+ VIEW:add_task: start 15_42_35_03_25_17
+ VIEW:follow_info: POST 15_42_35_03_25_171100900130095579793
+ VIEW:follow_info: Create result file /var/www/7day/studioapp/results/1100900130095579793
+ VIEW:follow_info: Try to get followers_info for look_its_dimson
+ VIEW:follow_info: Create selenium_bot
+ VIEW:follow_info: Try to login
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:login_user: Try to get login studio7day
+ VIEWS:insta_api: get_tasks
+ VIEW:add_task: start 15_44_28_03_25_17
+ VIEW:follow_info: GET 15_46_40_03_25_17
+ VIEWS:insta_api: add_task
+ VIEW:add_task: start 15_46_58_03_25_17
+ VIEW:follow_info: POST 15_46_58_03_25_17332813387694454502
+ VIEW:follow_info: Create result file /var/www/7day/studioapp/results/332813387694454502
+ VIEW:follow_info: Try to get followers_info for look_its_dimson
+ VIEW:follow_info: Create selenium_bot
+ VIEW:follow_info: Try to login
+ SELENIUM_BOT:login_user: Try to get login page
+ VIEWS:insta_api: get_tasks
+ VIEW:add_task: start 15_47_13_03_25_17
+ SELENIUM_BOT:login_user: Try to get login studio7day
+ VIEW:follow_info: GET 15_48_54_03_25_17
+ VIEW:follow_info: GET 15_53_31_03_25_17
+ VIEWS:insta_api: add_task
+ VIEW:add_task: start 15_53_45_03_25_17
+ VIEW:follow_info: POST 15_53_45_03_25_172944702888405853707
+ VIEW:follow_info: Create result file /var/www/7day/studioapp/results/2944702888405853707
+ VIEW:follow_info: Try to get followers_info for fursty
+ VIEW:follow_info: Create selenium_bot
+ VIEW:follow_info: Try to login
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:login_user: Try to login studio7day
+ SELENIUM_BOT:login_user: studio7day loggined
+ VIEW:follow_info: Try get names
+ SELENIUM_BOT:get_follow_names: Try to get 15  followers for fursty
+ SELENIUM_BOT:get_follow_info: Try to get 15  followers for fursty
+ SELENIUM_BOT:get_follow_info: Try to get user page
+ SELENIUM_BOT:get_follow_info: Try to find button
+ SELENIUM_BOT:get_follow_info: Try to click button
+ SELENIUM_BOT:get_follow_info: Try to find divs
+ SELENIUM_BOT:get_follow_info: Try to find follow buttons
+ SELENIUM_BOT:get_follow_info: Len of list 84
+ VIEW:follow_info: Got user_names
+ Try to get info for shahizwan.maamor
+ DONE: shahizwan.maamor
+ Try to get info for 97ollive
+ DONE: 97ollive
+ VIEW:selenium_bot: FINISH
+ VIEWS:insta_api: get_tasks
+ VIEW:add_task: start 15_54_38_03_25_17
