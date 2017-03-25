@@ -31,14 +31,14 @@ class selenium_webdriver(object):
         self.driver.find_element_by_xpath("//input[@name='username']").send_keys(username)
         self.driver.find_element_by_xpath("//input[@name='password']").send_keys(password)
         
-        self.logger.log('SELENIUM_BOT:login_user: Try to get login %s' % username )
+        self.logger.log('SELENIUM_BOT:login_user: Try to login %s' % username )
         self.driver.find_element_by_css_selector("button").click()
         
         time.sleep(3)
 
         #self.make_screenshot()
-
-        self.driver.find_elements_by_css_selector("button")[0].click()        
+        self.driver.get("https://www.instagram.com/")
+               
         
         time.sleep(3)
         #self.make_screenshot()

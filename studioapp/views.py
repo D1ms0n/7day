@@ -72,10 +72,12 @@ def manage_task(request, action):
     task_list_file.close()    
 
     if request.method == 'GET':
-        return render(request, 'studio/tasks.html', {'task_list_json': task_list_json})
+        if action == 'get_list':
+            return HttpResponse(task_list_content,
+                            content_type="application/json")
     
     elif request.method == 'POST':
-        task_list_file = open('%s/tasks' % path , 'w')
+        
         request_json = json.loads(request.body)
         
         if action == 'add':
@@ -106,12 +108,10 @@ def manage_task(request, action):
             if id_to_del in task_list_json:
                 task_list_json.pop(id_to_del)
 
-        elif action == 'get_list':
-            return HttpResponse(task_list_content,
-                            content_type="application/json")
+        
 
         task_list_content = json.dumps(task_list_json)
-
+        task_list_file = open('%s/tasks' % path , 'w')
         task_list_file.write(task_list_content)
         task_list_file.close()
         
