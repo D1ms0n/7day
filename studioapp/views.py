@@ -21,6 +21,7 @@ import sys
 import time
 import subprocess
 import os
+import threading
 
 from local_conf import *
 from selenium_bot import selenium_webdriver
@@ -39,7 +40,7 @@ def main(request):
 @csrf_exempt    
 def insta_api(request, target):
     logger = Logger('view')
-    logger.log("insta_api: " + target)
+    logger.log("VIEWS:insta_api: " + target)
     if target == 'follow_info':
         return follow_info(request)
     elif target == 'add_task':
@@ -49,12 +50,12 @@ def insta_api(request, target):
     elif target == 'get_tasks':
         return manage_task(request, 'get_list')
 
-        
+
 def manage_task(request, action):
     
     logger = Logger('view')
     time_now =  time.strftime('%X %x').replace(' ', '_').replace('/', '_').replace(':', '_')
-    logger.log('VIEW:add_task: start' + str(time_now))
+    logger.log('VIEW:add_task: start ' + str(time_now))
     
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     path = os.path.join(BASE_DIR, 'studioapp', 'data')
@@ -85,13 +86,20 @@ def manage_task(request, action):
             else:
                 count = 50
 
-
             time_now     =  time.strftime('%X %x').replace(' ', '_').replace('/', '_')
 
             task_id = abs(hash(time_now + username + direction + str(count)))
 
             task_list_json[task_id] = {'username': username, 'direction' : direction, 'count': count,  'create_time' : time_now}
-        
+            
+            # Create new threads
+            thread = threading.Thread(target = follow_info, args=(request, task_id,))
+            thread.daemon = True  
+
+            # Start new Threads
+            thread.start()
+
+
         elif action == 'del':
             
             id_to_del    = request_json['id']
@@ -113,45 +121,71 @@ def manage_task(request, action):
                             content_type="application/json")
 
 
-def follow_info(request):
+def follow_info(request, task_id = ''):
     
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    path = os.path.join(BASE_DIR, 'studioapp', 'results')
+
     logger = Logger('view')
     time_now =  time.strftime('%X %x').replace(' ', '_').replace('/', '_').replace(':', '_')
-    logger.log('VIEW:follow_info: start' + str(time_now))
+    
     
     if request.method == 'GET':
+        logger.log('VIEW:follow_info: GET ' + str(time_now))
         return render(request, 'studio/test_front.html', {})
     
     elif request.method == 'POST':
-    
+        
+        logger.log('VIEW:follow_info: POST ' + str(time_now) + str(task_id))
+        
         request_json = json.loads(request.body)
         username     = request_json['username']
         direction    = request_json['direction']
         
+        
+        result_file_name = '%s/%s' % (path, task_id)
+
+        logger.log('VIEW:follow_info: Create result file %s' % result_file_name)
+
+        result_file = open(result_file_name , 'w')
+        result_file.write('[]')
+        result_file.close()
+
         logger.log('VIEW:follow_info: Try to get %s_info for %s' % (direction, username) )
         
-        selenium_bot = selenium_webdriver()
         logger.log('VIEW:follow_info: Create selenium_bot')
-        #time.sleep(3)
-        logger.log('VIEW:selenium_bot: Try to login')
+        selenium_bot = selenium_webdriver()
+        time.sleep(3)
+
+        #selenium_bot.make_screenshot()
+
+        logger.log('VIEW:follow_info: Try to login')
         selenium_bot.login_user('studio7day', 'Nopasaran')
-        #time.sleep(3)
-        logger.log('VIEW:selenium_bot: Try get names')
+        
+        #selenium_bot.make_screenshot()
+
+        logger.log('VIEW:follow_info: Try get names')
         user_names = selenium_bot.get_follow_names(username, direction,  15)
-        
+
+        #selenium_bot.make_screenshot()
+
+        logger.log('VIEW:follow_info: Got user_names')
+
         bot = Bot()
-        
-        
+                
         response = []
-        #for name in user_names[3:5]:
-        #    info = bot.get_info(name)
-        #    response.append(info)
+        for name in user_names[3:5]:
+            info = bot.get_info(name)
+            response.append(info)
         
         selenium_bot.driver.close()
         logger.log('VIEW:selenium_bot: FINISH')
-        return HttpResponse(json.dumps(user_names),
-                            content_type="application/json")
+        
+        # Write results to result_file
 
+        result_file = open(result_file_name , 'w')
+        result_file.write(str(response))
+        result_file.close()
 
 def tasks(request):
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -168,8 +202,19 @@ def tasks(request):
     return render(request, 'studio/tasks.html', {'task_list' : task_list_content})
 
 def task(request, id):
-     
-    return render(request, 'studio/task.html', {})
+    
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    path = os.path.join(BASE_DIR, 'studioapp', 'results')
+    
+    result = ''
+
+    try:
+        result_file = open('%s/%s' % (path, id))
+        result = result_file.readlines()[0]
+    except:
+        result = '[]'
+    
+    return render(request, 'studio/task.html', {'result':result})
 
 
 def follow(request):
@@ -186,6 +231,7 @@ def follow(request):
     time.sleep(3)
     #logger.log('Try to login')
     selenium_bot.login_user('studio7day', 'Nopasaran')
+    
     time.sleep(3)
     #logger.log('Try follow')
     
