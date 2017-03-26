@@ -29,31 +29,24 @@ from instabot import Bot
 from logger import Logger
 
 
-def main(request):
-    #aboutus = open ('/var/lib/openshift/567ef60b2d5271270500014d/app-root/runtime/repo/wsgi/studio/studioapp/lst').readlines()[0]
-    aboutus = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-    return render(request, 'studio/index.html', {'aboutus': aboutus})
+def start_thread(function):
+    def wrapper(*args, **kwargs):
+        
+        # Create new threads
+        thread = threading.Thread(target = function, args=args)
+        thread.daemon = True  
 
+        # Start new Threads
+        thread.start()
+    return wrapper
 
-        ################################################################################### INSTA_API ###########################################################################
+########################################################################################### INSTA_API ###########################################################################
 
 @csrf_exempt    
 def insta_api(request, target):
     logger = Logger('view')
     logger.log("VIEWS:insta_api: " + target)
-    if target == 'follow_info':
-        return follow_info(request)
-    elif target == 'add_task':
-        return manage_task(request, 'add')
-    elif target == 'del_task':
-        return manage_task(request, 'del')
-    elif target == 'get_tasks':
-        return manage_task(request, 'get_list')
 
-
-def manage_task(request, action):
-    
-    logger = Logger('view')
     time_now =  time.strftime('%X %x').replace(' ', '_').replace('/', '_').replace(':', '_')
     logger.log('VIEW:add_task: start ' + str(time_now))
     
@@ -66,62 +59,73 @@ def manage_task(request, action):
     if task_list_lines:
         task_list_content = task_list_lines[0]
     else:
-        task_list_content = '{}'
+        task_list_content = '{lalala}'
 
     task_list_json    = json.loads(task_list_content)
-    task_list_file.close()    
+    task_list_file.close() 
 
-    if request.method == 'GET':
-        if action == 'get_list':
-            return HttpResponse(task_list_content,
-                            content_type="application/json")
+
+##################### GET ##################################
     
+    # GET / get_list
+    if request.method == 'GET' and target == 'get_tasks':
+        return HttpResponse(task_list_content,
+                            content_type="application/json")
+
+
+#################### POST ##################################
     elif request.method == 'POST':
-        
         request_json = json.loads(request.body)
-        
-        if action == 'add':
+
+        # POST / add_task
+        if target == 'add_task':
+            
             username     = request_json['username']
             direction    = request_json['direction']
+            
             if 'count' in request_json:
-                count        = request_json['count']
+                count = request_json['count']
             else:
                 count = 50
-
-            time_now     =  time.strftime('%X %x').replace(' ', '_').replace('/', '_')
-
-            task_id = abs(hash(time_now + username + direction + str(count)))
-
-            task_list_json[task_id] = {'username': username, 'direction' : direction, 'count': count,  'create_time' : time_now}
             
-            # Create new threads
-            thread = threading.Thread(target = follow_info, args=(request, task_id,))
-            thread.daemon = True  
+            time_now = time.strftime('%X %x').replace(' ', '_').replace('/', '_')
 
-            # Start new Threads
-            thread.start()
+            task_id  = abs(hash(time_now + username + direction + str(count)))
 
-
-        elif action == 'del':
+            task_list_json[task_id] = {'username'    : username,
+                                       'direction'   : direction, 
+                                       'count'       : count,  
+                                       'create_time' : time_now}
             
+            get_follow_info(request, task_id)
+
+        # POST / del_task    
+        elif target == 'del_task':
             id_to_del    = request_json['id']
+            
             if id_to_del in task_list_json:
                 task_list_json.pop(id_to_del)
-
-        
+    
 
         task_list_content = json.dumps(task_list_json)
         task_list_file = open('%s/tasks' % path , 'w')
         task_list_file.write(task_list_content)
         task_list_file.close()
-        
-
 
         return HttpResponse(task_list_content,
-                            content_type="application/json")
+                            content_type="application/json")    
 
 
-def follow_info(request, task_id = ''):
+def follow_info(request):
+    if request.method == 'GET':
+        logger = Logger('view')
+
+        time_now =  time.strftime('%X %x').replace(' ', '_').replace('/', '_').replace(':', '_')
+        logger.log('VIEW:follow_info: GET ' + str(time_now))
+        return render(request, 'studio/test_front.html', {})
+
+@start_thread
+def get_follow_info(request, task_id = ''):
     
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     path = os.path.join(BASE_DIR, 'studioapp', 'results')
@@ -129,19 +133,13 @@ def follow_info(request, task_id = ''):
     logger = Logger('view')
     time_now =  time.strftime('%X %x').replace(' ', '_').replace('/', '_').replace(':', '_')
     
-    
-    if request.method == 'GET':
-        logger.log('VIEW:follow_info: GET ' + str(time_now))
-        return render(request, 'studio/test_front.html', {})
-    
-    elif request.method == 'POST':
+    if request.method == 'POST':
         
         logger.log('VIEW:follow_info: POST ' + str(time_now) + str(task_id))
         
         request_json = json.loads(request.body)
         username     = request_json['username']
         direction    = request_json['direction']
-        
         
         result_file_name = '%s/%s' % (path, task_id)
 
@@ -155,51 +153,32 @@ def follow_info(request, task_id = ''):
         
         logger.log('VIEW:follow_info: Create selenium_bot')
         selenium_bot = selenium_webdriver()
-        time.sleep(3)
-
-        #selenium_bot.make_screenshot()
 
         logger.log('VIEW:follow_info: Try to login')
         selenium_bot.login_user('studio7day', 'Nopasaran')
         
-        #selenium_bot.make_screenshot()
-
         logger.log('VIEW:follow_info: Try get names')
         user_names = selenium_bot.get_follow_names(username, direction,  15)
-
-        #selenium_bot.make_screenshot()
 
         logger.log('VIEW:follow_info: Got user_names')
 
         bot = Bot()
                 
         response = []
-        for name in user_names[3:5]:
+        for name in user_names[3:]:
             info = bot.get_info(name)
             response.append(info)
         
         selenium_bot.driver.close()
         logger.log('VIEW:selenium_bot: FINISH')
         
-        # Write results to result_file
-
         result_file = open(result_file_name , 'w')
         result_file.write(str(response))
         result_file.close()
 
 def tasks(request):
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    path = os.path.join(BASE_DIR, 'studioapp', 'data')
- 
-    task_list_file    = open('%s/tasks' % path , 'r')
-    task_list_lines = task_list_file.readlines()
-    if task_list_lines:
-        task_list_content = task_list_lines[0]
-    else:
-        task_list_content = '{}'
-
-    task_list_file.close()  
-    return render(request, 'studio/tasks.html', {'task_list' : task_list_content})
+    # Return empty tasks page.
+    return render(request, 'studio/tasks.html', {})
 
 def task(request, id):
     
@@ -215,6 +194,21 @@ def task(request, id):
         result = '[]'
     
     return render(request, 'studio/task.html', {'result':result})
+
+
+def logs(request):
+    
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    path = os.path.join(BASE_DIR, 'studioapp', 'logs')
+    
+    try:
+        result_file = open('%s/LOG' % path)
+        log = result_file.readlines()
+    except:
+        log = []
+    
+    return render(request, 'studio/logs.html', {'log':log[-50:]})
+
 
 
 def follow(request):
