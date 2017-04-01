@@ -1,4 +1,4 @@
-Add task:
+Add task to get follow info:
 
 url : /insta_api/add_task
 type: POST
@@ -10,6 +10,21 @@ response (new list of tasks):
 {"0": {"username": "look_its_dimson", "direction": "following", "create_time":"11:19:19", "status": "35/50"},"1": {"username": "look_its_dimson", "direction": "following", "create_time":"11:19:19", "status": "34/50"}}
 
 where 0, 1 - IDs
+
+
+
+
+###################################################################################################
+
+Add task to  follow/unfollow
+
+url : /insta_api/add_task
+type: POST
+
+content (json): {"user_names": "['dimson', 'serega' ]", "direction": "follow"}    
+				OR
+                {"user_names": "['dimson', 'serega' ]", "direction": "unfollow"}
+
 
 ###################################################################################################
 
