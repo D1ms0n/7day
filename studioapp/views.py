@@ -104,10 +104,8 @@ def insta_api(request, target):
             elif direction in ['follow', 'unfollow']:
                 user_names = request_json['user_names']
 
-                task_list_json[task_id] = {'username'    : username,
-                                           'direction'   : direction,
-                                           'user_names'    : user_names,
-                                           'count'       : count,  
+                task_list_json[task_id] = {'direction'   : direction,
+                                           'user_names'  : user_names,
                                            'create_time' : time_now}
                 
                 change_relationships(user_names, direction, task_id)        
