@@ -12,7 +12,7 @@ class selenium_webdriver(object):
     
     def __init__(self):
         self.logger = Logger('selenium_bot')
-        logger.log('SELENIUM_BOT:init: Create selenium_bot')
+        self.logger.log('SELENIUM_BOT:init: Create selenium_bot')
         if platform.system() == 'Winows':  
             self.binary = FirefoxBinary(r'C:\Program Files (x86)\Mozilla Firefox\firefox.exe')
             self.driver = webdriver.Firefox(firefox_binary=self.binary)
@@ -22,11 +22,13 @@ class selenium_webdriver(object):
             
             self.driver = webdriver.PhantomJS(service_log_path='%s/phantom' % path)
             self.driver.set_window_size(1120, 550)
-        logger.log('SELENIUM_BOT:init: DONE')
+        self.logger.log('SELENIUM_BOT:init: DONE')
         time.sleep(3)
 
     def login_user(self,  username, password):                                                                             #TO DO: SAVE and return cookie
         self.logger.log('SELENIUM_BOT:login_user: Try to get login page')
+
+        self.my_user_name = username
 
         self.driver.get("https://www.instagram.com/accounts/login/")
         time.sleep(3)
@@ -110,7 +112,7 @@ class selenium_webdriver(object):
                 if username not in follow_names and username != self.my_user_name:
                     follow_names.append(username)
 
-        logger.log('SELENIUM_BOT:get_follow_names: Got %d user_names' % len(follow_names))
+        self.logger.log('SELENIUM_BOT:get_follow_names: Got %s user_names' % str(len(follow_names)))
         return follow_names
 
     def get_follow_buttons(self, username, direction = 'followers' ,  max_value = 8):

@@ -26,7 +26,8 @@ urlpatterns = [
     url(r'^$',                     'studioapp.views.follow_info',                 name='home'),
     url(r'^admin/',                 admin.site.urls                                    ),
     
-    url(r'^insta_api/(?P<target>.+)$',          'studioapp.views.insta_api',            name='insta_api'),
+    #url(r'^insta_api/(?P<target>.+)$',          'studioapp.views.insta_api',            name='insta_api'),
+    url(r'^insta_api/(?P<target>[a-z_]+)(?:/(?P<request_id>\d+))?$',          'studioapp.views.insta_api',            name='insta_api'),
     url(r'^follow_info/$',         'studioapp.views.follow_info',          name='follow_info'),
     url(r'^tasks/$',               'studioapp.views.tasks',                name='tasks'),
     url(r'^task/(?P<id>.+)$',      'studioapp.views.task',                 name='task'),

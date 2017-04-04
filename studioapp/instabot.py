@@ -7,8 +7,9 @@ import time
 import datetime
 import re
 
-follow_link   = 'https://www.instagram.com/web/friendships/%s/follow/'
-unfollow_link = 'https://www.instagram.com/web/friendships/%s/unfollow/'
+follow_link      = 'https://www.instagram.com/web/friendships/%s/follow/'
+unfollow_link    = 'https://www.instagram.com/web/friendships/%s/unfollow/'
+user_info_link   = 'https://www.instagram.com/%s/?__a=1'
 
 class Bot(object):
     def __init__(self):
@@ -22,9 +23,22 @@ class Bot(object):
         self.url_login = 'https://www.instagram.com/accounts/login/ajax/'
         self.logger = Logger('instabot')
 
-#    def logger(self, text):
- #       log_file = open('%slog' % path, 'a')
- #       log_file.write('\n ' + str(text))
+    def get_info(self, name):
+        self.logger.log('Try to get info for %s' % name)
+        
+        answer = ''
+        answer = requests.get(user_info_link % name).text
+        if answer:
+            try:
+                info = json.loads(answer)
+            except:
+                info = None
+        if info== None:
+            self.logger.log('DONE: %s is NONE' % name)
+        else:
+            self.logger.log('DONE: %s' % name)                
+        return info
+
 
     def login_user(self):
         self.s = requests.Session()
@@ -52,45 +66,21 @@ class Bot(object):
         csrftoken = login.cookies['csrftoken']
         time.sleep(5 * random.random())
 
-    def get_info(self, name):
-        self.logger.log('Try to get info for %s' % name)
-        link   = 'https://www.instagram.com/%s/?__a=1'
-        answer = ''
-        answer = requests.get(link % name).text
-        #time.sleep(1)
-        if answer:
-            try:
-                info = json.loads(answer)
-            except:
-                info = None
-        if info== None:
-            self.logger.log('DONE: %s is NONE' % name)
-        else:
-            self.logger.log('DONE: %s' % name)                
-        return info
-
-
     def user_request(self, reqs, r_type = 'get'):
         answer = {}
-        #self.logger.log('req' + str(reqs))
         if r_type == 'get':
-
             answer = self.s.get(reqs['link'] % reqs['id']).text
             return answer
 
         elif r_type == 'post':
 
             rst = self.s.post(reqs['link'] % reqs['id'])
-            #self.logger.log(rst.status_code)
             answer =rst.text
 
             if rst.status_code != 200:
-                #self.logger.log('bad' + reqs['link'] % reqs['id'])
-                #self.logger.log('\nFAILED' + str(reqs['id']))
                 return rst
 
             else:
-                #self.logger.log('good ' + reqs['id'] +  str(time.strftime('%X %x %Z')))
                 time.sleep(55 + random.randint(1, 5))
 
             return rst
@@ -105,6 +95,11 @@ class Bot(object):
         answer = self.user_request(reqs, 'post')
         return answer
 
+
+   
+
+
+######################################################################################################################################################################
 
     def parse_logins(self, file):
         follow_file_content = file.readlines()[-1]
