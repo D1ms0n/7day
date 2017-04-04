@@ -6769,3 +6769,1874 @@ get follows_info for fursty
  VIEW:selenium_bot: FINISH
  VIEWS:insta_api: get_task_result
  VIEW:add_task: start 19_53_20_04_04_17
+ WORKER: CREATED
+ VIEW:follow_info: POST 23_08_04_04_04_17123
+ WORKER: CREATED
+ VIEW:follow_info: POST 23_08_53_04_04_17123
+ VIEW:follow_info: POST 23_09_12_04_04_17123
+ WORKER: CREATED
+ VIEW:follow_info: POST 23_09_33_04_04_17123
+ VIEW:follow_info: Create result file /mnt/hgfs/web/7day/studioapp/results/123
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:login_user: Try to login studio7day
+ SELENIUM_BOT:login_user: studio7day loggined
+ SELENIUM_BOT:get_follow_names: Try to get 15  following for fursty
+ SELENIUM_BOT:get_follow_info: Try to get 15  following for fursty
+ SELENIUM_BOT:get_follow_info: Try to get user page
+ VIEWS:insta_api: get_tasks
+ VIEW:add_task: start 20_09_55_04_04_17
+ SELENIUM_BOT:get_follow_info: Try to find button
+ SELENIUM_BOT:get_follow_info: Try to click button
+ SELENIUM_BOT:get_follow_info: Try to find divs
+ SELENIUM_BOT:get_follow_info: Try to find follow buttons
+ TEXT:button: Follow
+ TEXT:button: 
+ TEXT:button: Options
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Close
+ SELENIUM_BOT:get_follow_info: Len of list 84
+ SELENIUM_BOT:get_follow_names: Got 132 user_names
+ Try to get info for thurstonphoto
+ DONE: thurstonphoto
+ Try to get info for li0nsmane
+ DONE: li0nsmane
+ Try to get info for wiamhie
+ DONE: wiamhie
+ Try to get info for myspacetom
+ DONE: myspacetom
+ Try to get info for kellycalvillo
+ DONE: kellycalvillo
+ Try to get info for brandonwoelfel
+ DONE: brandonwoelfel
+ Try to get info for tavinpratt
+ DONE: tavinpratt
+ Try to get info for philngyn
+ DONE: philngyn
+ Try to get info for jeremiahschuster
+ DONE: jeremiahschuster
+ Try to get info for eydismariaolafs
+ DONE: eydismariaolafs
+ Try to get info for marcusbenaim
+ DONE: marcusbenaim
+ Try to get info for erickaffine
+ DONE: erickaffine
+ Try to get info for masonprendergast
+ DONE: masonprendergast
+ Try to get info for brokensundowns
+ DONE: brokensundowns
+ Try to get info for gypsea_lust
+ DONE: gypsea_lust
+ Try to get info for pie_aerts
+ DONE: pie_aerts
+ Try to get info for secondhand_kearns
+ DONE: secondhand_kearns
+ Try to get info for stockmfgco
+ DONE: stockmfgco
+ Try to get info for tropicalratchet
+ DONE: tropicalratchet
+ Try to get info for mallorysantic
+ DONE: mallorysantic
+ Try to get info for emilyjoangreene
+ DONE: emilyjoangreene
+ Try to get info for markymath
+ DONE: markymath
+ Try to get info for charlottelittlewolf
+ DONE: charlottelittlewolf
+ Try to get info for amandakayferrell
+ DONE: amandakayferrell
+ Try to get info for torrey_merritt
+ DONE: torrey_merritt
+ Try to get info for megan_evanson
+ DONE: megan_evanson
+ Try to get info for alexbaileypdx
+ DONE: alexbaileypdx
+ Try to get info for landroverusa
+ DONE: landroverusa
+ Try to get info for sonoratmw
+ DONE: sonoratmw
+ Try to get info for rawmeyn
+ DONE: rawmeyn
+ Try to get info for overlandhammock
+ DONE: overlandhammock
+ Try to get info for fryesvan
+ DONE: fryesvan
+ Try to get info for nealburk
+ DONE: nealburk
+ Try to get info for stevestrehl
+ DONE: stevestrehl
+ Try to get info for garinwood
+ DONE: garinwood
+ Try to get info for doyoutravel
+ DONE: doyoutravel
+ Try to get info for illgander
+ DONE: illgander
+ Try to get info for indus_the_wolfdog
+ DONE: indus_the_wolfdog
+ Try to get info for jazz.paws
+ DONE: jazz.paws
+ Try to get info for shortstache
+ DONE: shortstache
+ Try to get info for milliethegolden
+ DONE: milliethegolden
+ Try to get info for bridgetmariesmith
+ DONE: bridgetmariesmith
+ Try to get info for alexapland
+ DONE: alexapland
+ Try to get info for christianannschaffer
+ DONE: christianannschaffer
+ Try to get info for johnwingfield
+ DONE: johnwingfield
+ Try to get info for bennnnnnnngie
+ DONE: bennnnnnnngie
+ Try to get info for adrenaline.addiction
+ DONE: adrenaline.addiction
+ Try to get info for redbulltv
+ DONE: redbulltv
+ Try to get info for tuckerdoss
+ DONE: tuckerdoss
+ Try to get info for alivialatimer
+ DONE: alivialatimer
+ Try to get info for masonstrehl
+ DONE: masonstrehl
+ Try to get info for stevenscarcello
+ DONE: stevenscarcello
+ Try to get info for mbuuurd
+ DONE: mbuuurd
+ Try to get info for toalaolivares
+ DONE: toalaolivares
+ Try to get info for ashnichole_xo
+ DONE: ashnichole_xo
+ Try to get info for seanparkerphotography
+ DONE: seanparkerphotography
+ Try to get info for soothingsista
+ DONE: soothingsista
+ Try to get info for iuriebelegurschi
+ DONE: iuriebelegurschi
+ Try to get info for keslerbear
+ DONE: keslerbear
+ Try to get info for houseofhighlights
+ DONE: houseofhighlights
+ Try to get info for elizabethgadd
+ DONE: elizabethgadd
+ Try to get info for kalenemsley
+ DONE: kalenemsley
+ Try to get info for joelschat
+ DONE: joelschat
+ Try to get info for jakechams
+ DONE: jakechams
+ Try to get info for tinyhousemovement
+ DONE: tinyhousemovement
+ Try to get info for theroguecrew
+ DONE: theroguecrew
+ Try to get info for benjaminhardman
+ DONE: benjaminhardman
+ Try to get info for mariners
+ DONE: mariners
+ Try to get info for mightykills
+ DONE: mightykills
+ Try to get info for stevint
+ DONE: stevint
+ Try to get info for loki_the_wolfdog
+ DONE: loki_the_wolfdog
+ Try to get info for patrickromain
+ DONE: patrickromain
+ Try to get info for jovellyism
+ DONE: jovellyism
+ Try to get info for andrew.studer
+ DONE: andrew.studer
+ Try to get info for nataliewall
+ DONE: nataliewall
+ Try to get info for bradleyfriesen
+ DONE: bradleyfriesen
+ Try to get info for dantom
+ DONE: dantom
+ Try to get info for samlandreth
+ DONE: samlandreth
+ Try to get info for gbergphoto
+ DONE: gbergphoto
+ Try to get info for zachallia
+ DONE: zachallia
+ Try to get info for aaronbhall
+ DONE: aaronbhall
+ Try to get info for jasoncharleshill
+ DONE: jasoncharleshill
+ Try to get info for isaacsjohnston
+ DONE: isaacsjohnston
+ Try to get info for rideoutjoey
+ DONE: rideoutjoey
+ Try to get info for rodtrvn
+ DONE: rodtrvn
+ Try to get info for ryanmillier
+ DONE: ryanmillier
+ Try to get info for annie.jpeg
+ DONE: annie.jpeg
+ Try to get info for connorsurdi
+ DONE: connorsurdi
+ Try to get info for joshrneff
+ DONE: joshrneff
+ Try to get info for westwardeast
+ DONE: westwardeast
+ Try to get info for jerm_cohen
+ DONE: jerm_cohen
+ Try to get info for adamnaples
+ DONE: adamnaples
+ Try to get info for jamesbarkman
+ DONE: jamesbarkman
+ Try to get info for michaelflugstad
+ DONE: michaelflugstad
+ Try to get info for jaquory_lunsford
+ DONE: jaquory_lunsford
+ Try to get info for mikeseehagel
+ DONE: mikeseehagel
+ Try to get info for samlarson
+ DONE: samlarson
+ Try to get info for alinatsvor
+ DONE: alinatsvor
+ Try to get info for lennart
+ DONE: lennart
+ Try to get info for youngbex
+ DONE: youngbex
+ Try to get info for helloemilie
+ DONE: helloemilie
+ Try to get info for andrewberk
+ DONE: andrewberk
+ Try to get info for mattcherub
+ DONE: mattcherub
+ Try to get info for r_petey
+ DONE: r_petey
+ Try to get info for karitazac
+ DONE: karitazac
+ Try to get info for erlaziskasen
+ DONE: erlaziskasen
+ Try to get info for digernes
+ DONE: digernes
+ Try to get info for zckrf
+ DONE: zckrf
+ Try to get info for jeffkmarsh
+ DONE: jeffkmarsh
+ Try to get info for bertymandagie
+ DONE: bertymandagie
+ Try to get info for bycycle
+ DONE: bycycle
+ Try to get info for tomparkr
+ DONE: tomparkr
+ Try to get info for ioegreer
+ DONE: ioegreer
+ Try to get info for jontaylorsweet
+ DONE: jontaylorsweet
+ Try to get info for earthpix
+ DONE: earthpix
+ Try to get info for buchowski
+ DONE: buchowski
+ Try to get info for eljackson
+ DONE: eljackson
+ Try to get info for xshaydx
+ DONE: xshaydx
+ Try to get info for montanasbestrentals
+ DONE: montanasbestrentals
+ Try to get info for aldoinseattle
+ DONE: aldoinseattle
+ Try to get info for kodiak.stag
+ DONE: kodiak.stag
+ Try to get info for nicholasgraves
+ DONE: nicholasgraves
+ Try to get info for lizeswein
+ DONE: lizeswein
+ Try to get info for spencercotton
+ DONE: spencercotton
+ Try to get info for sarahpour
+ DONE: sarahpour
+ Try to get info for tentree
+ DONE: tentree
+ Try to get info for graeme_o
+ DONE: graeme_o
+ Try to get info for daniel_ernst
+ DONE: daniel_ernst
+ Try to get info for sanborncanoe
+ DONE: sanborncanoe
+ VIEW:selenium_bot: FINISH
+ VIEWS:insta_api: get_tasks
+ VIEW:add_task: start 20_12_09_04_04_17
+ VIEWS:insta_api: get_task_result
+ VIEW:add_task: start 20_12_24_04_04_17
+ VIEWS:insta_api: add_task
+ VIEW:add_task: start 20_15_07_04_04_17
+ WORKER: CREATED
+ VIEW:follow_info: POST 20_15_07_04_04_175999741266947723327
+ VIEW:follow_info: Create result file /var/www/7day/studioapp/results/5999741266947723327
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:login_user: Try to login studio7day
+ SELENIUM_BOT:login_user: studio7day loggined
+ SELENIUM_BOT:get_follow_names: Try to get 15  followers for fursty
+ SELENIUM_BOT:get_follow_info: Try to get 15  followers for fursty
+ SELENIUM_BOT:get_follow_info: Try to get user page
+ SELENIUM_BOT:get_follow_info: Try to find button
+ SELENIUM_BOT:get_follow_info: Try to click button
+ SELENIUM_BOT:get_follow_info: Try to find divs
+ SELENIUM_BOT:get_follow_info: Try to find follow buttons
+ TEXT:button: Follow
+ TEXT:button: 
+ TEXT:button: Options
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Close
+ SELENIUM_BOT:get_follow_info: Len of list 84
+ SELENIUM_BOT:get_follow_names: Got 132 user_names
+ Try to get info for ruzgarpattis
+ DONE: ruzgarpattis
+ Try to get info for magrom.photo
+ DONE: magrom.photo
+ Try to get info for berg__welten
+ DONE: berg__welten
+ Try to get info for valeeperuzzo
+ DONE: valeeperuzzo
+ Try to get info for enengin14
+ DONE: enengin14
+ Try to get info for salihyilmazsy
+ DONE: salihyilmazsy
+ Try to get info for rotadosparques
+ DONE: rotadosparques
+ Try to get info for aubingntl
+ DONE: aubingntl
+ Try to get info for goteborg_photography
+ DONE: goteborg_photography
+ Try to get info for nacho.loren
+ DONE: nacho.loren
+ Try to get info for jewpha
+ DONE: jewpha
+ Try to get info for jose.gera.loreto
+ DONE: jose.gera.loreto
+ Try to get info for madam_katy_
+ DONE: madam_katy_
+ Try to get info for niclynn79
+ DONE: niclynn79
+ Try to get info for luk3kovitch
+ DONE: luk3kovitch
+ Try to get info for xbrittsmulders
+ DONE: xbrittsmulders
+ Try to get info for benmurga
+ DONE: benmurga
+ Try to get info for hard2ctrl
+ DONE: hard2ctrl
+ Try to get info for f.kt.p
+ DONE: f.kt.p
+ Try to get info for talgatbimenov
+ DONE: talgatbimenov
+ Try to get info for _iamcristian
+ DONE: _iamcristian
+ Try to get info for eupix
+ DONE: eupix
+ Try to get info for reneesong_vvv
+ DONE: reneesong_vvv
+ Try to get info for laurapfq
+ DONE: laurapfq
+ Try to get info for mikailzoretich
+ DONE: mikailzoretich
+ Try to get info for findyourartstudio
+ DONE: findyourartstudio
+ Try to get info for s.f_mura
+ DONE: s.f_mura
+ Try to get info for anadenissep
+ DONE: anadenissep
+ Try to get info for cesarnarvaez24
+ DONE: cesarnarvaez24
+ Try to get info for johntc4
+ DONE: johntc4
+ Try to get info for joseph.mmmm
+ DONE: joseph.mmmm
+ Try to get info for klajdihaxhariphotography
+ DONE: klajdihaxhariphotography
+ Try to get info for ceyhan_balaban_photography
+ DONE: ceyhan_balaban_photography
+ Try to get info for grigoriy.sorokin
+ DONE: grigoriy.sorokin
+ Try to get info for makeup__krd
+ DONE: makeup__krd
+ Try to get info for phenomenaldestinations
+ DONE: phenomenaldestinations
+ Try to get info for mukhtar.shaikh_
+ DONE: mukhtar.shaikh_
+ Try to get info for rob___lee
+ DONE: rob___lee
+ Try to get info for yahia_sm
+ DONE: yahia_sm
+ Try to get info for cyrhiking
+ DONE: cyrhiking
+ Try to get info for issei0910
+ DONE: issei0910
+ Try to get info for olivia.adolph
+ DONE: olivia.adolph
+ Try to get info for ojoooom
+ DONE: ojoooom
+ Try to get info for davidegoldin
+ DONE: davidegoldin
+ Try to get info for we_are_saarbruecken
+ DONE: we_are_saarbruecken
+ Try to get info for _b.bertrand_
+ DONE: _b.bertrand_
+ Try to get info for angelina_m_
+ DONE: angelina_m_
+ Try to get info for patrizziam
+ DONE: patrizziam
+ Try to get info for alexis_ddrs
+ DONE: alexis_ddrs
+ Try to get info for _lolli.pop.off_
+ DONE: _lolli.pop.off_
+ Try to get info for crhudson
+ DONE: crhudson
+ Try to get info for justiinjohn
+ DONE: justiinjohn
+ Try to get info for silvija.fi
+ DONE: silvija.fi
+ Try to get info for bernhard_walter
+ DONE: bernhard_walter
+ Try to get info for cometravelwithsf
+ DONE: cometravelwithsf
+ Try to get info for pinnacleexposure
+ DONE: pinnacleexposure
+ Try to get info for stitch_p_deluxe
+ DONE: stitch_p_deluxe
+ Try to get info for __yurek__
+ DONE: __yurek__
+ Try to get info for kozlovzxc
+ DONE: kozlovzxc
+ Try to get info for ssssebi_
+ DONE: ssssebi_
+ Try to get info for vincentarchambault
+ DONE: vincentarchambault
+ Try to get info for manuel_lang96
+ DONE: manuel_lang96
+ Try to get info for b_planning_photography
+ DONE: b_planning_photography
+ Try to get info for mumu98x
+ DONE: mumu98x
+ Try to get info for thelibragroup
+ DONE: thelibragroup
+ Try to get info for katelynbly
+ DONE: katelynbly
+ Try to get info for averycole2
+ DONE: averycole2
+ Try to get info for fali69161
+ DONE: fali69161
+ Try to get info for bobbydigitalll
+ DONE: bobbydigitalll
+ Try to get info for uhrcenter
+ DONE: uhrcenter
+ Try to get info for a.arlene78
+ DONE: a.arlene78
+ Try to get info for kelly_guerron16
+ DONE: kelly_guerron16
+ Try to get info for mashakakmasha_
+ DONE: mashakakmasha_
+ Try to get info for liaaaaaaaaaaw
+ DONE: liaaaaaaaaaaw
+ Try to get info for ruslanabuhai
+ DONE: ruslanabuhai
+ Try to get info for gokceavci09
+ DONE: gokceavci09
+ Try to get info for watching_the_sun_rise
+ DONE: watching_the_sun_rise
+ Try to get info for merve.lamia
+ DONE: merve.lamia
+ Try to get info for kristin.y.u
+ DONE: kristin.y.u
+ Try to get info for elianneprange
+ DONE: elianneprange
+ Try to get info for foundblind
+ DONE: foundblind
+ Try to get info for lord_hated_oficial
+ DONE: lord_hated_oficial
+ Try to get info for dorothy_in_blue
+ DONE: dorothy_in_blue
+ Try to get info for hindol_bhattacharjee
+ DONE: hindol_bhattacharjee
+ Try to get info for moshesafranovitz
+ DONE: moshesafranovitz
+ Try to get info for ceviksevda
+ DONE: ceviksevda
+ Try to get info for omer_karaca_31
+ DONE: omer_karaca_31
+ Try to get info for luca.photo.travel
+ DONE: luca.photo.travel
+ Try to get info for _madruga_
+ DONE: _madruga_
+ Try to get info for riccardoarras
+ DONE: riccardoarras
+ Try to get info for spiritusmare
+ DONE: spiritusmare
+ Try to get info for jqsnook
+ DONE: jqsnook
+ Try to get info for thedainanana
+ DONE: thedainanana
+ Try to get info for kyliesmiths
+ DONE: kyliesmiths
+ Try to get info for caxya
+ DONE: caxya
+ Try to get info for 2staticrolla
+ DONE: 2staticrolla
+ Try to get info for karenpetrosjan
+ DONE: karenpetrosjan
+ Try to get info for alexandre_rcd
+ DONE: alexandre_rcd
+ Try to get info for ibraev.007
+ DONE: ibraev.007
+ Try to get info for giovannianthonysilva
+ DONE: giovannianthonysilva
+ Try to get info for nor_quotes
+ DONE: nor_quotes
+ Try to get info for seker_betull
+ DONE: seker_betull
+ Try to get info for salmashoots
+ DONE: salmashoots
+ Try to get info for matylda_sek
+ DONE: matylda_sek
+ Try to get info for whiskydc
+ DONE: whiskydc
+ Try to get info for happilytravel
+ DONE: happilytravel
+ Try to get info for __karolinv__
+ DONE: __karolinv__
+ Try to get info for photoby_hasic
+ DONE: photoby_hasic
+ Try to get info for okaythatsdope
+ DONE: okaythatsdope
+ Try to get info for desen.foque
+ DONE: desen.foque
+ Try to get info for quentinkbhjr
+ DONE: quentinkbhjr
+ Try to get info for ibhamm_
+ DONE: ibhamm_
+ Try to get info for ovitruta
+ DONE: ovitruta
+ Try to get info for georgiebradley
+ DONE: georgiebradley
+ Try to get info for walli_ml
+ DONE: walli_ml
+ Try to get info for isikrax
+ DONE: isikrax
+ Try to get info for arash.797
+ DONE: arash.797
+ Try to get info for excrs
+ DONE: excrs
+ Try to get info for s_fennelly
+ DONE: s_fennelly
+ Try to get info for bader_autism
+ DONE: bader_autism
+ Try to get info for stolestone
+ DONE: stolestone
+ Try to get info for _100_mph_
+ DONE: _100_mph_
+ Try to get info for photosouvenir
+ DONE: photosouvenir
+ Try to get info for fareedtal
+ DONE: fareedtal
+ Try to get info for subhankar_dey
+ DONE: subhankar_dey
+ Try to get info for olih_photography
+ DONE: olih_photography
+ Try to get info for fer_fdez
+ DONE: fer_fdez
+ Try to get info for morganplr
+ DONE: morganplr
+ Try to get info for burhan77700
+ DONE: burhan77700
+ VIEW:selenium_bot: FINISH
+ VIEWS:insta_api: get_tasks
+ VIEW:add_task: start 20_17_03_04_04_17
+ VIEWS:insta_api: get_task_result
+ VIEW:add_task: start 20_17_47_04_04_17
+ VIEWS:insta_api: get_task_result
+ VIEW:add_task: start 20_17_50_04_04_17
+ VIEWS:insta_api: add_task
+ VIEW:add_task: start 20_20_46_04_04_17
+ WORKER: CREATED
+ VIEW:follow_info: POST 20_20_46_04_04_174795180746807108006
+ VIEW:follow_info: Create result file /var/www/7day/studioapp/results/4795180746807108006
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:login_user: Try to login studio7day
+ SELENIUM_BOT:login_user: studio7day loggined
+ SELENIUM_BOT:get_follow_names: Try to get 15  followers for fursty
+ SELENIUM_BOT:get_follow_info: Try to get 15  followers for fursty
+ SELENIUM_BOT:get_follow_info: Try to get user page
+ SELENIUM_BOT:get_follow_info: Try to find button
+ SELENIUM_BOT:get_follow_info: Try to click button
+ SELENIUM_BOT:get_follow_info: Try to find divs
+ SELENIUM_BOT:get_follow_info: Try to find follow buttons
+ TEXT:button: Follow
+ TEXT:button: 
+ TEXT:button: Options
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Close
+ SELENIUM_BOT:get_follow_info: Len of list 94
+ SELENIUM_BOT:get_follow_names: Got 132 user_names
+ Try to get info for wallabygirl99
+ DONE: wallabygirl99
+ Try to get info for myiferal
+ DONE: myiferal
+ Try to get info for yongmikailoffic
+ DONE: yongmikailoffic
+ Try to get info for markusblume
+ DONE: markusblume
+ Try to get info for antoninalewicka
+ DONE: antoninalewicka
+ Try to get info for ermis_minf
+ DONE: ermis_minf
+ Try to get info for luxury_broadcast
+ DONE: luxury_broadcast
+ Try to get info for denisfavaphotography
+ DONE: denisfavaphotography
+ Try to get info for savys_lens
+ DONE: savys_lens
+ Try to get info for davide.amenta
+ DONE: davide.amenta
+ Try to get info for ohanother
+ DONE: ohanother
+ Try to get info for sonudj143
+ DONE: sonudj143
+ Try to get info for bee_bun
+ DONE: bee_bun
+ Try to get info for chrishutch_14
+ DONE: chrishutch_14
+ Try to get info for zittyzen
+ DONE: zittyzen
+ Try to get info for burtongoose
+ DONE: burtongoose
+ Try to get info for milographic
+ DONE: milographic
+ Try to get info for evabril26
+ DONE: evabril26
+ Try to get info for treesnshit
+ DONE: treesnshit
+ Try to get info for antonia_nea
+ DONE: antonia_nea
+ Try to get info for silkselection
+ DONE: silkselection
+ Try to get info for alongaxis
+ DONE: alongaxis
+ Try to get info for hellopictures_photography
+ DONE: hellopictures_photography
+ Try to get info for mohit_rajj
+ DONE: mohit_rajj
+ Try to get info for ruzgarpattis
+ DONE: ruzgarpattis
+ Try to get info for magrom.photo
+ DONE: magrom.photo
+ Try to get info for berg__welten
+ DONE: berg__welten
+ Try to get info for valeeperuzzo
+ DONE: valeeperuzzo
+ Try to get info for enengin14
+ DONE: enengin14
+ Try to get info for salihyilmazsy
+ DONE: salihyilmazsy
+ Try to get info for rotadosparques
+ DONE: rotadosparques
+ Try to get info for aubingntl
+ DONE: aubingntl
+ Try to get info for goteborg_photography
+ DONE: goteborg_photography
+ Try to get info for nacho.loren
+ DONE: nacho.loren
+ Try to get info for jewpha
+ DONE: jewpha
+ Try to get info for jose.gera.loreto
+ DONE: jose.gera.loreto
+ Try to get info for madam_katy_
+ DONE: madam_katy_
+ Try to get info for niclynn79
+ DONE: niclynn79
+ Try to get info for luk3kovitch
+ DONE: luk3kovitch
+ Try to get info for xbrittsmulders
+ DONE: xbrittsmulders
+ Try to get info for benmurga
+ DONE: benmurga
+ Try to get info for hard2ctrl
+ DONE: hard2ctrl
+ Try to get info for f.kt.p
+ DONE: f.kt.p
+ Try to get info for talgatbimenov
+ DONE: talgatbimenov
+ Try to get info for _iamcristian
+ DONE: _iamcristian
+ Try to get info for eupix
+ DONE: eupix
+ Try to get info for reneesong_vvv
+ DONE: reneesong_vvv
+ Try to get info for laurapfq
+ DONE: laurapfq
+ Try to get info for mikailzoretich
+ DONE: mikailzoretich
+ Try to get info for findyourartstudio
+ DONE: findyourartstudio
+ Try to get info for s.f_mura
+ DONE: s.f_mura
+ Try to get info for anadenissep
+ DONE: anadenissep
+ Try to get info for cesarnarvaez24
+ DONE: cesarnarvaez24
+ Try to get info for johntc4
+ DONE: johntc4
+ Try to get info for joseph.mmmm
+ DONE: joseph.mmmm
+ Try to get info for klajdihaxhariphotography
+ DONE: klajdihaxhariphotography
+ Try to get info for ceyhan_balaban_photography
+ DONE: ceyhan_balaban_photography
+ Try to get info for grigoriy.sorokin
+ DONE: grigoriy.sorokin
+ Try to get info for makeup__krd
+ DONE: makeup__krd
+ Try to get info for phenomenaldestinations
+ DONE: phenomenaldestinations
+ Try to get info for mukhtar.shaikh_
+ DONE: mukhtar.shaikh_
+ Try to get info for rob___lee
+ DONE: rob___lee
+ Try to get info for yahia_sm
+ DONE: yahia_sm
+ Try to get info for cyrhiking
+ DONE: cyrhiking
+ Try to get info for issei0910
+ DONE: issei0910
+ Try to get info for olivia.adolph
+ DONE: olivia.adolph
+ Try to get info for ojoooom
+ DONE: ojoooom
+ Try to get info for davidegoldin
+ DONE: davidegoldin
+ Try to get info for we_are_saarbruecken
+ DONE: we_are_saarbruecken
+ Try to get info for _b.bertrand_
+ DONE: _b.bertrand_
+ Try to get info for angelina_m_
+ DONE: angelina_m_
+ Try to get info for patrizziam
+ DONE: patrizziam
+ Try to get info for alexis_ddrs
+ DONE: alexis_ddrs
+ Try to get info for _lolli.pop.off_
+ DONE: _lolli.pop.off_
+ Try to get info for crhudson
+ DONE: crhudson
+ Try to get info for justiinjohn
+ DONE: justiinjohn
+ Try to get info for silvija.fi
+ DONE: silvija.fi
+ Try to get info for bernhard_walter
+ DONE: bernhard_walter
+ Try to get info for cometravelwithsf
+ DONE: cometravelwithsf
+ Try to get info for pinnacleexposure
+ DONE: pinnacleexposure
+ Try to get info for stitch_p_deluxe
+ DONE: stitch_p_deluxe
+ Try to get info for kozlovzxc
+ DONE: kozlovzxc
+ Try to get info for ssssebi_
+ DONE: ssssebi_
+ Try to get info for vincentarchambault
+ DONE: vincentarchambault
+ Try to get info for manuel_lang96
+ DONE: manuel_lang96
+ Try to get info for b_planning_photography
+ DONE: b_planning_photography
+ Try to get info for mumu98x
+ DONE: mumu98x
+ Try to get info for thelibragroup
+ DONE: thelibragroup
+ Try to get info for katelynbly
+ DONE: katelynbly
+ Try to get info for averycole2
+ DONE: averycole2
+ Try to get info for fali69161
+ DONE: fali69161
+ Try to get info for bobbydigitalll
+ DONE: bobbydigitalll
+ Try to get info for uhrcenter
+ DONE: uhrcenter
+ Try to get info for a.arlene78
+ DONE: a.arlene78
+ Try to get info for kelly_guerron16
+ DONE: kelly_guerron16
+ Try to get info for mashakakmasha_
+ DONE: mashakakmasha_
+ Try to get info for liaaaaaaaaaaw
+ DONE: liaaaaaaaaaaw
+ Try to get info for ruslanabuhai
+ DONE: ruslanabuhai
+ Try to get info for gokceavci09
+ DONE: gokceavci09
+ Try to get info for watching_the_sun_rise
+ DONE: watching_the_sun_rise
+ Try to get info for merve.lamia
+ DONE: merve.lamia
+ Try to get info for kristin.y.u
+ DONE: kristin.y.u
+ Try to get info for elianneprange
+ DONE: elianneprange
+ Try to get info for foundblind
+ DONE: foundblind
+ Try to get info for lord_hated_oficial
+ DONE: lord_hated_oficial
+ Try to get info for dorothy_in_blue
+ DONE: dorothy_in_blue
+ Try to get info for hindol_bhattacharjee
+ DONE: hindol_bhattacharjee
+ Try to get info for moshesafranovitz
+ DONE: moshesafranovitz
+ Try to get info for ceviksevda
+ DONE: ceviksevda
+ Try to get info for omer_karaca_31
+ DONE: omer_karaca_31
+ Try to get info for luca.photo.travel
+ DONE: luca.photo.travel
+ Try to get info for _madruga_
+ DONE: _madruga_
+ Try to get info for riccardoarras
+ DONE: riccardoarras
+ Try to get info for spiritusmare
+ DONE: spiritusmare
+ Try to get info for jqsnook
+ DONE: jqsnook
+ Try to get info for thedainanana
+ DONE: thedainanana
+ Try to get info for kyliesmiths
+ DONE: kyliesmiths
+ Try to get info for caxya
+ DONE: caxya
+ Try to get info for 2staticrolla
+ DONE: 2staticrolla
+ Try to get info for karenpetrosjan
+ DONE: karenpetrosjan
+ Try to get info for alexandre_rcd
+ DONE: alexandre_rcd
+ Try to get info for ibraev.007
+ DONE: ibraev.007
+ Try to get info for giovannianthonysilva
+ DONE: giovannianthonysilva
+ Try to get info for nor_quotes
+ DONE: nor_quotes
+ Try to get info for seker_betull
+ DONE: seker_betull
+ Try to get info for salmashoots
+ DONE: salmashoots
+ Try to get info for matylda_sek
+ DONE: matylda_sek
+ Try to get info for whiskydc
+ DONE: whiskydc
+ Try to get info for happilytravel
+ DONE: happilytravel
+ VIEW:selenium_bot: FINISH
+ VIEWS:insta_api: add_task
+ VIEW:add_task: start 20_24_51_04_04_17
+ WORKER: CREATED
+ WORKER:follow_info: POST 20_24_51_04_04_1791945594021732890
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/91945594021732890
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:login_user: Try to login studio7day
+ SELENIUM_BOT:login_user: studio7day loggined
+ SELENIUM_BOT:get_follow_names: Try to get 15  followers for fursty
+ SELENIUM_BOT:get_follow_info: Try to get 15  followers for fursty
+ SELENIUM_BOT:get_follow_info: Try to get user page
+ VIEWS:insta_api: get_tasks
+ VIEW:add_task: start 20_25_15_04_04_17
+ VIEWS:insta_api: get_tasks
+ VIEW:add_task: start 20_25_16_04_04_17
+ SELENIUM_BOT:get_follow_info: Try to find button
+ SELENIUM_BOT:get_follow_info: Try to click button
+ SELENIUM_BOT:get_follow_info: Try to find divs
+ SELENIUM_BOT:get_follow_info: Try to find follow buttons
+ TEXT:button: Follow
+ TEXT:button: 
+ TEXT:button: Options
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Close
+ SELENIUM_BOT:get_follow_info: Len of list 84
+ SELENIUM_BOT:get_follow_names: Got 132 user_names
+ Try to get info for hulises_g
+ DONE: hulises_g
+ Try to get info for martinioana_
+ DONE: martinioana_
+ Try to get info for almystery
+ DONE: almystery
+ Try to get info for rotem_haliva_
+ DONE: rotem_haliva_
+ Try to get info for whereisdc
+ DONE: whereisdc
+ Try to get info for dilipsah0000
+ DONE: dilipsah0000
+ Try to get info for manochehr.sahamifard
+ DONE: manochehr.sahamifard
+ Try to get info for digjayayudhaphoto
+ DONE: digjayayudhaphoto
+ Try to get info for iamflyingto
+ DONE: iamflyingto
+ Try to get info for cx.asheley
+ DONE: cx.asheley
+ Try to get info for l.e.r.a_
+ DONE: l.e.r.a_
+ Try to get info for igormunareto
+ DONE: igormunareto
+ Try to get info for sonal_1515
+ DONE: sonal_1515
+ Try to get info for ywy1900
+ DONE: ywy1900
+ Try to get info for mishonnalexa
+ DONE: mishonnalexa
+ Try to get info for joanaines.almeida
+ DONE: joanaines.almeida
+ Try to get info for kotowskan_
+ DONE: kotowskan_
+ Try to get info for ast_madyan
+ DONE: ast_madyan
+ Try to get info for amarillo_by_mohnin
+ DONE: amarillo_by_mohnin
+ Try to get info for aheste_56
+ DONE: aheste_56
+ Try to get info for johnnik_00
+ DONE: johnnik_00
+ Try to get info for fotonaia
+ DONE: fotonaia
+ Try to get info for wallabygirl99
+ DONE: wallabygirl99
+ Try to get info for myiferal
+ DONE: myiferal
+ Try to get info for markusblume
+ DONE: markusblume
+ Try to get info for antoninalewicka
+ DONE: antoninalewicka
+ Try to get info for ermis_minf
+ DONE: ermis_minf
+ Try to get info for luxury_broadcast
+ DONE: luxury_broadcast
+ Try to get info for denisfavaphotography
+ DONE: denisfavaphotography
+ Try to get info for savys_lens
+ DONE: savys_lens
+ Try to get info for davide.amenta
+ DONE: davide.amenta
+ Try to get info for ohanother
+ DONE: ohanother
+ Try to get info for sonudj143
+ DONE: sonudj143
+ Try to get info for bee_bun
+ DONE: bee_bun
+ Try to get info for chrishutch_14
+ DONE: chrishutch_14
+ Try to get info for zittyzen
+ DONE: zittyzen
+ Try to get info for burtongoose
+ DONE: burtongoose
+ Try to get info for milographic
+ DONE: milographic
+ Try to get info for evabril26
+ DONE: evabril26
+ Try to get info for treesnshit
+ DONE: treesnshit
+ Try to get info for antonia_nea
+ DONE: antonia_nea
+ Try to get info for silkselection
+ DONE: silkselection
+ Try to get info for alongaxis
+ DONE: alongaxis
+ Try to get info for hellopictures_photography
+ DONE: hellopictures_photography
+ Try to get info for mohit_rajj
+ DONE: mohit_rajj
+ Try to get info for ruzgarpattis
+ DONE: ruzgarpattis
+ Try to get info for magrom.photo
+ DONE: magrom.photo
+ Try to get info for berg__welten
+ DONE: berg__welten
+ Try to get info for valeeperuzzo
+ DONE: valeeperuzzo
+ Try to get info for enengin14
+ DONE: enengin14
+ Try to get info for salihyilmazsy
+ DONE: salihyilmazsy
+ Try to get info for rotadosparques
+ DONE: rotadosparques
+ Try to get info for aubingntl
+ DONE: aubingntl
+ Try to get info for goteborg_photography
+ DONE: goteborg_photography
+ Try to get info for nacho.loren
+ DONE: nacho.loren
+ Try to get info for jewpha
+ DONE: jewpha
+ Try to get info for jose.gera.loreto
+ DONE: jose.gera.loreto
+ Try to get info for madam_katy_
+ DONE: madam_katy_
+ Try to get info for niclynn79
+ DONE: niclynn79
+ Try to get info for luk3kovitch
+ DONE: luk3kovitch
+ Try to get info for xbrittsmulders
+ DONE: xbrittsmulders
+ Try to get info for benmurga
+ DONE: benmurga
+ Try to get info for hard2ctrl
+ DONE: hard2ctrl
+ Try to get info for f.kt.p
+ DONE: f.kt.p
+ Try to get info for talgatbimenov
+ DONE: talgatbimenov
+ Try to get info for _iamcristian
+ DONE: _iamcristian
+ Try to get info for eupix
+ DONE: eupix
+ Try to get info for reneesong_vvv
+ DONE: reneesong_vvv
+ Try to get info for laurapfq
+ DONE: laurapfq
+ Try to get info for mikailzoretich
+ DONE: mikailzoretich
+ Try to get info for findyourartstudio
+ DONE: findyourartstudio
+ Try to get info for s.f_mura
+ DONE: s.f_mura
+ Try to get info for anadenissep
+ DONE: anadenissep
+ Try to get info for cesarnarvaez24
+ DONE: cesarnarvaez24
+ Try to get info for johntc4
+ DONE: johntc4
+ Try to get info for joseph.mmmm
+ DONE: joseph.mmmm
+ Try to get info for klajdihaxhariphotography
+ DONE: klajdihaxhariphotography
+ Try to get info for ceyhan_balaban_photography
+ DONE: ceyhan_balaban_photography
+ Try to get info for grigoriy.sorokin
+ DONE: grigoriy.sorokin
+ Try to get info for makeup__krd
+ DONE: makeup__krd
+ Try to get info for phenomenaldestinations
+ DONE: phenomenaldestinations
+ Try to get info for mukhtar.shaikh_
+ DONE: mukhtar.shaikh_
+ Try to get info for rob___lee
+ DONE: rob___lee
+ Try to get info for yahia_sm
+ DONE: yahia_sm
+ Try to get info for cyrhiking
+ DONE: cyrhiking
+ Try to get info for issei0910
+ DONE: issei0910
+ Try to get info for olivia.adolph
+ DONE: olivia.adolph
+ Try to get info for ojoooom
+ DONE: ojoooom
+ Try to get info for davidegoldin
+ DONE: davidegoldin
+ Try to get info for we_are_saarbruecken
+ DONE: we_are_saarbruecken
+ Try to get info for _b.bertrand_
+ DONE: _b.bertrand_
+ Try to get info for angelina_m_
+ DONE: angelina_m_
+ Try to get info for patrizziam
+ DONE: patrizziam
+ Try to get info for alexis_ddrs
+ DONE: alexis_ddrs
+ Try to get info for _lolli.pop.off_
+ DONE: _lolli.pop.off_
+ Try to get info for crhudson
+ DONE: crhudson
+ Try to get info for justiinjohn
+ DONE: justiinjohn
+ Try to get info for silvija.fi
+ DONE: silvija.fi
+ Try to get info for bernhard_walter
+ DONE: bernhard_walter
+ Try to get info for cometravelwithsf
+ DONE: cometravelwithsf
+ Try to get info for pinnacleexposure
+ DONE: pinnacleexposure
+ Try to get info for stitch_p_deluxe
+ DONE: stitch_p_deluxe
+ Try to get info for kozlovzxc
+ DONE: kozlovzxc
+ Try to get info for ssssebi_
+ DONE: ssssebi_
+ Try to get info for vincentarchambault
+ DONE: vincentarchambault
+ Try to get info for manuel_lang96
+ DONE: manuel_lang96
+ Try to get info for b_planning_photography
+ DONE: b_planning_photography
+ Try to get info for mumu98x
+ DONE: mumu98x
+ Try to get info for thelibragroup
+ DONE: thelibragroup
+ Try to get info for katelynbly
+ DONE: katelynbly
+ Try to get info for averycole2
+ DONE: averycole2
+ Try to get info for fali69161
+ DONE: fali69161
+ Try to get info for bobbydigitalll
+ DONE: bobbydigitalll
+ Try to get info for uhrcenter
+ DONE: uhrcenter
+ Try to get info for a.arlene78
+ DONE: a.arlene78
+ Try to get info for kelly_guerron16
+ DONE: kelly_guerron16
+ Try to get info for mashakakmasha_
+ DONE: mashakakmasha_
+ Try to get info for liaaaaaaaaaaw
+ DONE: liaaaaaaaaaaw
+ Try to get info for ruslanabuhai
+ DONE: ruslanabuhai
+ Try to get info for gokceavci09
+ DONE: gokceavci09
+ Try to get info for watching_the_sun_rise
+ DONE: watching_the_sun_rise
+ Try to get info for merve.lamia
+ DONE: merve.lamia
+ Try to get info for kristin.y.u
+ DONE: kristin.y.u
+ Try to get info for elianneprange
+ DONE: elianneprange
+ Try to get info for foundblind
+ DONE: foundblind
+ Try to get info for lord_hated_oficial
+ DONE: lord_hated_oficial
+ Try to get info for dorothy_in_blue
+ DONE: dorothy_in_blue
+ Try to get info for hindol_bhattacharjee
+ DONE: hindol_bhattacharjee
+ Try to get info for moshesafranovitz
+ DONE: moshesafranovitz
+ VIEW:selenium_bot: FINISH
+ VIEW:insta_api: start at 20_33_06_04_04_17 get_tasks/None
+ VIEW:insta_api: start at 20_34_02_04_04_17 get_tasks/None
+ VIEW:insta_api: start at 20_34_05_04_04_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_34_08_04_04_17 add_task/None
+ WORKER: CREATED
+ WORKER:follow_info: POST 20_34_08_04_04_171440429849282069987
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/1440429849282069987
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:login_user: Try to login studio7day
+ SELENIUM_BOT:login_user: studio7day loggined
+ SELENIUM_BOT:get_follow_names: Try to get 15  followers for fursty
+ SELENIUM_BOT:get_follow_info: Try to get 15  followers for fursty
+ SELENIUM_BOT:get_follow_info: Try to get user page
+ SELENIUM_BOT:get_follow_info: Try to find button
+ SELENIUM_BOT:get_follow_info: Try to click button
+ SELENIUM_BOT:get_follow_info: Try to find divs
+ SELENIUM_BOT:get_follow_info: Try to find follow buttons
+ TEXT:button: Follow
+ TEXT:button: 
+ TEXT:button: Options
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Close
+ SELENIUM_BOT:get_follow_info: Len of list 94
+ SELENIUM_BOT:get_follow_names: Got 142 user_names
+ Try to get info for mani4l
+ DONE: mani4l
+ Try to get info for stasia_gr
+ DONE: stasia_gr
+ Try to get info for marcialhb
+ DONE: marcialhb
+ Try to get info for thestephaniemao
+ DONE: thestephaniemao
+ Try to get info for annastasia_cm
+ DONE: annastasia_cm
+ Try to get info for elenabrasili
+ DONE: elenabrasili
+ Try to get info for patel_d7
+ DONE: patel_d7
+ Try to get info for thetownwhereidontbelong
+ DONE: thetownwhereidontbelong
+ Try to get info for jackendays_youtube
+ DONE: jackendays_youtube
+ Try to get info for everchangingemma
+ DONE: everchangingemma
+ Try to get info for radwakhaled23
+ DONE: radwakhaled23
+ Try to get info for astridfghjkl
+ DONE: astridfghjkl
+ Try to get info for travisjayner
+ DONE: travisjayner
+ Try to get info for jessicatheprncess05
+ DONE: jessicatheprncess05
+ Try to get info for larissa_cristina_almeida
+ DONE: larissa_cristina_almeida
+ Try to get info for geevarghesejobin
+ DONE: geevarghesejobin
+ Try to get info for roninuguru
+ DONE: roninuguru
+ Try to get info for teamcharlton_family
+ DONE: teamcharlton_family
+ Try to get info for gigiwitte
+ DONE: gigiwitte
+ Try to get info for mrcslv_
+ DONE: mrcslv_
+ Try to get info for alfafener
+ DONE: alfafener
+ Try to get info for horticultor_excursionist
+ DONE: horticultor_excursionist
+ Try to get info for marina1vazquez
+ DONE: marina1vazquez
+ Try to get info for annajoyboyd
+ DONE: annajoyboyd
+ Try to get info for makerscreations
+ DONE: makerscreations
+ Try to get info for cbehaviour
+ DONE: cbehaviour
+ Try to get info for brwa_xaled
+ DONE: brwa_xaled
+ Try to get info for kiwiiisun
+ DONE: kiwiiisun
+ Try to get info for koyvar
+ DONE: koyvar
+ Try to get info for nassim___
+ DONE: nassim___
+ Try to get info for kyle__yen
+ DONE: kyle__yen
+ Try to get info for viljoenamelia
+ DONE: viljoenamelia
+ Try to get info for jules_cesure
+ DONE: jules_cesure
+ Try to get info for nomadiccreators
+ DONE: nomadiccreators
+ Try to get info for orhnavcii
+ DONE: orhnavcii
+ Try to get info for anniwac
+ DONE: anniwac
+ Try to get info for kate.winfree3
+ DONE: kate.winfree3
+ Try to get info for sa7ar_a
+ DONE: sa7ar_a
+ Try to get info for meanwhile.world
+ DONE: meanwhile.world
+ Try to get info for we_are_saarbruecken
+ DONE: we_are_saarbruecken
+ Try to get info for simply_like_earth
+ DONE: simply_like_earth
+ Try to get info for piratanine
+ DONE: piratanine
+ Try to get info for issei_test
+ DONE: issei_test
+ Try to get info for namesnotmark
+ DONE: namesnotmark
+ Try to get info for mdyvrus
+ DONE: mdyvrus
+ Try to get info for andyleonard_
+ DONE: andyleonard_
+ Try to get info for robertoarroyobon
+ DONE: robertoarroyobon
+ Try to get info for stebaann
+ DONE: stebaann
+ Try to get info for hulises_g
+ DONE: hulises_g
+ Try to get info for martinioana_
+ DONE: martinioana_
+ Try to get info for almystery
+ DONE: almystery
+ Try to get info for rotem_haliva_
+ DONE: rotem_haliva_
+ Try to get info for whereisdc
+ DONE: whereisdc
+ Try to get info for dilipsah0000
+ DONE: dilipsah0000
+ Try to get info for manochehr.sahamifard
+ DONE: manochehr.sahamifard
+ Try to get info for digjayayudhaphoto
+ DONE: digjayayudhaphoto
+ Try to get info for iamflyingto
+ DONE: iamflyingto
+ Try to get info for cx.asheley
+ DONE: cx.asheley
+ Try to get info for l.e.r.a_
+ DONE: l.e.r.a_
+ Try to get info for igormunareto
+ DONE: igormunareto
+ Try to get info for sonal_1515
+ DONE: sonal_1515
+ Try to get info for ywy1900
+ DONE: ywy1900
+ Try to get info for mishonnalexa
+ DONE: mishonnalexa
+ Try to get info for joanaines.almeida
+ DONE: joanaines.almeida
+ Try to get info for kotowskan_
+ DONE: kotowskan_
+ Try to get info for ast_madyan
+ DONE: ast_madyan
+ Try to get info for amarillo_by_mohnin
+ DONE: amarillo_by_mohnin
+ Try to get info for aheste_56
+ DONE: aheste_56
+ Try to get info for johnnik_00
+ DONE: johnnik_00
+ Try to get info for fotonaia
+ DONE: fotonaia
+ Try to get info for wallabygirl99
+ DONE: wallabygirl99
+ Try to get info for myiferal
+ DONE: myiferal
+ Try to get info for markusblume
+ DONE: markusblume
+ Try to get info for antoninalewicka
+ DONE: antoninalewicka
+ Try to get info for ermis_minf
+ DONE: ermis_minf
+ Try to get info for luxury_broadcast
+ DONE: luxury_broadcast
+ Try to get info for denisfavaphotography
+ DONE: denisfavaphotography
+ Try to get info for savys_lens
+ DONE: savys_lens
+ Try to get info for davide.amenta
+ DONE: davide.amenta
+ Try to get info for ohanother
+ DONE: ohanother
+ Try to get info for sonudj143
+ DONE: sonudj143
+ Try to get info for bee_bun
+ DONE: bee_bun
+ Try to get info for chrishutch_14
+ DONE: chrishutch_14
+ Try to get info for burtongoose
+ DONE: burtongoose
+ Try to get info for milographic
+ DONE: milographic
+ Try to get info for evabril26
+ DONE: evabril26
+ Try to get info for treesnshit
+ DONE: treesnshit
+ Try to get info for antonia_nea
+ DONE: antonia_nea
+ Try to get info for silkselection
+ DONE: silkselection
+ Try to get info for alongaxis
+ DONE: alongaxis
+ Try to get info for hellopictures_photography
+ DONE: hellopictures_photography
+ Try to get info for mohit_rajj
+ DONE: mohit_rajj
+ Try to get info for ruzgarpattis
+ DONE: ruzgarpattis
+ Try to get info for magrom.photo
+ DONE: magrom.photo
+ Try to get info for berg__welten
+ DONE: berg__welten
+ Try to get info for valeeperuzzo
+ DONE: valeeperuzzo
+ Try to get info for enengin14
+ DONE: enengin14
+ Try to get info for salihyilmazsy
+ DONE: salihyilmazsy
+ Try to get info for rotadosparques
+ DONE: rotadosparques
+ Try to get info for aubingntl
+ DONE: aubingntl
+ Try to get info for goteborg_photography
+ DONE: goteborg_photography
+ Try to get info for nacho.loren
+ DONE: nacho.loren
+ Try to get info for jewpha
+ DONE: jewpha
+ Try to get info for jose.gera.loreto
+ DONE: jose.gera.loreto
+ Try to get info for madam_katy_
+ DONE: madam_katy_
+ Try to get info for niclynn79
+ DONE: niclynn79
+ Try to get info for luk3kovitch
+ DONE: luk3kovitch
+ Try to get info for xbrittsmulders
+ DONE: xbrittsmulders
+ Try to get info for benmurga
+ DONE: benmurga
+ Try to get info for hard2ctrl
+ DONE: hard2ctrl
+ Try to get info for f.kt.p
+ DONE: f.kt.p
+ Try to get info for talgatbimenov
+ DONE: talgatbimenov
+ Try to get info for _iamcristian
+ DONE: _iamcristian
+ Try to get info for eupix
+ DONE: eupix
+ Try to get info for reneesong_vvv
+ DONE: reneesong_vvv
+ Try to get info for laurapfq
+ DONE: laurapfq
+ Try to get info for mikailzoretich
+ DONE: mikailzoretich
+ Try to get info for findyourartstudio
+ DONE: findyourartstudio
+ Try to get info for s.f_mura
+ DONE: s.f_mura
+ Try to get info for anadenissep
+ DONE: anadenissep
+ Try to get info for cesarnarvaez24
+ DONE: cesarnarvaez24
+ Try to get info for johntc4
+ DONE: johntc4
+ Try to get info for joseph.mmmm
+ DONE: joseph.mmmm
+ Try to get info for klajdihaxhariphotography
+ DONE: klajdihaxhariphotography
+ Try to get info for ceyhan_balaban_photography
+ DONE: ceyhan_balaban_photography
+ Try to get info for grigoriy.sorokin
+ DONE: grigoriy.sorokin
+ Try to get info for makeup__krd
+ DONE: makeup__krd
+ Try to get info for phenomenaldestinations
+ DONE: phenomenaldestinations
+ Try to get info for mukhtar.shaikh_
+ DONE: mukhtar.shaikh_
+ Try to get info for rob___lee
+ DONE: rob___lee
+ Try to get info for yahia_sm
+ DONE: yahia_sm
+ Try to get info for cyrhiking
+ DONE: cyrhiking
+ Try to get info for issei0910
+ DONE: issei0910
+ Try to get info for olivia.adolph
+ DONE: olivia.adolph
+ Try to get info for ojoooom
+ DONE: ojoooom
+ Try to get info for davidegoldin
+ DONE: davidegoldin
+ Try to get info for _b.bertrand_
+ DONE: _b.bertrand_
+ Try to get info for angelina_m_
+ DONE: angelina_m_
+ Try to get info for patrizziam
+ DONE: patrizziam
+ VIEW:selenium_bot: FINISH
