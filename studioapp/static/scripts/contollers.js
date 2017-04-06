@@ -167,7 +167,7 @@ angular.module('application')
             console.log(task_id);
             $http({
                 method: 'GET',
-                url: '/insta_api/get_task_result/request_'+task_id
+                url: '/insta_api/get_task_result/'+task_id
             }).then(
                 function successCallback(response) {
                     $scope.users = response.data;
