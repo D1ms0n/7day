@@ -162,7 +162,7 @@ angular.module('application')
 
     .controller('getTaskController', ['$scope','$http', function($scope,$http) {
 
-        $scope.getTaskInfo = function () {
+        function getTaskInfo(){
             var task_id = localStorage.getItem('taskId');
             console.log(task_id);
             $http({
@@ -175,7 +175,13 @@ angular.module('application')
                 function errorCallback(response) {
                     $scope.errorMss = 'Something wrong, ' + ' status ' + '" ' + response.status+' "';
                 });
-        };
+        }
+
+        setInterval(function(){
+            getTaskInfo();
+            console.log('get times')
+        }, 2000);
+
 
     }])
 
