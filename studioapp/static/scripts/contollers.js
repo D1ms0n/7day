@@ -163,6 +163,7 @@ angular.module('application')
 
     .controller('getTaskController', ['$scope','$http', function($scope,$http) {
 
+        window.getTasks=function(){return false;};
         function getTaskInfo(){
             var task_id = localStorage.getItem('taskId');
             console.log(task_id);
