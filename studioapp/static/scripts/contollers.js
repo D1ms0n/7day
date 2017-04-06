@@ -152,11 +152,11 @@ angular.module('application')
         }
         setInterval(function(){
             getTasks();
-            console.log('get times')
         }, 2000);
 
         $scope.getTask = function (taskId) {
             localStorage.setItem('taskId',taskId);
+            window.location = "http://studio7day.herokuapp.com/#/task";
         };
     }])
 
@@ -167,7 +167,7 @@ angular.module('application')
             console.log(task_id);
             $http({
                 method: 'GET',
-                url: '/insta_api/get_task_result/'+task_id
+                url: '/insta_api/get_task_result/request_'+task_id
             }).then(
                 function successCallback(response) {
                     $scope.users = response.data;
@@ -176,15 +176,10 @@ angular.module('application')
                     $scope.errorMss = 'Something wrong, ' + ' status ' + '" ' + response.status+' "';
                 });
         }
-
         setInterval(function(){
             getTaskInfo();
-            console.log('get times')
         }, 2000);
-
-
     }])
-
 ;
 
 
