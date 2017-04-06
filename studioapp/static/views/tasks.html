@@ -15,16 +15,17 @@
                                     Name
                                 </div>
                                 <div class="col-md-3 col-sm-3 col-xs-3">
-                                    task
+                                    Direction
                                 </div>
                                 <div class="col-md-3 col-sm-3 col-xs-3">
-                                    start time
+                                    Start time
                                 </div>
                                 <div class="col-md-3 col-sm-3 col-xs-3">
-                                    progress
+                                    Progress
                                 </div>
                             </div>
                         </li>
+
                         <li  ng-repeat="task in tasks">
                             <div class="row">
                                 <div class="col-md-3 col-sm-3 col-xs-3">
@@ -37,7 +38,8 @@
                                     {{task.create_time}}
                                 </div>
                                 <div class="col-md-3 col-sm-3 col-xs-3">
-                                    {{task.status}}
+                                    {{task.id}}
+                                    <div ng-click="getTask('91945594021732890')">91945594021732890</div>
                                 </div>
                             </div>
                         </li>

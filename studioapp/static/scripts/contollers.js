@@ -38,7 +38,8 @@ angular.module('application')
                 data : getListDataJson
             }).then(
                 function successCallback(response) {
-                    $scope.users = response.data;
+                    // $scope.users = response.data;
+                    window.location = "http://studio7day.herokuapp.com/#/tasks";
                 },
                 function errorCallback(response) {
                     $scope.errorMss = 'Something wrong, ' + ' status ' + '" ' + response.status+' "';
@@ -152,10 +153,29 @@ angular.module('application')
         setInterval(function(){
             getTasks();
             console.log('get times')
-        }, 5000);
+        }, 2000);
+
+        $scope.getTask = function (taskId) {
+            localStorage.setItem('taskId',taskId);
+        };
     }])
 
     .controller('getTaskController', ['$scope','$http', function($scope,$http) {
+
+        $scope.getTaskInfo = function () {
+            var task_id = localStorage.getItem('taskId');
+            console.log(task_id);
+            $http({
+                method: 'GET',
+                url: '/insta_api/get_task_result/'+task_id
+            }).then(
+                function successCallback(response) {
+                    $scope.users = response.data;
+                },
+                function errorCallback(response) {
+                    $scope.errorMss = 'Something wrong, ' + ' status ' + '" ' + response.status+' "';
+                });
+        };
 
     }])
 
