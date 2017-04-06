@@ -150,9 +150,10 @@ angular.module('application')
                     $scope.tasks = response.data;
                 });
         }
+        getTasks();
         setInterval(function(){
             getTasks();
-        }, 2000);
+        }, 20000);
 
         $scope.getTask = function (taskId) {
             localStorage.setItem('taskId',taskId);
@@ -176,9 +177,10 @@ angular.module('application')
                     $scope.errorMss = 'Something wrong, ' + ' status ' + '" ' + response.status+' "';
                 });
         }
+        getTaskInfo();
         setInterval(function(){
             getTaskInfo();
-        }, 2000);
+        }, 10000);
     }])
 ;
 
