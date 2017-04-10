@@ -14,30 +14,32 @@
                                 <div class="col-md-3 col-sm-3 col-xs-3">
                                     Name
                                 </div>
-                                <div class="col-md-3 col-sm-3 col-xs-3">
-                                    task
+                                <div class="col-md-2 col-sm-3 col-xs-3">
+                                    Direction
+                                </div>
+                                <div class="col-md-4 col-sm-3 col-xs-3">
+                                    Start time
                                 </div>
                                 <div class="col-md-3 col-sm-3 col-xs-3">
-                                    start time
-                                </div>
-                                <div class="col-md-3 col-sm-3 col-xs-3">
-                                    progress
+                                    Progress
                                 </div>
                             </div>
                         </li>
+
                         <li  ng-repeat="task in tasks">
                             <div class="row">
                                 <div class="col-md-3 col-sm-3 col-xs-3">
                                     {{task.username}}
                                 </div>
-                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                <div class="col-md-2 col-sm-3 col-xs-3">
                                     {{task.direction}}
                                 </div>
-                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                <div class="col-md-4 col-sm-3 col-xs-3">
                                     {{task.create_time}}
                                 </div>
                                 <div class="col-md-3 col-sm-3 col-xs-3">
-                                    {{task.status}}
+                                    {{task.id}}
+                                    <button class="submit-btn" ng-click="getTask('5999741266947723327')">DETAILS</button>
                                 </div>
                             </div>
                         </li>

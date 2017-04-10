@@ -214,7 +214,7 @@ body {
   text-align: center;
   height: 30px;
   box-sizing: border-box;
-  margin-left: 5px; }
+  margin-right: 5px; }
 .submit-btn:hover {
   color: #fff;
   background-color: #3897f0; }
@@ -391,6 +391,9 @@ form label {
 .taskslist li .col-md-3 {
   padding-top: 15px;
   padding-bottom: 15px; }
+
+.count-block {
+  margin-top: 10px; }
 
 footer {
   min-height: 70px;

@@ -13,7 +13,6 @@
     <div class="row main-page">
         <div class="col-md-12">
             <div class="search-block">
-
                 <input type="text" name="search" class="main-input" ng-model="username" />
                 <label for="followers">
                     <input type="radio" id="followers" name="direction" value="followers" ng-model="direction" checked  />
@@ -23,31 +22,38 @@
                     <input type="radio" id="follows" name="direction" value="following" ng-model="direction" />
                     Get follows
                 </label>
-                <button ng-click="getFollowers(username,direction)" class="submit-btn">Search</button>
+                <button ng-click="getFollowers(username,direction,count)" class="submit-btn">Search</button>
 
-                <div class="actions">
-                    <button class="submit-btn" ng-click="Subscribe()">Subscribe</button>
-                    <button class="submit-btn" ng-click="unSubscribe()">UnSubscribe</button>
-                    <span class="error-massage">{{errorMss}}</span>
-                    <button class="submit-btn pull-right" ng-click="checkAll()">Select all</button>
-                    <button class="submit-btn pull-right" ng-click="unCheckAll()">Unselect all</button>
+                <div class="count-block">
+                    <label for="25">
+                        25
+                        <input type="radio" id="25" name="count" value="25" ng-model="count"/>
+                    </label>
+                    <label for="50">
+                        50
+                        <input type="radio" id="50" name="count" value="50" ng-model="count"/>
+                    </label>
+                    <label for="100">
+                        100
+                        <input type="radio" id="100" name="count" value="100" ng-model="count"/>
+                    </label>
                 </div>
-
             </div>
-            <ul class="users-list">
-                <li ng-repeat="user in users | filter : testFilter" class="users-list-block">
-                    <div class="user-avatar" style="background-image: url('{{user.user.profile_pic_url}}')"></div>
-                    <a href="https://www.instagram.com/{{user.user.username}}/" target="_blank" class="main-link">{{user.user.username}}</a>
-                    <div class="name">{{user.user.full_name}}</div>
-                    <div class="description">{{user.user.biography}}</div>
-                    <div class="followed_by">Followed by : {{user.user.followed_by.count}}</div>
-                    <div class="follows">Follows : {{user.user.follows.count}}</div>
-                    <button class="action-btn" id="subscribe">Subscribe</button>
-                    <button class="action-btn" id="unsubscribe">UnSubscribe</button>
-                    <input type="checkbox" name="checkbox" id="{{user.user.id}}" class="checkbox" value="{{user.user.id}}"/>
-                    <label for="{{user.user.id}}" class="checkbox-label"></label>
-                </li>
-            </ul>
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

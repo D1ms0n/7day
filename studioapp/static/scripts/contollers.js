@@ -24,56 +24,78 @@ angular.module('application')
     .controller('mainController', ['$scope','usersFactory','$http', function($scope, usersFactory, $http) {
 //send search keyword
         var preloader = document.getElementById('preloader');
-        $scope.getFollowers = function (username,direction) {
-            preloader.style.display='block';
-            console.log(username,direction) ;
+        $scope.getFollowers = function (username,direction,count) {
+            var getListData = {
+                'username'  : username,
+                'direction' : direction,
+                "count": count
+            };
+            var getListDataJson = JSON.stringify(getListData);
+            console.log(getListDataJson);
             $http({
                 method: 'POST',
                 url: '/insta_api/add_task',
-                data : {
-                    'username'  : username,
-                    'direction' : direction
-                }
+                data : getListDataJson
             }).then(
                 function successCallback(response) {
-                    $scope.users = response.data;
-                    preloader.style.display='none';
+                    // $scope.users = response.data;
+                    window.location = "http://studio7day.herokuapp.com/#/tasks";
                 },
                 function errorCallback(response) {
                     $scope.errorMss = 'Something wrong, ' + ' status ' + '" ' + response.status+' "';
                 });
         };
-//check all checkboxes
-        $scope.checkAll = function () {
-            //var elements = document.getElementsByClassName('checkbox');
-            var elements = document.querySelectorAll('.checkbox');
-            for( var i = 0; i <= elements.length; i++){
-                elements[i].checked = true;
-                console.log(typeof(elements[i]),elements[i]);
+//check or uncheckall checkboxes
+        $scope.checkUnCheckAll = function (param) {
+            var checkboxes = document.querySelectorAll('.checkbox');
+            var boolean;
+            switch (param) {
+                case 'check':
+                    boolean = true;
+                    break;
+                case 'uncheck':
+                    boolean = false;
+                    break;
+                default:
+                    alert( 'Error' );
+            }
+            for( var i = 0; i <= checkboxes.length; i++){
+                if(checkboxes[i]) {
+                    checkboxes[i].checked = boolean;
+                }
             }
         };
-//uncheck all checkboxes
-        $scope.unCheckAll = function () {
-            var elements = document.querySelectorAll('.checkbox');
-            for( var i = 0; i <= elements.length; i++){
-                var elements = document.querySelectorAll('.checkbox');
-                elements[i].checked = false;
-            }
-        };
-//send list of users id-s for unsubscribe
-        var usersId = [];
-        $scope.unSubscribe =function () {
+//send list of users names for subscribe or unsubscribe
+        var usersNames;
+        var usersNamesObject;
+        $scope.followUnfollowAll =function (param) {
             preloader.style.display='block';
+            usersNames = [];
             var usersList = document.querySelectorAll('.checkbox:checked');
+            var action;
             for( var i = 0; i < usersList.length; i++){
-                usersId.push(usersList[i].value);
+                usersNames.push(usersList[i].value);
             }
-            var usersIdJs = JSON.stringify(usersId);
-            console.log(usersIdJs);
+            switch (param) {
+                case 'follow':
+                    action = 'follow';
+                    break;
+                case 'unfollow':
+                    action = 'unfollow';
+                    break;
+                default:
+                    alert( 'Error' );
+            }
+            usersNamesObject = {
+                "user_names": usersNames,
+                "direction": action
+            };
+            var usersNamesJson = JSON.stringify(usersNamesObject);
+            console.log(usersNamesJson);
             $http({
                 method: 'POST',
-                url: 'http://example.com',
-                data : usersIdJs
+                url: '/insta_api/add_task',
+                data : usersNamesJson
             }).then(
                 function successCallback(response) {
                     preloader.style.display='none';
@@ -82,20 +104,30 @@ angular.module('application')
                     preloader.style.display='none';
                 });
         };
-
-//send list of users id-s for subscribe
-        $scope.Subscribe =function () {
-            preloader.style.display='block';
-            var usersList = document.querySelectorAll('.checkbox:checked');
-            for( var i = 0; i < usersList.length; i++){
-                usersId.push(usersList[i].value);
+//send current user name for subscribe or unsubscribe
+        $scope.followUnfollowThis = function (name,action) {
+            console.log(name,action);
+            var userNameObject;
+            switch (action) {
+                case 'follow':
+                    action = 'follow';
+                    break;
+                case 'unfollow':
+                    action = 'unfollow';
+                    break;
+                default:
+                    alert( 'Error' );
             }
-            var usersIdJs = JSON.stringify(usersId);
-            console.log(usersIdJs);
+            userNameObject = {
+                "user_names": name,
+                "direction": action
+            };
+            var userNameJson = JSON.stringify(userNameObject);
+            console.log(userNameJson);
             $http({
                 method: 'POST',
-                url: 'http://example.com',
-                data : usersIdJs
+                url: '/insta_api/add_task',
+                data : userNameJson
             }).then(
                 function successCallback(response) {
                     preloader.style.display='none';
@@ -118,16 +150,39 @@ angular.module('application')
                     $scope.tasks = response.data;
                 });
         }
+        getTasks();
         setInterval(function(){
             getTasks();
-            console.log('get times')
-        }, 5000);
+        }, 20000);
+
+        $scope.getTask = function (taskId) {
+            localStorage.setItem('taskId',taskId);
+            window.location = "http://studio7day.herokuapp.com/#/task";
+        };
     }])
 
     .controller('getTaskController', ['$scope','$http', function($scope,$http) {
 
+        window.getTasks=function(){return false;};
+        function getTaskInfo(){
+            var task_id = localStorage.getItem('taskId');
+            console.log(task_id);
+            $http({
+                method: 'GET',
+                url: '/insta_api/get_task_result/'+task_id
+            }).then(
+                function successCallback(response) {
+                    $scope.users = response.data;
+                },
+                function errorCallback(response) {
+                    $scope.errorMss = 'Something wrong, ' + ' status ' + '" ' + response.status+' "';
+                });
+        }
+        getTaskInfo();
+        setInterval(function(){
+            getTaskInfo();
+        }, 10000);
     }])
-
 ;
 
 
