@@ -2,7 +2,8 @@
 'use strict';
 
 angular.module('application', ['ui.router'])
-    .config(function($stateProvider, $urlRouterProvider) {
+
+    .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         $stateProvider
         // route for the home page
          .state('app', {
@@ -20,7 +21,6 @@ angular.module('application', ['ui.router'])
                  }
              }
          })
-
         .state('app.main', {
             url:'main',
             views: {
@@ -30,7 +30,6 @@ angular.module('application', ['ui.router'])
                 }
             }
         })
-
         .state('app.tasks', {
             url:'tasks',
             views: {
@@ -40,7 +39,6 @@ angular.module('application', ['ui.router'])
                 }
             }
         })
-
         .state('app.task', {
             url:'task',
             views: {
@@ -50,7 +48,8 @@ angular.module('application', ['ui.router'])
                 }
             }
         });
-
         $urlRouterProvider.otherwise('/');
+        // use the HTML5 History API
+        $locationProvider.html5Mode(true);
     })
 ;
