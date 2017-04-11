@@ -24,8 +24,7 @@
                     </div>
                     <ul class="users-list">
                         <li ng-repeat="user in users.result" class="users-list-block">
-                            <div ng-if="user.user.profile_pic_url_hd" class="user-avatar" style="background-image: url('{{user.user.profile_pic_url_hd}}')"></div>
-                            <div ng-if="!user.user.profile_pic_url_hd" class="user-avatar"></div>
+                            <div class="user-avatar" style="background-image: url('{{user.user.profile_pic_url_hd}}')"></div>
                             <a href="https://www.instagram.com/{{user.user.username}}/" target="_blank" class="main-link">{{user.user.username}}</a>
                             <div class="name">{{user.user.full_name}}</div>
                             <div class="description">{{user.user.biography}}</div>
