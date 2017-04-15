@@ -1,7 +1,13 @@
 
 
 
-
+<div id="preloader">
+    <div id="preloader_bg">
+        <div class="waiting-text">
+            Waiting...
+        </div>
+    </div>
+</div>
 <div class="container-fluid" ng-controller="mainController">
     <div class="row">
         <div class="container" ng-controller="getTaskController">
@@ -17,7 +23,7 @@
                         <button class="submit-btn pull-right" ng-click ="checkUnCheckAll('uncheck')">Unselect all</button>
                     </div>
                     <ul class="users-list">
-                        <li ng-repeat="user in users | filter : testFilter" class="users-list-block">
+                        <li ng-repeat="user in users.result" class="users-list-block">
                             <div class="user-avatar" style="background-image: url('{{user.user.profile_pic_url_hd}}')"></div>
                             <a href="https://www.instagram.com/{{user.user.username}}/" target="_blank" class="main-link">{{user.user.username}}</a>
                             <div class="name">{{user.user.full_name}}</div>
@@ -29,10 +35,46 @@
                             <input type="checkbox" name="checkbox" id="{{user.user.id}}" class="checkbox" value="{{user.user.username}}"/>
                             <label for="{{user.user.id}}" class="checkbox-label"></label>
                         </li>
-                    </ul>
-
+                    </ul>                   
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
