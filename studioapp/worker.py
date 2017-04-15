@@ -31,7 +31,10 @@ class Worker(object):
 
     @start_thread
     def get_follow_info(self, username, direction, count,  task_id = ''):
-    
+        
+        my_username = 'studio_7_day_2'
+        my_password = 'Nopasaran'
+        
         logger = Logger('worker')
         time_now =  time.strftime('%X %x').replace(' ', '_').replace('/', '_').replace(':', '_')
         
@@ -45,6 +48,7 @@ class Worker(object):
                                'task_id'  : task_id}
 
         result_file_name = '%s/%s' % (os.path.join(get_base_dir(), 'studioapp', 'results'), task_id)
+        
 
         logger.log('WORKER:follow_info: Create result file %s' % result_file_name)
 
@@ -53,8 +57,11 @@ class Worker(object):
         result_file.close()
 
         selenium_bot = selenium_webdriver()
-        selenium_bot.login_user('studio7day', 'Nopasaran')
-        
+        login_result = selenium_bot.login_user(my_username, my_password)
+
+        #if login_result['status'] == 'OK':
+
+
         user_names = selenium_bot.get_follow_names(username, direction,  15)
         selenium_bot.driver.close()
 

@@ -13,8 +13,8 @@ user_info_link   = 'https://www.instagram.com/%s/?__a=1'
 
 class Bot(object):
     def __init__(self):
-        self.user_login    = 'look_its_dimson'
-        self.user_password = 'Nopasaran'
+        self.user_login    = 'dimka_photo'
+        self.user_password = 'Vyt25ktn'
         self.accept_language = 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
         self.user_agent = ("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 "
                           "(KHTML, like Gecko) Chrome/48.0.2564.103 Safari/537.36")
@@ -62,6 +62,9 @@ class Bot(object):
         time.sleep(5 * random.random())
         login = self.s.post(self.url_login, data=self.login_post,
                             allow_redirects=True)
+        
+        print str(login.cookies)
+        
         self.s.headers.update({'X-CSRFToken': login.cookies['csrftoken']})
         csrftoken = login.cookies['csrftoken']
         time.sleep(5 * random.random())

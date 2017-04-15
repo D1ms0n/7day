@@ -140,6 +140,7 @@ angular.module('application')
 
 
     .controller('getTasksController', ['$scope','$http', function($scope,$http) {
+        window.getTaskInfo=function(){return false;};
 //get tasks
         function getTasks(){
             $http({
@@ -153,7 +154,7 @@ angular.module('application')
         getTasks();
         setInterval(function(){
             getTasks();
-        }, 20000);
+        }, 60000);
 
         $scope.getTask = function (taskId) {
             localStorage.setItem('taskId',taskId);
@@ -162,7 +163,6 @@ angular.module('application')
     }])
 
     .controller('getTaskController', ['$scope','$http', function($scope,$http) {
-
         window.getTasks=function(){return false;};
         function getTaskInfo(){
             var task_id = localStorage.getItem('taskId');
@@ -181,37 +181,9 @@ angular.module('application')
         getTaskInfo();
         setInterval(function(){
             getTaskInfo();
-        }, 10000);
+        }, 60000);
     }])
 ;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

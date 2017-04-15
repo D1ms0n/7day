@@ -8640,3 +8640,3347 @@ get follows_info for fursty
  Try to get info for patrizziam
  DONE: patrizziam
  VIEW:selenium_bot: FINISH
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:login_user: Try to login dimka_photo
+ SELENIUM_BOT:login_user: dimka_photo loggined
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_43_49_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_44_19_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:login_user: Try to login dimka_photo
+ SELENIUM_BOT:login_user: dimka_photo loggined
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_45_31_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:login_user: Try to login studio7day
+ SELENIUM_BOT:login_user: studio7day loggined
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_47_12_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_47_24_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_49_13_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_49_26_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_49_27_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to login studio7day
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_49_30_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_49_34_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: studio7day loggined
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_50_14_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_50_15_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to login dimka_photo
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_50_18_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_50_21_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: dimka_photo loggined
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_50_41_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_50_42_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to login dimka_photo
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_50_45_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_50_55_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: dimka_photo loggined
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 20_05_20_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 20_06_46_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 20_07_23_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 20_10_31_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 20_11_46_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ VIEW:insta_api: start at 18_36_46_04_14_17 add_task/None
+ WORKER: CREATED
+ WORKER:follow_info: POST 18_36_46_04_14_171958249962989013019
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/1958249962989013019
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_36_55_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_36_57_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to login studio7day
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_37_00_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_37_04_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: studio7day loggined
+ VIEW:insta_api: start at 18_42_54_04_14_17 add_task/None
+ WORKER: CREATED
+ WORKER:follow_info: POST 18_42_54_04_14_178567319675563844357
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/8567319675563844357
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_43_06_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_43_07_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to login studio7day
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_43_10_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_43_14_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: studio7day loggined
+ VIEW:insta_api: start at 18_44_04_04_14_17 add_task/None
+ WORKER: CREATED
+ WORKER:follow_info: POST 18_44_04_04_14_174090802399142676428
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/4090802399142676428
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_44_14_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_44_15_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to login studio7day
+ VIEW:insta_api: start at 18_44_17_04_14_17 add_task/None
+ WORKER: CREATED
+ WORKER:follow_info: POST 18_44_17_04_14_175768302832971954548
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/5768302832971954548
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_44_19_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_44_24_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: studio7day loggined
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_44_28_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_44_30_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to login studio7day
+ VIEW:insta_api: start at 18_44_32_04_14_17 add_task/None
+ WORKER: CREATED
+ WORKER:follow_info: POST 18_44_32_04_14_177557060739870323113
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/7557060739870323113
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_44_34_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_44_40_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: studio7day loggined
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_44_45_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_44_45_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to login studio7day
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_44_49_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_44_54_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: studio7day loggined
+ VIEW:insta_api: start at 18_45_16_04_14_17 add_task/None
+ WORKER: CREATED
+ WORKER:follow_info: POST 18_45_16_04_14_1760766845558167846
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/60766845558167846
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_45_26_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_45_26_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to login studio7day
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_45_30_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 18_45_34_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: studio7day loggined
+ VIEW:insta_api: start at 18_56_16_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_56_16_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_56_28_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_56_28_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_56_48_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_56_48_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_57_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_57_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_57_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_57_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_57_08_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_57_08_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_57_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_57_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_57_25_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_57_25_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_57_28_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_57_28_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_57_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_57_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_57_45_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_57_45_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_57_48_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_57_48_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_58_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_58_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_58_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_58_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_58_08_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_58_08_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_58_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_58_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_58_25_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_58_25_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_58_28_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_58_28_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_58_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_58_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_58_45_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_58_45_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_58_48_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_58_48_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_59_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_59_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_59_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_59_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_59_08_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_59_08_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_59_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_59_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_59_25_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_59_25_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_59_28_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_59_28_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_59_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_59_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_59_45_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_59_45_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_59_48_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 18_59_48_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_00_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_00_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_00_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_00_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_00_08_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_00_08_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_00_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_00_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_00_25_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_00_25_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_00_28_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_00_28_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_00_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_00_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_00_45_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_00_45_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_00_48_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_00_48_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_01_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_01_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_01_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_01_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_01_08_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_01_08_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_01_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_01_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_01_25_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_01_25_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_01_28_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_01_28_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_01_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_01_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_01_45_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_01_45_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_01_48_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_01_48_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_02_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_02_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_02_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_02_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_02_08_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_02_08_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_02_23_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_02_23_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_02_37_04_14_17 add_task/None
+ WORKER: CREATED
+ WORKER:follow_info: POST 19_02_37_04_14_171018112007876658633
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/1018112007876658633
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_02_46_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_02_47_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to login studio7day
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_02_50_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_02_56_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: studio7day loggined
+ VIEW:insta_api: start at 19_07_59_04_14_17 add_task/None
+ WORKER: CREATED
+ WORKER:follow_info: POST 19_07_59_04_14_177989582725387725038
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/7989582725387725038
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_08_09_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_08_10_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to login studio7day
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_08_13_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_08_17_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: studio7day loggined
+ VIEW:insta_api: start at 19_11_44_04_14_17 add_task/None
+ WORKER: CREATED
+ VIEW:insta_api: start at 19_12_07_04_14_17 add_task/None
+ WORKER: CREATED
+ WORKER:follow_info: POST 19_12_07_04_14_177249277439366320083
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/7249277439366320083
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_12_17_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_12_18_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to login studio7day
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_12_21_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: studio7day loggined
+ SELENIUM_BOT:get_follow_names: Try to get 15  followers for dimka_photo
+ SELENIUM_BOT:get_follow_info: Try to get 15  followers for dimka_photo
+ SELENIUM_BOT:get_follow_info: Try to get user page
+ SELENIUM_BOT:get_follow_info: Try to find button
+ VIEW:insta_api: start at 19_15_46_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_15_46_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_16_06_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_16_06_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_16_26_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_16_26_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_16_46_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_16_46_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_17_06_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_17_06_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_17_26_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_17_26_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_17_46_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_17_46_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_18_06_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_18_06_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_18_26_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_18_26_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_18_46_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_18_46_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_19_06_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_19_06_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_19_26_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_19_26_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_19_46_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_19_46_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_20_06_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_20_06_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_20_26_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_20_26_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_20_46_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_20_46_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_21_07_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_21_07_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_21_28_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_21_28_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_21_40_04_14_17 add_task/None
+ WORKER: CREATED
+ WORKER:follow_info: POST 19_21_40_04_14_17301720859692450468
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/301720859692450468
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_21_49_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_21_51_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to login studio7day
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_21_55_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: studio7day loggined
+ SELENIUM_BOT:get_follow_names: Try to get 15  following for dimka_photo
+ SELENIUM_BOT:get_follow_info: Try to get 15  following for dimka_photo
+ SELENIUM_BOT:get_follow_info: Try to get user page
+ SELENIUM_BOT:get_follow_info: Try to find button
+ VIEW:insta_api: start at 19_35_42_04_14_17 add_task/None
+ WORKER: CREATED
+ WORKER:follow_info: POST 19_35_42_04_14_176510065875316343209
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/6510065875316343209
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_35_52_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_35_54_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to login studio_7_day_2
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_35_57_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: studio_7_day_2 loggined
+ SELENIUM_BOT:get_follow_names: Try to get 15  following for dimka_photo
+ SELENIUM_BOT:get_follow_info: Try to get 15  following for dimka_photo
+ SELENIUM_BOT:get_follow_info: Try to get user page
+ SELENIUM_BOT:get_follow_info: Try to find button
+ SELENIUM_BOT:get_follow_info: Try to click button
+ SELENIUM_BOT:get_follow_info: Try to find divs
+ SELENIUM_BOT:get_follow_info: Try to find follow buttons
+ TEXT:button: Follow
+ TEXT:button: 
+ TEXT:button: Options
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Close
+ SELENIUM_BOT:get_follow_info: Len of list 84
+ SELENIUM_BOT:get_follow_names: Got 172 user_names
+ Try to get info for hustleanywhere
+ DONE: hustleanywhere
+ Try to get info for trentnattrass
+ DONE: trentnattrass
+ Try to get info for chernyavskyphoto
+ DONE: chernyavskyphoto
+ Try to get info for alkalinka
+ DONE: alkalinka
+ Try to get info for romannahrynkiv
+ DONE: romannahrynkiv
+ Try to get info for eugeniahavrylko
+ DONE: eugeniahavrylko
+ Try to get info for margo.amp
+ DONE: margo.amp
+ Try to get info for crispycitron
+ DONE: crispycitron
+ Try to get info for sarahdewald
+ DONE: sarahdewald
+ Try to get info for carekettu
+ DONE: carekettu
+ Try to get info for fit.planet
+ DONE: fit.planet
+ Try to get info for av2.photo
+ DONE: av2.photo
+ Try to get info for claudy_pitt
+ DONE: claudy_pitt
+ Try to get info for gibsoncoy
+ DONE: gibsoncoy
+ Try to get info for katie_teague
+ DONE: katie_teague
+ Try to get info for skirotica
+ DONE: skirotica
+ Try to get info for ebaumhofer
+ DONE: ebaumhofer
+ Try to get info for lilya_de
+ DONE: lilya_de
+ Try to get info for tatiana_superstar
+ DONE: tatiana_superstar
+ Try to get info for m3xtures
+ DONE: m3xtures
+ Try to get info for sombrescapes
+ DONE: sombrescapes
+ Try to get info for sombresociety
+ DONE: sombresociety
+ Try to get info for ariana_babcock
+ DONE: ariana_babcock
+ Try to get info for m.scheiner
+ DONE: m.scheiner
+ Try to get info for adampartridge
+ DONE: adampartridge
+ Try to get info for lyesk
+ DONE: lyesk
+ Try to get info for garinwood
+ DONE: garinwood
+ Try to get info for johannessroth
+ DONE: johannessroth
+ Try to get info for hank.david
+ DONE: hank.david
+ Try to get info for 1924us
+ DONE: 1924us
+ Try to get info for rob.sese
+ DONE: rob.sese
+ Try to get info for sonoratmw
+ DONE: sonoratmw
+ Try to get info for sam_griggs
+ DONE: sam_griggs
+ Try to get info for queekygrams
+ DONE: queekygrams
+ Try to get info for mrbenbrown
+ DONE: mrbenbrown
+ Try to get info for jeraldmcdermott
+ DONE: jeraldmcdermott
+ Try to get info for steffenegly
+ DONE: steffenegly
+ Try to get info for tuckerdoss
+ DONE: tuckerdoss
+ Try to get info for masonstrehl
+ DONE: masonstrehl
+ Try to get info for johnwingfield
+ DONE: johnwingfield
+ Try to get info for secondhand_kearns
+ DONE: secondhand_kearns
+ Try to get info for dylankato
+ DONE: dylankato
+ Try to get info for runawayueli
+ DONE: runawayueli
+ Try to get info for theolator
+ DONE: theolator
+ Try to get info for donalboyd
+ DONE: donalboyd
+ Try to get info for btonevibes
+ DONE: btonevibes
+ Try to get info for samdavidsmith
+ DONE: samdavidsmith
+ Try to get info for _fabiozingg
+ DONE: _fabiozingg
+ Try to get info for milliethegolden
+ DONE: milliethegolden
+ Try to get info for isaacsjohnston
+ DONE: isaacsjohnston
+ Try to get info for erinroseofficial
+ DONE: erinroseofficial
+ Try to get info for street.furniture
+ DONE: street.furniture
+ Try to get info for mywhiskeygirl
+ DONE: mywhiskeygirl
+ Try to get info for visitplanett
+ DONE: visitplanett
+ Try to get info for chrispoops
+ DONE: chrispoops
+ Try to get info for toni_b_____
+ DONE: toni_b_____
+ Try to get info for throughthetent
+ DONE: throughthetent
+ Try to get info for mlbourne
+ DONE: mlbourne
+ Try to get info for katzuka
+ DONE: katzuka
+ Try to get info for alyonaowl
+ DONE: alyonaowl
+ Try to get info for meredith_roper
+ DONE: meredith_roper
+ Try to get info for giuligartner
+ DONE: giuligartner
+ Try to get info for annchristinamberg
+ DONE: annchristinamberg
+ Try to get info for siberian_husky_world
+ DONE: siberian_husky_world
+ Try to get info for mrbenadams
+ DONE: mrbenadams
+ Try to get info for lukasdegroodt
+ DONE: lukasdegroodt
+ Try to get info for sullivang_
+ DONE: sullivang_
+ Try to get info for stelaluna_
+ DONE: stelaluna_
+ Try to get info for _lilikoi
+ DONE: _lilikoi
+ Try to get info for brooklynlaughlin
+ DONE: brooklynlaughlin
+ Try to get info for gagefarmer
+ VIEW:insta_api: start at 19_37_26_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_37_26_04_14_17 get_tasks/None
+ DONE: gagefarmer
+ Try to get info for slickc
+ DONE: slickc
+ Try to get info for lostintheforrest
+ DONE: lostintheforrest
+ Try to get info for wokenwild
+ DONE: wokenwild
+ Try to get info for michaelflugstad
+ DONE: michaelflugstad
+ Try to get info for campeveryday
+ DONE: campeveryday
+ Try to get info for emmaaculate
+ DONE: emmaaculate
+ Try to get info for tmwonders
+ DONE: tmwonders
+ Try to get info for corrado_mariani
+ DONE: corrado_mariani
+ Try to get info for photo.travel.view
+ DONE: photo.travel.view
+ Try to get info for moodandtones
+ DONE: moodandtones
+ Try to get info for kenny.h.guan.lin
+ DONE: kenny.h.guan.lin
+ Try to get info for kirkamartin1
+ DONE: kirkamartin1
+ Try to get info for ellielovesfetch
+ DONE: ellielovesfetch
+ Try to get info for mittnordnorge
+ DONE: mittnordnorge
+ Try to get info for phensopian
+ DONE: phensopian
+ Try to get info for fikri.m.r
+ DONE: fikri.m.r
+ Try to get info for anastasia_vervueren
+ DONE: anastasia_vervueren
+ Try to get info for pipergracee
+ DONE: pipergracee
+ Try to get info for shutter.klick
+ DONE: shutter.klick
+ Try to get info for nature_iloveme
+ DONE: nature_iloveme
+ Try to get info for profit
+ DONE: profit
+ Try to get info for cld_hk
+ DONE: cld_hk
+ Try to get info for gramslayers
+ DONE: gramslayers
+ Try to get info for isk.s
+ DONE: isk.s
+ Try to get info for veronika_gorianska
+ DONE: veronika_gorianska
+ Try to get info for pavel.sergienko
+ DONE: pavel.sergienko
+ Try to get info for petterhegre
+ DONE: petterhegre
+ Try to get info for kookh_workshop
+ DONE: kookh_workshop
+ Try to get info for sidtechnology
+ DONE: sidtechnology
+ Try to get info for a_zerv
+ DONE: a_zerv
+ Try to get info for readylightmedia
+ DONE: readylightmedia
+ Try to get info for nathanaelbillings
+ DONE: nathanaelbillings
+ Try to get info for ninamckinley
+ DONE: ninamckinley
+ Try to get info for marie_sts
+ DONE: marie_sts
+ Try to get info for photohunted
+ DONE: photohunted
+ Try to get info for portrait_vision
+ DONE: portrait_vision
+ Try to get info for kirstinvang
+ DONE: kirstinvang
+ Try to get info for creative_portraits
+ DONE: creative_portraits
+ Try to get info for fabulousshot
+ DONE: fabulousshot
+ Try to get info for peoplephotatoes
+ DONE: peoplephotatoes
+ Try to get info for portraittmood
+ DONE: portraittmood
+ Try to get info for full.div
+ DONE: full.div
+ Try to get info for workhardanywhere
+ DONE: workhardanywhere
+ Try to get info for rusticroamer
+ VIEW:insta_api: start at 19_37_46_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_37_46_04_14_17 get_tasks/None
+ DONE: rusticroamer
+ Try to get info for fairychristinamay
+ DONE: fairychristinamay
+ Try to get info for iren.markovskaya
+ DONE: iren.markovskaya
+ Try to get info for joshnicholzon
+ DONE: joshnicholzon
+ Try to get info for valyavalya8
+ DONE: valyavalya8
+ Try to get info for desiree.mbr
+ DONE: desiree.mbr
+ Try to get info for janna_evstafeva
+ DONE: janna_evstafeva
+ Try to get info for minimalsource
+ DONE: minimalsource
+ Try to get info for linxclass
+ DONE: linxclass
+ Try to get info for remibennett
+ DONE: remibennett
+ Try to get info for nwhite_nyc
+ DONE: nwhite_nyc
+ Try to get info for mariiiaagapova
+ DONE: mariiiaagapova
+ Try to get info for t.nastycha
+ DONE: t.nastycha
+ Try to get info for notikat
+ DONE: notikat
+ Try to get info for nice_lady_ganja
+ DONE: nice_lady_ganja
+ Try to get info for valeriia_horovets
+ DONE: valeriia_horovets
+ Try to get info for ma_rinashevchenko
+ DONE: ma_rinashevchenko
+ Try to get info for altitudeiseverything
+ DONE: altitudeiseverything
+ Try to get info for derevosemeinoe
+ DONE: derevosemeinoe
+ Try to get info for sachen.ka
+ DONE: sachen.ka
+ Try to get info for messlifer
+ DONE: messlifer
+ Try to get info for lilu.n
+ DONE: lilu.n
+ Try to get info for kirilkoo
+ DONE: kirilkoo
+ Try to get info for janlosert
+ DONE: janlosert
+ Try to get info for liza230200
+ DONE: liza230200
+ Try to get info for m9arnold
+ DONE: m9arnold
+ Try to get info for twoaliensouls
+ DONE: twoaliensouls
+ Try to get info for feetricamag
+ DONE: feetricamag
+ Try to get info for danbilzerian
+ DONE: danbilzerian
+ Try to get info for mathildtantot
+ DONE: mathildtantot
+ Try to get info for portraittpage
+ DONE: portraittpage
+ Try to get info for kobethesibehusky
+ DONE: kobethesibehusky
+ Try to get info for vergor.r
+ DONE: vergor.r
+ Try to get info for yaroslav_kirilenko
+ DONE: yaroslav_kirilenko
+ Try to get info for alex.kozyar
+ DONE: alex.kozyar
+ Try to get info for sarafanchikova
+ DONE: sarafanchikova
+ Try to get info for _i_khmelevskaya
+ DONE: _i_khmelevskaya
+ Try to get info for sashaluss
+ DONE: sashaluss
+ Try to get info for __neverbethesame
+ DONE: __neverbethesame
+ Try to get info for angela_nikolau
+ DONE: angela_nikolau
+ Try to get info for natasha.wiseman
+ DONE: natasha.wiseman
+ Try to get info for nextdoormodel
+ DONE: nextdoormodel
+ Try to get info for vladaae
+ DONE: vladaae
+ Try to get info for livefast_mag
+ DONE: livefast_mag
+ Try to get info for magdulenka
+ DONE: magdulenka
+ Try to get info for anckor
+ DONE: anckor
+ Try to get info for likadancc
+ VIEW:insta_api: start at 19_38_06_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_38_06_04_14_17 get_tasks/None
+ DONE: likadancc
+ Try to get info for chloe_rioux
+ DONE: chloe_rioux
+ Try to get info for sam.ison.photos
+ DONE: sam.ison.photos
+ Try to get info for _jeremyherbert_
+ DONE: _jeremyherbert_
+ Try to get info for doublelifeband
+ DONE: doublelifeband
+ Try to get info for toronto.universe
+ DONE: toronto.universe
+ Try to get info for vanishvanish
+ DONE: vanishvanish
+ Try to get info for bigroom_com_travel
+ DONE: bigroom_com_travel
+ Try to get info for ramontirado
+ DONE: ramontirado
+ VIEW:selenium_bot: FINISH
+ VIEW:insta_api: start at 19_38_26_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_38_26_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_39_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_39_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_41_13_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_41_13_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_46_06_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_46_12_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_46_12_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_46_13_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_46_16_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_46_23_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_46_26_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_46_32_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_46_32_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_46_34_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_46_36_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_46_43_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_46_46_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_46_51_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_46_51_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_46_54_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_46_56_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_47_03_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_47_06_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_47_11_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_47_12_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_47_13_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_47_16_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_47_24_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_47_26_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_47_32_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_47_32_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_47_34_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_47_36_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_47_43_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_47_46_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_47_51_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_47_51_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_47_53_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_47_56_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_48_03_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_48_06_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_48_11_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_48_11_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_48_13_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_48_16_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_48_23_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_48_26_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_48_31_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_48_31_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_48_34_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_48_36_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_48_43_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_48_46_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_48_51_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_48_52_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_48_53_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_48_56_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_49_03_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_49_06_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_49_11_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_49_11_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_49_13_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_49_16_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_49_23_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_49_26_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_49_31_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_49_31_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_49_34_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_49_36_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_49_43_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_49_46_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_49_51_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_49_52_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_49_53_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_49_56_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_50_03_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_50_06_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_50_11_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_50_12_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_50_13_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_50_16_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_50_23_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_50_26_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_50_31_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_50_32_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_50_34_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_50_36_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_50_43_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_50_46_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_50_51_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_50_51_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_50_53_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_50_56_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_51_03_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_51_06_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_51_11_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_51_11_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_51_13_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_51_16_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_51_23_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_51_26_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_51_31_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_51_31_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_51_34_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_51_36_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_51_43_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_51_46_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_51_51_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_51_52_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 19_51_56_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_51_56_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_52_05_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 19_52_16_04_14_17 add_task/None
+ WORKER: CREATED
+ WORKER:follow_info: POST 19_52_16_04_14_179104022657657056499
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/9104022657657056499
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_52_27_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_52_28_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to login studio_7_day_2
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_52_32_04_14_17 in /var/www/7day/studioapp/scr 
+ VIEW:insta_api: start at 19_55_16_04_14_17 add_task/None
+ WORKER: CREATED
+ WORKER:follow_info: POST 19_55_16_04_14_17131391045438008746
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/131391045438008746
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_55_26_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_55_28_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to login studio_7_day_2
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_55_31_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: cookies: [{u'domain': u'www.instagram.com', u'name': u'ig_pr', u'value': u'1', u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'ig_vw', u'value': u'1120', u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'ds_user_id', u'expires': u'Thu, 13 Jul 2017 19:55:34 GMT', u'value': u'5327792014', u'expiry': 1499975734, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'csrftoken', u'expires': u'Fri, 13 Apr 2018 19:55:34 GMT', u'value': u'LCD9Xh3pLIkHrFeGmRITfOQzwkl0T0uC', u'expiry': 1523649334, u'path': u'/', u'httponly': False, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u's_network', u'expires': u'Fri, 14 Apr 2017 20:55:34 GMT', u'value': u'""', u'expiry': 1492203334, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'rur', u'expires': u'Fri, 14 Apr 2017 20:55:34 GMT', u'value': u'FRC', u'expiry': 1492203334, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'sessionid', u'expires': u'Thu, 13 Jul 2017 19:55:32 GMT', u'value': u'IGSC5e0958a61ba0fc04dc7a6e73f7d9baa91c5c8cba359ab8ba6e52c52f53acb697%3A1IWZWRVdWg9rgFrpwT3Du2bCkihjws5V%3A%7B%22_auth_user_id%22%3A5327792014%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_token_ver%22%3A2%2C%22_token%22%3A%225327792014%3AoIQdetTwwd91kYqVS55JCnOVInplqMw3%3Af9a0373613b095c91dd5f927f02f76b59fcae4f411c6624f76102d69a0993405%22%2C%22_platform%22%3A4%2C%22last_refreshed%22%3A1492199728.9873814583%2C%22asns%22%3A%7B%22time%22%3A1492199729%2C%22212.80.37.96%22%3A8788%7D%7D', u'expiry': 1499975732, u'path': u'/', u'httponly': True, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u'mid', u'expires': u'Thu, 09 Apr 2037 19:55:22 GMT', u'value': u'WPEpKgAEAAG5wBjVU2CrAadQQCv4', u'expiry': 2122919722, u'path': u'/', u'httponly': False, u'secure': False}]
+ SELENIUM_BOT:login_user: studio_7_day_2 loggined
+ SELENIUM_BOT:get_follow_names: Try to get 15  following for dimka_photo
+ SELENIUM_BOT:get_follow_info: Try to get 15  following for dimka_photo
+ SELENIUM_BOT:get_follow_info: Try to get user page
+ SELENIUM_BOT:get_follow_info: Try to find button
+ SELENIUM_BOT:get_follow_info: Try to click button
+ SELENIUM_BOT:get_follow_info: Try to find divs
+ SELENIUM_BOT:get_follow_info: Try to find follow buttons
+ TEXT:button: Follow
+ TEXT:button: 
+ TEXT:button: Options
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Close
+ SELENIUM_BOT:get_follow_info: Len of list 74
+ SELENIUM_BOT:get_follow_names: Got 142 user_names
+ Try to get info for hustleanywhere
+ DONE: hustleanywhere
+ Try to get info for trentnattrass
+ DONE: trentnattrass
+ Try to get info for chernyavskyphoto
+ DONE: chernyavskyphoto
+ Try to get info for alkalinka
+ DONE: alkalinka
+ Try to get info for romannahrynkiv
+ DONE: romannahrynkiv
+ Try to get info for eugeniahavrylko
+ DONE: eugeniahavrylko
+ Try to get info for margo.amp
+ DONE: margo.amp
+ Try to get info for crispycitron
+ DONE: crispycitron
+ Try to get info for sarahdewald
+ DONE: sarahdewald
+ Try to get info for carekettu
+ DONE: carekettu
+ Try to get info for fit.planet
+ DONE: fit.planet
+ Try to get info for av2.photo
+ DONE: av2.photo
+ Try to get info for claudy_pitt
+ DONE: claudy_pitt
+ Try to get info for gibsoncoy
+ DONE: gibsoncoy
+ Try to get info for katie_teague
+ DONE: katie_teague
+ Try to get info for skirotica
+ DONE: skirotica
+ Try to get info for ebaumhofer
+ DONE: ebaumhofer
+ Try to get info for lilya_de
+ DONE: lilya_de
+ Try to get info for tatiana_superstar
+ DONE: tatiana_superstar
+ Try to get info for m3xtures
+ DONE: m3xtures
+ Try to get info for sombrescapes
+ DONE: sombrescapes
+ Try to get info for sombresociety
+ DONE: sombresociety
+ Try to get info for ariana_babcock
+ DONE: ariana_babcock
+ Try to get info for m.scheiner
+ DONE: m.scheiner
+ Try to get info for adampartridge
+ DONE: adampartridge
+ Try to get info for lyesk
+ DONE: lyesk
+ Try to get info for garinwood
+ DONE: garinwood
+ Try to get info for johannessroth
+ DONE: johannessroth
+ Try to get info for hank.david
+ DONE: hank.david
+ Try to get info for 1924us
+ DONE: 1924us
+ Try to get info for rob.sese
+ DONE: rob.sese
+ Try to get info for sonoratmw
+ DONE: sonoratmw
+ Try to get info for sam_griggs
+ DONE: sam_griggs
+ Try to get info for queekygrams
+ DONE: queekygrams
+ Try to get info for mrbenbrown
+ DONE: mrbenbrown
+ Try to get info for jeraldmcdermott
+ DONE: jeraldmcdermott
+ Try to get info for steffenegly
+ DONE: steffenegly
+ Try to get info for tuckerdoss
+ DONE: tuckerdoss
+ Try to get info for masonstrehl
+ DONE: masonstrehl
+ Try to get info for johnwingfield
+ DONE: johnwingfield
+ Try to get info for secondhand_kearns
+ DONE: secondhand_kearns
+ Try to get info for dylankato
+ DONE: dylankato
+ Try to get info for runawayueli
+ DONE: runawayueli
+ Try to get info for theolator
+ DONE: theolator
+ Try to get info for donalboyd
+ DONE: donalboyd
+ Try to get info for btonevibes
+ DONE: btonevibes
+ Try to get info for samdavidsmith
+ DONE: samdavidsmith
+ Try to get info for _fabiozingg
+ DONE: _fabiozingg
+ Try to get info for milliethegolden
+ DONE: milliethegolden
+ Try to get info for isaacsjohnston
+ DONE: isaacsjohnston
+ Try to get info for erinroseofficial
+ DONE: erinroseofficial
+ Try to get info for street.furniture
+ DONE: street.furniture
+ Try to get info for mywhiskeygirl
+ DONE: mywhiskeygirl
+ Try to get info for visitplanett
+ DONE: visitplanett
+ Try to get info for chrispoops
+ DONE: chrispoops
+ Try to get info for toni_b_____
+ DONE: toni_b_____
+ Try to get info for throughthetent
+ DONE: throughthetent
+ Try to get info for mlbourne
+ DONE: mlbourne
+ Try to get info for katzuka
+ DONE: katzuka
+ Try to get info for alyonaowl
+ DONE: alyonaowl
+ Try to get info for meredith_roper
+ DONE: meredith_roper
+ Try to get info for giuligartner
+ DONE: giuligartner
+ Try to get info for annchristinamberg
+ DONE: annchristinamberg
+ Try to get info for siberian_husky_world
+ DONE: siberian_husky_world
+ Try to get info for mrbenadams
+ DONE: mrbenadams
+ Try to get info for lukasdegroodt
+ DONE: lukasdegroodt
+ Try to get info for sullivang_
+ DONE: sullivang_
+ Try to get info for stelaluna_
+ DONE: stelaluna_
+ Try to get info for _lilikoi
+ DONE: _lilikoi
+ Try to get info for brooklynlaughlin
+ DONE: brooklynlaughlin
+ Try to get info for gagefarmer
+ DONE: gagefarmer
+ Try to get info for slickc
+ DONE: slickc
+ Try to get info for lostintheforrest
+ DONE: lostintheforrest
+ Try to get info for wokenwild
+ DONE: wokenwild
+ Try to get info for michaelflugstad
+ DONE: michaelflugstad
+ Try to get info for campeveryday
+ DONE: campeveryday
+ Try to get info for emmaaculate
+ DONE: emmaaculate
+ Try to get info for tmwonders
+ DONE: tmwonders
+ Try to get info for corrado_mariani
+ DONE: corrado_mariani
+ Try to get info for photo.travel.view
+ DONE: photo.travel.view
+ Try to get info for moodandtones
+ DONE: moodandtones
+ Try to get info for kenny.h.guan.lin
+ DONE: kenny.h.guan.lin
+ Try to get info for kirkamartin1
+ DONE: kirkamartin1
+ Try to get info for ellielovesfetch
+ DONE: ellielovesfetch
+ Try to get info for mittnordnorge
+ DONE: mittnordnorge
+ Try to get info for phensopian
+ DONE: phensopian
+ Try to get info for fikri.m.r
+ DONE: fikri.m.r
+ Try to get info for anastasia_vervueren
+ DONE: anastasia_vervueren
+ Try to get info for pipergracee
+ DONE: pipergracee
+ Try to get info for shutter.klick
+ DONE: shutter.klick
+ Try to get info for nature_iloveme
+ DONE: nature_iloveme
+ Try to get info for profit
+ DONE: profit
+ Try to get info for cld_hk
+ DONE: cld_hk
+ Try to get info for gramslayers
+ DONE: gramslayers
+ Try to get info for isk.s
+ DONE: isk.s
+ Try to get info for veronika_gorianska
+ DONE: veronika_gorianska
+ Try to get info for pavel.sergienko
+ DONE: pavel.sergienko
+ Try to get info for petterhegre
+ DONE: petterhegre
+ Try to get info for kookh_workshop
+ DONE: kookh_workshop
+ Try to get info for sidtechnology
+ DONE: sidtechnology
+ Try to get info for a_zerv
+ DONE: a_zerv
+ Try to get info for readylightmedia
+ DONE: readylightmedia
+ Try to get info for nathanaelbillings
+ DONE: nathanaelbillings
+ Try to get info for ninamckinley
+ DONE: ninamckinley
+ Try to get info for marie_sts
+ DONE: marie_sts
+ Try to get info for photohunted
+ DONE: photohunted
+ Try to get info for portrait_vision
+ DONE: portrait_vision
+ Try to get info for kirstinvang
+ DONE: kirstinvang
+ Try to get info for creative_portraits
+ DONE: creative_portraits
+ Try to get info for fabulousshot
+ DONE: fabulousshot
+ Try to get info for peoplephotatoes
+ DONE: peoplephotatoes
+ Try to get info for portraittmood
+ DONE: portraittmood
+ Try to get info for full.div
+ DONE: full.div
+ Try to get info for workhardanywhere
+ DONE: workhardanywhere
+ Try to get info for rusticroamer
+ DONE: rusticroamer
+ Try to get info for fairychristinamay
+ DONE: fairychristinamay
+ Try to get info for iren.markovskaya
+ DONE: iren.markovskaya
+ Try to get info for joshnicholzon
+ DONE: joshnicholzon
+ Try to get info for valyavalya8
+ DONE: valyavalya8
+ Try to get info for desiree.mbr
+ DONE: desiree.mbr
+ Try to get info for janna_evstafeva
+ DONE: janna_evstafeva
+ Try to get info for minimalsource
+ DONE: minimalsource
+ Try to get info for linxclass
+ DONE: linxclass
+ Try to get info for remibennett
+ DONE: remibennett
+ Try to get info for nwhite_nyc
+ DONE: nwhite_nyc
+ Try to get info for mariiiaagapova
+ DONE: mariiiaagapova
+ Try to get info for t.nastycha
+ DONE: t.nastycha
+ Try to get info for notikat
+ DONE: notikat
+ Try to get info for nice_lady_ganja
+ DONE: nice_lady_ganja
+ Try to get info for valeriia_horovets
+ DONE: valeriia_horovets
+ Try to get info for ma_rinashevchenko
+ DONE: ma_rinashevchenko
+ Try to get info for altitudeiseverything
+ DONE: altitudeiseverything
+ Try to get info for derevosemeinoe
+ DONE: derevosemeinoe
+ Try to get info for sachen.ka
+ DONE: sachen.ka
+ Try to get info for messlifer
+ DONE: messlifer
+ Try to get info for lilu.n
+ DONE: lilu.n
+ Try to get info for kirilkoo
+ DONE: kirilkoo
+ Try to get info for janlosert
+ DONE: janlosert
+ Try to get info for liza230200
+ DONE: liza230200
+ VIEW:selenium_bot: FINISH
+ VIEW:insta_api: start at 19_57_52_04_14_17 add_task/None
+ WORKER: CREATED
+ WORKER:follow_info: POST 19_57_52_04_14_174445443579036014580
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/4445443579036014580
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_58_03_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_58_05_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to login studio_7_day_2
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 19_58_08_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: studio_7_day_2 loggined
+ SELENIUM_BOT:login_user: cookies: [{u'domain': u'www.instagram.com', u'name': u'ig_pr', u'value': u'1', u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'ig_vw', u'value': u'1120', u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'sessionid', u'expires': u'Thu, 13 Jul 2017 19:58:12 GMT', u'value': u'IGSCe10c991b2b98814af333a2c9d23cdf8e61179ff982adf629a7def81d473789e2%3AIZkKLKJ1qRTkd1qQ8xz6BMLmwDK7PtNO%3A%7B%22_auth_user_id%22%3A5327792014%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_token_ver%22%3A2%2C%22_token%22%3A%225327792014%3AElYkt2yO2YMv44cTvcNG6QH9NR6yvi4i%3A96622a5b4b1142e6a6daf2b9907edec12e2d54a439b51eeb5d3419f1b8a733f1%22%2C%22_platform%22%3A4%2C%22last_refreshed%22%3A1492199886.1103923321%2C%22asns%22%3A%7B%22time%22%3A1492199889%2C%22212.80.37.96%22%3A8788%7D%7D', u'expiry': 1499975892, u'path': u'/', u'httponly': True, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u'ds_user_id', u'expires': u'Thu, 13 Jul 2017 19:58:12 GMT', u'value': u'5327792014', u'expiry': 1499975892, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'csrftoken', u'expires': u'Fri, 13 Apr 2018 19:58:12 GMT', u'value': u'rXlfXM5kib5lxhfSMcq07c21ElQVZOym', u'expiry': 1523649492, u'path': u'/', u'httponly': False, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u's_network', u'expires': u'Fri, 14 Apr 2017 20:58:12 GMT', u'value': u'""', u'expiry': 1492203492, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'rur', u'expires': u'Fri, 14 Apr 2017 20:58:12 GMT', u'value': u'FRC', u'expiry': 1492203492, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'mid', u'expires': u'Thu, 09 Apr 2037 19:57:58 GMT', u'value': u'WPEpxwAEAAFrz4wV8YzEChj2nl85', u'expiry': 2122919878, u'path': u'/', u'httponly': False, u'secure': False}]
+ SELENIUM_BOT:get_follow_names: Try to get 15  followers for fursty
+ SELENIUM_BOT:get_follow_info: Try to get 15  followers for fursty
+ SELENIUM_BOT:get_follow_info: Try to get user page
+ SELENIUM_BOT:get_follow_info: Try to find button
+ SELENIUM_BOT:get_follow_info: Try to click button
+ SELENIUM_BOT:get_follow_info: Try to find divs
+ SELENIUM_BOT:get_follow_info: Try to find follow buttons
+ TEXT:button: Following
+ TEXT:button: 
+ TEXT:button: Options
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Close
+ SELENIUM_BOT:get_follow_info: Len of list 84
+ SELENIUM_BOT:get_follow_names: Got 171 user_names
+ Try to get info for aburk3
+ DONE: aburk3
+ Try to get info for nature.photography110
+ DONE: nature.photography110
+ Try to get info for salihyilmazsy
+ DONE: salihyilmazsy
+ Try to get info for pilgrm
+ DONE: pilgrm
+ Try to get info for pinevalleyranchapts
+ DONE: pinevalleyranchapts
+ Try to get info for stefaniamello
+ DONE: stefaniamello
+ Try to get info for _madruga_
+ DONE: _madruga_
+ Try to get info for castleclickphoto
+ DONE: castleclickphoto
+ Try to get info for quentin_bschr
+ DONE: quentin_bschr
+ Try to get info for fedr.gvozdental
+ DONE: fedr.gvozdental
+ Try to get info for jensencarol
+ DONE: jensencarol
+ Try to get info for julian_mathieu_
+ DONE: julian_mathieu_
+ Try to get info for bader_autism
+ DONE: bader_autism
+ Try to get info for hbosssss
+ DONE: hbosssss
+ Try to get info for jufehlbaum
+ DONE: jufehlbaum
+ Try to get info for adrianamorozova
+ DONE: adrianamorozova
+ Try to get info for arkonik
+ DONE: arkonik
+ Try to get info for plantsandpasta
+ DONE: plantsandpasta
+ Try to get info for m.karolinaa
+ DONE: m.karolinaa
+ Try to get info for jt.vision
+ DONE: jt.vision
+ Try to get info for juicyora
+ DONE: juicyora
+ Try to get info for pedrulo
+ DONE: pedrulo
+ Try to get info for gretadonzellamegret
+ DONE: gretadonzellamegret
+ Try to get info for yerotsp
+ DONE: yerotsp
+ Try to get info for abbyatziry_
+ DONE: abbyatziry_
+ Try to get info for danibloodoff
+ DONE: danibloodoff
+ Try to get info for aeslehco
+ DONE: aeslehco
+ Try to get info for motog0
+ DONE: motog0
+ Try to get info for sams.perspective
+ DONE: sams.perspective
+ Try to get info for melis_zybk03
+ DONE: melis_zybk03
+ Try to get info for trungcut_trungcut
+ DONE: trungcut_trungcut
+ Try to get info for dustinthewind_._
+ DONE: dustinthewind_._
+ Try to get info for alina.mihaela.badicioiu
+ DONE: alina.mihaela.badicioiu
+ Try to get info for ziv_sror
+ DONE: ziv_sror
+ Try to get info for luciasasarabia
+ DONE: luciasasarabia
+ Try to get info for thepathtohimself
+ DONE: thepathtohimself
+ Try to get info for mr.birsen
+ DONE: mr.birsen
+ Try to get info for fotoman_mai
+ DONE: fotoman_mai
+ Try to get info for garmentgames
+ DONE: garmentgames
+ Try to get info for totsik_isf
+ DONE: totsik_isf
+ Try to get info for travelonymus
+ DONE: travelonymus
+ Try to get info for maggieseluwa
+ DONE: maggieseluwa
+ Try to get info for ryanbrooks82
+ DONE: ryanbrooks82
+ Try to get info for aakenya98
+ DONE: aakenya98
+ Try to get info for thelawphotography
+ DONE: thelawphotography
+ Try to get info for habichtjonathan
+ DONE: habichtjonathan
+ Try to get info for dream.photo17
+ DONE: dream.photo17
+ Try to get info for aliyucel01
+ DONE: aliyucel01
+ Try to get info for jorgedmartin
+ DONE: jorgedmartin
+ Try to get info for hjkl__7909
+ DONE: hjkl__7909
+ Try to get info for mentor_counselor
+ DONE: mentor_counselor
+ Try to get info for zeynepbsrm
+ DONE: zeynepbsrm
+ Try to get info for mssav04
+ DONE: mssav04
+ Try to get info for luu_name
+ DONE: luu_name
+ Try to get info for traveltheworlds2017
+ DONE: traveltheworlds2017
+ Try to get info for auntpollyanna
+ DONE: auntpollyanna
+ Try to get info for art4maaly
+ DONE: art4maaly
+ Try to get info for alex_red_bunny
+ DONE: alex_red_bunny
+ Try to get info for ovitruta
+ DONE: ovitruta
+ Try to get info for ladygaramakeup.pro
+ DONE: ladygaramakeup.pro
+ Try to get info for peechpeach
+ DONE: peechpeach
+ Try to get info for fernweh_fh
+ DONE: fernweh_fh
+ Try to get info for luissmackk
+ DONE: luissmackk
+ Try to get info for amirmahdizamaani
+ DONE: amirmahdizamaani
+ Try to get info for charlenejiho
+ DONE: charlenejiho
+ Try to get info for rutgr
+ DONE: rutgr
+ Try to get info for robdemc123
+ DONE: robdemc123
+ Try to get info for rfernweh
+ DONE: rfernweh
+ Try to get info for hardi444
+ DONE: hardi444
+ Try to get info for tyna8192
+ DONE: tyna8192
+ Try to get info for joshswords
+ DONE: joshswords
+ Try to get info for _intanbaiduri_
+ DONE: _intanbaiduri_
+ Try to get info for rclemento
+ DONE: rclemento
+ Try to get info for myceviche
+ DONE: myceviche
+ Try to get info for subhankar_dey
+ DONE: subhankar_dey
+ Try to get info for arabellahunter
+ DONE: arabellahunter
+ Try to get info for sukruemanet
+ DONE: sukruemanet
+ Try to get info for jeessyy_13
+ DONE: jeessyy_13
+ Try to get info for jay.mbithi
+ DONE: jay.mbithi
+ Try to get info for samuelperrard
+ DONE: samuelperrard
+ Try to get info for ohhiheytherehello
+ DONE: ohhiheytherehello
+ Try to get info for alicurve
+ DONE: alicurve
+ Try to get info for pinnacleexposure
+ DONE: pinnacleexposure
+ Try to get info for mahmod3442
+ DONE: mahmod3442
+ Try to get info for christian_tjernagel
+ DONE: christian_tjernagel
+ Try to get info for davide.amenta
+ DONE: davide.amenta
+ Try to get info for temperani
+ DONE: temperani
+ Try to get info for javarockstar
+ DONE: javarockstar
+ Try to get info for _speedycat_
+ DONE: _speedycat_
+ Try to get info for traveller918
+ DONE: traveller918
+ Try to get info for minimenio
+ DONE: minimenio
+ Try to get info for leo_khidesheli
+ DONE: leo_khidesheli
+ Try to get info for theadventurelifee
+ DONE: theadventurelifee
+ Try to get info for _iuliiaa
+ DONE: _iuliiaa
+ Try to get info for instaramholgado
+ DONE: instaramholgado
+ Try to get info for hshw_pictures_
+ DONE: hshw_pictures_
+ Try to get info for s_v_e_n_199
+ DONE: s_v_e_n_199
+ Try to get info for _da_.rian
+ DONE: _da_.rian
+ Try to get info for laurentizia
+ DONE: laurentizia
+ Try to get info for mimoletom_
+ DONE: mimoletom_
+ Try to get info for salmashoots
+ DONE: salmashoots
+ Try to get info for anothertangerineworld
+ DONE: anothertangerineworld
+ Try to get info for kostia.pekarchuk
+ DONE: kostia.pekarchuk
+ Try to get info for ayyash_adil
+ DONE: ayyash_adil
+ Try to get info for chiara.molinari
+ DONE: chiara.molinari
+ Try to get info for annioss
+ DONE: annioss
+ Try to get info for natlightearth
+ DONE: natlightearth
+ Try to get info for seymaaderler
+ DONE: seymaaderler
+ Try to get info for alexis.ozoryo
+ DONE: alexis.ozoryo
+ Try to get info for elahekabootaran
+ DONE: elahekabootaran
+ Try to get info for alinasadovnikova__
+ DONE: alinasadovnikova__
+ Try to get info for sabrinaborgez
+ DONE: sabrinaborgez
+ Try to get info for randaguiga
+ DONE: randaguiga
+ Try to get info for karimids
+ DONE: karimids
+ Try to get info for kuzminovov_oleg
+ DONE: kuzminovov_oleg
+ Try to get info for photovideo_wedding
+ DONE: photovideo_wedding
+ Try to get info for joaovieiraphoto
+ DONE: joaovieiraphoto
+ Try to get info for danish_nozar65
+ DONE: danish_nozar65
+ Try to get info for penguin.picture
+ DONE: penguin.picture
+ Try to get info for _e_a_s_one_
+ DONE: _e_a_s_one_
+ Try to get info for serenako0116
+ DONE: serenako0116
+ Try to get info for pepa_photos
+ DONE: pepa_photos
+ Try to get info for palaciofz
+ DONE: palaciofz
+ Try to get info for pandas_are__cute
+ DONE: pandas_are__cute
+ Try to get info for anuraj_nath_photography
+ DONE: anuraj_nath_photography
+ Try to get info for patriciatormentum
+ DONE: patriciatormentum
+ Try to get info for matteogerosa
+ DONE: matteogerosa
+ Try to get info for belle_bragaa
+ DONE: belle_bragaa
+ Try to get info for jt.perspective
+ DONE: jt.perspective
+ Try to get info for jonhansenn
+ DONE: jonhansenn
+ Try to get info for _peac3
+ DONE: _peac3
+ Try to get info for aboutsomethingaround
+ DONE: aboutsomethingaround
+ Try to get info for gladysafan
+ DONE: gladysafan
+ Try to get info for slsergeev
+ DONE: slsergeev
+ Try to get info for lilacelsa
+ DONE: lilacelsa
+ Try to get info for jay_pisi
+ DONE: jay_pisi
+ Try to get info for oneetalon
+ DONE: oneetalon
+ Try to get info for nell_captured
+ DONE: nell_captured
+ Try to get info for riyabagchii
+ DONE: riyabagchii
+ Try to get info for ryleetherescued
+ DONE: ryleetherescued
+ Try to get info for cool_kid82
+ DONE: cool_kid82
+ Try to get info for misadventures_with_buddy
+ DONE: misadventures_with_buddy
+ DONE: prabhu_bruuhr prabhu_bruuh
+ Try to get info for syl__via_
+ DONE: syl__via_
+ Try to get info for tonimas.photography.iphone
+ DONE: tonimas.photography.iphone
+ Try to get info for samhenderson7
+ DONE: samhenderson7
+ Try to get info for anuraj_nath
+ DONE: anuraj_nath
+ Try to get info for venkyroverscout
+ DONE: venkyroverscout
+ Try to get info for mukul_khopade_mk
+ DONE: mukul_khopade_mk
+ Try to get info for marcoavanziphotos
+ DONE: marcoavanziphotos
+ Try to get info for suparmand
+ DONE: suparmand
+ Try to get info for emily_wallacee
+ DONE: emily_wallacee
+ Try to get info for liaaaaaaaaaaw
+ DONE: liaaaaaaaaaaw
+ Try to get info for jeff_ventura89
+ DONE: jeff_ventura89
+ Try to get info for whitorq
+ DONE: whitorq
+ Try to get info for mellotron.scratch
+ DONE: mellotron.scratch
+ Try to get info for petras.adventures
+ DONE: petras.adventures
+ Try to get info for _miriam_bricco_
+ DONE: _miriam_bricco_
+ Try to get info for backcountryfanatics
+ DONE: backcountryfanatics
+ Try to get info for dawid.d.k
+ DONE: dawid.d.k
+ Try to get info for basarirtugce
+ DONE: basarirtugce
+ Try to get info for lookatchinogo
+ DONE: lookatchinogo
+ Try to get info for vlad_ua_
+ DONE: vlad_ua_
+ Try to get info for luuphuc0602
+ DONE: luuphuc0602
+ Try to get info for guerilladepina
+ DONE: guerilladepina
+ Try to get info for photocosmology
+ DONE: photocosmology
+ Try to get info for gavinglogowski
+ DONE: gavinglogowski
+ Try to get info for jeanlfourie
+ DONE: jeanlfourie
+ VIEW:selenium_bot: FINISH
+ VIEW:insta_api: start at 20_01_02_04_14_17 add_task/None
+ WORKER: CREATED
+ WORKER:follow_info: POST 20_01_02_04_14_172160539602526793032
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/2160539602526793032
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 20_01_13_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 20_01_14_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to login studio_7_day_2
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 20_01_18_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: studio_7_day_2 loggined
+ SELENIUM_BOT:login_user: cookies: [{"domain": "www.instagram.com", "name": "ig_pr", "value": "1", "path": "/", "httponly": false, "secure": false}, {"domain": "www.instagram.com", "name": "ig_vw", "value": "1120", "path": "/", "httponly": false, "secure": false}, {"domain": "www.instagram.com", "name": "ds_user_id", "expires": "Thu, 13 Jul 2017 20:01:21 GMT", "value": "5327792014", "expiry": 1499976081, "path": "/", "httponly": false, "secure": false}, {"domain": "www.instagram.com", "name": "csrftoken", "expires": "Fri, 13 Apr 2018 20:01:21 GMT", "value": "w4YhrrfAHOivtHVdJT7YLo19ZwdIa3jV", "expiry": 1523649681, "path": "/", "httponly": false, "secure": true}, {"domain": "www.instagram.com", "name": "s_network", "expires": "Fri, 14 Apr 2017 21:01:21 GMT", "value": "\"\"", "expiry": 1492203681, "path": "/", "httponly": false, "secure": false}, {"domain": "www.instagram.com", "name": "rur", "expires": "Fri, 14 Apr 2017 21:01:21 GMT", "value": "FRC", "expiry": 1492203681, "path": "/", "httponly": false, "secure": false}, {"domain": "www.instagram.com", "name": "sessionid", "expires": "Thu, 13 Jul 2017 20:01:18 GMT", "value": "IGSCbcfc512ddf2300e5d146f6e8c359d091b0cefd378b93b950099fbf91ef9e6bad%3A9kTFcH62nUwsRWLNYNXwQxsvosZ9wq4S%3A%7B%22_auth_user_id%22%3A5327792014%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_token_ver%22%3A2%2C%22_token%22%3A%225327792014%3A9vdKXUqiSJsb0X3xjXLBKhW3mJGkA37t%3A36b2f46b82ae4f3a3cc4972e74ae7eb5d86a3f3e93e8ad3787a08358d1f712df%22%2C%22_platform%22%3A4%2C%22last_refreshed%22%3A1492200075.6616594791%2C%22asns%22%3A%7B%22time%22%3A1492200076%2C%22212.80.37.96%22%3A8788%7D%7D", "expiry": 1499976078, "path": "/", "httponly": true, "secure": true}, {"domain": "www.instagram.com", "name": "mid", "expires": "Thu, 09 Apr 2037 20:01:08 GMT", "value": "WPEqhAAEAAFg0Oe7aw8R2ULnlW0T", "expiry": 2122920068, "path": "/", "httponly": false, "secure": false}]
+ SELENIUM_BOT:get_follow_names: Try to get 15  followers for jeanlfourie
+ SELENIUM_BOT:get_follow_info: Try to get 15  followers for jeanlfourie
+ SELENIUM_BOT:get_follow_info: Try to get user page
+ SELENIUM_BOT:get_follow_info: Try to find button
+ SELENIUM_BOT:get_follow_info: Try to click button
+ SELENIUM_BOT:get_follow_info: Try to find divs
+ SELENIUM_BOT:get_follow_info: Try to find follow buttons
+ TEXT:button: Follow
+ TEXT:button: 
+ TEXT:button: Options
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Close
+ SELENIUM_BOT:get_follow_info: Len of list 34
+ SELENIUM_BOT:get_follow_names: Got 71 user_names
+ Try to get info for s__i__m__e
+ DONE: s__i__m__e
+ Try to get info for heimaterfahren
+ DONE: heimaterfahren
+ Try to get info for viktorijamaren6209
+ DONE: viktorijamaren6209
+ Try to get info for chickmagnetcars
+ DONE: chickmagnetcars
+ Try to get info for andrewaden
+ DONE: andrewaden
+ Try to get info for love_to_lens_a_hand
+ DONE: love_to_lens_a_hand
+ Try to get info for intuilapse
+ DONE: intuilapse
+ Try to get info for timtimruivo
+ DONE: timtimruivo
+ Try to get info for kabelomahlakeng
+ DONE: kabelomahlakeng
+ Try to get info for _biaq_
+ DONE: _biaq_
+ Try to get info for matsumaboitumelo
+ DONE: matsumaboitumelo
+ Try to get info for sam_peters_nz
+ DONE: sam_peters_nz
+ Try to get info for anzel_olivier
+ DONE: anzel_olivier
+ Try to get info for raulcaramizaru
+ DONE: raulcaramizaru
+ Try to get info for huldahr
+ DONE: huldahr
+ Try to get info for theonield
+ DONE: theonield
+ Try to get info for henkversluis
+ DONE: henkversluis
+ Try to get info for naledimohapi
+ DONE: naledimohapi
+ Try to get info for mirekkerimtattoo
+ DONE: mirekkerimtattoo
+ Try to get info for scherzoprod
+ DONE: scherzoprod
+ Try to get info for johnny_fourie
+ DONE: johnny_fourie
+ Try to get info for boitumelomatsuma
+ DONE: boitumelomatsuma
+ Try to get info for zandertoerien1
+ DONE: zandertoerien1
+ Try to get info for photograpy_classy_cactus
+ DONE: photograpy_classy_cactus
+ Try to get info for kirstin.walters
+ DONE: kirstin.walters
+ Try to get info for bothabrandon
+ DONE: bothabrandon
+ Try to get info for lucretia_nothnagel
+ DONE: lucretia_nothnagel
+ Try to get info for joskinart
+ DONE: joskinart
+ Try to get info for chicago_lounge
+ DONE: chicago_lounge
+ Try to get info for liebenberg_diandra
+ DONE: liebenberg_diandra
+ Try to get info for laningthabo
+ DONE: laningthabo
+ Try to get info for stickstudio17
+ DONE: stickstudio17
+ Try to get info for hadarband
+ DONE: hadarband
+ Try to get info for graspoldiegerthie
+ DONE: graspoldiegerthie
+ Try to get info for stanleybubb1961
+ DONE: stanleybubb1961
+ Try to get info for rootloopa
+ DONE: rootloopa
+ Try to get info for jwelthagen
+ DONE: jwelthagen
+ Try to get info for robinahahaha
+ DONE: robinahahaha
+ Try to get info for hopeisforwerner
+ DONE: hopeisforwerner
+ Try to get info for bloemfuntown
+ DONE: bloemfuntown
+ Try to get info for andries_plak
+ DONE: andries_plak
+ Try to get info for thirdworldgenie
+ DONE: thirdworldgenie
+ Try to get info for theoandre0819
+ DONE: theoandre0819
+ Try to get info for fluffmenow
+ DONE: fluffmenow
+ Try to get info for anja.vandermerwe
+ DONE: anja.vandermerwe
+ Try to get info for mona_skinart
+ DONE: mona_skinart
+ Try to get info for highwaypatrolband
+ DONE: highwaypatrolband
+ Try to get info for schoonm3d
+ DONE: schoonm3d
+ Try to get info for illuminationfestza
+ DONE: illuminationfestza
+ Try to get info for lizetal95
+ DONE: lizetal95
+ Try to get info for chrisschlebusch
+ DONE: chrisschlebusch
+ Try to get info for willem08vdmerwe
+ DONE: willem08vdmerwe
+ Try to get info for blommarita
+ DONE: blommarita
+ Try to get info for kirkland_band
+ DONE: kirkland_band
+ Try to get info for jpschroeder1
+ DONE: jpschroeder1
+ Try to get info for jonathanroux6
+ DONE: jonathanroux6
+ Try to get info for cooks101
+ DONE: cooks101
+ Try to get info for orosinnlangglas
+ DONE: orosinnlangglas
+ Try to get info for whian4
+ DONE: whian4
+ Try to get info for joethompson1994
+ DONE: joethompson1994
+ Try to get info for samusicevents
+ DONE: samusicevents
+ Try to get info for jesusacarter
+ DONE: jesusacarter
+ Try to get info for mwnothnagel
+ DONE: mwnothnagel
+ Try to get info for christilcasey
+ DONE: christilcasey
+ Try to get info for kingbalthizar
+ DONE: kingbalthizar
+ Try to get info for radicallife
+ DONE: radicallife
+ Try to get info for commandirrrr
+ DONE: commandirrrr
+ Try to get info for motebangletelea
+ DONE: motebangletelea
+ VIEW:selenium_bot: FINISH
+ VIEW:insta_api: start at 20_06_01_04_14_17 add_task/None
+ WORKER: CREATED
+ WORKER:follow_info: POST 20_06_01_04_14_172448293896676895098
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/2448293896676895098
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 20_06_12_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 20_06_13_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to login studio_7_day_2
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 20_06_16_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: studio_7_day_2 loggined
+ SELENIUM_BOT:login_user: cookies: [{"domain": "www.instagram.com", "name": "ig_pr", "value": "1", "path": "/", "httponly": false, "secure": false}, {"domain": "www.instagram.com", "name": "ig_vw", "value": "1120", "path": "/", "httponly": false, "secure": false}, {"domain": "www.instagram.com", "name": "sessionid", "expires": "Thu, 13 Jul 2017 20:06:20 GMT", "value": "IGSC61426c047757824e2d29f65866730056233cdd124a3df9b00b52fed37b39e41b%3AfoTWiXjnPaq6CUCtAayEJRHgjJ2Zwssj%3A%7B%22_auth_user_id%22%3A5327792014%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_token_ver%22%3A2%2C%22_token%22%3A%225327792014%3AB7VClTbNj6MrzSXdTvYAMGOc09xq8KBR%3A037ac8f64e877004edf08937475186467a64e4588b8ded369eeac629d53738d1%22%2C%22_platform%22%3A4%2C%22last_refreshed%22%3A1492200374.3267021179%2C%22asns%22%3A%7B%22time%22%3A1492200377%2C%22212.80.37.96%22%3A8788%7D%7D", "expiry": 1499976380, "path": "/", "httponly": true, "secure": true}, {"domain": "www.instagram.com", "name": "ds_user_id", "expires": "Thu, 13 Jul 2017 20:06:20 GMT", "value": "5327792014", "expiry": 1499976380, "path": "/", "httponly": false, "secure": false}, {"domain": "www.instagram.com", "name": "csrftoken", "expires": "Fri, 13 Apr 2018 20:06:20 GMT", "value": "4LnewPa91p4zkcujvLEwMxsx0chLPZ0J", "expiry": 1523649980, "path": "/", "httponly": false, "secure": true}, {"domain": "www.instagram.com", "name": "s_network", "expires": "Fri, 14 Apr 2017 21:06:20 GMT", "value": "\"\"", "expiry": 1492203980, "path": "/", "httponly": false, "secure": false}, {"domain": "www.instagram.com", "name": "rur", "expires": "Fri, 14 Apr 2017 21:06:20 GMT", "value": "FRC", "expiry": 1492203980, "path": "/", "httponly": false, "secure": false}, {"domain": "www.instagram.com", "name": "mid", "expires": "Thu, 09 Apr 2037 20:06:07 GMT", "value": "WPErrwAEAAEVWAjQxNze3mE2IlYY", "expiry": 2122920367, "path": "/", "httponly": false, "secure": false}]
+ VIEW:insta_api: start at 20_08_32_04_14_17 add_task/None
+ WORKER: CREATED
+ VIEW:insta_api: start at 20_08_33_04_14_17 add_task/None
+ WORKER: CREATED
+ WORKER:follow_info: POST 20_08_33_04_14_177913246666170453385
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/7913246666170453385
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: Try to get login page
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 20_08_45_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 20_08_46_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: Try to login studio_7_day_2
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 20_08_50_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: studio_7_day_2 loggined
+ SELENIUM_BOT:login_user: cookies: [{"domain": "www.instagram.com", "name": "ig_pr", "value": "1", "path": "/", "httponly": false, "secure": false}, {"domain": "www.instagram.com", "name": "ig_vw", "value": "1120", "path": "/", "httponly": false, "secure": false}, {"domain": "www.instagram.com", "name": "sessionid", "expires": "Thu, 13 Jul 2017 20:08:54 GMT", "value": "IGSCbde62f9386c40ee0a26dd22191a338793637b3c5ff166a8b0710d5c0d48ae06d%3AlnAOVfbpNxvvdqWjZz7BqQaExFVmTsqx%3A%7B%22_auth_user_id%22%3A5327792014%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_token_ver%22%3A2%2C%22_token%22%3A%225327792014%3AC13QohL6XLuue6GKYVzhkUxExzkeo65q%3A8ea3e2ee2c45694b9979d65fffc7d91997e40f2712be70533b3bdb8fb21c2eac%22%2C%22_platform%22%3A4%2C%22last_refreshed%22%3A1492200527.9029877186%2C%22asns%22%3A%7B%22time%22%3A1492200531%2C%22212.80.37.96%22%3A8788%7D%7D", "expiry": 1499976534, "path": "/", "httponly": true, "secure": true}, {"domain": "www.instagram.com", "name": "ds_user_id", "expires": "Thu, 13 Jul 2017 20:08:54 GMT", "value": "5327792014", "expiry": 1499976534, "path": "/", "httponly": false, "secure": false}, {"domain": "www.instagram.com", "name": "csrftoken", "expires": "Fri, 13 Apr 2018 20:08:54 GMT", "value": "qfcJNANfQfk63EmVZAtpJleqi2Ql2euc", "expiry": 1523650134, "path": "/", "httponly": false, "secure": true}, {"domain": "www.instagram.com", "name": "s_network", "expires": "Fri, 14 Apr 2017 21:08:54 GMT", "value": "\"\"", "expiry": 1492204134, "path": "/", "httponly": false, "secure": false}, {"domain": "www.instagram.com", "name": "rur", "expires": "Fri, 14 Apr 2017 21:08:54 GMT", "value": "FRC", "expiry": 1492204134, "path": "/", "httponly": false, "secure": false}, {"domain": "www.instagram.com", "name": "mid", "expires": "Thu, 09 Apr 2037 20:08:40 GMT", "value": "WPEsSAAEAAGDaEcXPhODHCNM0xnY", "expiry": 2122920520, "path": "/", "httponly": false, "secure": false}]
+ SELENIUM_BOT:login_user: cookies_path: /var/www/7day/studioapp/cookies/cookie
+ SELENIUM_BOT:login_user: cookies_path: /var/www/7day/studioapp/cookies/cookie
+ SELENIUM_BOT:get_follow_names: Try to get 15  following for rootloopa
+ SELENIUM_BOT:get_follow_info: Try to get 15  following for rootloopa
+ SELENIUM_BOT:get_follow_info: Try to get user page
+ SELENIUM_BOT:get_follow_info: Try to find button
+ SELENIUM_BOT:get_follow_info: Try to click button
+ SELENIUM_BOT:get_follow_info: Try to find divs
+ SELENIUM_BOT:get_follow_info: Try to find follow buttons
+ TEXT:button: Follow
+ TEXT:button: 
+ TEXT:button: Options
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Close
+ SELENIUM_BOT:get_follow_info: Len of list 74
+ SELENIUM_BOT:get_follow_names: Got 142 user_names
+ Try to get info for hoytbowhunting
+ DONE: hoytbowhunting
+ Try to get info for gino.artist
+ DONE: gino.artist
+ Try to get info for chasingstu
+ DONE: chasingstu
+ Try to get info for nemesisgazza
+ DONE: nemesisgazza
+ Try to get info for tripan777
+ DONE: tripan777
+ Try to get info for michaelvan_zyl
+ DONE: michaelvan_zyl
+ Try to get info for doctor_bops
+ DONE: doctor_bops
+ Try to get info for goddardstanley
+ DONE: goddardstanley
+ Try to get info for mattsedivy
+ DONE: mattsedivy
+ Try to get info for lowdevries
+ DONE: lowdevries
+ Try to get info for peterjohnhanmer
+ DONE: peterjohnhanmer
+ Try to get info for henryhyundai
+ DONE: henryhyundai
+ Try to get info for slproductions.co.za
+ DONE: slproductions.co.za
+ Try to get info for meagz_hart
+ DONE: meagz_hart
+ Try to get info for nikkijackmanjoy
+ DONE: nikkijackmanjoy
+ Try to get info for crystallinephotography
+ DONE: crystallinephotography
+ Try to get info for chelle_goliath
+ DONE: chelle_goliath
+ Try to get info for shaleenvanjaarsveld
+ DONE: shaleenvanjaarsveld
+ Try to get info for edmunddjones
+ DONE: edmunddjones
+ Try to get info for shoreline.plett
+ DONE: shoreline.plett
+ Try to get info for candy.dee
+ DONE: candy.dee
+ Try to get info for nataliekirby5059
+ DONE: nataliekirby5059
+ Try to get info for roland_l_vorbek
+ DONE: roland_l_vorbek
+ Try to get info for mikewilliams3834
+ DONE: mikewilliams3834
+ Try to get info for yvesroberts_clubfeet
+ DONE: yvesroberts_clubfeet
+ Try to get info for ouderdoos
+ DONE: ouderdoos
+ Try to get info for jackmantis
+ DONE: jackmantis
+ Try to get info for tazfishinteriors
+ DONE: tazfishinteriors
+ Try to get info for jeanlfourie
+ DONE: jeanlfourie
+ Try to get info for fish.kev
+ DONE: fish.kev
+ Try to get info for franrico970
+ DONE: franrico970
+ Try to get info for jongman_van_ouderdom
+ DONE: jongman_van_ouderdom
+ Try to get info for angiemacdonald2590
+ DONE: angiemacdonald2590
+ Try to get info for bloodtrauma
+ DONE: bloodtrauma
+ Try to get info for nomic171
+ DONE: nomic171
+ Try to get info for earthspiritjourney
+ DONE: earthspiritjourney
+ Try to get info for blaqinc
+ DONE: blaqinc
+ Try to get info for mama_bumpkin
+ DONE: mama_bumpkin
+ Try to get info for astleyduncan
+ DONE: astleyduncan
+ Try to get info for queeniecombrinck28
+ DONE: queeniecombrinck28
+ Try to get info for shay0209
+ DONE: shay0209
+ Try to get info for mimi_woods_
+ DONE: mimi_woods_
+ Try to get info for afrikar1978
+ DONE: afrikar1978
+ Try to get info for trashcan_preachers
+ DONE: trashcan_preachers
+ Try to get info for 7iann3
+ DONE: 7iann3
+ Try to get info for riaanmaritz1
+ DONE: riaanmaritz1
+ Try to get info for norma_wild
+ DONE: norma_wild
+ Try to get info for mcgregorufc
+ DONE: mcgregorufc
+ Try to get info for dillondanis
+ DONE: dillondanis
+ Try to get info for millercliffie
+ DONE: millercliffie
+ Try to get info for wandfc
+ DONE: wandfc
+ Try to get info for rampage4real
+ DONE: rampage4real
+ Try to get info for basruttenmma
+ DONE: basruttenmma
+ Try to get info for arielhelwani
+ DONE: arielhelwani
+ Try to get info for showtimepettis
+ DONE: showtimepettis
+ Try to get info for jonnybones
+ DONE: jonnybones
+ Try to get info for hollyholm
+ DONE: hollyholm
+ Try to get info for danhendo
+ DONE: danhendo
+ Try to get info for c_wildsweetchild
+ DONE: c_wildsweetchild
+ Try to get info for gage_band
+ DONE: gage_band
+ Try to get info for jdkustomguitars
+ DONE: jdkustomguitars
+ Try to get info for alonselmann
+ DONE: alonselmann
+ Try to get info for georgieminopetros
+ DONE: georgieminopetros
+ Try to get info for juanita8477
+ DONE: juanita8477
+ Try to get info for juncha
+ DONE: juncha
+ Try to get info for mistertroshin
+ DONE: mistertroshin
+ Try to get info for d12
+ DONE: d12
+ Try to get info for rondarousey
+ DONE: rondarousey
+ Try to get info for rosenberg
+ DONE: rosenberg
+ Try to get info for shady_records_
+ DONE: shady_records_
+ Try to get info for yelawolfpack
+ DONE: yelawolfpack
+ Try to get info for ludacris
+ DONE: ludacris
+ Try to get info for wizkhalifa
+ DONE: wizkhalifa
+ Try to get info for juicyj
+ DONE: juicyj
+ Try to get info for groovyq
+ DONE: groovyq
+ Try to get info for machinegunkelly
+ DONE: machinegunkelly
+ Try to get info for 50cent
+ DONE: 50cent
+ Try to get info for shadyrecords
+ DONE: shadyrecords
+ Try to get info for yelawolf
+ DONE: yelawolf
+ Try to get info for eugenevanplet
+ DONE: eugenevanplet
+ Try to get info for glenysthomas22
+ DONE: glenysthomas22
+ Try to get info for sofakingbrent
+ DONE: sofakingbrent
+ Try to get info for nameless_rsa
+ DONE: nameless_rsa
+ Try to get info for castlesryan
+ DONE: castlesryan
+ Try to get info for mfernandacastro
+ DONE: mfernandacastro
+ Try to get info for johnbarbatis
+ DONE: johnbarbatis
+ Try to get info for maureenmautaylor
+ DONE: maureenmautaylor
+ Try to get info for dellitot777
+ DONE: dellitot777
+ Try to get info for delingerjon
+ DONE: delingerjon
+ Try to get info for tim.hooperzt
+ DONE: tim.hooperzt
+ Try to get info for groenewaldmarc
+ DONE: groenewaldmarc
+ Try to get info for jarrodcorns
+ DONE: jarrodcorns
+ Try to get info for 36chambers
+ DONE: 36chambers
+ Try to get info for afriwearsa
+ DONE: afriwearsa
+ Try to get info for lasthologram
+ DONE: lasthologram
+ Try to get info for christokalon
+ DONE: christokalon
+ Try to get info for pibbes78
+ DONE: pibbes78
+ Try to get info for omg_its_figger
+ DONE: omg_its_figger
+ Try to get info for angelobotha
+ DONE: angelobotha
+ Try to get info for backyardbrowsing
+ DONE: backyardbrowsing
+ Try to get info for david_shamanzi
+ DONE: david_shamanzi
+ Try to get info for glenelliott7
+ DONE: glenelliott7
+ Try to get info for gerhardlouwrens
+ DONE: gerhardlouwrens
+ Try to get info for djnathan101
+ DONE: djnathan101
+ Try to get info for toms.co.za
+ DONE: toms.co.za
+ Try to get info for janloungerer
+ DONE: janloungerer
+ Try to get info for audiosure
+ DONE: audiosure
+ Try to get info for vanderwaltpeet
+ DONE: vanderwaltpeet
+ Try to get info for nibsvanderspuy
+ DONE: nibsvanderspuy
+ Try to get info for ettienemaritz
+ DONE: ettienemaritz
+ Try to get info for jess_is_best_
+ DONE: jess_is_best_
+ Try to get info for darryltorr
+ DONE: darryltorr
+ Try to get info for zoniki
+ DONE: zoniki
+ Try to get info for nicklemp
+ DONE: nicklemp
+ Try to get info for vanwyk_matthew
+ DONE: vanwyk_matthew
+ Try to get info for dubarray
+ DONE: dubarray
+ Try to get info for michael_zeke
+ DONE: michael_zeke
+ Try to get info for erfie2235
+ DONE: erfie2235
+ Try to get info for vancustoms
+ DONE: vancustoms
+ Try to get info for jarrettjoubert
+ DONE: jarrettjoubert
+ Try to get info for sandranel1
+ DONE: sandranel1
+ Try to get info for ignovanrooyen
+ DONE: ignovanrooyen
+ Try to get info for gravergirl
+ DONE: gravergirl
+ Try to get info for von_toon
+ DONE: von_toon
+ Try to get info for brentroberthill
+ DONE: brentroberthill
+ Try to get info for betsiemilne
+ DONE: betsiemilne
+ Try to get info for mikeycader
+ DONE: mikeycader
+ Try to get info for flyingcuckoo
+ DONE: flyingcuckoo
+ Try to get info for indecent_olivia
+ DONE: indecent_olivia
+ Try to get info for steyn.chantel
+ DONE: steyn.chantel
+ Try to get info for soeleencoetzee
+ DONE: soeleencoetzee
+ Try to get info for michael_williams118
+ DONE: michael_williams118
+ Try to get info for stevenlburrow
+ DONE: stevenlburrow
+ Try to get info for luzanne11
+ DONE: luzanne11
+ Try to get info for francois_vdm_greeff
+ DONE: francois_vdm_greeff
+ Try to get info for mylifeaschante
+ DONE: mylifeaschante
+ Try to get info for van.bianca
+ DONE: van.bianca
+ Try to get info for maritzward
+ DONE: maritzward
+ Try to get info for dustinpoirier
+ DONE: dustinpoirier
+ VIEW:selenium_bot: FINISH
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ VIEW:insta_api: start at 20_34_13_04_14_17 add_task/None
+ WORKER: CREATED
+ WORKER:follow_info: POST 20_34_13_04_14_177520484660558665234
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/7520484660558665234
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: try to use cookies 
+ SELENIUM_BOT:login_user: [{u'domain': u'www.instagram.com', u'secure': False, u'value': u'1', u'path': u'/', u'httponly': False, u'name': u'ig_pr'}, {u'domain': u'www.instagram.com', u'secure': False, u'value': u'1120', u'path': u'/', u'httponly': False, u'name': u'ig_vw'}, {u'domain': u'www.instagram.com', u'name': u'sessionid', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'IGSCbde62f9386c40ee0a26dd22191a338793637b3c5ff166a8b0710d5c0d48ae06d%3AlnAOVfbpNxvvdqWjZz7BqQaExFVmTsqx%3A%7B%22_auth_user_id%22%3A5327792014%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_token_ver%22%3A2%2C%22_token%22%3A%225327792014%3AC13QohL6XLuue6GKYVzhkUxExzkeo65q%3A8ea3e2ee2c45694b9979d65fffc7d91997e40f2712be70533b3bdb8fb21c2eac%22%2C%22_platform%22%3A4%2C%22last_refreshed%22%3A1492200527.9029877186%2C%22asns%22%3A%7B%22time%22%3A1492200531%2C%22212.80.37.96%22%3A8788%7D%7D', u'expiry': 1499976534, u'path': u'/', u'httponly': True, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u'ds_user_id', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'5327792014', u'expiry': 1499976534, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'csrftoken', u'expires': u'Fri, 13 Apr 2018 20:08:54 GMT', u'value': u'qfcJNANfQfk63EmVZAtpJleqi2Ql2euc', u'expiry': 1523650134, u'path': u'/', u'httponly': False, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u's_network', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'""', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'rur', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'FRC', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'mid', u'expires': u'Thu, 09 Apr 2037 20:08:40 GMT', u'value': u'WPEsSAAEAAGDaEcXPhODHCNM0xnY', u'expiry': 2122920520, u'path': u'/', u'httponly': False, u'secure': False}] 
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: try to use cookies 
+ SELENIUM_BOT:login_user: [{u'domain': u'www.instagram.com', u'secure': False, u'value': u'1', u'path': u'/', u'httponly': False, u'name': u'ig_pr'}, {u'domain': u'www.instagram.com', u'secure': False, u'value': u'1120', u'path': u'/', u'httponly': False, u'name': u'ig_vw'}, {u'domain': u'www.instagram.com', u'name': u'sessionid', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'IGSCbde62f9386c40ee0a26dd22191a338793637b3c5ff166a8b0710d5c0d48ae06d%3AlnAOVfbpNxvvdqWjZz7BqQaExFVmTsqx%3A%7B%22_auth_user_id%22%3A5327792014%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_token_ver%22%3A2%2C%22_token%22%3A%225327792014%3AC13QohL6XLuue6GKYVzhkUxExzkeo65q%3A8ea3e2ee2c45694b9979d65fffc7d91997e40f2712be70533b3bdb8fb21c2eac%22%2C%22_platform%22%3A4%2C%22last_refreshed%22%3A1492200527.9029877186%2C%22asns%22%3A%7B%22time%22%3A1492200531%2C%22212.80.37.96%22%3A8788%7D%7D', u'expiry': 1499976534, u'path': u'/', u'httponly': True, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u'ds_user_id', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'5327792014', u'expiry': 1499976534, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'csrftoken', u'expires': u'Fri, 13 Apr 2018 20:08:54 GMT', u'value': u'qfcJNANfQfk63EmVZAtpJleqi2Ql2euc', u'expiry': 1523650134, u'path': u'/', u'httponly': False, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u's_network', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'""', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'rur', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'FRC', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'mid', u'expires': u'Thu, 09 Apr 2037 20:08:40 GMT', u'value': u'WPEsSAAEAAGDaEcXPhODHCNM0xnY', u'expiry': 2122920520, u'path': u'/', u'httponly': False, u'secure': False}] 
+ VIEW:insta_api: start at 20_41_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_41_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_41_25_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_41_36_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_41_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_41_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_41_45_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_41_45_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_41_45_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_41_47_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_41_55_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_41_57_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_42_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_42_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_42_05_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_42_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_42_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_42_07_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_42_15_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_42_17_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_42_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_42_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_42_25_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_42_25_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_42_25_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_42_27_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_42_35_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_42_37_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_42_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_42_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_42_45_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_42_45_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_42_45_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_42_47_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_42_55_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_42_57_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_43_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_43_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_43_05_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_43_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_43_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_43_07_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_43_15_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_43_17_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_43_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_43_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_43_25_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_43_25_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_43_25_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_43_27_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_43_35_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_43_37_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_43_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_43_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_43_45_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_43_45_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_43_45_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_43_47_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_43_55_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_43_57_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_44_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_44_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_44_05_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_44_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_44_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_44_07_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_44_15_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_44_17_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_44_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_44_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_44_25_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_44_25_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_44_26_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_44_27_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_44_35_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_44_37_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_44_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_44_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_44_45_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_44_45_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_44_45_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_44_47_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_44_56_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_44_57_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_45_03_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_45_03_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_45_05_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_45_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_45_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_45_07_04_14_17 get_task_result/5999741266947723327
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ VIEW:insta_api: start at 20_45_15_04_14_17 get_task_result/5999741266947723327
+ SELENIUM_BOT:login_user: try to use cookies 
+ SELENIUM_BOT:login_user: [{u'domain': u'www.instagram.com', u'secure': False, u'value': u'1', u'path': u'/', u'httponly': False, u'name': u'ig_pr'}, {u'domain': u'www.instagram.com', u'secure': False, u'value': u'1120', u'path': u'/', u'httponly': False, u'name': u'ig_vw'}, {u'domain': u'www.instagram.com', u'name': u'sessionid', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'IGSCbde62f9386c40ee0a26dd22191a338793637b3c5ff166a8b0710d5c0d48ae06d%3AlnAOVfbpNxvvdqWjZz7BqQaExFVmTsqx%3A%7B%22_auth_user_id%22%3A5327792014%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_token_ver%22%3A2%2C%22_token%22%3A%225327792014%3AC13QohL6XLuue6GKYVzhkUxExzkeo65q%3A8ea3e2ee2c45694b9979d65fffc7d91997e40f2712be70533b3bdb8fb21c2eac%22%2C%22_platform%22%3A4%2C%22last_refreshed%22%3A1492200527.9029877186%2C%22asns%22%3A%7B%22time%22%3A1492200531%2C%22212.80.37.96%22%3A8788%7D%7D', u'expiry': 1499976534, u'path': u'/', u'httponly': True, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u'ds_user_id', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'5327792014', u'expiry': 1499976534, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'csrftoken', u'expires': u'Fri, 13 Apr 2018 20:08:54 GMT', u'value': u'qfcJNANfQfk63EmVZAtpJleqi2Ql2euc', u'expiry': 1523650134, u'path': u'/', u'httponly': False, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u's_network', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'""', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'rur', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'FRC', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'mid', u'expires': u'Thu, 09 Apr 2037 20:08:40 GMT', u'value': u'WPEsSAAEAAGDaEcXPhODHCNM0xnY', u'expiry': 2122920520, u'path': u'/', u'httponly': False, u'secure': False}] 
+ VIEW:insta_api: start at 20_45_17_04_14_17 get_task_result/5999741266947723327
+ SELENIUM_BOT:login_user: try cookie 0 
+ SELENIUM_BOT:login_user: try cookie 1 
+ SELENIUM_BOT:login_user: try cookie 2 
+ SELENIUM_BOT:login_user: try cookie 3 
+ SELENIUM_BOT:login_user: try cookie 4 
+ SELENIUM_BOT:login_user: try cookie 5 
+ VIEW:insta_api: start at 20_45_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_45_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_45_25_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_45_25_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_45_25_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_45_27_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_45_35_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_45_37_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_45_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_45_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_45_45_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_45_45_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_45_45_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_45_47_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_45_55_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_45_57_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_46_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_46_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_46_05_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_46_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_46_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_46_07_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_46_15_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_46_17_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_46_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_46_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_46_25_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_46_25_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_46_27_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_46_35_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_46_37_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_46_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_46_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_46_45_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_46_45_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_46_45_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_46_47_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_46_55_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_46_57_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_47_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_47_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_47_05_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_47_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_47_05_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_47_07_04_14_17 get_task_result/5999741266947723327
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: try to use cookies 
+ SELENIUM_BOT:login_user: [{u'domain': u'www.instagram.com', u'secure': False, u'value': u'1', u'path': u'/', u'httponly': False, u'name': u'ig_pr'}, {u'domain': u'www.instagram.com', u'secure': False, u'value': u'1120', u'path': u'/', u'httponly': False, u'name': u'ig_vw'}, {u'domain': u'www.instagram.com', u'name': u'sessionid', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'IGSCbde62f9386c40ee0a26dd22191a338793637b3c5ff166a8b0710d5c0d48ae06d%3AlnAOVfbpNxvvdqWjZz7BqQaExFVmTsqx%3A%7B%22_auth_user_id%22%3A5327792014%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_token_ver%22%3A2%2C%22_token%22%3A%225327792014%3AC13QohL6XLuue6GKYVzhkUxExzkeo65q%3A8ea3e2ee2c45694b9979d65fffc7d91997e40f2712be70533b3bdb8fb21c2eac%22%2C%22_platform%22%3A4%2C%22last_refreshed%22%3A1492200527.9029877186%2C%22asns%22%3A%7B%22time%22%3A1492200531%2C%22212.80.37.96%22%3A8788%7D%7D', u'expiry': 1499976534, u'path': u'/', u'httponly': True, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u'ds_user_id', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'5327792014', u'expiry': 1499976534, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'csrftoken', u'expires': u'Fri, 13 Apr 2018 20:08:54 GMT', u'value': u'qfcJNANfQfk63EmVZAtpJleqi2Ql2euc', u'expiry': 1523650134, u'path': u'/', u'httponly': False, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u's_network', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'""', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'rur', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'FRC', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'mid', u'expires': u'Thu, 09 Apr 2037 20:08:40 GMT', u'value': u'WPEsSAAEAAGDaEcXPhODHCNM0xnY', u'expiry': 2122920520, u'path': u'/', u'httponly': False, u'secure': False}] 
+ SELENIUM_BOT:login_user: try cookie 0 
+ SELENIUM_BOT:login_user: try cookie 1 
+ SELENIUM_BOT:login_user: try cookie 2 
+ SELENIUM_BOT:login_user: try cookie 3 
+ SELENIUM_BOT:login_user: try cookie 4 
+ SELENIUM_BOT:login_user: try cookie 5 
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: try to use cookies 
+ SELENIUM_BOT:login_user: [{u'domain': u'www.instagram.com', u'secure': False, u'value': u'1', u'path': u'/', u'httponly': False, u'name': u'ig_pr'}, {u'domain': u'www.instagram.com', u'secure': False, u'value': u'1120', u'path': u'/', u'httponly': False, u'name': u'ig_vw'}, {u'domain': u'www.instagram.com', u'name': u'sessionid', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'IGSCbde62f9386c40ee0a26dd22191a338793637b3c5ff166a8b0710d5c0d48ae06d%3AlnAOVfbpNxvvdqWjZz7BqQaExFVmTsqx%3A%7B%22_auth_user_id%22%3A5327792014%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_token_ver%22%3A2%2C%22_token%22%3A%225327792014%3AC13QohL6XLuue6GKYVzhkUxExzkeo65q%3A8ea3e2ee2c45694b9979d65fffc7d91997e40f2712be70533b3bdb8fb21c2eac%22%2C%22_platform%22%3A4%2C%22last_refreshed%22%3A1492200527.9029877186%2C%22asns%22%3A%7B%22time%22%3A1492200531%2C%22212.80.37.96%22%3A8788%7D%7D', u'expiry': 1499976534, u'path': u'/', u'httponly': True, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u'ds_user_id', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'5327792014', u'expiry': 1499976534, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'csrftoken', u'expires': u'Fri, 13 Apr 2018 20:08:54 GMT', u'value': u'qfcJNANfQfk63EmVZAtpJleqi2Ql2euc', u'expiry': 1523650134, u'path': u'/', u'httponly': False, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u's_network', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'""', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'rur', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'FRC', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'mid', u'expires': u'Thu, 09 Apr 2037 20:08:40 GMT', u'value': u'WPEsSAAEAAGDaEcXPhODHCNM0xnY', u'expiry': 2122920520, u'path': u'/', u'httponly': False, u'secure': False}] 
+ SELENIUM_BOT:login_user: try cookie 0 
+ SELENIUM_BOT:login_user: try cookie 1 
+ SELENIUM_BOT:login_user: try cookie 2 
+ SELENIUM_BOT:login_user: try cookie 3 
+ SELENIUM_BOT:login_user: try cookie 4 
+ SELENIUM_BOT:login_user: try cookie 5 
+ SELENIUM_BOT:login_user: try cookie 6 
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: try to use cookies 
+ SELENIUM_BOT:login_user: [{u'domain': u'www.instagram.com', u'secure': False, u'value': u'1', u'path': u'/', u'httponly': False, u'name': u'ig_pr'}, {u'domain': u'www.instagram.com', u'secure': False, u'value': u'1120', u'path': u'/', u'httponly': False, u'name': u'ig_vw'}, {u'domain': u'www.instagram.com', u'name': u'sessionid', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'IGSCbde62f9386c40ee0a26dd22191a338793637b3c5ff166a8b0710d5c0d48ae06d%3AlnAOVfbpNxvvdqWjZz7BqQaExFVmTsqx%3A%7B%22_auth_user_id%22%3A5327792014%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_token_ver%22%3A2%2C%22_token%22%3A%225327792014%3AC13QohL6XLuue6GKYVzhkUxExzkeo65q%3A8ea3e2ee2c45694b9979d65fffc7d91997e40f2712be70533b3bdb8fb21c2eac%22%2C%22_platform%22%3A4%2C%22last_refreshed%22%3A1492200527.9029877186%2C%22asns%22%3A%7B%22time%22%3A1492200531%2C%22212.80.37.96%22%3A8788%7D%7D', u'expiry': 1499976534, u'path': u'/', u'httponly': True, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u'ds_user_id', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'5327792014', u'expiry': 1499976534, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'csrftoken', u'expires': u'Fri, 13 Apr 2018 20:08:54 GMT', u'value': u'qfcJNANfQfk63EmVZAtpJleqi2Ql2euc', u'expiry': 1523650134, u'path': u'/', u'httponly': False, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u's_network', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'""', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'rur', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'FRC', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'mid', u'expires': u'Thu, 09 Apr 2037 20:08:40 GMT', u'value': u'WPEsSAAEAAGDaEcXPhODHCNM0xnY', u'expiry': 2122920520, u'path': u'/', u'httponly': False, u'secure': False}] 
+ SELENIUM_BOT:login_user: try cookie 0 
+ SELENIUM_BOT:login_user: try cookie 1 
+ SELENIUM_BOT:login_user: try cookie 2 
+ SELENIUM_BOT:login_user: try cookie 3 
+ SELENIUM_BOT:login_user: try cookie 4 
+ SELENIUM_BOT:login_user: try cookie 5 
+ SELENIUM_BOT:login_user: try cookie 6 
+ SELENIUM_BOT:login_user: try cookie 7 
+ SELENIUM_BOT:login_user: cook uploaded 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 23_54_37_04_14_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ VIEW:insta_api: start at 20_55_37_04_14_17 add_task/None
+ WORKER: CREATED
+ WORKER:follow_info: POST 20_55_37_04_14_171265818908008870571
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/1265818908008870571
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: try to use cookies 
+ SELENIUM_BOT:login_user: [{u'domain': u'www.instagram.com', u'secure': False, u'value': u'1', u'path': u'/', u'httponly': False, u'name': u'ig_pr'}, {u'domain': u'www.instagram.com', u'secure': False, u'value': u'1120', u'path': u'/', u'httponly': False, u'name': u'ig_vw'}, {u'domain': u'www.instagram.com', u'name': u'sessionid', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'IGSCbde62f9386c40ee0a26dd22191a338793637b3c5ff166a8b0710d5c0d48ae06d%3AlnAOVfbpNxvvdqWjZz7BqQaExFVmTsqx%3A%7B%22_auth_user_id%22%3A5327792014%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_token_ver%22%3A2%2C%22_token%22%3A%225327792014%3AC13QohL6XLuue6GKYVzhkUxExzkeo65q%3A8ea3e2ee2c45694b9979d65fffc7d91997e40f2712be70533b3bdb8fb21c2eac%22%2C%22_platform%22%3A4%2C%22last_refreshed%22%3A1492200527.9029877186%2C%22asns%22%3A%7B%22time%22%3A1492200531%2C%22212.80.37.96%22%3A8788%7D%7D', u'expiry': 1499976534, u'path': u'/', u'httponly': True, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u'ds_user_id', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'5327792014', u'expiry': 1499976534, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'csrftoken', u'expires': u'Fri, 13 Apr 2018 20:08:54 GMT', u'value': u'qfcJNANfQfk63EmVZAtpJleqi2Ql2euc', u'expiry': 1523650134, u'path': u'/', u'httponly': False, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u's_network', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'""', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'rur', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'FRC', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'mid', u'expires': u'Thu, 09 Apr 2037 20:08:40 GMT', u'value': u'WPEsSAAEAAGDaEcXPhODHCNM0xnY', u'expiry': 2122920520, u'path': u'/', u'httponly': False, u'secure': False}] 
+ SELENIUM_BOT:login_user: try cookie 0 
+ SELENIUM_BOT:login_user: try cookie 1 
+ SELENIUM_BOT:login_user: try cookie 2 
+ SELENIUM_BOT:login_user: try cookie 3 
+ SELENIUM_BOT:login_user: try cookie 4 
+ SELENIUM_BOT:login_user: try cookie 5 
+ SELENIUM_BOT:login_user: try cookie 6 
+ SELENIUM_BOT:login_user: try cookie 7 
+ SELENIUM_BOT:login_user: cook uploaded 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 20_55_53_04_14_17 in /var/www/7day/studioapp/scr 
+ VIEW:insta_api: start at 20_58_58_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_58_58_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_59_02_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_59_12_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_59_18_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_59_18_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_59_22_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_59_32_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_59_38_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 20_59_42_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 20_59_58_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_00_02_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_00_18_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_00_22_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_00_38_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_00_38_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_00_42_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_00_46_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_00_48_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_00_52_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_00_53_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_00_57_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_00_57_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_01_00_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_01_11_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_01_17_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_01_20_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_01_37_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_01_40_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_01_50_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_01_50_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_01_53_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_01_57_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_02_00_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_02_02_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_02_03_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_02_10_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_02_10_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_02_13_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_02_17_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_02_20_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_02_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_02_22_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_02_23_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_02_30_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_02_30_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_02_33_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_02_37_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_02_37_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_02_40_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_02_43_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_02_43_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_02_48_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_02_57_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_02_57_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_02_58_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_03_03_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_03_03_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_03_06_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_03_16_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_03_23_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_03_23_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_03_26_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_03_37_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_03_41_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_03_42_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_03_43_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_03_53_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_04_01_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_04_01_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_04_03_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_04_13_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_04_21_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_04_21_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_04_23_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_04_32_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_04_32_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_04_33_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_04_41_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_04_41_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_04_43_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_04_52_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_04_52_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_04_53_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_05_01_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_05_01_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_05_03_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_05_12_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_05_12_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_05_13_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_05_18_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_05_21_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_05_21_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_05_23_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_05_28_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_05_32_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_05_32_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_05_33_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_05_38_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_05_41_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_05_41_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_05_43_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_05_48_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_05_53_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_05_53_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_06_01_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_06_01_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_06_04_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_06_14_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_06_21_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_06_21_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_06_24_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_06_34_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_06_41_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_06_41_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_06_44_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_06_54_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_07_01_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_07_01_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_07_04_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_07_14_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_07_21_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_07_21_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_07_24_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_07_34_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_07_41_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_07_41_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_07_44_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_07_54_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_08_01_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_08_01_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_08_04_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_08_14_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_08_21_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_08_21_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_08_24_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_08_34_04_14_17 get_task_result/5999741266947723327
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ VIEW:insta_api: start at 21_08_41_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_08_41_04_14_17 get_tasks/None
+ SELENIUM_BOT:login_user: try to use cookies 
+ SELENIUM_BOT:login_user: [{u'domain': u'www.instagram.com', u'secure': False, u'value': u'1', u'path': u'/', u'httponly': False, u'name': u'ig_pr'}, {u'domain': u'www.instagram.com', u'secure': False, u'value': u'1120', u'path': u'/', u'httponly': False, u'name': u'ig_vw'}, {u'domain': u'www.instagram.com', u'name': u'sessionid', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'IGSCbde62f9386c40ee0a26dd22191a338793637b3c5ff166a8b0710d5c0d48ae06d%3AlnAOVfbpNxvvdqWjZz7BqQaExFVmTsqx%3A%7B%22_auth_user_id%22%3A5327792014%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_token_ver%22%3A2%2C%22_token%22%3A%225327792014%3AC13QohL6XLuue6GKYVzhkUxExzkeo65q%3A8ea3e2ee2c45694b9979d65fffc7d91997e40f2712be70533b3bdb8fb21c2eac%22%2C%22_platform%22%3A4%2C%22last_refreshed%22%3A1492200527.9029877186%2C%22asns%22%3A%7B%22time%22%3A1492200531%2C%22212.80.37.96%22%3A8788%7D%7D', u'expiry': 1499976534, u'path': u'/', u'httponly': True, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u'ds_user_id', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'5327792014', u'expiry': 1499976534, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'csrftoken', u'expires': u'Fri, 13 Apr 2018 20:08:54 GMT', u'value': u'qfcJNANfQfk63EmVZAtpJleqi2Ql2euc', u'expiry': 1523650134, u'path': u'/', u'httponly': False, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u's_network', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'""', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'rur', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'FRC', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'mid', u'expires': u'Thu, 09 Apr 2037 20:08:40 GMT', u'value': u'WPEsSAAEAAGDaEcXPhODHCNM0xnY', u'expiry': 2122920520, u'path': u'/', u'httponly': False, u'secure': False}] 
+ SELENIUM_BOT:login_user: try cookie 0 
+ SELENIUM_BOT:login_user: try cookie 1 
+ SELENIUM_BOT:login_user: try cookie 2 
+ SELENIUM_BOT:login_user: try cookie 3 
+ SELENIUM_BOT:login_user: try cookie 4 
+ SELENIUM_BOT:login_user: try cookie 5 
+ SELENIUM_BOT:login_user: try cookie 6 
+ SELENIUM_BOT:login_user: try cookie 7 
+ SELENIUM_BOT:login_user: cook uploaded 
+ VIEW:insta_api: start at 21_08_44_04_14_17 get_task_result/5999741266947723327
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 00_08_54_04_15_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ VIEW:insta_api: start at 21_08_54_04_14_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 21_09_01_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_09_01_04_14_17 get_tasks/None
+ VIEW:insta_api: start at 21_09_04_04_14_17 get_task_result/5999741266947723327
+ SELENIUM_BOT:login_user: element <selenium.webdriver.remote.webelement.WebElement (session="867c8120-2156-11e7-b6af-a96e8ebf1f99", element=":wdc:1492204145301")> 
+ SELENIUM_BOT:login_user: try to use cookies 
+ SELENIUM_BOT:login_user: [{u'domain': u'www.instagram.com', u'secure': False, u'value': u'1', u'path': u'/', u'httponly': False, u'name': u'ig_pr'}, {u'domain': u'www.instagram.com', u'secure': False, u'value': u'1120', u'path': u'/', u'httponly': False, u'name': u'ig_vw'}, {u'domain': u'www.instagram.com', u'name': u'sessionid', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'IGSCbde62f9386c40ee0a26dd22191a338793637b3c5ff166a8b0710d5c0d48ae06d%3AlnAOVfbpNxvvdqWjZz7BqQaExFVmTsqx%3A%7B%22_auth_user_id%22%3A5327792014%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_token_ver%22%3A2%2C%22_token%22%3A%225327792014%3AC13QohL6XLuue6GKYVzhkUxExzkeo65q%3A8ea3e2ee2c45694b9979d65fffc7d91997e40f2712be70533b3bdb8fb21c2eac%22%2C%22_platform%22%3A4%2C%22last_refreshed%22%3A1492200527.9029877186%2C%22asns%22%3A%7B%22time%22%3A1492200531%2C%22212.80.37.96%22%3A8788%7D%7D', u'expiry': 1499976534, u'path': u'/', u'httponly': True, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u'ds_user_id', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'5327792014', u'expiry': 1499976534, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'csrftoken', u'expires': u'Fri, 13 Apr 2018 20:08:54 GMT', u'value': u'qfcJNANfQfk63EmVZAtpJleqi2Ql2euc', u'expiry': 1523650134, u'path': u'/', u'httponly': False, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u's_network', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'""', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'rur', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'FRC', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'mid', u'expires': u'Thu, 09 Apr 2037 20:08:40 GMT', u'value': u'WPEsSAAEAAGDaEcXPhODHCNM0xnY', u'expiry': 2122920520, u'path': u'/', u'httponly': False, u'secure': False}] 
+ SELENIUM_BOT:login_user: try cookie 0 
+ SELENIUM_BOT:login_user: try cookie 1 
+ SELENIUM_BOT:login_user: try cookie 2 
+ SELENIUM_BOT:login_user: try cookie 3 
+ SELENIUM_BOT:login_user: try cookie 4 
+ SELENIUM_BOT:login_user: try cookie 5 
+ SELENIUM_BOT:login_user: try cookie 6 
+ SELENIUM_BOT:login_user: try cookie 7 
+ SELENIUM_BOT:login_user: cook uploaded 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 00_09_43_04_15_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: element <selenium.webdriver.remote.webelement.WebElement (session="867c8120-2156-11e7-b6af-a96e8ebf1f99", element=":wdc:1492204190637")> 
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: try to use cookies 
+ SELENIUM_BOT:login_user: [{u'domain': u'www.instagram.com', u'secure': False, u'value': u'1', u'path': u'/', u'httponly': False, u'name': u'ig_pr'}, {u'domain': u'www.instagram.com', u'secure': False, u'value': u'1120', u'path': u'/', u'httponly': False, u'name': u'ig_vw'}, {u'domain': u'www.instagram.com', u'name': u'sessionid', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'IGSCbde62f9386c40ee0a26dd22191a338793637b3c5ff166a8b0710d5c0d48ae06d%3AlnAOVfbpNxvvdqWjZz7BqQaExFVmTsqx%3A%7B%22_auth_user_id%22%3A5327792014%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_token_ver%22%3A2%2C%22_token%22%3A%225327792014%3AC13QohL6XLuue6GKYVzhkUxExzkeo65q%3A8ea3e2ee2c45694b9979d65fffc7d91997e40f2712be70533b3bdb8fb21c2eac%22%2C%22_platform%22%3A4%2C%22last_refreshed%22%3A1492200527.9029877186%2C%22asns%22%3A%7B%22time%22%3A1492200531%2C%22212.80.37.96%22%3A8788%7D%7D', u'expiry': 1499976534, u'path': u'/', u'httponly': True, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u'ds_user_id', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'5327792014', u'expiry': 1499976534, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'csrftoken', u'expires': u'Fri, 13 Apr 2018 20:08:54 GMT', u'value': u'qfcJNANfQfk63EmVZAtpJleqi2Ql2euc', u'expiry': 1523650134, u'path': u'/', u'httponly': False, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u's_network', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'""', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'rur', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'FRC', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'mid', u'expires': u'Thu, 09 Apr 2037 20:08:40 GMT', u'value': u'WPEsSAAEAAGDaEcXPhODHCNM0xnY', u'expiry': 2122920520, u'path': u'/', u'httponly': False, u'secure': False}] 
+ SELENIUM_BOT:login_user: try cookie 0 
+ SELENIUM_BOT:login_user: try cookie 1 
+ SELENIUM_BOT:login_user: try cookie 2 
+ SELENIUM_BOT:login_user: try cookie 3 
+ SELENIUM_BOT:login_user: try cookie 4 
+ SELENIUM_BOT:login_user: try cookie 5 
+ SELENIUM_BOT:login_user: try cookie 6 
+ SELENIUM_BOT:login_user: try cookie 7 
+ SELENIUM_BOT:login_user: cook uploaded 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 00_11_18_04_15_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: element [<selenium.webdriver.remote.webelement.WebElement (session="dd9a23e0-2156-11e7-80cc-67d1ec718c37", element=":wdc:1492204288710")>] 
+ SELENIUM_BOT:login_user: COOKIE WORKS!!!
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 00_11_28_04_15_17 in /mnt/hgfs/web/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: studio_7_day_2 loggined
+ VIEW:insta_api: start at 21_13_37_04_14_17 add_task/None
+ WORKER: CREATED
+ WORKER:follow_info: POST 21_13_37_04_14_175566915260843634882
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/5566915260843634882
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: try to use cookies 
+ SELENIUM_BOT:login_user: [{u'domain': u'www.instagram.com', u'secure': False, u'value': u'1', u'path': u'/', u'httponly': False, u'name': u'ig_pr'}, {u'domain': u'www.instagram.com', u'secure': False, u'value': u'1120', u'path': u'/', u'httponly': False, u'name': u'ig_vw'}, {u'domain': u'www.instagram.com', u'name': u'sessionid', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'IGSCbde62f9386c40ee0a26dd22191a338793637b3c5ff166a8b0710d5c0d48ae06d%3AlnAOVfbpNxvvdqWjZz7BqQaExFVmTsqx%3A%7B%22_auth_user_id%22%3A5327792014%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_token_ver%22%3A2%2C%22_token%22%3A%225327792014%3AC13QohL6XLuue6GKYVzhkUxExzkeo65q%3A8ea3e2ee2c45694b9979d65fffc7d91997e40f2712be70533b3bdb8fb21c2eac%22%2C%22_platform%22%3A4%2C%22last_refreshed%22%3A1492200527.9029877186%2C%22asns%22%3A%7B%22time%22%3A1492200531%2C%22212.80.37.96%22%3A8788%7D%7D', u'expiry': 1499976534, u'path': u'/', u'httponly': True, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u'ds_user_id', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'5327792014', u'expiry': 1499976534, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'csrftoken', u'expires': u'Fri, 13 Apr 2018 20:08:54 GMT', u'value': u'qfcJNANfQfk63EmVZAtpJleqi2Ql2euc', u'expiry': 1523650134, u'path': u'/', u'httponly': False, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u's_network', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'""', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'rur', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'FRC', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'mid', u'expires': u'Thu, 09 Apr 2037 20:08:40 GMT', u'value': u'WPEsSAAEAAGDaEcXPhODHCNM0xnY', u'expiry': 2122920520, u'path': u'/', u'httponly': False, u'secure': False}] 
+ SELENIUM_BOT:login_user: try cookie 0 
+ SELENIUM_BOT:login_user: try cookie 1 
+ SELENIUM_BOT:login_user: try cookie 2 
+ SELENIUM_BOT:login_user: try cookie 3 
+ SELENIUM_BOT:login_user: try cookie 4 
+ SELENIUM_BOT:login_user: try cookie 5 
+ SELENIUM_BOT:login_user: try cookie 6 
+ SELENIUM_BOT:login_user: try cookie 7 
+ SELENIUM_BOT:login_user: cook uploaded 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 21_13_54_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: element [<selenium.webdriver.remote.webelement.WebElement (session="3d13f940-2157-11e7-960a-854c72d73548", element=":wdc:1492204442752")>] 
+ SELENIUM_BOT:login_user: COOKIE WORKS!!!
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 21_14_02_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: studio_7_day_2 loggined
+ SELENIUM_BOT:get_follow_names: Try to get 15  followers for fursty
+ SELENIUM_BOT:get_follow_info: Try to get 15  followers for fursty
+ SELENIUM_BOT:get_follow_info: Try to get user page
+ SELENIUM_BOT:get_follow_info: Try to find button
+ SELENIUM_BOT:get_follow_info: Try to click button
+ SELENIUM_BOT:get_follow_info: Try to find divs
+ SELENIUM_BOT:get_follow_info: Try to find follow buttons
+ TEXT:button: Following
+ TEXT:button: 
+ TEXT:button: Options
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Close
+ SELENIUM_BOT:get_follow_info: Len of list 84
+ VIEW:insta_api: start at 21_23_40_04_14_17 add_task/None
+ WORKER: CREATED
+ WORKER:follow_info: POST 21_23_40_04_14_178332912551753788961
+ WORKER:follow_info: Create result file /var/www/7day/studioapp/results/8332912551753788961
+ SELENIUM_BOT:init: Create selenium_bot
+ SELENIUM_BOT:init: DONE
+ SELENIUM_BOT:login_user: try to use cookies 
+ SELENIUM_BOT:login_user: [{u'domain': u'www.instagram.com', u'secure': False, u'value': u'1', u'path': u'/', u'httponly': False, u'name': u'ig_pr'}, {u'domain': u'www.instagram.com', u'secure': False, u'value': u'1120', u'path': u'/', u'httponly': False, u'name': u'ig_vw'}, {u'domain': u'www.instagram.com', u'name': u'sessionid', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'IGSCbde62f9386c40ee0a26dd22191a338793637b3c5ff166a8b0710d5c0d48ae06d%3AlnAOVfbpNxvvdqWjZz7BqQaExFVmTsqx%3A%7B%22_auth_user_id%22%3A5327792014%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_token_ver%22%3A2%2C%22_token%22%3A%225327792014%3AC13QohL6XLuue6GKYVzhkUxExzkeo65q%3A8ea3e2ee2c45694b9979d65fffc7d91997e40f2712be70533b3bdb8fb21c2eac%22%2C%22_platform%22%3A4%2C%22last_refreshed%22%3A1492200527.9029877186%2C%22asns%22%3A%7B%22time%22%3A1492200531%2C%22212.80.37.96%22%3A8788%7D%7D', u'expiry': 1499976534, u'path': u'/', u'httponly': True, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u'ds_user_id', u'expires': u'Thu, 13 Jul 2017 20:08:54 GMT', u'value': u'5327792014', u'expiry': 1499976534, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'csrftoken', u'expires': u'Fri, 13 Apr 2018 20:08:54 GMT', u'value': u'qfcJNANfQfk63EmVZAtpJleqi2Ql2euc', u'expiry': 1523650134, u'path': u'/', u'httponly': False, u'secure': True}, {u'domain': u'www.instagram.com', u'name': u's_network', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'""', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'rur', u'expires': u'Fri, 14 Apr 2017 21:08:54 GMT', u'value': u'FRC', u'expiry': 1492204134, u'path': u'/', u'httponly': False, u'secure': False}, {u'domain': u'www.instagram.com', u'name': u'mid', u'expires': u'Thu, 09 Apr 2037 20:08:40 GMT', u'value': u'WPEsSAAEAAGDaEcXPhODHCNM0xnY', u'expiry': 2122920520, u'path': u'/', u'httponly': False, u'secure': False}] 
+ SELENIUM_BOT:login_user: try cookie 0 
+ SELENIUM_BOT:login_user: try cookie 1 
+ SELENIUM_BOT:login_user: try cookie 2 
+ SELENIUM_BOT:login_user: try cookie 3 
+ SELENIUM_BOT:login_user: try cookie 4 
+ SELENIUM_BOT:login_user: try cookie 5 
+ SELENIUM_BOT:login_user: try cookie 6 
+ SELENIUM_BOT:login_user: try cookie 7 
+ SELENIUM_BOT:login_user: cook uploaded 
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 21_23_57_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: element [<selenium.webdriver.remote.webelement.WebElement (session="a3080560-2158-11e7-b6ba-77b05022d231", element=":wdc:1492205054868")>] 
+ SELENIUM_BOT:login_user: COOKIE WORKS!!!
+ SELENIUM_BOT:make_screenshot: Try to make screen_shot at 21_24_14_04_14_17 in /var/www/7day/studioapp/scr 
+ SELENIUM_BOT:login_user: studio_7_day_2 loggined
+ SELENIUM_BOT:get_follow_names: Try to get 15  following for fursty
+ SELENIUM_BOT:get_follow_info: Try to get 15  following for fursty
+ SELENIUM_BOT:get_follow_info: Try to get user page
+ SELENIUM_BOT:get_follow_info: Try to find button
+ SELENIUM_BOT:get_follow_info: Try to click button
+ SELENIUM_BOT:get_follow_info: Try to find divs
+ SELENIUM_BOT:get_follow_info: Try to find follow buttons
+ TEXT:button: Following
+ TEXT:button: 
+ TEXT:button: Options
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Follow
+ TEXT:button: Close
+ SELENIUM_BOT:get_follow_info: Len of list 74
+ SELENIUM_BOT:get_follow_names: Try to get follow_users_links
+ SELENIUM_BOT:get_follow_names: Try https://www.instagram.com/fursty/followers/
+ SELENIUM_BOT:get_follow_names: Try https://www.instagram.com/fursty/following/
+ SELENIUM_BOT:get_follow_names: Try http://l.instagram.com/?u=http%3A%2F%2Fdylanfurstphoto.com%2F&e=ATNqAP4pWYBivxsY-TMXcIqAnD0MqD6gcJVJC7a3pWVJY-DbnunBW6tVi0pqPjDLJatfcWE
+ SELENIUM_BOT:get_follow_names: Try https://www.instagram.com/p/BSyrlVAFy18/?taken-by=fursty
+ SELENIUM_BOT:get_follow_names: Try https://www.instagram.com/p/BSq2_KxF5OW/?taken-by=fursty
+ SELENIUM_BOT:get_follow_names: Try https://www.instagram.com/p/BSjRHQvld8b/?taken-by=fursty
+ SELENIUM_BOT:get_follow_names: Try https://www.instagram.com/p/BSeK3kvlF9v/?taken-by=fursty
+ SELENIUM_BOT:get_follow_names: Try https://www.instagram.com/p/BSZAuVVlAKL/?taken-by=fursty
+ SELENIUM_BOT:get_follow_names: Try https://www.instagram.com/p/BSTwt9RFG4R/?taken-by=fursty
+ SELENIUM_BOT:get_follow_names: Try https://www.instagram.com/p/BSOoHs0ld5S/?taken-by=fursty
+ SELENIUM_BOT:get_follow_names: Try https://www.instagram.com/p/BSMDYsblj97/?taken-by=fursty
+ SELENIUM_BOT:get_follow_names: Try https://www.instagram.com/p/BSG7vPDFpKo/?taken-by=fursty
+ SELENIUM_BOT:get_follow_names: Try https://www.instagram.com/p/BSBy3etF1Pc/?taken-by=fursty
+ SELENIUM_BOT:get_follow_names: Try https://www.instagram.com/p/BR6ErrOFC_L/?taken-by=fursty
+ SELENIUM_BOT:get_follow_names: Try https://www.instagram.com/p/BR05mIOFrSB/?taken-by=fursty
+ SELENIUM_BOT:get_follow_names: Try https://www.instagram.com/fursty/?max_id=1458851645920499635
+ SELENIUM_BOT:get_follow_names: Try https://www.instagram.com/
+ SELENIUM_BOT:get_follow_names: Try https://www.instagram.com/explore/
+ VIEW:insta_api: start at 09_29_46_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_29_46_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_29_55_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_30_05_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_30_06_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_30_06_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_30_15_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_30_25_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_30_26_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_30_26_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_30_35_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_30_45_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_30_46_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_30_46_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_30_55_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_31_05_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_31_06_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_31_06_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_31_15_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_31_25_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_31_26_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_31_26_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_31_35_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_31_45_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_31_46_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_31_46_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_31_55_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_32_05_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_32_06_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_32_06_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_32_15_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_32_25_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_32_26_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_32_26_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_32_35_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_32_45_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_32_46_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_32_46_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_32_55_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_33_05_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_33_06_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_33_06_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_33_15_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_33_25_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_33_26_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_33_26_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_33_35_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_33_45_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_33_46_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_33_46_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_33_55_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_34_05_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_34_06_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_34_06_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_34_15_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_34_25_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_34_26_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_34_26_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_34_35_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_34_45_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_34_46_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_34_46_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_34_55_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_35_05_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_35_06_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_35_06_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_35_15_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_35_25_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_35_26_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_35_26_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_35_35_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_35_45_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_35_46_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_35_46_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_35_55_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_36_05_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_36_06_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_36_06_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_36_16_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_36_25_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_36_26_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_36_26_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_36_35_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_36_45_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_36_46_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_36_46_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_36_55_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_37_05_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_37_06_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_37_06_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_37_15_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_37_25_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_37_26_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_37_26_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_37_35_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_37_45_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_37_46_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_37_46_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_37_55_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_38_05_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_38_06_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_38_06_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_38_15_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_38_25_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_38_26_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_38_26_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_38_35_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_38_45_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_38_46_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_38_46_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_38_55_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_39_05_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_39_06_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_39_06_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_39_15_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_39_25_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_39_26_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_39_26_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_39_35_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_39_40_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_39_44_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_39_44_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_39_47_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_39_50_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_39_57_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_40_00_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_40_04_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_40_04_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_40_07_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_40_10_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_40_17_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_40_20_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_40_24_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_40_24_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_40_27_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_40_30_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_40_37_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_40_40_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_40_44_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_40_44_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_40_47_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_40_50_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_40_57_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_41_00_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_41_04_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_41_04_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_41_07_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_41_10_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_41_16_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_41_16_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_41_19_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_41_29_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_41_36_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_41_36_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_41_39_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_41_49_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_41_56_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_41_56_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_41_59_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_42_09_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_42_16_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_42_16_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_42_19_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_42_29_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_42_36_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_42_36_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_42_39_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_42_49_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_42_51_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_42_51_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_43_11_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_43_11_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_43_33_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_43_33_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_43_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_43_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_43_51_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_44_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_44_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_44_01_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_44_11_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_44_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_44_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_44_21_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_44_31_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_44_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_44_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_44_41_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_44_51_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_45_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_45_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_45_01_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_45_11_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_45_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_45_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_45_21_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_45_31_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_45_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_45_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_45_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_45_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_45_41_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_45_51_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_45_58_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_45_58_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_46_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_46_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_46_01_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_46_11_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_46_18_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_46_18_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_46_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_46_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_46_21_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_46_31_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_46_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_46_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_46_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_46_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_46_41_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_46_51_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_46_58_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_46_58_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_47_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_47_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_47_01_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_47_11_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_47_18_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_47_18_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_47_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_47_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_47_21_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_47_31_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_47_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_47_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_47_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_47_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_47_41_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_47_51_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_47_58_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_47_58_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_48_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_48_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_48_01_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_48_11_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_48_18_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_48_18_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_48_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_48_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_48_21_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_48_31_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_48_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_48_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_48_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_48_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_48_41_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_48_51_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_48_58_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_48_58_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_49_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_49_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_49_01_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_49_11_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_49_18_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_49_18_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_49_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_49_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_49_21_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_49_31_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_49_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_49_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_49_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_49_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_49_41_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_49_51_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_49_58_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_49_58_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_50_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_50_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_50_01_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_50_11_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_50_18_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_50_18_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_50_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_50_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_50_21_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_50_31_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_50_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_50_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_50_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_50_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_50_42_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_50_51_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_51_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_51_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_51_01_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_51_01_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_51_02_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_51_11_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_51_18_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_51_18_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_51_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_51_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_51_21_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_51_31_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_51_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_51_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_51_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_51_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_51_41_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_51_51_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_51_58_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_51_58_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_52_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_52_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_52_01_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_52_12_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_52_18_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_52_18_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_52_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_52_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_52_21_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_52_31_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_52_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_52_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_52_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_52_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_52_41_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_52_51_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_52_58_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_52_58_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_53_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_53_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_53_01_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_53_11_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_53_18_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_53_18_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_53_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_53_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_53_21_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_53_31_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_53_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_53_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_53_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_53_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_53_41_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_53_51_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_53_58_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_53_58_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_54_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_54_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_54_01_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_54_11_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_54_18_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_54_18_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_54_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_54_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_54_21_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_54_31_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_54_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_54_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_54_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_54_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_54_41_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_54_51_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_54_58_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_54_58_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_55_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_55_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_55_01_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_55_11_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_55_18_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_55_18_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_55_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_55_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_55_21_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_55_31_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_55_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_55_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_55_41_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_55_41_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_55_41_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_55_51_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_55_58_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_55_58_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_56_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_56_00_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_56_01_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_56_12_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_56_18_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_56_18_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_56_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_56_20_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_56_21_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_56_31_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_56_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_56_38_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_56_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_56_40_04_15_17 get_tasks/None
+ VIEW:insta_api: start at 09_56_41_04_15_17 get_task_result/5999741266947723327
+ VIEW:insta_api: start at 09_56_51_04_15_17 get_task_result/5999741266947723327
