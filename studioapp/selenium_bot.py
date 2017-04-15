@@ -26,7 +26,7 @@ class selenium_webdriver(object):
         self.logger.log('SELENIUM_BOT:init: DONE')
         time.sleep(3)
 
-    def login_user(self,  username, password):                                                                             #TO DO: SAVE and return cookie
+    def login_user(self,  username, password):                                                                             
         
         BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         cookies_path = os.path.join(BASE_DIR, 'studioapp', 'cookies/cookie')
@@ -35,75 +35,62 @@ class selenium_webdriver(object):
         self.logger.log('SELENIUM_BOT:login_user: %s ' % str(old_cookies))
         self.driver.get("https://www.instagram.com/")
 
-        self.logger.log('SELENIUM_BOT:login_user: try cookie 0 ')
-        self.driver.add_cookie(old_cookies[0])
+        try:
+            self.logger.log('SELENIUM_BOT:login_user: try cookie 0 ')
+            self.driver.add_cookie(old_cookies[0])
 
-        self.logger.log('SELENIUM_BOT:login_user: try cookie 1 ')
-        self.driver.add_cookie(old_cookies[1])
+            self.logger.log('SELENIUM_BOT:login_user: try cookie 1 ')
+            self.driver.add_cookie(old_cookies[1])
 
-        self.logger.log('SELENIUM_BOT:login_user: try cookie 2 ')
-        self.driver.add_cookie(old_cookies[2])
+            self.logger.log('SELENIUM_BOT:login_user: try cookie 2 ')
+            self.driver.add_cookie(old_cookies[2])
 
-        self.logger.log('SELENIUM_BOT:login_user: try cookie 3 ')
+            self.logger.log('SELENIUM_BOT:login_user: try cookie 3 ')
 
-        self.driver.add_cookie(old_cookies[3])
+            self.driver.add_cookie(old_cookies[3])
 
-        self.logger.log('SELENIUM_BOT:login_user: try cookie 4 ')
+            self.logger.log('SELENIUM_BOT:login_user: try cookie 4 ')
 
-        self.driver.add_cookie(old_cookies[4])
-        self.logger.log('SELENIUM_BOT:login_user: try cookie 5 ')
+            self.driver.add_cookie(old_cookies[4])
+            
+            self.logger.log('SELENIUM_BOT:login_user: try cookie 7 ')
 
-        #self.driver.add_cookie(old_cookies[5])
-        self.logger.log('SELENIUM_BOT:login_user: try cookie 6 ')
+            self.driver.add_cookie(old_cookies[7])
 
-        #self.driver.add_cookie(old_cookies[6])
-        self.logger.log('SELENIUM_BOT:login_user: try cookie 7 ')
+            self.logger.log('SELENIUM_BOT:login_user: cook uploaded ')
+        except:
+            pass
 
-        self.driver.add_cookie(old_cookies[7])
-
-        self.logger.log('SELENIUM_BOT:login_user: cook uploaded ')
         self.driver.get("https://www.instagram.com/")
         time.sleep(3)
-        self.make_screenshot()
+        
 
         element = self.driver.find_elements_by_class_name('coreSpriteDesktopNavProfile')
 
         self.logger.log('SELENIUM_BOT:login_user: element %s '% str(element))
-        
+        self.my_user_name = username
+
         if len(element) != 0:
             self.logger.log('SELENIUM_BOT:login_user: COOKIE WORKS!!!')
-            self.make_screenshot()
 
         else:
-            self.make_screenshot()
-
-            status = ''
+            
             cookies = ''
-            result = {}
             self.logger.log('SELENIUM_BOT:login_user: Try to get login page')
-
-            self.my_user_name = username
 
             self.driver.get("https://www.instagram.com/accounts/login/")
             time.sleep(3)
-            self.make_screenshot()
+
             self.driver.find_element_by_xpath("//input[@name='username']").send_keys(username)
             self.driver.find_element_by_xpath("//input[@name='password']").send_keys(password)
             
-            self.make_screenshot()
-
             self.logger.log('SELENIUM_BOT:login_user: Try to login %s' % username )
             self.driver.find_element_by_css_selector("button").click()
             time.sleep(3)
-            self.make_screenshot()
+
             self.driver.get("https://www.instagram.com/")
             time.sleep(3)
 
-
-            time.sleep(3)
-
-            #result = {'status': status, 'cookies':cookies}
-            #return result
 
             cookies = self.driver.get_cookies()
             cookies_str = json.dumps(cookies)
@@ -142,7 +129,7 @@ class selenium_webdriver(object):
         time.sleep(3)
 
         self.logger.log('SELENIUM_BOT:get_follow_info: Try to find button')
-        button = self.driver.find_element_by_xpath("//a[@href='/%s/%s/']" % (username, direction))
+        button = self.driver.find_element_by_xpath("//a[@href='/%s/%s/']" % (username.lower(), direction))
 
  
         self.logger.log('SELENIUM_BOT:get_follow_info: Try to click button')        
@@ -178,17 +165,21 @@ class selenium_webdriver(object):
         self.logger.log('SELENIUM_BOT:get_follow_names: Try to get follow_users_links')
 
         follow_users_links = self.driver.find_elements_by_css_selector('a')
-        regex = re.compile(r'https://www.instagram.com/([^/]+)/$')
+        regex = re.compile(r'https://www\.instagram\.com/([^/]+)/$')
         follow_names = []
 
         for link in follow_users_links:
+            link_attr = ''
             link_attr = link.get_attribute('href')
             self.logger.log('SELENIUM_BOT:get_follow_names: Try %s' % link_attr)
-            username_search = re.search(regex, link_attr)
-            if username_search:
-                username = username_search.group(1)
-                if username not in follow_names and username != self.my_user_name:
-                    follow_names.append(username)
+            
+            if link_attr:
+                
+                username_search = re.search(regex, link_attr)
+                if username_search and username_search.group(1):
+                    username = username_search.group(1)
+                    if username not in follow_names and username != self.my_user_name:
+                        follow_names.append(username)
 
         self.logger.log('SELENIUM_BOT:get_follow_names: Got %s user_names' % str(len(follow_names)))
         return follow_names

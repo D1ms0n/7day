@@ -59,8 +59,6 @@ class Worker(object):
         selenium_bot = selenium_webdriver()
         login_result = selenium_bot.login_user(my_username, my_password)
 
-        #if login_result['status'] == 'OK':
-
 
         user_names = selenium_bot.get_follow_names(username, direction,  15)
         selenium_bot.driver.close()

@@ -39,7 +39,7 @@ angular.module('application')
             }).then(
                 function successCallback(response) {
                     // $scope.users = response.data;
-                    window.location = "http://studio7day.herokuapp.com/#/tasks";
+                    window.location = "/#/tasks";
                 },
                 function errorCallback(response) {
                     $scope.errorMss = 'Something wrong, ' + ' status ' + '" ' + response.status+' "';
@@ -158,7 +158,7 @@ angular.module('application')
 
         $scope.getTask = function (taskId) {
             localStorage.setItem('taskId',taskId);
-            window.location = "http://studio7day.herokuapp.com/#/task";
+            window.location = "/#/task";
         };
     }])
 

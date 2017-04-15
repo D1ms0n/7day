@@ -56,14 +56,23 @@ def insta_api(request, target, request_id = '',  **kwargs):
     else:
         task_list_json = {}
 
-    
 
-##################### GET ##################################
+    ##################### GET ##################################
     
     # GET / get_list
     if request.method == 'GET': 
+        
         if target == 'get_tasks':
-            return HttpResponse(task_list_content,
+            task_list = []
+            for task_id in task_list_json:
+                new_task = {'task_id': task_id}
+                for item in task_list_json[task_id]:
+                    new_task[item] = task_list_json[task_id][item]
+                task_list.append(new_task)
+
+
+
+            return HttpResponse(json.dumps(task_list),
                                 content_type="application/json")
         elif target == 'get_task_result':
             
@@ -79,8 +88,8 @@ def insta_api(request, target, request_id = '',  **kwargs):
                                 content_type="application/json")
 
 
-#################### POST ##################################
-# Directions: following, followers, follow, unfollow
+    #################### POST ##################################
+    # Directions: following, followers, follow, unfollow
     elif request.method == 'POST':
         request_json = json.loads(request.body)
 
@@ -88,10 +97,10 @@ def insta_api(request, target, request_id = '',  **kwargs):
 
         # POST / add_task
         if target == 'add_task':
-            
             time_now = time.strftime('%X %x').replace(' ', '_').replace('/', '_')
             task_id  = abs(hash(time_now))
-   
+            task_list_json[task_id] = request_json
+            task_list_json[task_id]['create_time'] = time_now
             direction    = request_json['direction']
 
             if direction in ['following', 'followers']:
@@ -101,21 +110,12 @@ def insta_api(request, target, request_id = '',  **kwargs):
                     count = request_json['count']
                 else:
                     count = 50
-
-                    task_list_json[task_id] = {'username'    : username,
-                                               'direction'   : direction, 
-                                               'count'       : count,  
-                                               'create_time' : time_now}
     
                 worker.get_follow_info(username, direction, count, task_id)
                 
 
             elif direction in ['follow', 'unfollow']:
                 user_names = request_json['user_names']
-
-                task_list_json[task_id] = {'direction'   : direction,
-                                           'user_names'  : user_names,
-                                           'create_time' : time_now}
                 
                 worker.change_relationships(user_names, direction, task_id)        
             
@@ -126,14 +126,13 @@ def insta_api(request, target, request_id = '',  **kwargs):
             
             if id_to_del in task_list_json:
                 task_list_json.pop(id_to_del)
-    
 
-        task_list_content = json.dumps(task_list_json)
-        task_list_file = open('%s/tasks' % os.path.join(get_base_dir(), 'studioapp', 'data') , 'w')
-        task_list_file.write(task_list_content)
+
+        task_list_file = open( '%s/tasks' % os.path.join(get_base_dir(), 'studioapp', 'data') , 'w')
+        task_list_file.write(json.dumps(task_list_json))
         task_list_file.close()
 
-        return HttpResponse(task_list_content,
+        return HttpResponse(json.dumps(task_list_json),
                             content_type="application/json")    
 
 
@@ -157,11 +156,6 @@ def logs(request):
         log = []
     
     return render(request, 'studio/logs.html', {'log':log[-50:]})
-
-
-
-  
-
 
         ################################################################################### FOLLOW_FORM ###########################################################################
 """
