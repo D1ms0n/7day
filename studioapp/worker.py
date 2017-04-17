@@ -8,7 +8,7 @@ from local_conf import *
 from selenium_bot import selenium_webdriver
 from instabot import Bot
 from logger import Logger
-
+from models import Insta_user
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -93,7 +93,24 @@ class Worker(object):
             info['user']['followed_by']['count'] = full_info['user']['followed_by']['count']
             info['user']['follows']['count'] = full_info['user']['follows']['count']
             
+            
 
+            new_user = Insta_user(user_id              = info['user']['id'],
+                                  user_name            = info['user']['username'],
+                                  user_full_name       = info['user']['full_name'],
+                                  followers_count      = int(info['user']['followed_by']['count']),
+                                  follow_count         = int(info['user']['follows']['count']),
+                                  profile_pic_url_hd   = info['user']['profile_pic_url_hd'],
+                                  user_biography       = info['user']['biography'],
+                                  user_external_url    = info['user']['external_url'],
+                                  follows_viewer       = info['user']['follows_viewer'],
+                                  followed_by_viewer   = info['user']['followed_by_viewer'],
+                                  has_requested_viewer = info['user']['has_requested_viewer'],
+                                  requested_by_viewer  = info['user']['requested_by_viewer'],
+                                  has_blocked_viewer   = info['user']['has_blocked_viewer'],
+                                  blocked_by_viewer    = info['user']['blocked_by_viewer'],
+                                  is_private           = info['user']['is_private'])
+            new_user.save()
             task_result['result'].append(info)
         
             

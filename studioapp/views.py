@@ -14,7 +14,6 @@ import os
 from logger import Logger
 from worker import Worker
 
-
 def get_base_dir():
     return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
