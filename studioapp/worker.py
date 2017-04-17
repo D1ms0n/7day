@@ -9,8 +9,8 @@ from selenium_bot import selenium_webdriver
 from instabot import Bot
 from logger import Logger
 
-def get_base_dir():
-        return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def start_thread(function):
     def wrapper(*args, **kwargs):
@@ -24,7 +24,6 @@ def start_thread(function):
     return wrapper
 
 class Worker(object):
-    """docstring for Worker"""
     def __init__(self):
         logger = Logger('worker')
         logger.log("WORKER: CREATED")
@@ -47,7 +46,7 @@ class Worker(object):
                                'count'    : count,
                                'task_id'  : task_id}
 
-        result_file_name = '%s/%s' % (os.path.join(get_base_dir(), 'studioapp', 'results'), task_id)
+        result_file_name = '%s/%s' % (os.path.join(BASE_DIR, 'studioapp', 'results'), task_id)
         
 
         logger.log('WORKER:follow_info: Create result file %s' % result_file_name)
@@ -57,28 +56,34 @@ class Worker(object):
         result_file.close()
 
         selenium_bot = selenium_webdriver()
-        login_result = selenium_bot.login_user(my_username, my_password)
-
+        selenium_bot.login_user(my_username, my_password)
 
         user_names = selenium_bot.get_follow_names(username, direction,  15)
         selenium_bot.driver.close()
 
         bot = Bot()
 
-
         for name in user_names[3:]:
             full_info = bot.get_info(name)
 
             info={'user':{}}
 
-            info['user']['id'] = full_info[u'user'][u'id']
+            attrs = ['id',
+                     'username',
+                     'full_name',
+                     'profile_pic_url_hd',
+                     'biography',
+                     'external_url',
+                     'follows_viewer',
+                     'followed_by_viewer',
+                     'has_requested_viewer',
+                     'requested_by_viewer',
+                     'has_blocked_viewer',
+                     'blocked_by_viewer',
+                     'is_private',]
 
-            info['user']['username'] = full_info[u'user'][u'username']
-
-            info['user']['full_name'] = full_info['user']['full_name']
-            info['user']['profile_pic_url_hd'] = full_info['user']['profile_pic_url_hd']
-            info['user']['biography'] = full_info['user']['biography']
-            info['user']['external_url'] = full_info['user']['external_url']
+            for attr in attrs:
+                info['user'][attr] = full_info[u'user'][attr]
 
             info['user']['media'] = {}
             info['user']['followed_by'] ={}
@@ -87,18 +92,7 @@ class Worker(object):
             info['user']['media']['count'] = full_info['user']['media']['count']
             info['user']['followed_by']['count'] = full_info['user']['followed_by']['count']
             info['user']['follows']['count'] = full_info['user']['follows']['count']
-
-            info['user']['follows_viewer'] = full_info['user']['follows_viewer']
-            info['user']['followed_by_viewer'] = full_info['user']['followed_by_viewer']
-
             
-            info['user']['has_requested_viewer'] = full_info['user']['has_requested_viewer']
-            info['user']['requested_by_viewer'] = full_info['user']['requested_by_viewer']
-
-            info['user']['has_blocked_viewer'] = full_info['user']['has_blocked_viewer']
-            info['user']['blocked_by_viewer'] = full_info['user']['blocked_by_viewer']
-            
-            info['user']['is_private'] = full_info['user']['is_private']
 
             task_result['result'].append(info)
         
@@ -116,9 +110,9 @@ class Worker(object):
         logger = Logger('worker')
         time_now =  time.strftime('%X %x').replace(' ', '_').replace('/', '_').replace(':', '_')
         
-        result_file_name = '%s/%s' % (os.path.join(get_base_dir(), 'studioapp', 'results'), task_id)
+        result_file_name = '%s/%s' % (os.path.join(BASE_DIR, 'studioapp', 'results'), task_id)
 
-        logger.log('WORKER:follow_info: Create result file %s' % result_file_name)
+        logger.log('WORKER:change_relationships: Create result file %s' % result_file_name)
 
         task_result = {'info':{}, 'result':[]}
 
@@ -134,9 +128,11 @@ class Worker(object):
 
 
         selenium_bot = selenium_webdriver()
-        selenium_bot.login_user('studio7day', 'Nopasaran')
-            
+        selenium_bot.login_user('studio_7_day_2', 'Nopasaran')
+        logger.log('WORKER:change_relationships: TRY to follow %s' % str(user_names))
+
         for user_name in user_names:
+            logger.log('WORKER:change_relationships: TRY to follow %s' % str(user_name))            
             selenium_bot.change_relationships(user_name)
             task_result['result'].append(user_name)
         
@@ -146,4 +142,4 @@ class Worker(object):
         result_file.write(json.dumps(task_result))
         result_file.close()
         
-        logger.log('WORKER:selenium_bot: FINISH')
+        logger.log('WORKER:change_relationships: FINISH')

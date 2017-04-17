@@ -9,6 +9,9 @@ import os
 from logger import Logger
 import json
 
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 class selenium_webdriver(object):
     
     def __init__(self):
@@ -18,7 +21,6 @@ class selenium_webdriver(object):
             self.binary = FirefoxBinary(r'C:\Program Files (x86)\Mozilla Firefox\firefox.exe')
             self.driver = webdriver.Firefox(firefox_binary=self.binary)
         else:
-            BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
             path = os.path.join(BASE_DIR, 'studioapp', 'logs')
             
             self.driver = webdriver.PhantomJS(service_log_path='%s/phantom' % path)
@@ -27,47 +29,26 @@ class selenium_webdriver(object):
         time.sleep(3)
 
     def login_user(self,  username, password):                                                                             
-        
-        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         cookies_path = os.path.join(BASE_DIR, 'studioapp', 'cookies/cookie')
-        self.logger.log('SELENIUM_BOT:login_user: try to use cookies ')        # try to use cookies
+        self.logger.log('SELENIUM_BOT:login_user: try to use cookies ')
         old_cookies = json.loads(open(cookies_path).readlines()[0])
-        self.logger.log('SELENIUM_BOT:login_user: %s ' % str(old_cookies))
         self.driver.get("https://www.instagram.com/")
 
         try:
-            self.logger.log('SELENIUM_BOT:login_user: try cookie 0 ')
-            self.driver.add_cookie(old_cookies[0])
+            for num in [0,1,2,3,4,7]:
 
-            self.logger.log('SELENIUM_BOT:login_user: try cookie 1 ')
-            self.driver.add_cookie(old_cookies[1])
+                self.logger.log('SELENIUM_BOT:login_user: try cookie %d ' % num)
+                self.driver.add_cookie(old_cookies[num])
 
-            self.logger.log('SELENIUM_BOT:login_user: try cookie 2 ')
-            self.driver.add_cookie(old_cookies[2])
-
-            self.logger.log('SELENIUM_BOT:login_user: try cookie 3 ')
-
-            self.driver.add_cookie(old_cookies[3])
-
-            self.logger.log('SELENIUM_BOT:login_user: try cookie 4 ')
-
-            self.driver.add_cookie(old_cookies[4])
-            
-            self.logger.log('SELENIUM_BOT:login_user: try cookie 7 ')
-
-            self.driver.add_cookie(old_cookies[7])
-
-            self.logger.log('SELENIUM_BOT:login_user: cook uploaded ')
+            self.logger.log('SELENIUM_BOT:login_user: cookies uploaded ')
         except:
             pass
 
         self.driver.get("https://www.instagram.com/")
         time.sleep(3)
-        
 
         element = self.driver.find_elements_by_class_name('coreSpriteDesktopNavProfile')
 
-        self.logger.log('SELENIUM_BOT:login_user: element %s '% str(element))
         self.my_user_name = username
 
         if len(element) != 0:
@@ -91,25 +72,17 @@ class selenium_webdriver(object):
             self.driver.get("https://www.instagram.com/")
             time.sleep(3)
 
-
             cookies = self.driver.get_cookies()
             cookies_str = json.dumps(cookies)
 
             self.logger.log('SELENIUM_BOT:login_user: cookies: %s' % cookies_str )
 
-            BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-            cookies_path = os.path.join(BASE_DIR, 'studioapp', 'cookies/cookie')
-            
-            self.logger.log('SELENIUM_BOT:login_user: cookies_path: %s' % cookies_path )
-            self.logger.log('SELENIUM_BOT:login_user: cookies_path: %s' % cookies_path )
-            
-            cookies_file = open(cookies_path, 'w')
+            cookies_file = open(os.path.join(BASE_DIR, 'studioapp', 'cookies/cookie'), 'w')
             cookies_file.write(cookies_str)
             cookies_file.close()
         self.logger.log('SELENIUM_BOT:login_user: %s loggined' % username )
 
     def make_screenshot(self):
-        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         path_scr = os.path.join(BASE_DIR, 'studioapp', 'scr')
         time_now        =  time.strftime('%X %x').replace(' ', '_').replace('/', '_').replace(':', '_')
         
@@ -117,6 +90,7 @@ class selenium_webdriver(object):
 
         screenshot      = self.driver.get_screenshot_as_png()
         screenshot_file = open('%s/%s_screen.png' % (path_scr, time_now), 'a')
+        
         screenshot_file.write(screenshot)
         screenshot_file.close()
 
@@ -184,16 +158,19 @@ class selenium_webdriver(object):
         self.logger.log('SELENIUM_BOT:get_follow_names: Got %s user_names' % str(len(follow_names)))
         return follow_names
 
-    def get_follow_buttons(self, username, direction = 'followers' ,  max_value = 8):
-        self.get_follow_info(username, direction,  max_value)
-        follow_buttons_list = self.driver.find_elements_by_css_selector('button')
-        return follow_buttons_list
-
-    def change_relationships(username):
+    def change_relationships(self, username):
+        self.logger.log('SELENIUM_BOT:change_relationships: try to get page %s ' % username)
         self.driver.get("https://www.instagram.com/%s/" % username)
+        self.logger.log('SELENIUM_BOT:change_relationships: try to follow %s ' % username)
         time.sleep(3)
 
-        self.driver.find_elements_by_css_selector('button')[0].click()
+        buttons = self.driver.find_elements_by_css_selector('button')
+        try:
+            buttons[0].click()
+        except Exception, e:
+            self.logger.log('SELENIUM_BOT:change_relationships: FAILED %s ' % str(e))
+
+        time.sleep(3)
 
 
         ################################################################################### TESTS ###########################################################################
