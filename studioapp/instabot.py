@@ -13,8 +13,8 @@ user_info_link   = 'https://www.instagram.com/%s/?__a=1'
 
 class Bot(object):
     def __init__(self):
-        self.user_login    = 'dimka_photo'
-        self.user_password = 'Vyt25ktn'
+        #self.user_login    = 'studio_7_day_2'
+        #self.user_password = 'Nopasaran'
         self.accept_language = 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
         self.user_agent = ("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 "
                           "(KHTML, like Gecko) Chrome/48.0.2564.103 Safari/537.36")
@@ -27,7 +27,7 @@ class Bot(object):
         self.logger.log('Try to get info for %s' % name)
         
         answer = ''
-        answer = requests.get(user_info_link % name).text
+        answer = self.s.get(user_info_link % name).text
         if answer:
             try:
                 info = json.loads(answer)
@@ -40,13 +40,13 @@ class Bot(object):
         return info
 
 
-    def login_user(self):
+    def login_user(self, username, password):
         self.s = requests.Session()
         self.s.cookies.update({'sessionid': '', 'mid': '', 'ig_pr': '1',
                                'ig_vw': '1920', 'csrftoken': '',
                                's_network': '', 'ds_user_id': ''})
-        self.login_post = {'username': self.user_login,
-                      'password': self.user_password}
+        self.login_post = {'username': username,
+                           'password': password}
         self.s.headers.update({'Accept-Encoding': 'gzip, deflate',
                                'Accept-Language': self.accept_language,
                                'Connection': 'keep-alive',

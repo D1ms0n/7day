@@ -62,7 +62,7 @@ class Worker(object):
         selenium_bot.driver.close()
 
         bot = Bot()
-
+        bot.login_user(my_username, my_password)
         for name in user_names[3:]:
             full_info = bot.get_info(name)
 

@@ -9,8 +9,16 @@ import os
 from logger import Logger
 import json
 
+# Path:
+BASE_DIR       = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+cookies_path   = os.path.join(BASE_DIR, 'studioapp', 'cookies/cookie')
+logs_dir       = os.path.join(BASE_DIR, 'studioapp', 'logs')
+screenshot_dir = os.path.join(BASE_DIR, 'studioapp', 'scr')
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#Links:
+insta_main_link  = "https://www.instagram.com/"
+insta_login_link = "https://www.instagram.com/accounts/login/"
+insta_user_link  = "https://www.instagram.com/%s/"   # % username
 
 class selenium_webdriver(object):
     
@@ -21,7 +29,7 @@ class selenium_webdriver(object):
             self.binary = FirefoxBinary(r'C:\Program Files (x86)\Mozilla Firefox\firefox.exe')
             self.driver = webdriver.Firefox(firefox_binary=self.binary)
         else:
-            path = os.path.join(BASE_DIR, 'studioapp', 'logs')
+            path = logs_dir
             
             self.driver = webdriver.PhantomJS(service_log_path='%s/phantom' % path)
             self.driver.set_window_size(1120, 550)
@@ -29,10 +37,10 @@ class selenium_webdriver(object):
         time.sleep(3)
 
     def login_user(self,  username, password):                                                                             
-        cookies_path = os.path.join(BASE_DIR, 'studioapp', 'cookies/cookie')
+        
         self.logger.log('SELENIUM_BOT:login_user: try to use cookies ')
         old_cookies = json.loads(open(cookies_path).readlines()[0])
-        self.driver.get("https://www.instagram.com/")
+        self.driver.get(insta_main_link)
 
         try:
             for num in [0,1,2,3,4,7]:
@@ -44,7 +52,7 @@ class selenium_webdriver(object):
         except:
             pass
 
-        self.driver.get("https://www.instagram.com/")
+        self.driver.get(insta_main_link)
         time.sleep(3)
 
         element = self.driver.find_elements_by_class_name('coreSpriteDesktopNavProfile')
@@ -59,7 +67,7 @@ class selenium_webdriver(object):
             cookies = ''
             self.logger.log('SELENIUM_BOT:login_user: Try to get login page')
 
-            self.driver.get("https://www.instagram.com/accounts/login/")
+            self.driver.get(insta_login_link)
             time.sleep(3)
 
             self.driver.find_element_by_xpath("//input[@name='username']").send_keys(username)
@@ -69,76 +77,57 @@ class selenium_webdriver(object):
             self.driver.find_element_by_css_selector("button").click()
             time.sleep(3)
 
-            self.driver.get("https://www.instagram.com/")
+            self.driver.get(insta_main_link)
             time.sleep(3)
 
-            cookies = self.driver.get_cookies()
+            cookies     = self.driver.get_cookies()
             cookies_str = json.dumps(cookies)
 
             self.logger.log('SELENIUM_BOT:login_user: cookies: %s' % cookies_str )
 
-            cookies_file = open(os.path.join(BASE_DIR, 'studioapp', 'cookies/cookie'), 'w')
+            cookies_file = open(cookies_path, 'w')
             cookies_file.write(cookies_str)
             cookies_file.close()
         self.logger.log('SELENIUM_BOT:login_user: %s loggined' % username )
 
     def make_screenshot(self):
-        path_scr = os.path.join(BASE_DIR, 'studioapp', 'scr')
         time_now        =  time.strftime('%X %x').replace(' ', '_').replace('/', '_').replace(':', '_')
-        
-        self.logger.log('SELENIUM_BOT:make_screenshot: Try to make screen_shot at %s in %s ' % (time_now, path_scr))
 
         screenshot      = self.driver.get_screenshot_as_png()
-        screenshot_file = open('%s/%s_screen.png' % (path_scr, time_now), 'a')
+        screenshot_file = open('%s/%s_screen.png' % (screenshot_dir , time_now), 'a')
         
         screenshot_file.write(screenshot)
         screenshot_file.close()
 
-    def get_follow_info(self, username, direction = 'followers' ,  max_value = 8):
-        
-        self.logger.log('SELENIUM_BOT:get_follow_info: Try to get %d  %s for %s' % (max_value, direction, username))
-
-        self.logger.log('SELENIUM_BOT:get_follow_info: Try to get user page')
-        self.driver.get("https://www.instagram.com/%s/" % username)
-        time.sleep(3)
-
-        self.logger.log('SELENIUM_BOT:get_follow_info: Try to find button')
-        button = self.driver.find_element_by_xpath("//a[@href='/%s/%s/']" % (username.lower(), direction))
-
- 
-        self.logger.log('SELENIUM_BOT:get_follow_info: Try to click button')        
-        button.click()
-        time.sleep(3)
-        
-        divs_followers = self.driver.find_elements_by_xpath("//div[text()='F%s']" % direction[1:])[0]                              
-        
-        self.logger.log('SELENIUM_BOT:get_follow_info: Try to find divs')
-        divs = self.driver.find_elements_by_css_selector('div')
-        
-        div_to_scroll_index = divs.index(divs_followers) + 1  
-        div_to_scroll_class = divs[div_to_scroll_index].get_attribute('class')
-
-
-        self.logger.log('SELENIUM_BOT:get_follow_info: Try to find follow buttons')
-        follow_buttons_list = self.driver.find_elements_by_css_selector('button')
-
-        for butt in follow_buttons_list:
-            t = butt.text
-            self.logger.log('TEXT:button: ' + str(t))
-
-        self.logger.log('SELENIUM_BOT:get_follow_info: Len of list ' + str(len(follow_buttons_list)) )
-
-        
 
     def get_follow_names(self, username, direction = 'followers' ,  max_value = 8):
         
         self.logger.log('SELENIUM_BOT:get_follow_names: Try to get %d  %s for %s' % (max_value, direction, username))
         
-        self.get_follow_info(username, direction,  max_value)
+        self.logger.log('SELENIUM_BOT:get_follow_names: Try to get user page')
+        self.driver.get(insta_user_link % username)
+        time.sleep(3)
+
+        self.logger.log('SELENIUM_BOT:get_follow_names: Try to find button')
+        button = self.driver.find_element_by_xpath("//a[@href='/%s/%s/']" % (username.lower(), direction))
+ 
+        self.logger.log('SELENIUM_BOT:get_follow_names: Try to click button')        
+        button.click()
+        time.sleep(3)
+        
+        # SCROLL
+        #divs_followers = self.driver.find_elements_by_xpath("//div[text()='F%s']" % direction[1:])[0]                              
+        #self.logger.log('SELENIUM_BOT:get_follow_names: Try to find divs')
+        #divs = self.driver.find_elements_by_css_selector('div')
+        #div_to_scroll_index = divs.index(divs_followers) + 1  
+        #div_to_scroll_class = divs[div_to_scroll_index].get_attribute('class')
+        #self.logger.log('SELENIUM_BOT:get_follow_names: Try to find follow buttons')
+        #follow_buttons_list = self.driver.find_elements_by_css_selector('button')
+        #self.logger.log('SELENIUM_BOT:get_follow_names: Len of list ' + str(len(follow_buttons_list)) )
         
         self.logger.log('SELENIUM_BOT:get_follow_names: Try to get follow_users_links')
-
         follow_users_links = self.driver.find_elements_by_css_selector('a')
+
         regex = re.compile(r'https://www\.instagram\.com/([^/]+)/$')
         follow_names = []
 
@@ -160,7 +149,7 @@ class selenium_webdriver(object):
 
     def change_relationships(self, username):
         self.logger.log('SELENIUM_BOT:change_relationships: try to get page %s ' % username)
-        self.driver.get("https://www.instagram.com/%s/" % username)
+        self.driver.get(insta_user_link % username)
         self.logger.log('SELENIUM_BOT:change_relationships: try to follow %s ' % username)
         time.sleep(3)
 
