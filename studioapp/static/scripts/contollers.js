@@ -40,7 +40,7 @@ angular.module('application')
             }).then(
                 function successCallback(response) {
                     // $scope.users = response.data;
-                    window.location = "/#/tasks";
+                    window.location = "/tasks";
                     preloader.style.display='none';
                 },
                 function errorCallback(response) {
@@ -165,12 +165,14 @@ angular.module('application')
         }, 120000);
 
         $scope.getTask = function (taskId) {
+            console.log(taskId);
             localStorage.setItem('taskId',taskId);
-            window.location = "/#/task";
+            window.location = "/task";
         };
 
         $scope.delTask = function (taskId) {
             preloader.style.display='block';
+            console.log(taskId);
             $http({
                 method: 'POST',
                 url: '/insta_api/del_task',
