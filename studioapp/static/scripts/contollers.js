@@ -25,6 +25,7 @@ angular.module('application')
 //send search keyword
         var preloader = document.getElementById('preloader');
         $scope.getFollowers = function (username,direction,count) {
+            preloader.style.display='block';
             var getListData = {
                 'username'  : username,
                 'direction' : direction,
@@ -40,9 +41,11 @@ angular.module('application')
                 function successCallback(response) {
                     // $scope.users = response.data;
                     window.location = "/#/tasks";
+                    preloader.style.display='none';
                 },
                 function errorCallback(response) {
                     $scope.errorMss = 'Something wrong, ' + ' status ' + '" ' + response.status+' "';
+                    preloader.style.display='none';
                 });
         };
 //check or uncheckall checkboxes
@@ -74,6 +77,7 @@ angular.module('application')
             var usersList = document.querySelectorAll('.checkbox:checked');
             var action;
             for( var i = 0; i < usersList.length; i++){
+                if ( usersList[i].followedbyviewer == true) { continue; } // ignore if already follow
                 usersNames.push(usersList[i].value);
             }
             switch (param) {
@@ -92,6 +96,7 @@ angular.module('application')
             };
             var usersNamesJson = JSON.stringify(usersNamesObject);
             console.log(usersNamesJson);
+            preloader.style.display='block';
             $http({
                 method: 'POST',
                 url: '/insta_api/add_task',
@@ -124,6 +129,7 @@ angular.module('application')
             };
             var userNameJson = JSON.stringify(userNameObject);
             console.log(userNameJson);
+            preloader.style.display='block';
             $http({
                 method: 'POST',
                 url: '/insta_api/add_task',
@@ -143,22 +149,40 @@ angular.module('application')
         window.getTaskInfo=function(){return false;};
 //get tasks
         function getTasks(){
+            preloader.style.display='block';
             $http({
                 method: 'GET',
                 url: '/insta_api/get_tasks'
             }).then(
                 function successCallback(response) {
                     $scope.tasks = response.data;
+                    preloader.style.display='none';
                 });
         }
         getTasks();
         setInterval(function(){
             getTasks();
-        }, 60000);
+        }, 120000);
 
         $scope.getTask = function (taskId) {
             localStorage.setItem('taskId',taskId);
             window.location = "/#/task";
+        };
+
+        $scope.delTask = function (taskId) {
+            preloader.style.display='block';
+            $http({
+                method: 'POST',
+                url: '/insta_api/del_task',
+                data : taskId
+            }).then(
+                function successCallback(response) {
+                    preloader.style.display='none';
+                    getTasks();
+                },
+                function errorCallback(response) {
+                    preloader.style.display='none';
+                });
         };
     }])
 
@@ -169,7 +193,7 @@ angular.module('application')
             console.log(task_id);
             $http({
                 method: 'GET',
-                url: '/insta_api/get_task_result/'+task_id
+                url: '/insta_api/get_task_result/' + task_id
             }).then(
                 function successCallback(response) {
                     $scope.users = response.data;
@@ -179,9 +203,6 @@ angular.module('application')
                 });
         }
         getTaskInfo();
-        setInterval(function(){
-            getTaskInfo();
-        }, 60000);
     }])
 ;
 
