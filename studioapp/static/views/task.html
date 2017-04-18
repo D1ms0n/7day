@@ -30,8 +30,8 @@
                             <div class="description">{{user.user.biography}}</div>
                             <div class="followed_by">Followed by : {{user.user.followed_by.count}}</div>
                             <div class="follows">Follows : {{user.user.follows.count}}</div>
-                            <button class="action-btn" ng-click="followUnfollowThis(user.user.username,'follow')" id="subscribe">Subscribe</button>
-                            <button class="action-btn" ng-click="followUnfollowThis(user.user.username,'unfollow')" id="unsubscribe">UnSubscribe</button>
+                            <button ng-if="!user.user.followed_by_viewer" class="action-btn" ng-click="followUnfollowThis(user.user.username,'follow')" id="subscribe">Subscribe</button>
+                            <button ng-if="user.user.followed_by_viewer" class="action-btn" ng-click="followUnfollowThis(user.user.username,'unfollow')" id="unsubscribe">UnSubscribe</button>
                             <input type="checkbox" name="checkbox" id="{{user.user.id}}" class="checkbox" value="{{user.user.username}}"/>
                             <label for="{{user.user.id}}" class="checkbox-label"></label>
                         </li>
