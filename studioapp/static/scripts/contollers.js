@@ -166,16 +166,16 @@ angular.module('application')
         $scope.getTask = function (taskId) {
             console.log(taskId);
             localStorage.setItem('taskId',taskId);
-            // window.location = "/#/task";
         };
 
         $scope.delTask = function (taskId) {
             preloader.style.display='block';
             console.log(taskId);
+            var taskIdJson = JSON.stringify(taskId);
             $http({
                 method: 'POST',
                 url: '/insta_api/del_task',
-                data : taskId
+                data : taskIdJson
             }).then(
                 function successCallback(response) {
                     preloader.style.display='none';
