@@ -40,7 +40,6 @@ angular.module('application')
             }).then(
                 function successCallback(response) {
                     // $scope.users = response.data;
-                    window.location = "/tasks";
                     preloader.style.display='none';
                 },
                 function errorCallback(response) {
@@ -167,7 +166,7 @@ angular.module('application')
         $scope.getTask = function (taskId) {
             console.log(taskId);
             localStorage.setItem('taskId',taskId);
-            window.location = "/task";
+            // window.location = "/#/task";
         };
 
         $scope.delTask = function (taskId) {
