@@ -191,15 +191,18 @@ angular.module('application')
         function getTaskInfo(){
             var task_id = localStorage.getItem('taskId');
             console.log(task_id);
+            preloader.style.display='block';
             $http({
                 method: 'GET',
                 url: '/insta_api/get_task_result/' + task_id
             }).then(
                 function successCallback(response) {
                     $scope.users = response.data;
+                    preloader.style.display='none';
                 },
                 function errorCallback(response) {
                     $scope.errorMss = 'Something wrong, ' + ' status ' + '" ' + response.status+' "';
+                    preloader.style.display='none';
                 });
         }
         getTaskInfo();
