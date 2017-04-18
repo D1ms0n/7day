@@ -30,6 +30,7 @@
                             <div class="description">{{user.user.biography}}</div>
                             <div class="followed_by">Followed by : {{user.user.followed_by.count}}</div>
                             <div class="follows">Follows : {{user.user.follows.count}}</div>
+                            <div ng-if="follows_viewer">Follows you!</div>
                             <button ng-if="!user.user.followed_by_viewer" class="action-btn" ng-click="followUnfollowThis(user.user.username,'follow')" id="subscribe">Follow</button>
                             <button ng-if="user.user.followed_by_viewer" class="action-btn" ng-click="followUnfollowThis(user.user.username,'unfollow')" id="unsubscribe">UnFollow</button>
                             <input type="checkbox" name="checkbox" id="{{user.user.id}}" class="checkbox" followedbyviewer="{{followed_by_viewer}}" value="{{user.user.username}}"/>
