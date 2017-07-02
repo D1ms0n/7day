@@ -16,8 +16,8 @@
                     <div class="title">GET TASK</div>
 
                     <div class="actions">
-                        <button class="submit-btn" ng-click="followUnfollowAll('follow')">Subscribe</button>
-                        <button class="submit-btn" ng-click="followUnfollowAll('unfollow')">UnSubscribe</button>
+                        <button class="submit-btn" ng-click="followUnfollowAll('follow')">Follow</button>
+                        <button class="submit-btn" ng-click="followUnfollowAll('unfollow')">UnFollow</button>
                         <span class="error-massage">{{errorMss}}</span>
                         <button class="submit-btn pull-right" ng-click ="checkUnCheckAll('check')">Select all</button>
                         <button class="submit-btn pull-right" ng-click ="checkUnCheckAll('uncheck')">Unselect all</button>
@@ -30,9 +30,10 @@
                             <div class="description">{{user.user.biography}}</div>
                             <div class="followed_by">Followed by : {{user.user.followed_by.count}}</div>
                             <div class="follows">Follows : {{user.user.follows.count}}</div>
-                            <button class="action-btn" ng-click="followUnfollowThis(user.user.username,'follow')" id="subscribe">Subscribe</button>
-                            <button class="action-btn" ng-click="followUnfollowThis(user.user.username,'unfollow')" id="unsubscribe">UnSubscribe</button>
-                            <input type="checkbox" name="checkbox" id="{{user.user.id}}" class="checkbox" value="{{user.user.username}}"/>
+                            <div ng-if="follows_viewer">Follows you!</div>
+                            <button ng-if="!user.user.followed_by_viewer" class="action-btn" ng-click="followUnfollowThis(user.user.username,'follow')" id="subscribe">Follow</button>
+                            <button ng-if="user.user.followed_by_viewer" class="action-btn" ng-click="followUnfollowThis(user.user.username,'unfollow')" id="unsubscribe">UnFollow</button>
+                            <input type="checkbox" name="checkbox" id="{{user.user.id}}" class="checkbox" followedbyviewer="{{followed_by_viewer}}" value="{{user.user.username}}"/>
                             <label for="{{user.user.id}}" class="checkbox-label"></label>
                         </li>
                     </ul>                   
