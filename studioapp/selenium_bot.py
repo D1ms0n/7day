@@ -11,7 +11,7 @@ import json
 
 # Path:
 BASE_DIR       = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-cookies_path   = os.path.join(BASE_DIR, 'studioapp', 'cookies/cookie')
+cookies_path   = os.path.join(BASE_DIR, 'studioapp', 'cookies/cookie_')
 logs_dir       = os.path.join(BASE_DIR, 'studioapp', 'logs')
 screenshot_dir = os.path.join(BASE_DIR, 'studioapp', 'scr')
 
@@ -19,6 +19,8 @@ screenshot_dir = os.path.join(BASE_DIR, 'studioapp', 'scr')
 insta_main_link  = "https://www.instagram.com/"
 insta_login_link = "https://www.instagram.com/accounts/login/"
 insta_user_link  = "https://www.instagram.com/%s/"   # % username
+
+filtered_names = ['developer', 'explore']
 
 class selenium_webdriver(object):
     
@@ -39,25 +41,35 @@ class selenium_webdriver(object):
     def login_user(self,  username, password):                                                                             
         
         self.logger.log('SELENIUM_BOT:login_user: try to use cookies ')
-        old_cookies = json.loads(open(cookies_path).readlines()[0])
+        
         self.driver.get(insta_main_link)
 
         try:
-            for num in [0,1,2,3,4,7]:
-
-                self.logger.log('SELENIUM_BOT:login_user: try cookie %d ' % num)
-                self.driver.add_cookie(old_cookies[num])
-
-            self.logger.log('SELENIUM_BOT:login_user: cookies uploaded ')
+            old_cookies = json.loads(open(cookies_path + username).readlines()[0])
+            
         except:
             pass
 
+        for num in [0,1,2,3,4,7]:
+            try:
+                self.logger.log('SELENIUM_BOT:login_user: try cookie %d ' % num)
+                self.logger.log('SELENIUM_BOT:login_user: cookie #%d ---> %s' % (num,  str(old_cookies[num])))
+                self.driver.add_cookie(old_cookies[num])
+
+                self.logger.log('SELENIUM_BOT:login_user: cookies uploaded ')
+            except:
+                self.logger.log('SELENIUM_BOT:login_user: bad cookies ')
+
         self.driver.get(insta_main_link)
-        time.sleep(3)
+        time.sleep(15)
+        #self.driver.get(insta_user_link % username)
 
         element = self.driver.find_elements_by_class_name('coreSpriteDesktopNavProfile')
-
+        self.make_screenshot()
         self.my_user_name = username
+
+        debug_elements = self.driver.find_elements_by_name('a')
+        print str(debug_elements)
 
         if len(element) != 0:
             self.logger.log('SELENIUM_BOT:login_user: COOKIE WORKS!!!')
@@ -85,7 +97,7 @@ class selenium_webdriver(object):
 
             self.logger.log('SELENIUM_BOT:login_user: cookies: %s' % cookies_str )
 
-            cookies_file = open(cookies_path, 'w')
+            cookies_file = open(cookies_path  + username, 'w')
             cookies_file.write(cookies_str)
             cookies_file.close()
         self.logger.log('SELENIUM_BOT:login_user: %s loggined' % username )
@@ -128,22 +140,25 @@ class selenium_webdriver(object):
         self.logger.log('SELENIUM_BOT:get_follow_names: Try to get follow_users_links')
         follow_users_links = self.driver.find_elements_by_css_selector('a')
 
+        follow_users_links = list(set(follow_users_links))
+
         regex = re.compile(r'https://www\.instagram\.com/([^/]+)/$')
         follow_names = []
 
         for link in follow_users_links:
             link_attr = ''
             link_attr = link.get_attribute('href')
-            self.logger.log('SELENIUM_BOT:get_follow_names: Try %s' % link_attr)
+            #self.logger.log('SELENIUM_BOT:get_follow_names: Try %s' % link_attr)
             
             if link_attr:
                 
                 username_search = re.search(regex, link_attr)
                 if username_search and username_search.group(1):
                     username = username_search.group(1)
-                    if username not in follow_names and username != self.my_user_name:
+                    if username not in follow_names and username != self.my_user_name and username not in filtered_names:
                         follow_names.append(username)
 
+        self.logger.log('SELENIUM_BOT:get_follow_names: Got [%s] ' % str(follow_names))
         self.logger.log('SELENIUM_BOT:get_follow_names: Got %s user_names' % str(len(follow_names)))
         return follow_names
 

@@ -10,6 +10,8 @@ import re
 follow_link      = 'https://www.instagram.com/web/friendships/%s/follow/'
 unfollow_link    = 'https://www.instagram.com/web/friendships/%s/unfollow/'
 user_info_link   = 'https://www.instagram.com/%s/?__a=1'
+tag_posts_link   = 'https://www.instagram.com/explore/tags/%s/?__a=1'
+post_info_link   = 'https://www.instagram.com/p/%s/?__a=1'					# post code NOT ID!
 
 class Bot(object):
     def __init__(self):
@@ -41,6 +43,7 @@ class Bot(object):
 
 
     def login_user(self, username, password):
+        self.logger.log("INSTABOT: Try to login")
         self.s = requests.Session()
         self.s.cookies.update({'sessionid': '', 'mid': '', 'ig_pr': '1',
                                'ig_vw': '1920', 'csrftoken': '',

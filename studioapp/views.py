@@ -14,6 +14,9 @@ import os
 from logger import Logger
 from worker import Worker
 
+login = 'studio_7_day_2'
+password = 'Nopasaran'
+
 def get_base_dir():
     return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -21,25 +24,10 @@ def get_base_dir():
 
 @csrf_exempt    
 def insta_api(request, target, request_id = '',  **kwargs):
+    worker = Worker(login, password)
     logger = Logger('view')
     time_now =  time.strftime('%X %x').replace(' ', '_').replace('/', '_').replace(':', '_')
-
     logger.log('VIEW:insta_api: start at %s %s/%s' % (str(time_now), target, request_id))
-
-    try:
-        task_list_file    = open('%s/tasks' % os.path.join(get_base_dir(), 'studioapp', 'data') , 'r')
-        task_list_lines = task_list_file.readlines()
-    except:
-        task_list_lines = []
-    
-    if task_list_lines:
-        task_list_content = task_list_lines[0]
-        task_list_json    = json.loads(task_list_content)
-        task_list_file.close() 
-
-    else:
-        task_list_json = {}
-
 
     ##################### GET ##################################
     
@@ -47,37 +35,23 @@ def insta_api(request, target, request_id = '',  **kwargs):
     if request.method == 'GET': 
         
         if target == 'get_tasks':
-            task_list = []
-            for task_id in task_list_json:
-                new_task = {'task_id': task_id}
-                for item in task_list_json[task_id]:
-                    new_task[item] = task_list_json[task_id][item]
-                task_list.append(new_task)
+            task_list = worker.get_tasks()
             return HttpResponse(json.dumps(task_list),
                                 content_type="application/json")
 
         elif target == 'get_task_result':
-            result = 'Not ready'
-            try:
-                result_file = open('%s/%s' % (os.path.join(get_base_dir(), 'studioapp', 'results'), request_id))
-                result = result_file.readlines()[0]
-            except:
-                result = 'Bad request_id'
-            return HttpResponse(result,
+            result = worker.get_task_result(task_id = request_id)
+            return HttpResponse(json.dumps(result),
                                 content_type="application/json")
 
-
-    #################### POST ##################################
+    #################### POST ################################## 
     elif request.method == 'POST':
         request_json = json.loads(request.body)
-        worker = Worker()
 
         # POST / add_task
         if target == 'add_task':
             time_now = time.strftime('%X %x').replace(' ', '_').replace('/', '_')
             task_id  = abs(hash(time_now))
-            task_list_json[task_id] = request_json
-            task_list_json[task_id]['create_time'] = time_now
             direction    = request_json['direction']
 
             if direction in ['following', 'followers']:
@@ -86,28 +60,24 @@ def insta_api(request, target, request_id = '',  **kwargs):
                     count = request_json['count']
                 else:
                     count = 50
-                worker.get_follow_info(username, direction, count, task_id)
+
+                worker.create_new_task(task_id = task_id, direction = direction, username = username, count = count, create_time = time_now)
+                worker.get_follow_info(username, direction, count, task_id)                                                                                   # TODO: queue for tasks
 
             elif direction in ['follow', 'unfollow']:
                 user_names = request_json['user_names']
+                worker.create_new_task(task_id = task_id, direction = direction, username = 'None', count = 'None', create_time = time_now)
                 worker.change_relationships(user_names, direction, task_id)        
-            
+
+            task_list = worker.get_tasks()
+            return HttpResponse(json.dumps(task_list),
+                                content_type="application/json")
 
         # POST / del_task    
-        elif target == 'del_task':
-            id_to_del    = request_json['id']
-            if id_to_del in task_list_json:
-                task_list_json.pop(id_to_del)
-
-
-        task_list_file = open( '%s/tasks' % os.path.join(get_base_dir(), 'studioapp', 'data') , 'w')
-        task_list_file.write(json.dumps(task_list_json))
-        task_list_file.close()
-
-        return HttpResponse(json.dumps(task_list_json),
-                            content_type="application/json")    
-
-
+        #elif target == 'del_task':
+        #    id_to_del    = request_json['id']
+        #    if id_to_del in task_list_json:
+        #        task_list_json.pop(id_to_del)
 
 def follow_info(request):
     return render(request, 'studio/test_front.html', {})
