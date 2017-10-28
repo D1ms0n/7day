@@ -1,2 +1,16 @@
 
 studio/follow_files/15057116_1190446977702614_1059247928578670592_a.jpg
+.idea/modules.xml
+.idea/7day.iml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/misc.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.openshift/action_hooks/build
+.openshift/action_hooks/deploy
+.openshift/action_hooks/post_deploy
+.openshift/action_hooks/pre_build
+.openshift/action_hooks/README.md
+.openshift/cron/hourly/mytask
+*.jpg
+*.jpg
