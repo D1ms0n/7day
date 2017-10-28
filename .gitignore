@@ -14,3 +14,4 @@ studio/follow_files/15057116_1190446977702614_1059247928578670592_a.jpg
 .openshift/cron/hourly/mytask
 *.jpg
 *.jpg
+*.pyc
