@@ -537,3 +537,7 @@
  WORKER:get_follow_info: Create new Relationship 307913325 
  WORKER:get_follow_info: Create new Task_to_user_map
  VIEW:selenium_bot: FINISH
+ WORKER: CREATED for studio_7_day_2
+ VIEW:insta_api: start at 13_08_15_10_28_17 get_tasks/None
+ WORKER: CREATED for studio_7_day_2
+ VIEW:insta_api: start at 13_08_18_10_28_17 get_tasks/None
