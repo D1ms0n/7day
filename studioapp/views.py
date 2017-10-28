@@ -14,11 +14,30 @@ import os
 from logger import Logger
 from worker import Worker
 
+from .models import Insta_user
+from .serializers import InstaUserSerializer
+from rest_framework import generics
+
+
 login = 'studio_7_day_2'
 password = 'Nopasaran'
 
 def get_base_dir():
     return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+class InstaUsersList(generics.ListCreateAPIView):
+    #queryset = Insta_user.objects.all()
+    serializer_class = InstaUserSerializer
+    
+    def get_queryset(self):
+        logger = Logger('view')
+        logger.log('VIEW: ' + str(self.request.query_params.get('user')))
+        return Insta_user.objects.filter(follows_viewer = 'True')
+
+
+
+
 
 ########################################################################################### INSTA_API ###########################################################################
 
@@ -97,3 +116,9 @@ def logs(request):
         log = []
     
     return render(request, 'studio/logs.html', {'log':log[-50:]})
+
+
+
+def users_table(request):
+    users = Insta_user.objects.all()
+    return render(request, 'studio/Insta_users.html', {'users': users})
