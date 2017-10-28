@@ -15,3 +15,7 @@ studio/follow_files/15057116_1190446977702614_1059247928578670592_a.jpg
 *.jpg
 *.jpg
 *.pyc
+studio/settings.pyc
+*.pyc
+studioapp/logs/LOG
+studioapp/logs/phantom
