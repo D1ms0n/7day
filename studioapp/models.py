@@ -4,32 +4,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 
-# Create your models here.
-
-class HeaderSlide(models.Model):
-    class Meta(object):
-        verbose_name = u"Слайд шапки"
-        verbose_name_plural = u"Слайды шапки"
-    def __unicode__(self):
-        return self.h1
-
-    h1 = models.CharField(max_length=256,
-        blank=False,
-        verbose_name=u"Название")
-
-    h2 = models.CharField(max_length=256,
-        blank=True,
-        verbose_name=u"h2")
-
-    image = models.ImageField(
-        blank=True,
-        verbose_name=u"Фото",
-        null=True)
-    
-
-
-
-# ----------------------------------------- INSTA ---------------------------------------------------
+ # ----------------------------------------- INSTA ---------------------------------------------------
 
 class Insta_tag(models.Model):
     class Meta(object):
@@ -81,11 +56,11 @@ class Insta_bot_task(models.Model):
     def __unicode__(self):
         return u"%s..." % (self.task_id)
 
-    task_id =  models.CharField(max_length = 256, blank = True, verbose_name = u"Task id", primary_key = True)
-    direction = models.CharField(max_length = 256, blank = False, verbose_name = u"Direction", null = True)
-    username =  models.CharField(max_length=256, blank=False, verbose_name=u"User_login", null= True)
-    count  = models.IntegerField(blank=False, null= True)
-    create_time =  models.CharField(max_length=256, blank=False, verbose_name=u"Create time", null= True)
+    task_id     = models.CharField(max_length = 256, blank = True, verbose_name = u"Task id", primary_key = True)
+    direction   = models.CharField(max_length = 256, blank = False, verbose_name = u"Direction", null = True)
+    username    = models.CharField(max_length=256, blank=False, verbose_name=u"User_login", null= True)
+    count       = models.IntegerField(blank=False, null= True)
+    create_time = models.CharField(max_length=256, blank=False, verbose_name=u"Create time", null= True)
 
 
 class Task_to_user_map(models.Model):

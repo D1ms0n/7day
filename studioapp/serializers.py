@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from studioapp.models import Insta_user
+from studioapp.models import Insta_bot_task
 
 class InstaUserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -21,5 +22,11 @@ class InstaUserSerializer(serializers.ModelSerializer):
                   'is_private')
 
 
-
-
+class InstaBotTaskSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Insta_bot_task
+        fields = ('task_id',
+                  'direction',
+                  'username',
+                  'count',
+                  'create_time')

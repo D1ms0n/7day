@@ -36,14 +36,7 @@ class Worker(object):
         logger.log("WORKER: CREATED for %s" % login)
 
     def get_tasks(self):
-
-        task_list_from_db = Insta_bot_task.objects.all()
-        task_list = []
-        for task in task_list_from_db:
-            task_dict= task.__dict__
-            task_dict['_state'] = ''
-            task_list.append(task_dict)
-        return task_list
+        return Insta_bot_task.objects.all()
 
     def get_task_result(self, task_id):
         task_to_user_maps = Task_to_user_map.objects.filter(task_id = task_id)
@@ -67,41 +60,47 @@ class Worker(object):
     def filter_userrs(self, users, filter_by, filter_value):
         return users.filter()
 
-    def get_users_from_database(self, filter_by = {}, order_by = None):                                                  # TO DO
-        users_from_database_list = []
-        
-        users_from_database = Insta_user.objects.all()
+    def get_users_from_database(self, query_params):
 
-        if 'followers_count__gte' in filter_by:
-            users_from_database =  users_from_database.filter(followers_count__gte = filter_by['followers_count__gte'])
+        followers_count__gte = query_params.get('followers_count__gte')
+        followers_count__lte = query_params.get('followers_count__lte')
+        follow_count__gte    = query_params.get('follow_count__gte')
+        follow_count__lte    = query_params.get('follow_count__lte')
+        follows_viewer       = query_params.get('follows_viewer')
+        followed_by_viewer   = query_params.get('followed_by_viewer')
+        order_by             = query_params.get('order_by')
+        task_id              = query_params.get('task_id')
 
-        if 'followers_count__lte' in filter_by:
-            users_from_database =  users_from_database.filter(followers_count__lte = filter_by['followers_count__lte'])
-                
-        if 'follow_count__gte' in filter_by:
-            users_from_database =  users_from_database.filter(follow_count__gte = filter_by['follow_count__gte'])
+        queryset = Insta_user.objects.all()
 
-        if 'follow_count__lte' in filter_by:
-            users_from_database =  users_from_database.filter(follow_count__lte = filter_by['follow_count__lte'])
+        if followers_count__gte:
+            queryset = queryset.filter(followers_count__gte=followers_count__gte)
 
-        if 'follows_viewer' in filter_by:
-            users_from_database =  users_from_database.filter(follows_viewer = filter_by['follows_viewer'])
+        if followers_count__lte:
+            queryset = queryset.filter(followers_count__lte=followers_count__lte)
 
-        if 'followed_by_viewer' in filter_by:
-            users_from_database =  users_from_database.filter(followed_by_viewer = filter_by['followed_by_viewer'])
-                                                                                                                            # TO DO filter "follow_other_user"
+        if follow_count__gte:
+            queryset = queryset.filter(follow_count__gte=follow_count__gte)
+
+        if follow_count__lte:
+            queryset = queryset.filter(follow_count__lte=follow_count__lte)
+
+        if follows_viewer:
+            queryset = queryset.filter(follows_viewer=follows_viewer)
+
+        if followed_by_viewer:
+            queryset = queryset.filter(followed_by_viewe=followed_by_viewer)
+
+        if task_id:
+            user_ids = Task_to_user_map.objects.filter(task_id = task_id).values('user_id')
+            queryset = Insta_user.objects.filter(user_id__in = user_ids)
+
+        # TO DO filter "follow_other_user"
+
         if order_by:
-            users_from_database = users_from_database.order_by(order_by)
+            queryset = queryset.order_by(order_by)
 
-        users_from_database_list = []
-
-        for user in users_from_database:
-            user_dict= user.__dict__
-            user_dict['_state'] = ''
-            users_from_database_list.append(user_dict)
-
-        return users_from_database_list
-
+        return queryset
 
     #@start_thread
     def get_follow_info(self, username, direction, count,  task_id = ''):
@@ -111,16 +110,6 @@ class Worker(object):
         
         logger.log('WORKER:get_follow_info: ' + str(time_now) + str(task_id))
         
-        #task_result = {'info':{}, 'result':[]}
-        #task_result['info'] = {'user_name': username,
-        #                       'direction': direction,
-        #                       'count'    : count,
-        #                       'task_id'  : task_id}
-        #result_file_name = '%s/%s' % (os.path.join(BASE_DIR, 'studioapp', 'results'), task_id)
-        #logger.log('WORKER:get_follow_info: Create result file %s' % result_file_name)
-        #result_file = open(result_file_name , 'w')
-        #result_file.write(json.dumps(task_result))
-        #result_file.close()
 
         selenium_bot = selenium_webdriver()
         selenium_bot.login_user(self.login, self.password)
@@ -139,32 +128,7 @@ class Worker(object):
 
         for name in user_names:
             full_info = bot.get_info(name)
-            info={'user':{}}
-            attrs = ['id',
-                     'username',
-                     'full_name',
-                     'profile_pic_url_hd',
-                     'biography',
-                     'external_url',
-                     'follows_viewer',
-                     'followed_by_viewer',
-                     'has_requested_viewer',
-                     'requested_by_viewer',
-                     'has_blocked_viewer',
-                     'blocked_by_viewer',
-                     'is_private',]
 
-            #for attr in attrs:
-            #    info['user'][attr] = full_info[u'user'][attr]
-
-            #info['user']['media'] = {}
-            #info['user']['followed_by'] ={}
-            #info['user']['follows'] = {}
-
-            #info['user']['media']['count'] = full_info['user']['media']['count']
-            #info['user']['followed_by']['count'] = full_info['user']['followed_by']['count']
-            #info['user']['follows']['count'] = full_info['user']['follows']['count']
-            
             try:
                 old_user = Insta_user.objects.get(user_id = full_info[u'user']['id'])
             except:
@@ -237,13 +201,6 @@ class Worker(object):
 
             task_to_user_map.save()
 
-            #task_result['result'].append(info)
-        
-            
-        #result_file = open(result_file_name , 'w')
-        #result_file.write(json.dumps(task_result))
-        #result_file.close()
-        
         logger.log('VIEW:selenium_bot: FINISH')
 
 
