@@ -1,3 +1,57 @@
+REST API:
+
+Users:
+    Get all users:
+        URL: /api/users/
+        TYPE: GET
+
+    Filters:
+        followers_count__gte
+        followers_count__lte
+        follow_count__gte
+        follow_count__lte
+        follows_viewer
+        followed_by_viewer
+        task_id (Use it to obtain a list of users related to the task with this task_id)
+
+    Order by:
+        user_id
+        user_name
+        user_full_name
+        followers_count
+        follow_count
+        profile_pic_url_hd
+        user_biography
+        user_external_url
+        follows_viewer
+        followed_by_viewer
+        has_requested_viewer
+        requested_by_viewer
+        has_blocked_viewer
+        blocked_by_viewer
+        is_private
+
+    EXAMPLE: /api/users/?followers_count__gte=100&follow_count__lte=1000&order_by=follow_count
+
+    Get one user:
+        URL: /api/users/<user_id>
+        TYPE: GET
+
+Tasks:
+
+    Get all tasks:
+        URL: /api/tasks/
+        TYPE: GET
+
+    Get one task:
+        URL: /api/task/<task_id>
+        TYPE: GET
+
+
+#######################################################################################################################
+
+OLD API (DON'T USE IT!!!! I'LL UPDATE OR REMOVE IT!!!!!!!!!!!!!!!!!!!!!!!!):
+
 Add task to get follow info:
 
 url : /insta_api/add_task
