@@ -10,7 +10,7 @@ import os
 
 from logger import Logger
 from worker import Worker
-
+from django_datastore import get_users_from_database, get_tasks_from_database
 from .models import Insta_user
 from .models import Insta_bot_task
 from .serializers import InstaUserSerializer
@@ -35,7 +35,7 @@ class InstaUserList(generics.ListCreateAPIView):
     renderer_classes = (JSONRenderer,)
 
     def get_queryset(self):
-        queryset = worker.get_users_from_database(self.request.query_params)
+        queryset = get_users_from_database(self.request.query_params)
         return queryset
 
 class InstaUserDetail(generics.RetrieveAPIView):
@@ -44,18 +44,54 @@ class InstaUserDetail(generics.RetrieveAPIView):
     serializer_class = InstaUserSerializer
     lookup_field = 'user_id'
 
+class InstaUserFollowers(generics.ListCreateAPIView):
+    serializer_class = InstaUserSerializer
+    renderer_classes = (JSONRenderer,)
+
+    def get_queryset(self):
+        params = self.request.query_params.dict()
+        params['followed_user'] = self.kwargs['user_id']
+        queryset = get_users_from_database(params)
+        return queryset
+
+class InstaUserFollowedBy(generics.ListCreateAPIView):
+    serializer_class = InstaUserSerializer
+    renderer_classes = (JSONRenderer,)
+
+    def get_queryset(self):
+        params = self.request.query_params.dict()
+        params['followed_by_user'] = self.kwargs['user_id']
+        queryset = get_users_from_database(params)
+        return queryset
+
+
 class InstaBotTaskList(generics.ListCreateAPIView):
     serializer_class = InstaBotTaskSerializer
     renderer_classes = (JSONRenderer,)
 
     def get_queryset(self):
-        return worker.get_tasks()
+        params = self.request.query_params.dict()
+        return  get_tasks_from_database(params)
+
+
+#    def perform_create(self, serializer):
+#        instance = serializer.save()
+#        if 'users_list' in self.request.data:
+ #           logger.log('WOHHO')
 
 class InstaBotTaskDetail(generics.RetrieveAPIView):
         queryset         = Insta_bot_task.objects.all()
         serializer_class = InstaBotTaskSerializer
         renderer_classes = (JSONRenderer,)
         lookup_field     = 'task_id'
+
+
+class InstaBotTaskUserList(generics.RetrieveAPIView):
+    user_ids = Insta_user
+    queryset = Insta_bot_task.objects.all()
+    serializer_class = InstaBotTaskSerializer
+    renderer_classes = (JSONRenderer,)
+    lookup_field = 'task_id'
 
 
 ########################################################################################### INSTA_API ###########################################################################
@@ -70,7 +106,7 @@ def insta_api(request, target, request_id='', **kwargs):
     if request.method == 'GET':
 
         if target == 'get_tasks':
-            task_list = worker.get_tasks()
+            task_list = get_tasks_from_database()
             return HttpResponse(json.dumps(task_list),
                                 content_type="application/json")
 

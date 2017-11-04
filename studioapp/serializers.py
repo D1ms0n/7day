@@ -26,7 +26,8 @@ class InstaBotTaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Insta_bot_task
         fields = ('task_id',
-                  'direction',
+                  'operation',
                   'username',
-                  'count',
-                  'create_time')
+                  'create_time',
+                  'args',
+                  'status')

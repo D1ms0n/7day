@@ -57,9 +57,10 @@ class Insta_bot_task(models.Model):
         return u"%s..." % (self.task_id)
 
     task_id     = models.CharField(max_length = 256, blank = True, verbose_name = u"Task id", primary_key = True)
-    direction   = models.CharField(max_length = 256, blank = False, verbose_name = u"Direction", null = True)
-    username    = models.CharField(max_length=256, blank=False, verbose_name=u"User_login", null= True)
-    count       = models.IntegerField(blank=False, null= True)
+    operation    = models.CharField(max_length = 256, blank = False, verbose_name = u"Operation", null = True)
+    username    = models.CharField(max_length = 256, blank=False, verbose_name=u"User_login", null= True)
+    status      = models.CharField(max_length = 256, blank=False, verbose_name=u"Status", null= True)
+    args        = models.TextField(blank=False, verbose_name=u"args", null= True)
     create_time = models.CharField(max_length=256, blank=False, verbose_name=u"Create time", null= True)
 
 
