@@ -29,15 +29,19 @@ urlpatterns = [
     
     url(r'^insta_api/(?P<target>[a-z_]+)(?:/(?P<request_id>\d+))?$',          app_views.insta_api,            name='insta_api'),
     url(r'^follow_info/$',         app_views.follow_info,          name='follow_info'),
+    url(r'^react_app/$',           app_views.react_app,          name='react_app'),
 #    url(r'^tasks/$',               app_views.tasks,                name='tasks'),
 #    url(r'^task/(?P<id>.+)$',      app_views.task,                 name='task'),
     url(r'^logs/$',                app_views.logs,                 name='logs'),
 
     # REST API
-    url(r'^api/users/$',                     app_views.InstaUserList.as_view(),      name='users'),
-    url(r'^api/users/(?P<user_id>[0-9]+)/$', app_views.InstaUserDetail.as_view(),    name='user'),
+    url(r'^api/users/$',                              app_views.InstaUserList.as_view(),      name='users'),
+    url(r'^api/users/(?P<user_id>[0-9]+)/$',          app_views.InstaUserDetail.as_view(),    name='user'),
 
-    url(r'^api/tasks/$',                     app_views.InstaBotTaskList.as_view(),   name='tasks'),
-    url(r'^api/tasks/(?P<task_id>[0-9]+)/$', app_views.InstaBotTaskDetail.as_view(), name='task'),
+    url(r'^api/users/(?P<user_id>[0-9]+)/followers$', app_views.InstaUserFollowers.as_view(),    name='user_followers'),
+    url(r'^api/users/(?P<user_id>[0-9]+)/following$', app_views.InstaUserFollowedBy.as_view(),    name='user_following'),
+
+    url(r'^api/tasks/$',                              app_views.InstaBotTaskList.as_view(),   name='tasks'),
+    url(r'^api/tasks/(?P<task_id>[0-9]+)/$',          app_views.InstaBotTaskDetail.as_view(), name='task'),
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
