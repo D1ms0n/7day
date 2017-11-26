@@ -136,21 +136,21 @@ class selenium_webdriver(object):
         
         self.logger.log('SELENIUM_BOT:get_follow_names: Try to get user page')
         self.driver.get(insta_user_link % username)
-        time.sleep(3)
+        time.sleep(1)
 
         self.logger.log('SELENIUM_BOT:get_follow_names: Try to find button')
         button = self.driver.find_element_by_xpath("//a[@href='/%s/%s/']" % (username.lower(), direction))
  
         self.logger.log('SELENIUM_BOT:get_follow_names: Try to click button')        
         button.click()
-        time.sleep(3)
+        time.sleep(1)
         
         # SCROLL
 
         follow_buttons_list = self.driver.find_elements_by_css_selector('button')
         
-        scroll_value = 900500
-
+        scroll_value = 1000000
+        self.logger.log('SELENIUM_BOT:SCROLL')
         while len(follow_buttons_list) < max_value:
             old_len = len(follow_buttons_list)
 
@@ -164,20 +164,21 @@ class selenium_webdriver(object):
             divs = self.driver.find_elements_by_css_selector('div')
             div_to_scroll_index = divs.index(divs_followers) + 1  
             div_to_scroll_class = divs[div_to_scroll_index].get_attribute('class')
-            time.sleep(1)
 
             try:
                 #self.driver.execute_script("document.getElementsByClassName('%s')[0].scrollTo(0, %d)" % (div_to_scroll_class, scroll_value))
-                self.driver.execute_script("document.getElementsByClassName('%s')[0].scrollTop=10000" % div_to_scroll_class)
-                time.sleep(3)
+                self.driver.execute_script("document.getElementsByClassName('%s')[0].scrollTop=%d" % (div_to_scroll_class, scroll_value))
+
+                time.sleep(1)
 
             except Exception, e:
                 self.logger.log('SELENIUM_BOT:Exception: %s' % e)
 
-            time.sleep(1)
+
             follow_buttons_list = self.driver.find_elements_by_css_selector('button')
             new_len = len(follow_buttons_list)
 
+            self.logger.log('SELENIUM_BOT:SCROLLED %d ' % new_len )
             if new_len == old_len:
                 self.logger.log('SELENIUM_BOT:Scroll: BREAK')
                 break
