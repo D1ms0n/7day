@@ -27,18 +27,27 @@ class Bot(object):
 
     def get_info(self, name):
         self.logger.log('Try to get info for %s' % name)
-        
+        info = {}
         answer = ''
-        answer = self.s.get(user_info_link % name).text
+        answer = self.s.get(user_info_link % name)
+
+        if answer.status_code != 200:
+            self.logger.log('Answer status_code %d' % answer.status_code)
+            self.logger.log('Answer reason %s' % answer.reason)
+
+        answer_text = answer.text
+
         if answer:
             try:
-                info = json.loads(answer)
+                info = json.loads(answer_text)
             except:
                 info = None
         if info== None:
             self.logger.log('DONE: %s is NONE' % name)
-        else:
-            self.logger.log('DONE: %s' % name)                
+
+        info['status_code'] = answer.status_code
+        info['reason']      = answer.reason
+
         return info
 
 
