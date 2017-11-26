@@ -8,7 +8,7 @@ from local_conf import *
 from selenium_bot import selenium_webdriver
 from instabot import Bot
 from logger import Logger
-from django_datastore import create_update_user, create_relationship, create_task_to_user_map, get_task_from_database, create_update_task
+from django_datastore import create_update_user, create_relationship, create_task_to_user_map, get_task_from_database, create_update_task, get_user_from_database
 
 from .models import Insta_user
 from .models import Insta_bot_task
@@ -53,7 +53,7 @@ class Worker(object):
             method_to_run(username = task.username, task_args = task_args, task_id = task.task_id)
     
     #@start_thread
-    def get_follow_info(self, username, task_args, task_id):
+    def get_follow_info(self, username, task_args, task_id = None):
 
         time_now =  time.strftime('%X %x').replace(' ', '_').replace('/', '_').replace(':', '_')
         logger.log('WORKER:get_follow_info: ' + str(time_now) + str(task_id))
@@ -61,13 +61,15 @@ class Worker(object):
         count     = task_args['count']
         direction = task_args['direction']
         usernames = task_args['usernames']
+        known_usernames = task_args.get('known_usernames')
 
-        logger.log('WORKER:get_follow_info: Get task from database %s' % task_id)
-        task = get_task_from_database(task_id)
+        if not known_usernames:
+            logger.log('WORKER:get_follow_info: Get task from database %s' % task_id)
+            task = get_task_from_database(task_id)
 
-        logger.log('WORKER:get_follow_info: Change task %s status to "In pogress"' % str(task_id))
-        task.status = 'In pogress'
-        task.save()
+            logger.log('WORKER:get_follow_info: Change task %s status to "In pogress"' % str(task_id))
+            task.status = 'In pogress'
+            task.save()
 
         selenium_bot = selenium_webdriver()
         selenium_bot.login_user(self.login, self.password)
@@ -76,7 +78,11 @@ class Worker(object):
         bot.login_user(self.login, self.password)  # TO DO: SAVE COOKIES
 
         for username in usernames:
-            follow_names = selenium_bot.get_follow_names(username, direction, count)
+            if not known_usernames:
+                follow_names = selenium_bot.get_follow_names(username, direction, count)
+            else:
+                logger.log('WORKER:get_follow_info: Work with known_usernames')
+                follow_names = known_usernames
 
             user_info = bot.get_info(username)
             create_update_user(user_info)
@@ -85,32 +91,53 @@ class Worker(object):
 
 
             for follow_name in follow_names:
-                full_info = bot.get_info(follow_name)
 
-                user = create_update_user(full_info)
+                #Try to get user from database
+                user = get_user_from_database(user_name = follow_name)
 
-                logger.log('WORKER:get_follow_info: Create new Relationship %s ' % full_info[u'user']['id'])
+                if not user:
+                    try:
+                        full_info = bot.get_info(follow_name)
+                    except Exception, e:
+                        logger.log('WORKER:Exception: %s' % e)
+                        full_info = None
+                        time.sleep(30)
+
+                    if full_info and full_info['status_code'] == 200:
+                        user = create_update_user(full_info)
+                    elif full_info['status_code'] == 429:
+                        logger.log('WORKER: Sleep and create new bot')
+                        time.sleep(60)
+                        bot = Bot()
+                        bot.login_user(self.login, self.password)
+                        full_info = bot.get_info(follow_name)
+
+                        if full_info and full_info['status_code'] == 200:
+                            user = create_update_user(full_info)
+                        else:
+                            continue
+                if not user:
+                    continue
+                #logger.log('WORKER:get_follow_info: Create new Relationship %s ' % user.user_id)
 
                 if direction == 'following':
-                    create_relationship(user_id = user_id, followed_user_id = full_info[u'user']['id'])
+                    create_relationship(user_id = user_id, followed_user_id = user.user_id)
 
                 elif direction == 'followers':
-                    create_relationship(user_id=full_info[u'user']['id'], followed_user_id=user_id)
+                    create_relationship(user_id = user.user_id, followed_user_id=user_id)
 
-
-                logger.log('WORKER:get_follow_info: Create new Task_to_user_map')
-                create_task_to_user_map(task, user)
+                if not known_usernames:
+                    logger.log('WORKER:get_follow_info: Create new Task_to_user_map')
+                    create_task_to_user_map(task, user)
+                    task.status = 'Finished'
+                    task.save()
 
         selenium_bot.driver.close()
-
-        task.status = 'Finished'
-        task.save()
-
         logger.log('VIEW:get_follow_info: FINISH')
 
 
     #@start_thread
-    def change_relationships(self, user_names, direction, task_id):             # TO DO: update database after changing rel
+    def change_relationships(self, user_names, direction, task_id):         # TO DO: update database after changing rel
         selenium_bot = selenium_webdriver()
         selenium_bot.login_user(self.login, self.password)
 

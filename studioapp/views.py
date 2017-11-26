@@ -74,11 +74,6 @@ class InstaBotTaskList(generics.ListCreateAPIView):
         return  get_tasks_from_database(params)
 
 
-#    def perform_create(self, serializer):
-#        instance = serializer.save()
-#        if 'users_list' in self.request.data:
- #           logger.log('WOHHO')
-
 class InstaBotTaskDetail(generics.RetrieveAPIView):
         queryset         = Insta_bot_task.objects.all()
         serializer_class = InstaBotTaskSerializer
@@ -149,6 +144,9 @@ def insta_api(request, target, request_id='', **kwargs):
 def follow_info(request):
     return render(request, 'studio/test_front.html', {})
 
+
+def react_app(request):
+    return render(request, 'studio/insta_users_r.html', {})
 
 def tasks(request):
     return render(request, 'studio/tasks.html', {})
