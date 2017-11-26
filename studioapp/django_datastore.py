@@ -2,21 +2,27 @@ from logger import Logger
 import time
 import json
 
+
 from .models import Insta_user
 from .models import Insta_bot_task
 from .models import Task_to_user_map
 from .models import Relationship
 from .models import Insta_image
 
+logger = Logger('worker')
 
 def create_update_user(full_info):
+
+    if not full_info:
+        return None
     try:
         user = Insta_user.objects.get(user_id=full_info[u'user']['id'])
     except:
         user = None
 
+
     if not user:
-        #logger.log('WORKER:get_follow_info: Create new User %s ' % full_info[u'user']['id'])
+        logger.log('WORKER:get_follow_info: Create new User %s ' % full_info[u'user']['id'])
 
         user = Insta_user(user_id              = full_info[u'user']['id'],
                           user_name            = full_info[u'user']['username'],
@@ -64,6 +70,7 @@ def create_relationship(user_id, followed_user_id):
         #logger.log('WORKER:get_follow_info: We already know this following rel %s %d ' % (full_info[u'user']['id'], self_user_id))
 
     except:
+        logger.log('WORKER:get_follow_info: Create rel %s %s ' % (user_id, followed_user_id))
         relationship = Relationship(user_id          = user_id,
                                     followed_user_id = followed_user_id)
 
@@ -94,6 +101,17 @@ def create_update_task(operation, username, args, status = None, task_id = None)
 
     task.save()
     return task
+
+def get_user_from_database(user_id = None, user_name = None):
+    try:
+        if user_id:
+            user = Insta_user.objects.get(user_id = user_id)
+        elif user_name:
+            user = Insta_user.objects.get(user_name = user_name)
+    except:
+        user = None
+    return user
+
 
 def get_users_from_database(params):
 
