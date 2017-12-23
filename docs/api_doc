@@ -47,6 +47,16 @@ Tasks:
         URL: /api/task/<task_id>
         TYPE: GET
 
+    Create new task:
+        URL: /api/tasks/
+        TYPE: POST
+            attributes:
+                operation (follow/unfollow/like/get_follow_info...)
+                username
+                args      (it can be user_names, tag_names, photo_ids)
+            example:
+                {operation: "follow", username: "dima", args: [{user_name: "new_arg"}, {user_name: "lalala"}]}
+
 
 #######################################################################################################################
 
