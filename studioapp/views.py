@@ -30,6 +30,10 @@ logger = Logger('view')
 time_now = time.strftime('%X %x').replace(' ', '_').replace('/', '_').replace(':', '_')
 
 
+def insta_shop(request):
+    info = worker.get_photos('nu_a_huli_mme')
+    return render(request, 'studio/insta_shop.html', {'info': info})
+
 class InstaUserList(generics.ListCreateAPIView):
     serializer_class = InstaUserSerializer
     renderer_classes = (JSONRenderer,)
@@ -72,6 +76,14 @@ class InstaBotTaskList(generics.ListCreateAPIView):
     def get_queryset(self):
         params = self.request.query_params.dict()
         return  get_tasks_from_database(params)
+
+    def perform_create(self, serializer):
+        time_now = time.strftime('%X %x').replace(' ', '_').replace('/', '_')
+
+        serializer.save(task_id = abs(hash(time_now)), create_time = time_now, status= 'Created')
+
+
+
 
 
 class InstaBotTaskDetail(generics.RetrieveAPIView):

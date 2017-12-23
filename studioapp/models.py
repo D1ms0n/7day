@@ -54,13 +54,12 @@ class Insta_bot_task(models.Model):
         verbose_name = u"Task"
         verbose_name_plural = u"Tasks"
     def __unicode__(self):
-        return u"%s..." % (self.task_id)
+        return u"%s" % (self.task_id)
 
     task_id     = models.CharField(max_length = 256, blank = True, verbose_name = u"Task id", primary_key = True)
-    operation    = models.CharField(max_length = 256, blank = False, verbose_name = u"Operation", null = True)
+    operation   = models.CharField(max_length = 256, blank = False, verbose_name = u"Operation", null = True)
     username    = models.CharField(max_length = 256, blank=False, verbose_name=u"User_login", null= True)
     status      = models.CharField(max_length = 256, blank=False, verbose_name=u"Status", null= True)
-    args        = models.TextField(blank=False, verbose_name=u"args", null= True)
     create_time = models.CharField(max_length=256, blank=False, verbose_name=u"Create time", null= True)
 
 
@@ -69,12 +68,26 @@ class Task_to_user_map(models.Model):
         verbose_name = u"Task_to_user_map"
         verbose_name_plural = u"Task_to_user_maps"
     def __unicode__(self):
-        return u"%s..." % (self.task_id)
+        return u"%s" % (self.task_id)
 
     map_id =  models.AutoField(primary_key=True)
     task_id = models.ForeignKey(Insta_bot_task, on_delete = models.CASCADE)
     user_id = models.ForeignKey(Insta_user,     on_delete = models.CASCADE,  null= True)
     #user_name = models.CharField(max_length=256, blank=False, verbose_name=u"User_login", null= True)                   #TODO: change name to id
+
+
+class TaskArg(models.Model):
+    class Meta(object):
+        verbose_name = u"Task_to_arg_map"
+        verbose_name_plural = u"Task_to_arg_maps"
+    def __unicode__(self):
+        return u"%s" % (self.task_id)
+
+    map_id =  models.AutoField(primary_key=True)
+    task_id = models.ForeignKey(Insta_bot_task, related_name='args', on_delete = models.CASCADE)
+    user_name = models.CharField(max_length=256, blank=True, verbose_name=u"User_name", null= True)
+    tag_name = models.CharField(max_length=256, blank=True, verbose_name=u"User_name", null=True)
+    photo_id = models.CharField(max_length=256, blank=True, verbose_name=u"User_name", null=True)
 
 class Relationship(models.Model):
     class Meta(object):

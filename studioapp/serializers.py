@@ -1,6 +1,13 @@
+import time
+
 from rest_framework import serializers
 from studioapp.models import Insta_user
 from studioapp.models import Insta_bot_task
+from studioapp.models import TaskArg
+
+from logger import Logger
+logger = Logger('view')
+
 
 class InstaUserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -22,12 +29,32 @@ class InstaUserSerializer(serializers.ModelSerializer):
                   'is_private')
 
 
+class TaskArgSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TaskArg
+        fields = ('user_name',
+                  'tag_name',
+                  'photo_id')
+
 class InstaBotTaskSerializer(serializers.ModelSerializer):
+
+    args = TaskArgSerializer(many = True)
+
     class Meta:
         model = Insta_bot_task
         fields = ('task_id',
                   'operation',
                   'username',
                   'create_time',
-                  'args',
-                  'status')
+                  'status',
+                  'args')
+
+    def create(self, validated_data):
+        arg_data = validated_data.pop('args')
+        task = Insta_bot_task.objects.create(**validated_data)
+
+        for arg in arg_data:
+            TaskArg.objects.create(task_id=task,**arg)
+        return task
+
+

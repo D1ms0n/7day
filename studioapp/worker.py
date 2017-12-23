@@ -135,6 +135,11 @@ class Worker(object):
         selenium_bot.driver.close()
         logger.log('VIEW:get_follow_info: FINISH')
 
+    def get_photos(self, user_name):
+        bot = Bot()
+        bot.login_user(self.login, self.password)
+        user_info = bot.get_info(user_name)
+        return user_info['user']['media']
 
     #@start_thread
     def change_relationships(self, user_names, direction, task_id):         # TO DO: update database after changing rel
