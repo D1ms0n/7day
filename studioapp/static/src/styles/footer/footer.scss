@@ -1,0 +1,52 @@
+
+footer {
+  min-height: 70px;
+  padding-top: 20px;
+  border-top: 1px solid #d28888;
+}
+
+.scrollToTop {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-weight: 700;
+  text-decoration: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 7;
+  background-color: #d28888;
+  opacity: .7;
+  overflow: hidden;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: scale(.8);
+  transition: .2s ease-in-out;
+  &:hover{
+      opacity: 1;
+  }
+  &.active{
+      display: block;
+  }
+  &:after,
+  &:before {
+      content: "";
+      display: block;
+      height: 20px;
+      width: 3px;
+      position: absolute;
+      top: 15px;
+      background-color: #fff;
+  }
+  &:after {
+      right: 30px;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+  }
+  &:before {
+      left: 29px;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+  }
+}

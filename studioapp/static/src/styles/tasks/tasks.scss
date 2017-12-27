@@ -1,0 +1,51 @@
+
+.taskslist {
+    margin-bottom: 20px;
+    tr {
+        border-bottom: 1px solid #d28888;
+        position: relative;
+        .submit-btn {
+            width: 100%;
+            border: 1px solid #d28888;
+        }
+        td {
+            position: relative;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+}
+
+.count-block {
+    margin-top: 10px;
+}
+
+
+.details-btn{
+    border: none;
+    width: 30px;
+    height: 30px;
+    opacity: .5;
+    //background: url('../static/src/images/details.svg') center center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    @include mixin-transition(.2s);
+    &:hover{
+      opacity: 1;
+    }
+  }
+  .close-btn{
+    border: none;
+    width: 25px;
+    height: 25px;
+    opacity: .5;
+    position: relative;
+    left: 15px;
+    top: 0;
+    //background: url('../src/images/close.svg') center center no-repeat;
+    @include mixin-transition(.2s);
+    &:hover{
+      opacity: 1;
+    }
+  }
+  
