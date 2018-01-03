@@ -19,32 +19,42 @@ class Register extends Component {
         instaLogin: '',
         instaPass: '',
         nameValid: false,
-        passValid: false,
+        passwordValid: false,
         emailValid: false,
         instaLoginValid: false,
         instaPassValid: false,
         validationPassed: false,
         formErrors: {
             name: '',
-            pass: '',
+            password: '',
             email: '',
             instaLogin: '',
             instaPass: ''
-        }
-        
-    };
-    
-    this.registerSubmit = this.registerSubmit.bind(this); 
-    this.handleNameChange = this.handleNameChange.bind(this);
-  }
+        }      
 
-  
+    };
+    this.registerSubmit = this.registerSubmit.bind(this); 
+    this.validateField = this.validateField.bind(this); 
+    this.validateForm = this.validateForm.bind(this); 
+    this.handleUserInput = this.handleUserInput.bind(this); 
+  }
+  componentdidmount(){
+    console.log(this.state.formErrors);
+  }
   validateField(fieldName, value) {
+
     let fieldValidationErrors = this.state.formErrors;
+    let nameValid = this.state.nameValid;
     let emailValid = this.state.emailValid;
     let passwordValid = this.state.passwordValid;
-  
+    let instaLoginValid = this.state.instaLoginValid;
+    let instaPassValid = this.state.instaPassValid;
+    
     switch(fieldName) {
+      case 'name':    
+        nameValid = value.length >= 2;
+        fieldValidationErrors.name = nameValid ? '': ' enter the name';   
+        break;
       case 'email':
         emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
         fieldValidationErrors.email = emailValid ? '' : ' is invalid';
@@ -52,46 +62,51 @@ class Register extends Component {
       case 'password':
         passwordValid = value.length >= 6;
         fieldValidationErrors.password = passwordValid ? '': ' is too short';
-        break;
-      case 'email':       
-        break;
-      case 'instaLogin':       
+        break;      
+
+      case 'instaLogin':    
+        instaLoginValid = value.length >= 6;
+        fieldValidationErrors.instaLogin = instaLoginValid ? '': ' is too short';     
        break;
-      case 'instaPass':       
+      case 'instaPass':   
+        instaPassValid = value.length >= 6;
+        fieldValidationErrors.instaPass = instaPassValid ? '': ' is too short';    
         break;
       default:
         break;
     }
-    this.setState({ formErrors: fieldValidationErrors,
-                    emailValid: emailValid,
-                    passwordValid: passwordValid
-                  }, this.validateForm);
-  }
-  
+    this.setState({
+      formErrors: fieldValidationErrors,
+      nameValid: nameValid,
+      emailValid: emailValid,
+      passwordValid: passwordValid,
+      instaLoginValid: instaLoginValid,
+      instaPassValid: instaPassValid
+      }, this.validateForm);
+      
+  }  
+
   validateForm() {
-    this.setState({formValid: this.state.emailValid && this.state.passwordValid});
+
+    this.setState({
+      formValid:      
+        this.state.nameValid
+        && this.state.emailValid 
+        && this.state.passwordValid
+        && this.state.instaLoginValid
+        && this.state.instaPassValid
+      });
+
   }
-  handleUserInput (e) {
-    const name = e.target.name;
-    const value = e.target.value;
-    this.setState({[name]: value}, 
-      () => { this.validateField(name, value) });
+
+  handleUserInput (event) {
+    const name = event.target.name;
+    const value = event.target.value;
+    this.setState({
+      [name]: value
+    }, () => { this.validateField(name, value) });
   }
-  checkFields(){
-    if( this.state.nameValid &&
-        this.state.passValid &&
-        this.state.emailValid &&
-        this.state.instaLoginValid &&
-        this.state.instaPassValid ){
-        this.setState({
-            validationPassed: true
-        });
-    } else {        
-        this.setState({
-            validationPassed: false
-        });
-    }
-  }
+
   registerSubmit(event) {
     event.preventDefault();
       const preLoader = document.getElementById('preLoader');
@@ -107,7 +122,7 @@ class Register extends Component {
 
       let apiService = new ApiService();
 
-      apiService.postRequest(`${config.api.register}`,jsonBody)
+      apiService.postRequest(`${config.api.register}`,JSON.stringify(jsonBody))
         .then(function (result) {
           console.log(result);
             preLoader.style.display='none';
@@ -117,6 +132,7 @@ class Register extends Component {
             preLoader.style.display='none';
         });
   }
+
   render() {
     return (
       <div>
@@ -130,7 +146,7 @@ class Register extends Component {
               </div>
               <div className="login-block">
                 <form id="registerForm"
-                  onSubmit={this.registerSubmit}>
+                  onSubmit={(event) => this.registerSubmit(event)}>
                   <input type="text" className="main-input"
                           placeholder="name"
                           name="name"

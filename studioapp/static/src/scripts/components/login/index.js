@@ -19,7 +19,7 @@ class Login extends Component {
     super(props);
     this.state = {
       username: '',
-        password: ''
+      password: ''
     };
     this.handleUserInput = this.handleUserInput.bind(this);
     this.loginSubmit = this.loginSubmit.bind(this);
@@ -36,8 +36,8 @@ class Login extends Component {
        */
 
       let jsonBody = {
-        'name': this.state.name,
-        'pass': this.state.pass
+        'username': this.state.username,
+        'password': this.state.password
       };
       let apiService = new ApiService();
 
@@ -53,8 +53,8 @@ class Login extends Component {
   }
   
   handleUserInput (event) {
-    const name = e.target.name;
-    const value = e.target.value;
+    const name = event.target.name;
+    const value = event.target.value;
     this.setState({
       [name]: value}
     );     
@@ -76,7 +76,7 @@ class Login extends Component {
 
                 <form className="form-horizontal"
                       id="loginForm"
-                      onSubmit={() => this.loginSubmit()}>
+                      onSubmit={(event) => this.loginSubmit(event)}>
                   <input type="text"
                          className="main-input"
                          name="username"
@@ -87,14 +87,13 @@ class Login extends Component {
                          className="main-input"
                          name="password"
                          placeholder="password"
-                         value={this.state.pass}
+                         value={this.state.password}
                          onChange={(event) => this.handleUserInput(event)}/>
                   <button className="submit-btn">
                     Login
                   </button>                     
                 </form>
-               
-                or
+                              
                 <Link to="/register">Register</Link>
 
               </div>
