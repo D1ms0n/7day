@@ -30,6 +30,9 @@ urlpatterns = [
     url(r'^insta_api/(?P<target>[a-z_]+)(?:/(?P<request_id>\d+))?$',          app_views.insta_api,            name='insta_api'),
     url(r'^follow_info/$',         app_views.follow_info,          name='follow_info'),
     url(r'^react_app/$',           app_views.react_app,          name='react_app'),
+    url(r'^insta_shop/$',           app_views.insta_shop,          name='insta_shop'),
+
+    url(r'^api_test/$',           app_views.api_test,          name='api_test'),
 #    url(r'^tasks/$',               app_views.tasks,                name='tasks'),
 #    url(r'^task/(?P<id>.+)$',      app_views.task,                 name='task'),
     url(r'^logs/$',                app_views.logs,                 name='logs'),
@@ -43,5 +46,7 @@ urlpatterns = [
 
     url(r'^api/tasks/$',                              app_views.InstaBotTaskList.as_view(),   name='tasks'),
     url(r'^api/tasks/(?P<task_id>[0-9]+)/$',          app_views.InstaBotTaskDetail.as_view(), name='task'),
+    url(r'^api/tasks/(?P<task_id>[0-9]+)/run$',       app_views.run_task ,                    name='run_task'),
 
+    url(r'^api/medias/$',                              app_views.InstaMediaList.as_view(),   name='medias'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
