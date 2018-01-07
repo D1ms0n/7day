@@ -14,7 +14,7 @@ from .models import Insta_user
 from .models import Insta_bot_task
 from .models import Task_to_user_map
 from .models import Relationship
-from .models import Insta_image
+from .models import InstaMedia
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 logger = Logger('worker')
@@ -44,13 +44,17 @@ class Worker(object):
         return task
 
     def run_task(self, task_id):
-        task      = get_task_from_database(task_id)
-        task_args = json.loads(task.args.replace("'", '"'))
+        task      = Insta_bot_task.objects.get(task_id = task_id)
+
+        #task_args = json.loads(task.args.replace("'", '"'))
 
         method_to_run = self.__getattribute__(task.operation)
 
-        if method_to_run:
-            method_to_run(username = task.username, task_args = task_args, task_id = task.task_id)
+        logger.log('WORKER:run_task: ' + task_id)
+        task_args = task.args.values()
+
+        if method_to_run and task_args:
+            method_to_run(username = task.username, task_args = task_args)
     
     #@start_thread
     def get_follow_info(self, username, task_args, task_id = None):
@@ -135,14 +139,21 @@ class Worker(object):
         selenium_bot.driver.close()
         logger.log('VIEW:get_follow_info: FINISH')
 
-    def get_photos(self, user_name):
+    def get_medias(self, user_name):
         bot = Bot()
-        bot.login_user(self.login, self.password)
+        #bot.login_user(self.login, self.password)
         user_info = bot.get_info(user_name)
-        return user_info['user']['media']
+        logger.log(user_info['user']['media']['nodes'])
+        return user_info['user']['media']['nodes']
+
+    def get_media_info(self, code):
+        bot = Bot()
+        media_info = bot.get_media_info(code)
+        return media_info
 
     #@start_thread
-    def change_relationships(self, user_names, direction, task_id):         # TO DO: update database after changing rel
+    def change_relationships(self, username, task_args, direction):         # TO DO: update database after changing rel
+        user_names = [str(task_arg['user_name']) for task_arg in task_args]
         selenium_bot = selenium_webdriver()
         selenium_bot.login_user(self.login, self.password)
 
@@ -150,6 +161,12 @@ class Worker(object):
             selenium_bot.change_relationships(user_name)
 
         selenium_bot.driver.close()
+
+    def follow(self, username, task_args):
+        self.change_relationships(username, task_args, 'follow')
+
+    def unfollow(self, usernames, task_args):
+        self.change_relationships(username, task_args, 'unfollow')
 
     ############################################################## OLD METHODS ##############################
     def get_task_result(self, task_id):

@@ -1,183 +1,1 @@
-# -*- coding: utf-8 -*-
-from django.shortcuts import render
-from django.http import HttpResponse
-from rest_framework.renderers import JSONRenderer
-from django.views.decorators.csrf import csrf_exempt, csrf_protect
-
-import json
-import time
-import os
-
-from logger import Logger
-from worker import Worker
-from django_datastore import get_users_from_database, get_tasks_from_database
-from .models import Insta_user
-from .models import Insta_bot_task
-from .serializers import InstaUserSerializer
-from .serializers import InstaBotTaskSerializer
-from rest_framework import generics
-
-login = 'studio_7_day_2'
-password = 'Nopasaran'
-
-
-def get_base_dir():
-    return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
-worker = Worker(login, password)
-logger = Logger('view')
-time_now = time.strftime('%X %x').replace(' ', '_').replace('/', '_').replace(':', '_')
-
-
-def insta_shop(request):
-    info = worker.get_photos('nu_a_huli_mme')
-    return render(request, 'studio/insta_shop.html', {'info': info})
-
-class InstaUserList(generics.ListCreateAPIView):
-    serializer_class = InstaUserSerializer
-    renderer_classes = (JSONRenderer,)
-
-    def get_queryset(self):
-        queryset = get_users_from_database(self.request.query_params)
-        return queryset
-
-class InstaUserDetail(generics.RetrieveAPIView):
-    queryset = Insta_user.objects.all()
-    renderer_classes = (JSONRenderer,)
-    serializer_class = InstaUserSerializer
-    lookup_field = 'user_id'
-
-class InstaUserFollowers(generics.ListCreateAPIView):
-    serializer_class = InstaUserSerializer
-    renderer_classes = (JSONRenderer,)
-
-    def get_queryset(self):
-        params = self.request.query_params.dict()
-        params['followed_user'] = self.kwargs['user_id']
-        queryset = get_users_from_database(params)
-        return queryset
-
-class InstaUserFollowedBy(generics.ListCreateAPIView):
-    serializer_class = InstaUserSerializer
-    renderer_classes = (JSONRenderer,)
-
-    def get_queryset(self):
-        params = self.request.query_params.dict()
-        params['followed_by_user'] = self.kwargs['user_id']
-        queryset = get_users_from_database(params)
-        return queryset
-
-
-class InstaBotTaskList(generics.ListCreateAPIView):
-    serializer_class = InstaBotTaskSerializer
-    renderer_classes = (JSONRenderer,)
-
-    def get_queryset(self):
-        params = self.request.query_params.dict()
-        return  get_tasks_from_database(params)
-
-    def perform_create(self, serializer):
-        time_now = time.strftime('%X %x').replace(' ', '_').replace('/', '_')
-
-        serializer.save(task_id = abs(hash(time_now)), create_time = time_now, status= 'Created')
-
-
-
-
-
-class InstaBotTaskDetail(generics.RetrieveAPIView):
-        queryset         = Insta_bot_task.objects.all()
-        serializer_class = InstaBotTaskSerializer
-        renderer_classes = (JSONRenderer,)
-        lookup_field     = 'task_id'
-
-
-class InstaBotTaskUserList(generics.RetrieveAPIView):
-    user_ids = Insta_user
-    queryset = Insta_bot_task.objects.all()
-    serializer_class = InstaBotTaskSerializer
-    renderer_classes = (JSONRenderer,)
-    lookup_field = 'task_id'
-
-
-########################################################################################### INSTA_API ###########################################################################
-
-@csrf_exempt
-def insta_api(request, target, request_id='', **kwargs):
-    logger.log('VIEW:insta_api: start at %s %s/%s' % (str(time_now), target, request_id))
-
-    ##################### GET ##################################
-
-    # GET / get_list
-    if request.method == 'GET':
-
-        if target == 'get_tasks':
-            task_list = get_tasks_from_database()
-            return HttpResponse(json.dumps(task_list),
-                                content_type="application/json")
-
-        elif target == 'get_task_result':
-            result = worker.get_task_result(task_id=request_id)
-            return HttpResponse(json.dumps(result),
-                                content_type="application/json")
-
-    #################### POST ################################## 
-    elif request.method == 'POST':
-        request_json = json.loads(request.body)
-
-        # POST / add_task
-        if target == 'add_task':
-            time_now = time.strftime('%X %x').replace(' ', '_').replace('/', '_')
-            task_id = abs(hash(time_now))
-            direction = request_json['direction']
-
-            if direction in ['following', 'followers']:
-                username = request_json['username']
-                if 'count' in request_json:
-                    count = request_json['count']
-                else:
-                    count = 50
-
-                worker.create_new_task(task_id=task_id, direction=direction, username=username, count=count,
-                                       create_time=time_now)
-                worker.get_follow_info(username, direction, count, task_id)  # TODO: queue for tasks
-
-            elif direction in ['follow', 'unfollow']:
-                user_names = request_json['user_names']
-                worker.create_new_task(task_id=task_id, direction=direction, username='None', count='None',
-                                       create_time=time_now)
-                worker.change_relationships(user_names, direction, task_id)
-
-            task_list = worker.get_tasks()
-            return HttpResponse(json.dumps(task_list),
-                                content_type="application/json")
-
-def follow_info(request):
-    return render(request, 'studio/test_front.html', {})
-
-
-def react_app(request):
-    return render(request, 'studio/insta_users_r.html', {})
-
-def tasks(request):
-    return render(request, 'studio/tasks.html', {})
-
-
-def task(request, id):
-    return render(request, 'studio/task.html', {})
-
-
-def logs(request):
-    try:
-        result_file = open('%s/LOG' % os.path.join(get_base_dir(), 'studioapp', 'logs'))
-        log = result_file.readlines()
-    except:
-        log = []
-
-    return render(request, 'studio/logs.html', {'log': log[-50:]})
-
-
-def users_table(request):
-    users = Insta_user.objects.all()
-    return render(request, 'studio/Insta_users.html', {'users': users})
+# -*- coding: utf-8 -*-from django.shortcuts import renderfrom django.http import HttpResponsefrom rest_framework.renderers import JSONRendererfrom django.views.decorators.csrf import csrf_exempt, csrf_protectimport jsonimport timeimport osfrom logger import Loggerfrom worker import Workerfrom django_datastore import get_users_from_database, get_tasks_from_databasefrom .models import Insta_userfrom .models import Insta_bot_taskfrom .models import InstaMediafrom .serializers import InstaUserSerializerfrom .serializers import InstaBotTaskSerializerfrom .serializers import InstaMediaSerializerfrom rest_framework import genericsfrom rest_framework import pagination# kostilifrom rest_framework.response import Responsefrom rest_framework import statuslogin = 'studio_7_day_2'password = 'Nopasaran'def get_base_dir():    return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))worker = Worker(login, password)logger = Logger('view')time_now = time.strftime('%X %x').replace(' ', '_').replace('/', '_').replace(':', '_')def insta_shop(request):    name = 'studio_7_day_2'    medias = worker.get_medias(name)    for media in medias:        author = Insta_user.objects.get(user_name= name)        if media['is_video']== True:            continue        if '#minimal' not in media['caption']:            continue        try:            media = InstaMedia.objects.get(image_id = media['id'])        except:            media = InstaMedia(image_id = media['id'],                               display_src= media['display_src'],                               caption = media['caption'],                               image_author = author,                               images_likes_count = media['likes']['count'],                               code               = media['code']                               )            media.save()        all_media= InstaMedia.objects.filter(image_author__user_name = name)        for media in all_media:            media_info = worker.get_media_info(code = media.code)            if media_info['status_code'] != 200:                media.delete()    return render(request, 'studio/insta_shop.html', {})def api_test(request):    return render(request, 'studio/api_test.html',{})def react_app(request):    return render(request, 'studio/insta_users_r.html', {})def run_task(request, task_id):    logger.log('VIEWS:runtask: ' + task_id )    worker.run_task(task_id)    return render(request, 'studio/insta_users_r.html', {})class InstaUserList(generics.ListCreateAPIView):    serializer_class = InstaUserSerializer    renderer_classes = (JSONRenderer,)    pagination_class = pagination.PageNumberPagination    def get_queryset(self):        queryset = get_users_from_database(self.request.query_params)        return querysetclass InstaUserDetail(generics.RetrieveAPIView):    queryset = Insta_user.objects.all()    renderer_classes = (JSONRenderer,)    serializer_class = InstaUserSerializer    lookup_field = 'user_id'class InstaMediaList(generics.ListCreateAPIView):    serializer_class = InstaMediaSerializer    renderer_classes = (JSONRenderer,)    def get_queryset(self):        return InstaMedia.objects.all()class InstaUserFollowers(generics.ListCreateAPIView):    serializer_class = InstaUserSerializer    renderer_classes = (JSONRenderer,)    def get_queryset(self):        params = self.request.query_params.dict()        params['followed_user'] = self.kwargs['user_id']        queryset = get_users_from_database(params)        return querysetclass InstaUserFollowedBy(generics.ListCreateAPIView):    serializer_class = InstaUserSerializer    renderer_classes = (JSONRenderer,)    def get_queryset(self):        params = self.request.query_params.dict()        params['followed_by_user'] = self.kwargs['user_id']        queryset = get_users_from_database(params)        return querysetclass InstaBotTaskList(generics.ListCreateAPIView):    serializer_class = InstaBotTaskSerializer    renderer_classes = (JSONRenderer,)    def get_queryset(self):        params = self.request.query_params.dict()        return  get_tasks_from_database(params)    def create(self, request, *args, **kwargs):        logger.log(request.data)        a = request.data.pop('args')        #request.data['args'] = str(request.data['args'])        request.data['args']= str(a)        serializer = self.get_serializer(data=request.data)        serializer.is_valid(raise_exception=True)        self.perform_create(serializer)        headers = self.get_success_headers(serializer.data)        return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)    def perform_create(self, serializer):        time_now = time.strftime('%X %x').replace(' ', '_').replace('/', '_')        serializer.save(task_id = abs(hash(time_now)), create_time = time_now, status= 'Created')class InstaBotTaskDetail(generics.RetrieveAPIView):        queryset         = Insta_bot_task.objects.all()        serializer_class = InstaBotTaskSerializer        renderer_classes = (JSONRenderer,)        lookup_field     = 'task_id'class InstaBotTaskUserList(generics.RetrieveAPIView):    user_ids = Insta_user    queryset = Insta_bot_task.objects.all()    serializer_class = InstaBotTaskSerializer    renderer_classes = (JSONRenderer,)    lookup_field = 'task_id'########################################################################################### INSTA_API ###########################################################################@csrf_exemptdef insta_api(request, target, request_id='', **kwargs):    logger.log('VIEW:insta_api: start at %s %s/%s' % (str(time_now), target, request_id))    ##################### GET ##################################    # GET / get_list    if request.method == 'GET':        if target == 'get_tasks':            task_list = get_tasks_from_database()            return HttpResponse(json.dumps(task_list),                                content_type="application/json")        elif target == 'get_task_result':            result = worker.get_task_result(task_id=request_id)            return HttpResponse(json.dumps(result),                                content_type="application/json")    #################### POST ##################################     elif request.method == 'POST':        request_json = json.loads(request.body)        # POST / add_task        if target == 'add_task':            time_now = time.strftime('%X %x').replace(' ', '_').replace('/', '_')            task_id = abs(hash(time_now))            direction = request_json['direction']            if direction in ['following', 'followers']:                username = request_json['username']                if 'count' in request_json:                    count = request_json['count']                else:                    count = 50                worker.create_new_task(task_id=task_id, direction=direction, username=username, count=count,                                       create_time=time_now)                worker.get_follow_info(username, direction, count, task_id)  # TODO: queue for tasks            elif direction in ['follow', 'unfollow']:                user_names = request_json['user_names']                worker.create_new_task(task_id=task_id, direction=direction, username='None', count='None',                                       create_time=time_now)                worker.change_relationships(user_names, direction, task_id)            task_list = worker.get_tasks()            return HttpResponse(json.dumps(task_list),                                content_type="application/json")def follow_info(request):    return render(request, 'studio/test_front.html', {})def tasks(request):    return render(request, 'studio/tasks.html', {})def task(request, id):    return render(request, 'studio/task.html', {})def logs(request):    try:        result_file = open('%s/LOG' % os.path.join(get_base_dir(), 'studioapp', 'logs'))        log = result_file.readlines()    except:        log = []    return render(request, 'studio/logs.html', {'log': log[-50:]})def users_table(request):    users = Insta_user.objects.all()    return render(request, 'studio/Insta_users.html', {'users': users})

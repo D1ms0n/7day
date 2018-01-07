@@ -7,7 +7,7 @@ from .models import Insta_user
 from .models import Insta_bot_task
 from .models import Task_to_user_map
 from .models import Relationship
-from .models import Insta_image
+from .models import InstaMedia
 
 logger = Logger('worker')
 

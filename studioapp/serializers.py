@@ -4,6 +4,7 @@ from rest_framework import serializers
 from studioapp.models import Insta_user
 from studioapp.models import Insta_bot_task
 from studioapp.models import TaskArg
+from studioapp.models import InstaMedia
 
 from logger import Logger
 logger = Logger('view')
@@ -38,7 +39,7 @@ class TaskArgSerializer(serializers.ModelSerializer):
 
 class InstaBotTaskSerializer(serializers.ModelSerializer):
 
-    args = TaskArgSerializer(many = True)
+    #args = TaskArgSerializer(many = True)
 
     class Meta:
         model = Insta_bot_task
@@ -49,12 +50,23 @@ class InstaBotTaskSerializer(serializers.ModelSerializer):
                   'status',
                   'args')
 
-    def create(self, validated_data):
-        arg_data = validated_data.pop('args')
-        task = Insta_bot_task.objects.create(**validated_data)
+    #def create(self, validated_data):
+    #    arg_data = validated_data.pop('args')
+    #    task = Insta_bot_task.objects.create(**validated_data)
 
-        for arg in arg_data:
-            TaskArg.objects.create(task_id=task,**arg)
-        return task
+    #    for arg in arg_data:
+    #        TaskArg.objects.create(task_id=task,**arg)
+    #    return task
 
 
+class InstaMediaSerializer(serializers.ModelSerializer):
+    image_author = InstaUserSerializer()
+
+    class Meta:
+        model = InstaMedia
+        fields = ('image_id',
+                  'display_src',
+                  'caption',
+                  'image_author',
+                  'images_likes_count',
+                  'code')

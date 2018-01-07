@@ -29,7 +29,13 @@ class Bot(object):
         self.logger.log('Try to get info for %s' % name)
         info = {}
         answer = ''
-        answer = self.s.get(user_info_link % name)
+        #answer = self.s.get(user_info_link % name)
+        self.anon_session = requests.Session()
+
+        link = user_info_link % name
+        self.logger.log('Link: ' + link)
+
+        answer = self.anon_session.get(link)
 
         if answer.status_code != 200:
             self.logger.log('Answer status_code %d' % answer.status_code)
@@ -44,6 +50,38 @@ class Bot(object):
                 info = None
         if info== None:
             self.logger.log('DONE: %s is NONE' % name)
+
+        info['status_code'] = answer.status_code
+        info['reason']      = answer.reason
+
+        return info
+
+
+    def get_media_info(self, code):
+        self.logger.log('Try to get info for %s' % code)
+        info = {}
+        answer = ''
+        #answer = self.s.get(user_info_link % name)
+        self.anon_session = requests.Session()
+
+        link = post_info_link % code
+        self.logger.log('Link: ' + link)
+
+        answer = self.anon_session.get(link)
+
+        if answer.status_code != 200:
+            self.logger.log('Answer status_code %d' % answer.status_code)
+            self.logger.log('Answer reason %s' % answer.reason)
+
+        answer_text = answer.text
+
+        if answer:
+            try:
+                info = json.loads(answer_text)
+            except:
+                info = None
+        if info== None:
+            self.logger.log('DONE: %s is NONE' % code)
 
         info['status_code'] = answer.status_code
         info['reason']      = answer.reason
