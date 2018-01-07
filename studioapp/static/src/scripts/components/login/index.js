@@ -2,19 +2,13 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import Menu from './../header/';
 import Footer from './../footer/';
-import Preloader from './../preloader/';
 import config from './../../configs/index';
 import ApiService from './../../services/api/index';
+import { CookiesService } from './../../services/cookies';
 
 class Login extends Component {
 
   constructor(props) {
-
-    /**
-    * local state
-    * @param {name} string - user name setting by {handleNameChange}
-    * @param {pass} string - user pass setting by {handlePassChange}
-    */
 
     super(props);
     this.state = {
@@ -22,29 +16,25 @@ class Login extends Component {
       password: ''
     };
     this.handleUserInput = this.handleUserInput.bind(this);
-    this.loginSubmit = this.loginSubmit.bind(this);
+    this.loginSubmit = this.loginSubmit.bind(this);    
   }
 
   loginSubmit(event) {
-    event.preventDefault();
+
+      event.preventDefault();
+
       const preLoader = document.getElementById('preLoader');
-      preLoader.style.display='block';
-
-      /**
-       * {apiService} - fetch post request
-       * {jsonBody}
-       */
-
+      let apiService = new ApiService();
       let jsonBody = {
         'username': this.state.username,
         'password': this.state.password
       };
-      let apiService = new ApiService();
-
+      preLoader.style.display='block';
       apiService.postRequest(`${config.api.login}`,jsonBody)
         .then(function (result) {
           console.log(result);
-            preLoader.style.display='none';
+          CookiesService.setCookie('userId',encodeURIComponent(result.id),1)
+          preLoader.style.display='none';
         })
         .catch(function (e) {
           console.log(e);
@@ -63,40 +53,42 @@ class Login extends Component {
   render() {
     return (
       <div>
-        <Preloader/>
         <Menu/>
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-
-              <div className="login-title">
-                Login Form
-              </div>
-              <div className="login-block">
-
-                <form className="form-horizontal"
-                      id="loginForm"
-                      onSubmit={(event) => this.loginSubmit(event)}>
-                  <input type="text"
-                         className="main-input"
-                         name="username"
-                         placeholder="username"
-                         value={this.state.username}
-                         onChange={(event) => this.handleUserInput(event)}/>
-                  <input type="password"
-                         className="main-input"
-                         name="password"
-                         placeholder="password"
-                         value={this.state.password}
-                         onChange={(event) => this.handleUserInput(event)}/>
-                  <button className="submit-btn">
-                    Login
-                  </button>                     
-                </form>
-                              
-                <Link to="/register">Register</Link>
-
-              </div>
+              <h2>Sign in</h2>              
+              <form id="loginForm"
+                    onSubmit={(event) => this.loginSubmit(event)}>
+                <div className='form-group row'>
+                  <label className="col-md-2 col-form-label">Username</label> 
+                  <div className="col-md-10">
+                    <input type="text"
+                          className="form-control"
+                          name="username"
+                          placeholder="username"
+                          value={this.state.username}
+                          onChange={(event) => this.handleUserInput(event)}/>
+                  </div>                    
+                </div>    
+                <div className='form-group row'>
+                  <label className="col-md-2 col-form-label">Password</label> 
+                  <div className="col-md-10">
+                    <input type="password"
+                            className="form-control"
+                            name="password"
+                            placeholder="password"
+                            value={this.state.password}
+                            onChange={(event) => this.handleUserInput(event)}/>
+                  </div>                    
+                </div>                      
+                <div className="form-group row">
+                  <div className="col-md-10">
+                   <button type="submit" className="btn btn-primary">Sign in</button>
+                  </div>
+                </div>                              
+              </form>         
+              <Link className="btn btn-primary" to="/register">or Sign up</Link>              
             </div>
           </div>
         </div>
@@ -105,4 +97,5 @@ class Login extends Component {
     );
   }
 }
+
 export default Login;

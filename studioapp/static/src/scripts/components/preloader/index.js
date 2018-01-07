@@ -7,7 +7,7 @@ export default class Preloader extends Component {
         <div id="preLoader">
           <div id="preloader_bg">
             <div className="waiting-text">
-              Waiting...
+              Pending...
             </div>
           </div>
         </div>

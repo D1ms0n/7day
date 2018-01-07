@@ -7,17 +7,19 @@ class FormErrors extends Component {
   render(){
     const formErrors = this.props.formErrors;
     return(
-      <div className='formErrors'>
+      <ul className="list-group">
         {Object.keys(formErrors).map((fieldName, index) => {
           if(formErrors[fieldName].length > 0){
             return (
-              <p key={index}>{fieldName} {formErrors[fieldName]}</p>
+              <li key={index} className="list-group-item list-group-item-danger">
+                {fieldName} {formErrors[fieldName]}
+              </li>              
             )        
           } else {
             return '';
           }
         })}
-      </div>
+      </ul>
     )
   }
 }

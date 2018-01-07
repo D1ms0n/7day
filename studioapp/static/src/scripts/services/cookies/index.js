@@ -1,5 +1,5 @@
 /**
- * Service for working with Cookies
+ * Service for work with Cookies
  */
 
 class CookiesService {

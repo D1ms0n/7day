@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 import config from '../../../../configs/index';
 import ApiService from '../../../../services/api/index';
 
-let apiService = new ApiService();
-const preLoader = document.getElementById('preLoader');
-
-class UserList extends Component {
+class TasksList extends Component {
 
     constructor(props) {
         super(props);
@@ -15,15 +12,12 @@ class UserList extends Component {
 
     detailTask(event){
 
+      const preLoader = document.getElementById('preLoader');
+      let apiService = new ApiService();
+
+      const taskId = event.target.value;    
+      
       preLoader.style.display='block';
-
-      /**
-       * {apiService} - fetch post request
-       * {detailTask} - method for show task details
-       */
-
-      const taskId = event.target.value;
-
       apiService.getRequest(`${config.api.taskDetail}${taskId}`)
         .then(function (result) {
           console.log(result);
@@ -36,17 +30,10 @@ class UserList extends Component {
     }
 
     deleteTask(event){
-
-      preLoader.style.display='block';
-
-      /**
-       * {apiService} - fetch post request
-       * {deleteTask} - method for delete task
-       * {taskId} - task id
-       */
-
+      const preLoader = document.getElementById('preLoader');
       const taskId = event.target.value;
 
+      preLoader.style.display='block';
       apiService.postRequest(`${config.api.removeTask}`,taskId)
         .then(function (result) {
           console.log(result);
@@ -60,49 +47,48 @@ class UserList extends Component {
     }
 
     render() {
+      let tasksList = this.props.list;
       return (
         <div>
           <div className="table-responsive">
-
-            <table className="table taskslist" id="usersListResult">
-              <thead>
+            <table className="table" id="tasksList">
+              <thead className="thead-dark">
                 <tr>
-                  <td>Name</td>
-                  <td>Direction</td>
-                  <td>Start time</td>
-                  <td>Count</td>
-                  <td>Actions</td>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Direction</th>
+                  <th scope="col">Start time</th>
+                  <th scope="col">Count</th>
+                  <th scope="col">Actions</th>
                 </tr>
               </thead>
               <tbody>
-
-                {this.props.list.map((item, index) =>
-                    <tr key={index} id={item.task_id}>
+                {tasksList.map((tasksListItem, index) =>
+                    <tr key={index} id={tasksListItem.task_id}>
+                        <th scope="row">{index}</th>
                         <td>
-                            {item.username}
+                            {tasksListItem.username}
                         </td>
                         <td>
-                            {item.direction}
+                            {tasksListItem.direction}
                         </td>
                         <td>
-                            {item.create_time}
+                            {tasksListItem.create_time}
                         </td>
                         <td>
-                            {item.count}
+                            {tasksListItem.count}
                         </td>
                         <td>
-                            <button value={item.task_id} className="details-btn" onClick={this.detailTask}> </button>
-                            <button value={item.task_id} className="close-btn" onClick={this.deleteTask}> </button>
+                            <button value={tasksListItem.task_id} className="btn btn-info" onClick={this.detailTask}></button>
+                            <button value={tasksListItem.task_id} className="btn btn-warning" onClick={this.deleteTask}></button>
                         </td>
                     </tr>
                 )}
-
               </tbody>
             </table>
-
           </div>
         </div>
       );
     }
 }
-export default UserList;
+export default TasksList;

@@ -17,7 +17,7 @@ import { setTimeout } from 'timers';
   }
 
   componentWillUnmount() {
-      window.removeEventListener('scroll', this.showScrollToTop);
+    window.removeEventListener('scroll', this.showScrollToTop);
   }
 
   showScrollToTop(){
@@ -31,7 +31,8 @@ import { setTimeout } from 'timers';
       });
     }
   }
-  scrollToTop(){   
+
+  scrollToTop(){
     for ( let i = window.scrollY; i >= 0 ; i-- ){
       if ( i % 5 === 0 ) {
        setTimeout(function(){

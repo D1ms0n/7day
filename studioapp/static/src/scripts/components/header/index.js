@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import Preloader from './../preloader/';
 
 class Menu extends Component {
   render() {
-    return (
-      <div>
+    return (      
+      <div>        
+        <Preloader/>
         <div className="container-fluid">
           <div className="row">
             <div className="container">
@@ -12,20 +14,17 @@ class Menu extends Component {
                 <div className="col-md-12">
                   <header>
                     <nav>
-                      <ul className="menu">
-                        <li>
-                          <Link to="/">home</Link>
+                      <ul className="nav justify-content-end">
+                        <li className="nav-item">                         
+                          <Link className="nav-link" to="/">home</Link>
                         </li>
-                        <li>
-                          <Link to="/search">search</Link>
+                        <li className="nav-item">                          
+                          <Link className="nav-link" to="/search">search</Link>
                         </li>
-                        <li>
-                          <Link to="/tasks">tasks</Link>
-                        </li>
-                        <li>
-                          <Link to="/task">task</Link>
-                        </li>
-                      </ul>
+                        <li className="nav-item">                         
+                          <Link className="nav-link" to="/tasks">tasks</Link>
+                        </li>                        
+                      </ul>                      
                     </nav>
                   </header>
                 </div>
@@ -37,4 +36,5 @@ class Menu extends Component {
     );
   }
 }
+
 export default Menu;

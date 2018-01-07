@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import Menu from './../header/';
 import Footer from './../footer/';
-import Preloader from './../preloader/';
 import FormErrors from './modules/formErrors';
-
 import config from './../../configs/index';
 import ApiService from './../../services/api/index';
 
@@ -37,10 +35,9 @@ class Register extends Component {
     this.validateField = this.validateField.bind(this); 
     this.validateForm = this.validateForm.bind(this); 
     this.handleUserInput = this.handleUserInput.bind(this); 
+
   }
-  componentdidmount(){
-    console.log(this.state.formErrors);
-  }
+
   validateField(fieldName, value) {
 
     let fieldValidationErrors = this.state.formErrors;
@@ -53,24 +50,23 @@ class Register extends Component {
     switch(fieldName) {
       case 'name':    
         nameValid = value.length >= 2;
-        fieldValidationErrors.name = nameValid ? '': ' enter the name';   
+        fieldValidationErrors.name = nameValid ? '': 'enter the name';   
         break;
       case 'email':
         emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
-        fieldValidationErrors.email = emailValid ? '' : ' is invalid';
+        fieldValidationErrors.email = emailValid ? '' : 'is invalid';
         break;
       case 'password':
         passwordValid = value.length >= 6;
-        fieldValidationErrors.password = passwordValid ? '': ' is too short';
+        fieldValidationErrors.password = passwordValid ? '': 'is too short';
         break;      
-
       case 'instaLogin':    
         instaLoginValid = value.length >= 6;
-        fieldValidationErrors.instaLogin = instaLoginValid ? '': ' is too short';     
+        fieldValidationErrors.instaLogin = instaLoginValid ? '': 'is too short';     
        break;
       case 'instaPass':   
         instaPassValid = value.length >= 6;
-        fieldValidationErrors.instaPass = instaPassValid ? '': ' is too short';    
+        fieldValidationErrors.instaPass = instaPassValid ? '': 'is too short';    
         break;
       default:
         break;
@@ -109,78 +105,101 @@ class Register extends Component {
 
   registerSubmit(event) {
     event.preventDefault();
-      const preLoader = document.getElementById('preLoader');
-      preLoader.style.display='block';
+    const preLoader = document.getElementById('preLoader');
+    
+    let jsonBody = {
+      'name': this.state.name,
+      'password': this.state.password,       
+      'email': this.state.email,
+      'instaLogin': this.state.instaLogin,
+      'instaPass': this.state.instaPass
+    };
 
-      let jsonBody = {
-        'name': this.state.name,
-        'password': this.state.password,       
-        'email': this.state.email,
-        'instaLogin': this.state.instaLogin,
-        'instaPass': this.state.instaPass
-      };
-
-      let apiService = new ApiService();
-
-      apiService.postRequest(`${config.api.register}`,JSON.stringify(jsonBody))
-        .then(function (result) {
-          console.log(result);
-            preLoader.style.display='none';
-        })
-        .catch(function (e) {
-          console.log(e);
-            preLoader.style.display='none';
-        });
+    let apiService = new ApiService();
+    preLoader.style.display='block';
+    apiService.postRequest(`${config.api.register}`,JSON.stringify(jsonBody))
+      .then(function (result) {
+        console.log(result);
+          preLoader.style.display='none';
+      })
+      .catch(function (e) {
+        console.log(e);
+          preLoader.style.display='none';
+      });
   }
 
   render() {
     return (
       <div>
-        <Preloader/>
         <Menu/>
         <div className="container">
           <div className="row">
             <div className="col-md-12">             
-              <div className="login-title">
-                  Register Form
-              </div>
-              <div className="login-block">
-                <form id="registerForm"
-                  onSubmit={(event) => this.registerSubmit(event)}>
-                  <input type="text" className="main-input"
-                          placeholder="name"
-                          name="name"
-                          value={this.state.name}
-                          onChange={(event) => this.handleUserInput(event)}/>
-                  <input type="email" className="main-input"
-                          placeholder="email"
-                          name="email"
-                          value={this.state.email}
-                          onChange={(event) => this.handleUserInput(event)}/>
-                  <input type="password" className="main-input"
-                          placeholder="password"
-                          name="password"
-                          value={this.state.password}
-                          onChange={(event) => this.handleUserInput(event)}/>                  
-                  <input type="text" className="main-input"
-                          placeholder="instaLogin"
-                          name="instaLogin"
-                          value={this.state.instaLogin}
-                          onChange={(event) => this.handleUserInput(event)}/>
-                  <input type="password" className="main-input"
-                          placeholder="instaPass"
-                          name="instaPass"
-                          value={this.state.instaPass}
-                          onChange={(event) => this.handleUserInput(event)}/>
-                  <button disabled={!this.state.validationPassed}
-                          className="submit-btn">
-                          Register
-                  </button>
-                  <div className='panel panel-default'>
-                    <FormErrors formErrors={this.state.formErrors} />
+              <h2>Sign up</h2>  
+              <form id="registerForm"
+                onSubmit={(event) => this.registerSubmit(event)}>                
+                <div className='form-group row'>
+                  <label className="col-md-2 col-form-label">name</label> 
+                  <div className="col-md-10">
+                    <input type="text" className="form-control"
+                            placeholder="name"
+                            name="name"
+                            value={this.state.name}
+                            onChange={(event) => this.handleUserInput(event)}/>
+                  </div>                    
+                </div>                      
+                <div className='form-group row'>
+                  <label className="col-md-2 col-form-label">email</label> 
+                  <div className="col-md-10">
+                    <input type="email" className="form-control"
+                            placeholder="email"
+                            name="email"
+                            value={this.state.email}
+                            onChange={(event) => this.handleUserInput(event)}/>
+                  </div>                    
+                </div>                    
+                <div className='form-group row'>
+                  <label className="col-md-2 col-form-label">password</label> 
+                  <div className="col-md-10">
+                    <input type="password" className="form-control"
+                            placeholder="password"
+                            name="password"
+                            value={this.state.password}
+                            onChange={(event) => this.handleUserInput(event)}/>      
+                  </div>                    
+                </div>                    
+                <div className='form-group row'>
+                  <label className="col-md-2 col-form-label">instaLogin</label> 
+                  <div className="col-md-10">
+                    <input type="text" className="form-control"
+                            placeholder="instaLogin"
+                            name="instaLogin"
+                            value={this.state.instaLogin}
+                            onChange={(event) => this.handleUserInput(event)}/>
+                  </div>                    
+                </div>  
+                <div className='form-group row'>
+                  <label className="col-md-2 col-form-label">instaPass</label> 
+                  <div className="col-md-10">
+                    <input type="password" className="form-control"
+                            placeholder="instaPass"
+                            name="instaPass"
+                            value={this.state.instaPass}
+                            onChange={(event) => this.handleUserInput(event)}/>
+                  </div>                    
+                </div>        
+                <div className="form-group row">
+                  <div className="col-md-10">
+                    <button disabled={!this.state.formValid}
+                            className="btn btn-primary">
+                            Sign up
+                    </button>
                   </div>
-                </form>
-              </div>
+                </div>
+                <div className='formErrors'>
+                  <FormErrors formErrors={this.state.formErrors} />
+                </div>
+              </form>              
             </div>
           </div>
         </div>
