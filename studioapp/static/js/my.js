@@ -31,6 +31,7 @@ class User_list extends React.Component{
         this.handleCheck = this.handleCheck.bind(this)
         this.render_user = this.render_user.bind(this)
         this.handleRelButton = this.handleRelButton.bind(this)
+        this.handleTaskButton = this.handleTaskButton.bind(this)
     }
 
 
@@ -54,21 +55,42 @@ class User_list extends React.Component{
 
         var action = e.target.id === 'FollowButton' ? 'Follow' : 'Unfollow'
 
-        fetch('http://192.168.253.128/api/tasks', {
+        fetch('http://192.168.0.103:8000/api/tasks/', {
                  method: "POST",
                  headers: {
                     Accept: "application/json",
                     "Content-Type": "application/json"
                     },
                  body: JSON.stringify({
-                    firstParam: this.state['checked_users'],
-                    action: action
+                    args: {user_ids: this.state['checked_users']},
+                    operation: action
+
                     })
                  })
                 .then(response => response.json())
                 .then(json => {this.setState({'user_list':json})})
     }
 
+    handleTaskButton(e){
+    var action = e.target.id === 'FollowButton' ? 'Follow' : 'Unfollow'
+
+        fetch('http://192.168.0.103:8000/api/tasks/', {
+                 method: "POST",
+                 headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json"
+                    },
+                 body: JSON.stringify({"operation":"follow",
+                                       "username":"dima",
+                                       "args":{"user_names":["new_arg","lalala"]},
+                                        })
+
+                 })
+                .then(response => response.json())
+                .then(json => {this.setState({'user_list':json})})
+
+
+    }
 
 
     handleClick(){
@@ -97,7 +119,7 @@ class User_list extends React.Component{
         else if (this.state["followed_lte"] != '' && filter == ''){
             filter = '?' + "followers_count__lte=" + this.state["followed_lte"]
         }
-        var link =  "http://192.168.253.128/api/users" + filter
+        var link =  "http://192.168.0.103:8000/api/users" + filter
 
         fetch(link)
         .then(response => response.json())
@@ -123,6 +145,11 @@ class User_list extends React.Component{
                 <button id = 'UnfollowButton' onClick={this.handleRelButton}>
                     Unfollow
                 </button>
+
+                <button id = 'GetFollowInfo' onClick={this.handleTaskButton}>
+                    GetFollowInfo
+                </button>
+
 
                 <table className="table"  >
                  <thead>
