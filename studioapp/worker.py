@@ -45,23 +45,33 @@ class Worker(object):
         return task
 
     def run_task(self, task_id):
-        task      = InstaBotTask.objects.get(task_id = task_id)
-
         task_args = {}
+
+        task      = InstaBotTask.objects.get(task_id = str(task_id))
+
+        logger.log('WORKER:run_task: AAA' + str(task))
+
         targets = TaskTarget.objects.filter(task = task)
 
-        targets_list = [target.user_name for target in targets]
+        directions= {'get_following': 'following',
+                     'get_followers': 'followers'
+                    }
+
+        methods = {"get_following" : "get_follow_info",
+                   "get_followers": "get_follow_info"}
+
+        task_args['usernames'] = [target.user_name for target in targets]
+        task_args['count'] = task.count
+        task_args['direction'] = directions[task.operation]
 
 
 
+        method_to_run = self.__getattribute__(methods[task.operation])
 
 
-        method_to_run = self.__getattribute__(task.operation)
-
-        logger.log('WORKER:run_task: ' + task_id + str(method_to_run))
 
         if method_to_run and task_args:
-            method_to_run(username = task.username, task_args = targets_list)
+            method_to_run(username = task.username, task_args = task_args,  task_id = task.task_id)
     
     #@start_thread
     def get_follow_info(self, username, task_args, task_id = None):
@@ -76,21 +86,29 @@ class Worker(object):
 
         if not known_usernames:
             logger.log('WORKER:get_follow_info: Get task from database %s' % task_id)
-            task = get_task_from_database(task_id)
+            task = InstaBotTask.objects.get(task_id=str(task_id))
 
             logger.log('WORKER:get_follow_info: Change task %s status to "In pogress"' % str(task_id))
             task.status = 'In pogress'
             task.save()
 
         selenium_bot = selenium_webdriver()
-        selenium_bot.login_user(self.login, self.password)
+        try:
+            selenium_bot.login_user(self.login, self.password)
+        except:
+            selenium_bot.make_screenshot()
+            selenium_bot.close_bot()
 
         bot = Bot()
         bot.login_user(self.login, self.password)  # TO DO: SAVE COOKIES
 
         for username in usernames:
             if not known_usernames:
-                follow_names = selenium_bot.get_follow_names(username, direction, count)
+                try:
+                    follow_names = selenium_bot.get_follow_names(username, direction, int(count))
+                except:
+                    selenium_bot.make_screenshot()
+                    selenium_bot.close_bot()
             else:
                 logger.log('WORKER:get_follow_info: Work with known_usernames')
                 follow_names = known_usernames
