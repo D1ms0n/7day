@@ -118,11 +118,11 @@ class Register extends Component {
     let apiService = new ApiService();
     preLoader.style.display='block';
     apiService.postRequest(`${config.api.register}`,JSON.stringify(jsonBody))
-      .then(function (result) {
+      .then((result) => {
         console.log(result);
           preLoader.style.display='none';
       })
-      .catch(function (e) {
+      .catch((e) => {
         console.log(e);
           preLoader.style.display='none';
       });

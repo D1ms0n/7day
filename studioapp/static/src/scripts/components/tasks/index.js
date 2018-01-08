@@ -11,28 +11,33 @@ class Tasks extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      resultList: []
+      taskstList: []
     };
     this.getTasksList = this.getTasksList.bind(this);
   }
-  getTasksList(){
-    const preLoader = document.getElementById('preLoader');    
+
+  getTasksList() {
+    const preLoader = document.getElementById('preLoader');
     let apiService = new ApiService();
     console.log('user id',decodeURIComponent(CookiesService.getCookie('userId')));
     preLoader.style.display='block';
     apiService.getRequest(`${config.api.tasks}`)
-        .then(function (result) {          
-          console.log(result);
+        .then((result) => {  
+          this.setState({
+            'taskstList': result
+          });        
           preLoader.style.display='none';
         })
-        .catch(function (e) {
+        .catch((e) => {
           console.log(e);
           preLoader.style.display='none';
         });
   }
+  
   componentDidMount(){    
     this.getTasksList();
   }
+
   render() {
       return (
       <div>
@@ -43,7 +48,7 @@ class Tasks extends Component {
               <div className="row">
                 <div className="col-md-12">
                   <h2>TASKS</h2>
-                  <TasksList list={this.state.resultList}/>
+                  <TasksList taskstList={this.state.taskstList}/>
                 </div>
               </div>
             </div>

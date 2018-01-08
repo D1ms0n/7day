@@ -4,7 +4,9 @@ import SearchResult from './modules/searchResult';
 import Footer from './../footer/';
 import config from './../../configs/index';
 import ApiService from './../../services/api/index';
+import { CookiesService } from './../../services/cookies';
 import serialize from './../../services/serialize/index';
+import { setTimeout } from 'timers';
 
 class Search extends Component {
 
@@ -20,20 +22,44 @@ class Search extends Component {
     this.checkUnCheckAll = this.checkUnCheckAll.bind(this);
   }  
   followAll(){
-    let usersNames = [];
+    const preLoader = document.getElementById('preLoader');
+    const showMassage = document.getElementById('showMassage');
+    let apiService = new ApiService();
     let usersList = document.querySelectorAll('.js-for-check:checked');
 
-    for( let i = 0; i < usersList.length; i++){
-        if ( usersList[i].followedbyviewer === true) { continue; } // ignore if already follow
-        usersNames.push(usersList[i].value);
+    if ( usersList.length === 0 ){
+      showMassage.classList.add('in');      
+      setTimeout(function(){
+        showMassage.classList.remove('in');
+      },3000);
+      return false;
     }
 
-    const usersNamesObject = {
-        "user_names": usersNames,
-        "direction": 'follow'
-    };
-    const usersNamesJson = JSON.stringify(usersNamesObject);
-    console.log(usersNamesJson);
+    let targets = [];
+    let userName = "test_name";
+    // decodeURIComponent(CookiesService.getCookie('userId'))
+    for( let i = 0; i < usersList.length; i++){
+        if ( usersList[i].followedbyviewer === true) { continue; } // ignore if already follow
+        targets.push(usersList[i].value);
+    }
+
+    let targetsJSON = {
+        "operation": "follow", 
+        "username": userName,
+        "targets": targets
+    };    
+
+    targetsJSON = JSON.stringify(targetsJSON);
+   
+    preLoader.style.display='block';
+    apiService.postRequest(`${config.api.tasks}?${targetsJSON}`)
+      .then((result) => {      
+        preLoader.style.display='none';
+      })
+      .catch((e) => {
+          console.log(e);
+          preLoader.style.display='none';
+      });
   }
   checkUnCheckAll(){
 
@@ -62,13 +88,13 @@ class Search extends Component {
 
     preLoader.style.display = 'block';
     apiService.getRequest(`${config.api.search}?${formParams}`)
-      .then(result => {
+      .then((result) => {
         this.setState({
           'resultList':result
         });        
         preLoader.style.display='none';
       })
-      .catch( e => {
+      .catch((e) => {
           console.log(e);
           preLoader.style.display='none';
       });
@@ -109,11 +135,11 @@ class Search extends Component {
                 <div className="form-group">
                   <div className="custom-control custom-checkbox">
                     <input type="checkbox" name="follows_viewer" className="custom-control-input" id="followers" />
-                    <label className="custom-control-label" htmlFor="followers">Get followers</label>
+                    <label className="custom-control-label" htmlFor="followers">follows viewer</label>
                   </div>
                   <div className="custom-control custom-checkbox">
                     <input type="checkbox" name="followed_by_viewer" className="custom-control-input" id="follows" />
-                    <label className="custom-control-label" htmlFor="follows">Get follows</label>
+                    <label className="custom-control-label" htmlFor="follows">followed by viewer</label>
                   </div> 
                 </div>                 
                 <div className="form-group">
@@ -139,25 +165,28 @@ class Search extends Component {
                 <div className="form-group">
                   <button type="submit" className="btn btn-primary">Search</button>
                 </div>   
-              </form>
-              <div className="panel panel-default">
-                <div className="panel-body">
-                  <div className="form-group">
-                    <div className="custom-control custom-checkbox">
-                      <input onChange={this.checkUnCheckAll}
-                      type="checkbox" name="checkbox" className="custom-control-input" id="checkUncheck" />
-                      <label className="custom-control-label" htmlFor="checkUncheck">Check/unCheckAll</label>
-                    </div>   
-                  </div>                           
-                  <button
-                    className="btn btn-success"
-                    onClick={() => this.followAll()}>
-                    Follow on Selected
-                  </button>
-                </div>
-              </div>             
+              </form>                       
             </div> 
             <div className="col-md-8 col-sm-8">
+              <div className="panel panel-default">
+                  <div className="panel-body">
+                    <div className="form-group">
+                      <div className="custom-control custom-checkbox">
+                        <input onChange={this.checkUnCheckAll}
+                        type="checkbox" name="checkbox" className="custom-control-input" id="checkUncheck" />
+                        <label className="custom-control-label" htmlFor="checkUncheck">Check/unCheckAll</label>
+                      </div>   
+                    </div>                           
+                    <button
+                      className="btn btn-success"                     
+                      onClick={() => this.followAll()}>
+                      Follow on Selected
+                    </button>
+                  </div>
+                </div>    
+                <div id="showMassage" className="absolute upper alert alert-danger fade" role="alert">
+                    Please choose someone
+                </div>
                 <SearchResult list={this.state.resultList} />
             </div>            
           </div>

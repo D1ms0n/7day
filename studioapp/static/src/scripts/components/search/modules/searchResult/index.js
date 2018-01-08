@@ -5,36 +5,13 @@ import ApiService from './../../../../services/api/index';
 class SearchResult extends Component {
 
   constructor(props) {
-    super(props);
-    this.followUnFollowThis = this.followUnFollowThis.bind(this);    
+    super(props);   
   }  
-  followUnFollowThis(name,action){
-    let userNameObject;
-    switch (action) {
-      case 'follow':
-        action = 'follow';
-        break;
-      case 'unfollow':
-        action = 'unfollow';
-        break;
-      default:
-        action = '';
-    }
-    userNameObject = {
-      "user_names": name,
-      "direction": action
-    };
-
-    const userNameJson = JSON.stringify(userNameObject);    
-    const preLoader = document.getElementById('preLoader');
-    let apiService = new ApiService();
-    console.log(userNameJson);
-  };
   render(){
     let searchList = this.props.list;
     let notFound = '';
     if ( searchList.length === 0 ){
-      notFound = <div className="alert alert-warning" role="alert">
+      notFound = <div className="absolute alert alert-warning" role="alert">
                     No results!
                   </div>
     }
@@ -62,19 +39,7 @@ class SearchResult extends Component {
               </div>
               <div className="follows">
                 Follows : {searchListItem.follow_count}
-              </div>
-              <button
-                className="btn btn-success"
-                id="subscribe"
-                onClick={() => this.followUnFollowThis(searchListItem.user_name,'follow')}>
-                Follow
-              </button>
-              <button
-                className="btn btn-info hidden"
-                id="unsubscribe"
-                onClick={() => this.followUnFollowThis(searchListItem.user_name,'unfollow')}>
-                UnFollow
-              </button>
+              </div>       
               <input className="form-check-input js-for-check" 
                     type="checkbox"
                     name="checkbox"
