@@ -1,9 +1,9 @@
 import time
 
 from rest_framework import serializers
-from studioapp.models import Insta_user
-from studioapp.models import Insta_bot_task
-from studioapp.models import TaskArg
+from studioapp.models import InstaUser
+from studioapp.models import InstaBotTask
+from studioapp.models import TaskTarget
 from studioapp.models import InstaMedia
 
 from logger import Logger
@@ -12,7 +12,7 @@ logger = Logger('view')
 
 class InstaUserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Insta_user
+        model = InstaUser
         fields = ('user_id',
                   'user_name',
                   'user_full_name',
@@ -30,33 +30,34 @@ class InstaUserSerializer(serializers.ModelSerializer):
                   'is_private')
 
 
-class TaskArgSerializer(serializers.ModelSerializer):
+class TaskTargetSerializer(serializers.ModelSerializer):
     class Meta:
-        model = TaskArg
+        model = TaskTarget
         fields = ('user_name',
                   'tag_name',
                   'photo_id')
 
 class InstaBotTaskSerializer(serializers.ModelSerializer):
 
-    #args = TaskArgSerializer(many = True)
+    targets = TaskTargetSerializer(many = True)
 
     class Meta:
-        model = Insta_bot_task
+        model = InstaBotTask
         fields = ('task_id',
                   'operation',
                   'username',
                   'create_time',
                   'status',
-                  'args')
+                  'targets',
+                  )
 
-    #def create(self, validated_data):
-    #    arg_data = validated_data.pop('args')
-    #    task = Insta_bot_task.objects.create(**validated_data)
+    def create(self, validated_data):
+        targets = validated_data.pop('targets')
+        task = InstaBotTask.objects.create(**validated_data)
 
-    #    for arg in arg_data:
-    #        TaskArg.objects.create(task_id=task,**arg)
-    #    return task
+        for target in targets:
+            TaskTarget.objects.create(task_id=task,**target)
+        return task
 
 
 class InstaMediaSerializer(serializers.ModelSerializer):

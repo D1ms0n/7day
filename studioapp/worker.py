@@ -10,8 +10,8 @@ from instabot import Bot
 from logger import Logger
 from django_datastore import create_update_user, create_relationship, create_task_to_user_map, get_task_from_database, create_update_task, get_user_from_database
 
-from .models import Insta_user
-from .models import Insta_bot_task
+from .models import InstaUser
+from .models import InstaBotTask
 from .models import Task_to_user_map
 from .models import Relationship
 from .models import InstaMedia
@@ -44,7 +44,7 @@ class Worker(object):
         return task
 
     def run_task(self, task_id):
-        task      = Insta_bot_task.objects.get(task_id = task_id)
+        task      = InstaBotTask.objects.get(task_id = task_id)
 
         #task_args = json.loads(task.args.replace("'", '"'))
 
@@ -174,7 +174,7 @@ class Worker(object):
         users_from_task_list = []
         for task_to_user_map in task_to_user_maps:
             user_id= task_to_user_map.__dict__['user_id_id']
-            user = Insta_user.objects.get(user_id = user_id)
+            user = InstaUser.objects.get(user_id = user_id)
             user_dict = user.__dict__
             user_dict['_state'] = ''
             users_from_task_list.append(user_dict)

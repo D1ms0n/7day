@@ -25,7 +25,7 @@ class Insta_tag(models.Model):
     tag_images_count = models.IntegerField(blank=True,
         verbose_name=u"Image count")
 
-class Insta_user(models.Model):
+class InstaUser(models.Model):
     class Meta(object):
         verbose_name = u"User"
         verbose_name_plural = u"Users"
@@ -49,7 +49,7 @@ class Insta_user(models.Model):
     is_private           = models.CharField(max_length=256, blank=True, null= True)
 
 
-class Insta_bot_task(models.Model):
+class InstaBotTask(models.Model):
     class Meta(object):
         verbose_name = u"Task"
         verbose_name_plural = u"Tasks"
@@ -61,7 +61,7 @@ class Insta_bot_task(models.Model):
     username    = models.CharField(max_length = 256, blank = False, verbose_name=u"User_login", null= True)
     status      = models.CharField(max_length = 256, blank = False, verbose_name=u"Status", null= True)
     create_time = models.CharField(max_length = 256, blank = False, verbose_name=u"Create time", null= True)
-    args        = models.CharField(max_length = 256, blank = False, verbose_name=u"Args", null= True)
+    #args        = models.CharField(max_length = 256, blank = False, verbose_name=u"Args", null= True)
 
 class Task_to_user_map(models.Model):
     class Meta(object):
@@ -71,12 +71,12 @@ class Task_to_user_map(models.Model):
         return u"%s" % (self.task_id)
 
     map_id =  models.AutoField(primary_key=True)
-    task_id = models.ForeignKey(Insta_bot_task, on_delete = models.CASCADE)
-    user_id = models.ForeignKey(Insta_user,     on_delete = models.CASCADE,  null= True)
+    task_id = models.ForeignKey(InstaBotTask, on_delete = models.CASCADE)
+    user_id = models.ForeignKey(InstaUser,     on_delete = models.CASCADE,  null= True)
     #user_name = models.CharField(max_length=256, blank=False, verbose_name=u"User_login", null= True)                   #TODO: change name to id
 
 
-class TaskArg(models.Model):
+class TaskTarget(models.Model):
     class Meta(object):
         verbose_name = u"Task_to_arg_map"
         verbose_name_plural = u"Task_to_arg_maps"
@@ -84,7 +84,7 @@ class TaskArg(models.Model):
         return u"%s" % (self.task_id)
 
     map_id =  models.AutoField(primary_key=True)
-    #task_id = models.ForeignKey(Insta_bot_task, related_name='args', on_delete = models.CASCADE)
+    task = models.ForeignKey(InstaBotTask, related_name='targets', on_delete = models.CASCADE)
     user_name = models.CharField(max_length=256, blank=True, verbose_name=u"User_name", null= True)
     tag_name = models.CharField(max_length=256, blank=True, verbose_name=u"Tag_name", null=True)
     photo_id = models.CharField(max_length=256, blank=True, verbose_name=u"Photo_id", null=True)
@@ -115,7 +115,7 @@ class InstaMedia(models.Model):
     image_id = models.CharField(max_length=256, blank=False, verbose_name=u"Id")
     display_src = models.CharField(max_length=256, blank=False, verbose_name=u"Caption")
     caption  = models.TextField(blank=True, verbose_name=u"Caption")
-    image_author = models.ForeignKey(Insta_user, on_delete=models.CASCADE)
+    image_author = models.ForeignKey(InstaUser, on_delete=models.CASCADE)
     images_likes_count = models.CharField(max_length=256, blank=True, verbose_name=u"Likes count")
     code = models.CharField(max_length=256, blank=True, verbose_name=u"Code")
 

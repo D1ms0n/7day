@@ -3,8 +3,8 @@ import time
 import json
 
 
-from .models import Insta_user
-from .models import Insta_bot_task
+from .models import InstaUser
+from .models import InstaBotTask
 from .models import Task_to_user_map
 from .models import Relationship
 from .models import InstaMedia
@@ -16,7 +16,7 @@ def create_update_user(full_info):
     if not full_info:
         return None
     try:
-        user = Insta_user.objects.get(user_id=full_info[u'user']['id'])
+        user = InstaUser.objects.get(user_id=full_info[u'user']['id'])
     except:
         user = None
 
@@ -24,7 +24,7 @@ def create_update_user(full_info):
     if not user:
         logger.log('WORKER:get_follow_info: Create new User %s ' % full_info[u'user']['id'])
 
-        user = Insta_user(user_id              = full_info[u'user']['id'],
+        user = InstaUser(user_id              = full_info[u'user']['id'],
                           user_name            = full_info[u'user']['username'],
                           user_full_name       = full_info[u'user']['full_name'],
                           followers_count      = int(full_info['user']['followed_by']['count']),
@@ -105,9 +105,9 @@ def create_update_task(operation, username, args, status = None, task_id = None)
 def get_user_from_database(user_id = None, user_name = None):
     try:
         if user_id:
-            user = Insta_user.objects.get(user_id = user_id)
+            user = InstaUser.objects.get(user_id = user_id)
         elif user_name:
-            user = Insta_user.objects.get(user_name = user_name)
+            user = InstaUser.objects.get(user_name = user_name)
     except:
         user = None
     return user
@@ -126,7 +126,7 @@ def get_users_from_database(params):
     followed_user        = params.get('followed_user')
     followed_by_user     = params.get('followed_by_user')
 
-    queryset = Insta_user.objects.all()
+    queryset = InstaUser.objects.all()
 
     if followers_count__gte:
         queryset = queryset.filter(followers_count__gte=followers_count__gte)
@@ -148,15 +148,15 @@ def get_users_from_database(params):
 
     if task_id:
         user_ids = Task_to_user_map.objects.filter(task_id=task_id).values('user_id')
-        queryset = Insta_user.objects.filter(user_id__in=user_ids)
+        queryset = InstaUser.objects.filter(user_id__in=user_ids)
 
     if followed_user:
         followers_ids = Relationship.objects.filter(followed_user_id=followed_user).values('user_id')
-        queryset = Insta_user.objects.filter(user_id__in=followers_ids)
+        queryset = InstaUser.objects.filter(user_id__in=followers_ids)
 
     if followed_by_user:
         following_ids = Relationship.objects.filter(user_id=followed_by_user).values('followed_user_id')
-        queryset = Insta_user.objects.filter(user_id__in=following_ids)
+        queryset = InstaUser.objects.filter(user_id__in=following_ids)
 
     if order_by:
         queryset = queryset.order_by(order_by)
@@ -165,7 +165,7 @@ def get_users_from_database(params):
 
 
 def get_task_from_database(id):
-    task = Insta_bot_task.objects.get(task_id = id)
+    task = InstaBotTask.objects.get(task_id = id)
     return task
 
 def get_tasks_from_database(params):
