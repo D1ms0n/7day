@@ -31,12 +31,12 @@ class Login extends Component {
       };
       preLoader.style.display='block';
       apiService.postRequest(`${config.api.login}`,jsonBody)
-        .then(function (result) {
+        .then((result) => {
           console.log(result);
           CookiesService.setCookie('userId',encodeURIComponent(result.id),1)
           preLoader.style.display='none';
         })
-        .catch(function (e) {
+        .catch((e) => {
           console.log(e);
             preLoader.style.display='none';
         });

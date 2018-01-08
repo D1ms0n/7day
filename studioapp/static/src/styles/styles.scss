@@ -20,6 +20,13 @@
     }
 }
 
+.absolute{
+    position: absolute;
+    z-index: 1;
+}
+.upper{
+    z-index: 2;
+}
 .btn.showFilters {
     display: none;   
     cursor:pointer;
