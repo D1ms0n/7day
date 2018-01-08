@@ -61,6 +61,7 @@ class InstaBotTask(models.Model):
     username    = models.CharField(max_length = 256, blank = False, verbose_name=u"User_login", null= True)
     status      = models.CharField(max_length = 256, blank = False, verbose_name=u"Status", null= True)
     create_time = models.CharField(max_length = 256, blank = False, verbose_name=u"Create time", null= True)
+    count       = models.CharField(max_length = 256, blank = False, verbose_name=u"Count", null= True)
     #args        = models.CharField(max_length = 256, blank = False, verbose_name=u"Args", null= True)
 
 class Task_to_user_map(models.Model):

@@ -48,6 +48,7 @@ class InstaBotTaskSerializer(serializers.ModelSerializer):
                   'username',
                   'create_time',
                   'status',
+                  'count',
                   'targets',
                   )
 

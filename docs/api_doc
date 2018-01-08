@@ -55,7 +55,7 @@ Tasks:
                 username
                 targets     (it can be user_names, tag_names, photo_ids)
             example:
-                {"operation": "follow", "username": "test_name", "targets": ["dima", "sasha"]}
+                {"operation": "follow", "username": "test_name", "targets": ["dima", "sasha"], "count":15}
 
 
 #######################################################################################################################

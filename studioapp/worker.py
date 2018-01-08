@@ -12,6 +12,7 @@ from django_datastore import create_update_user, create_relationship, create_tas
 
 from .models import InstaUser
 from .models import InstaBotTask
+from .models import TaskTarget
 from .models import Task_to_user_map
 from .models import Relationship
 from .models import InstaMedia
@@ -46,15 +47,21 @@ class Worker(object):
     def run_task(self, task_id):
         task      = InstaBotTask.objects.get(task_id = task_id)
 
-        #task_args = json.loads(task.args.replace("'", '"'))
+        task_args = {}
+        targets = TaskTarget.objects.filter(task = task)
+
+        targets_list = [target.user_name for target in targets]
+
+
+
+
 
         method_to_run = self.__getattribute__(task.operation)
 
-        logger.log('WORKER:run_task: ' + task_id)
-        task_args = task.args.values()
+        logger.log('WORKER:run_task: ' + task_id + str(method_to_run))
 
         if method_to_run and task_args:
-            method_to_run(username = task.username, task_args = task_args)
+            method_to_run(username = task.username, task_args = targets_list)
     
     #@start_thread
     def get_follow_info(self, username, task_args, task_id = None):
