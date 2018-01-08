@@ -51,11 +51,13 @@ Tasks:
         URL: /api/tasks/
         TYPE: POST
             attributes:
-                operation (follow/unfollow/like/get_follow_info...)
+                operation (follow/unfollow/get_following/get_followers...)
                 username
                 targets     (it can be user_names, tag_names, photo_ids)
+                count
+
             example:
-                {"operation": "follow", "username": "test_name", "targets": ["dima", "sasha"], "count":15}
+                {"operation": "get_following", "username": "test_name", "targets": ["dima", "sasha"], "count":15}
 
 
 #######################################################################################################################

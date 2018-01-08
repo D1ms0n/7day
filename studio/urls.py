@@ -45,7 +45,7 @@ urlpatterns = [
 
     url(r'^api/tasks/$',                              app_views.InstaBotTaskList.as_view(),   name='tasks'),
     url(r'^api/tasks/(?P<task_id>[0-9]+)/$',          app_views.InstaBotTaskDetail.as_view(), name='task'),
-    url(r'^api/tasks/(?P<task_id>[0-9]+)/run$',       app_views.run_task ,                    name='run_task'),
+    url(r'^api/tasks/(?P<task_id>[0-9]+)/run/$',       app_views.run_task ,                    name='run_task'),
 
     url(r'^api/medias/$',                              app_views.InstaMediaList.as_view(),   name='medias'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

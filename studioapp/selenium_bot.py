@@ -138,7 +138,7 @@ class selenium_webdriver(object):
         self.driver.get(insta_user_link % username)
         time.sleep(1)
 
-        self.logger.log('SELENIUM_BOT:get_follow_names: Try to find button')
+        self.logger.log('SELENIUM_BOT:get_follow_names: Try to find button ' + direction)
         button = self.driver.find_element_by_xpath("//a[@href='/%s/%s/']" % (username.lower(), direction))
  
         self.logger.log('SELENIUM_BOT:get_follow_names: Try to click button')        
