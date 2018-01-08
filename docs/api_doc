@@ -53,9 +53,9 @@ Tasks:
             attributes:
                 operation (follow/unfollow/like/get_follow_info...)
                 username
-                args      (it can be user_names, tag_names, photo_ids)
+                targets     (it can be user_names, tag_names, photo_ids)
             example:
-                {operation: "follow", username: "dima", args: [{user_name: "new_arg"}, {user_name: "lalala"}]}
+                {"operation": "follow", "username": "test_name", "targets": ["dima", "sasha"]}
 
 
 #######################################################################################################################
