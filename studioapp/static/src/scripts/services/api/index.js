@@ -46,9 +46,9 @@ export default class ApiService {
           method: 'POST',
           credentials: 'same-origin',
           headers: {
-              'Content-Type': 'application/json'
+              'Content-type': 'application/json'
           },
-          body: JSON.stringify(body)
+          body: body
         }
       );
   }

@@ -39,14 +39,18 @@ class SearchResult extends Component {
               </div>
               <div className="follows">
                 Follows : {searchListItem.follow_count}
-              </div>       
-              <input className="form-check-input js-for-check" 
-                    type="checkbox"
-                    name="checkbox"
-                    followedbyviewer = {searchListItem.followed_by_viewer}
-                    id={searchListItem.user_id}
-                    value={searchListItem.user_name}
-                    aria-label="..." />
+              </div>    
+              <div className="custom-control custom-checkbox">
+                <input className="custom-control-input form-check-input js-for-check" 
+                      type="checkbox"
+                      name="checkbox"
+                      followedbyviewer = {searchListItem.followed_by_viewer}
+                      id={searchListItem.user_id}
+                      value={searchListItem.user_name}
+                      aria-label="..." />
+                <label className="custom-control-label" htmlFor={searchListItem.user_id}></label>
+              </div>                    
+              
             </li>
           )}
         </ul>
