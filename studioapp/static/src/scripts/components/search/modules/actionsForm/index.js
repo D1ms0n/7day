@@ -8,6 +8,7 @@ class ActionsForm extends Component {
         super(props);
         this.checkUnCheckAll = this.checkUnCheckAll.bind(this);
         this.createTask = this.createTask.bind(this);
+        this.showMassage = this.showMassage.bind(this);
     }
     checkUnCheckAll(){
 
@@ -25,10 +26,18 @@ class ActionsForm extends Component {
        }
       }
     }    
-    createTask(){
-      const preLoader = document.getElementById('preLoader');
+    showMassage(text,className){
       const showMassage = document.getElementById('showMassage');
-      const taskMassage = document.getElementById('taskMassage');
+      showMassage.className = 'absolute upper rigth-top alert fade';      
+      showMassage.innerHTML = text;            
+      showMassage.classList.add(className);  
+      showMassage.classList.add('in'); 
+      setTimeout(function(){
+        showMassage.classList.remove('in');
+      },2000);
+    }
+    createTask(){
+      const preLoader = document.getElementById('preLoader');    
       const actions = document.getElementById('actions').value || '';
       const count = document.getElementById('count').value || '';      
       let usersList = document.querySelectorAll('.js-for-check:checked');
@@ -37,11 +46,7 @@ class ActionsForm extends Component {
       let apiService = new ApiService();
 
       if ( usersList.length === 0 ){
-        showMassage.classList.add('in');     
-        showMassage.innerHTML = 'Please choose someone' 
-        setTimeout(function(){
-          showMassage.classList.remove('in');
-        },2000);
+        this.showMassage('Please choose someone','alert-danger');
         return false;
       }
       // decodeURIComponent(CookiesService.getCookie('userId'))
@@ -60,21 +65,13 @@ class ActionsForm extends Component {
 
       preLoader.style.display='block';
       apiService.postRequest(config.api.tasks,targetsJSON)
-        .then((result) => {   
-          if ( result.task_id ){
-            taskMassage.classList.add('in');      
-            setTimeout(function(){
-              taskMassage.classList.remove('in');
-            },2000);        
-          } else {
-            showMassage.innerHTML = JSON.parse(result);
-            showMassage.classList.add('in');     
-            setTimeout(function(){
-              showMassage.classList.remove('in');
-            },2000);
-          }
-         
+        .then((result) => {                    
           preLoader.style.display='none';
+          if ( result.task_id ){
+            this.showMassage('Task created !','alert-success');                 
+          } else {
+            this.showMassage(result,'alert-danger');  
+          }  
         })
         .catch((e) => {
             console.log(e);
@@ -84,45 +81,41 @@ class ActionsForm extends Component {
     
     render() {
       return (
-        <div>                   
-          <div id="taskMassage" className="absolute upper rigth-top alert alert-success fade" role="alert">
-              Task created !
-          </div>
-          <div id="showMassage" className="absolute upper rigth-top alert alert-danger fade" role="alert">
-              
-          </div>
+        <div> 
+          <div id="showMassage" role="alert"></div>
           <div className="panel panel-default">
             <div className="panel-body">
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label>Select action</label>
-                  <select id="actions" className="custom-select custom-select-lg" name="action">
-                    <option value="follow">follow</option>
-                    <option value="unfollow">unfollow</option>
-                    <option value="get_following">get following</option>
-                    <option value="get_followers">get followers</option>                  
-                  </select>   
-                </div> 
-                <div className="form-group">
-                  <label>Count</label>
-                  <input id="count" type="number" className="form-control" />
+              <div className="row">
+                <div className="col-md-6">
+                  <div className="form-group">
+                    <label>Select action</label>
+                    <select id="actions" className="custom-select custom-select-lg" name="action">
+                      <option value="follow">follow</option>
+                      <option value="unfollow">unfollow</option>
+                      <option value="get_following">get following</option>
+                      <option value="get_followers">get followers</option>                  
+                    </select>   
+                  </div> 
+                  <button
+                    className="btn btn-success"                     
+                    onClick={() => this.createTask()}>
+                      Create task
+                  </button>
                 </div>
-              </div>
-              <div className="col-md-6">
-                <div className="form-group">
-                  <div className="custom-control custom-checkbox">
-                    <input onChange={this.checkUnCheckAll}
-                    type="checkbox" name="checkbox" className="custom-control-input" id="checkUncheck" />
-                    <label className="custom-control-label" htmlFor="checkUncheck">Check/unCheckAll</label>
-                  </div>   
+                <div className="col-md-6">                
+                  <div className="form-group">
+                    <label>Count</label>
+                    <input id="count" type="number" className="form-control" />
+                  </div>
+                  <div className="form-group">
+                    <div className="custom-control custom-checkbox">
+                      <input onChange={this.checkUnCheckAll}
+                      type="checkbox" name="checkbox" className="custom-control-input" id="checkUncheck" />
+                      <label className="custom-control-label" htmlFor="checkUncheck">Check/unCheckAll</label>
+                    </div>   
+                  </div>
                 </div>
-              </div>
-              <div className="clearfix"></div>    
-              <button
-                className="btn btn-success"                     
-                onClick={() => this.createTask()}>
-                  Create task
-              </button>
+              </div>  
             </div>
           </div>  
         </div>
