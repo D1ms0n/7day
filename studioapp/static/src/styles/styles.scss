@@ -1,6 +1,11 @@
 
 @import "~bootstrap/scss/bootstrap";
+@import "./fonts/styles";
+@import "./instashop/styles";
 
+body *{
+    word-break: break-word;
+}
 #preLoader{
     display: none;
     position: absolute;
