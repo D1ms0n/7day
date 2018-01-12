@@ -23,6 +23,9 @@ class Menu extends Component {
                         </li>
                         <li className="nav-item">                         
                           <Link className="nav-link" to="/tasks">tasks</Link>
+                        </li>  
+                        <li className="nav-item">                         
+                          <Link className="nav-link" to="/instashop">instashop</Link>
                         </li>                        
                       </ul>                      
                     </nav>

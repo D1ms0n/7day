@@ -1,6 +1,11 @@
 
 @import "~bootstrap/scss/bootstrap";
+@import "./fonts/styles";
+@import "./instashop/styles";
 
+body *{
+    word-break: break-word;
+}
 #preLoader{
     display: none;
     position: absolute;
@@ -27,15 +32,19 @@
 .upper{
     z-index: 2;
 }
+.rigth-top{
+    right: 20px;
+    top: 20px;
+}
 .btn.showFilters {
     display: none;   
     cursor:pointer;
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 768px) {
         display: block;
     }
 }  
 .searchFormOnMobile {   
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 768px) {
         display: none;
     }
 }  
@@ -50,6 +59,14 @@ select{
 }
 input[type=checkbox], input[type=radio]{
     cursor: pointer
+}
+#searchForm{
+    position: fixed;
+    width: 25%;
+    @media screen and (max-width: 768px) {
+        position: static;
+        width: 100%;
+    }
 }
 form {
     label{
@@ -68,7 +85,7 @@ form {
         @media screen and (max-width: 500px) {
            padding-left: 0;
         }
-        .form-check-input{
+        .custom-checkbox{
             width: 20px;
             height: 20px;
             position: absolute;

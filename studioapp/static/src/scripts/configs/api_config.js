@@ -4,6 +4,6 @@ export default {
     register: '/register/',   
     search: '/users/',
     tasks: '/tasks/',
-    task: '/task/'
-    
+    task: '/task/',
+    instashop: '/instashop'    
 };

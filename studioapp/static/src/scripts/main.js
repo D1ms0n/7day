@@ -5,6 +5,9 @@ import Login from './components/login';
 import Search from './components/search';
 import Tasks from './components/tasks';
 import Register from './components/register';
+import InstaShop from './components/instashop';
+import Basket from './components/instashop/modules/basket';
+
 import '../styles/styles.scss';
 import 'bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 
@@ -13,7 +16,9 @@ ReactDOM.render(
         <Route path="/" component={Login}/>
         <Route path="/search" component={Search}/>       
         <Route path="/tasks" component={Tasks}/>
-        <Route path="/register" component={Register}/>        
+        <Route path="/register" component={Register}/>      
+        <Route path="/instashop" component={InstaShop}/>      
+        <Route path="/basket" component={Basket}/>        
     </Router>,
   document.getElementById('page-content')
 );
