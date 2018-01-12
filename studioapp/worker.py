@@ -79,7 +79,7 @@ class Worker(object):
         time_now =  time.strftime('%X %x').replace(' ', '_').replace('/', '_').replace(':', '_')
         logger.log('WORKER:get_follow_info: ' + str(time_now) + str(task_id))
 
-        count     = task_args['count']
+        count     = task_args.get('count', 10)
         direction = task_args['direction']
         usernames = task_args['usernames']
         known_usernames = task_args.get('known_usernames')
@@ -95,16 +95,21 @@ class Worker(object):
         selenium_bot = selenium_webdriver()
         try:
             selenium_bot.login_user(self.login, self.password)
-        except:
+        except Exception as e:
+            logger.log(e)
             selenium_bot.make_screenshot()
             selenium_bot.close_bot()
 
         bot = Bot()
-        bot.login_user(self.login, self.password)  # TO DO: SAVE COOKIES
+        try:
+            bot.login_user(self.login, self.password)  # TO DO: SAVE COOKIES
+        except Exception as e:
+            logger.log(str(e))
 
         for username in usernames:
             if not known_usernames:
                 try:
+                    logger.log('get_follow_names' + username + direction + str(count))
                     follow_names = selenium_bot.get_follow_names(username, direction, int(count))
                 except:
                     selenium_bot.make_screenshot()
@@ -167,7 +172,7 @@ class Worker(object):
     def get_medias(self, user_name):
         bot = Bot()
         #bot.login_user(self.login, self.password)
-        user_info = bot.get_info(user_name)
+        user_info = bot.get_info(user_name, loggined = False)
         logger.log(user_info['user']['media']['nodes'])
         return user_info['user']['media']['nodes']
 

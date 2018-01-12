@@ -5,6 +5,7 @@ from studioapp.models import InstaUser
 from studioapp.models import InstaBotTask
 from studioapp.models import TaskTarget
 from studioapp.models import InstaMedia
+from .models import InstaShopItem
 
 from logger import Logger
 logger = Logger('view')
@@ -72,3 +73,13 @@ class InstaMediaSerializer(serializers.ModelSerializer):
                   'image_author',
                   'images_likes_count',
                   'code')
+
+class InstaShopItemSerializer(serializers.ModelSerializer):
+    media = InstaMediaSerializer()
+
+    class Meta:
+        model = InstaShopItem
+        fields = ('media',
+                  'price',
+                  'description',
+                  'category')

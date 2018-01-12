@@ -25,17 +25,20 @@ class Bot(object):
         self.url_login = 'https://www.instagram.com/accounts/login/ajax/'
         self.logger = Logger('instabot')
 
-    def get_info(self, name):
+    def get_info(self, name, loggined = True):
         self.logger.log('Try to get info for %s' % name)
         info = {}
         answer = ''
-        #answer = self.s.get(user_info_link % name)
-        self.anon_session = requests.Session()
 
         link = user_info_link % name
         self.logger.log('Link: ' + link)
 
-        answer = self.anon_session.get(link)
+        if loggined:
+            answer = self.s.get(user_info_link % name)
+        else:
+            self.anon_session = requests.Session()
+            answer = self.anon_session.get(link)
+
 
         if answer.status_code != 200:
             self.logger.log('Answer status_code %d' % answer.status_code)

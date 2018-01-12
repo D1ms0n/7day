@@ -122,6 +122,18 @@ class InstaMedia(models.Model):
 
     #images_tags =  models.ManyToManyField(Insta_tag)
 
+class InstaShopItem(models.Model):
+    class Meta(object):
+        verbose_name = u"Shop item"
+        verbose_name_plural = u"Shop items"
+    def __unicode__(self):
+        #self.content_part=self.image_id[0:100]
+        return u"%s..." % (self.media)
+
+    media    = models.ForeignKey(InstaMedia, on_delete=models.CASCADE)
+    price  = models.CharField(max_length=256, blank=False, verbose_name=u"Price")
+    category = models.CharField(max_length=256, blank=True, verbose_name=u"Category")
+    description  = models.TextField(blank=True, verbose_name=u"Description")
 
 
 
