@@ -57,8 +57,12 @@ Tasks:
                 count
 
             example:
-                {"operation": "get_following", "username": "test_name", "targets": ["dima", "sasha"], "count":15}
+                {"operation": "get_following", "username": "test_name", "targets": ["studio_7_day_2"], "count":15}
+Insta_shop:
 
+Get all medias:
+    URL: /api/medias/
+    TYPE: GET
 
 #######################################################################################################################
 
