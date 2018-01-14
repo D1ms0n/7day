@@ -5,5 +5,5 @@ export default {
     search: '/users/',
     tasks: '/tasks/',
     task: '/task/',
-    instashop: '/instashop'    
+    instashop: '/medias/'    
 };
