@@ -16,8 +16,15 @@ class GoodsList extends Component {
     }
     render() {
       let goodsList = this.props.goodsList;
+      let notFound = '';
+      if ( goodsList.length === 0 ){
+      notFound = <div className="absolute alert alert-warning" role="alert">
+                    No results!
+                </div>
+      }
       return (
         <div>
+            {notFound}
             {goodsList.map((goodsListItem,index) =>        
                 <div key={index} className="goods_item">
                     <div className="preview_float">

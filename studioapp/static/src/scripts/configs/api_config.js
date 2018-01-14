@@ -5,5 +5,6 @@ export default {
     search: '/users/',
     tasks: '/tasks/',
     task: '/task/',
-    instashop: '/medias/'    
+    instashop: '/medias/',
+    instashopCategory: '/shop_items/' 
 };
