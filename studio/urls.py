@@ -26,10 +26,12 @@ from studioapp import views as app_views
 urlpatterns = [
     url(r'^admin/',   admin.site.urls),
 
-    url(r'^$',        app_views.main, name='home'),
-    url(r'^search/$', app_views.main, name='home'),
-    url(r'^tasks/$',  app_views.main, name='home'),
-    url(r'^home/$',   app_views.main, name='home'),
+    url(r'^$',           app_views.main, name='home'),
+    url(r'^search/$',    app_views.main, name='home'),
+    url(r'^tasks/$',     app_views.main, name='home'),
+    url(r'^home/$',      app_views.main, name='home'),
+    url(r'^instashop/$', app_views.main, name='home'),
+    url(r'^basket/$',    app_views.main, name='home'),
 
     url(r'^react_app/$',  app_views.react_app,  name='react_app'),
     url(r'^insta_shop/$', app_views.insta_shop, name='insta_shop'),
