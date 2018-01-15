@@ -28,16 +28,19 @@ class GoodsList extends Component {
             {goodsList.map((goodsListItem,index) =>        
                 <div key={index} className="goods_item">
                     <div className="preview_float">
-                        <div className="preview"  style={{backgroundImage: "url(" + goodsListItem.display_src + ")"}}></div>
+                        <div className="preview"  style={{backgroundImage: "url(" + goodsListItem.media.display_src + ")"}}></div>
                     </div>
                     <div className="description_float">
                         <div className="description">
                             <div className="text">
-                                {goodsListItem.caption}
+                                {goodsListItem.description}
+                            </div>
+                            <div className="price">
+                                {goodsListItem.price}
                             </div>
                             <button className="btn add_btn" type="button"
-                            onClick={() => this.addGood('googsId')}>
-                                button
+                                    onClick={() => this.addGood('googsId')}>
+                                add to busket
                             </button>  
                         </div>
                     </div>

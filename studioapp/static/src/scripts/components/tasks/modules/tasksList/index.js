@@ -16,7 +16,7 @@ class TasksList extends Component {
       let apiService = new ApiService();
       
       preLoader.style.display='block';
-      apiService.getRequest(`${config.api.task}${taskId}`)
+      apiService.getRequest(`${config.api.tasks}${taskId}`)
         .then((result) => {
           console.log(result);
           preLoader.style.display='none';

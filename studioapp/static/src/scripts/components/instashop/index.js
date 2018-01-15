@@ -5,6 +5,7 @@ import { Link } from 'react-router';
 import GoodsList from './modules/goodsitem';
 import Footer from './../footer/';
 import Preloader from './../preloader/';
+import { log } from 'util';
 
 class InstaShop extends Component {
 
@@ -23,6 +24,9 @@ class InstaShop extends Component {
                 this.setState({
                     'goodsList':result
                 }); 
+                for ( let i = 0; i < result.length; i++ ){
+                    console.log(result[i].category)
+                }
             })
             .catch((e) => {
               console.log(e);
@@ -32,10 +36,17 @@ class InstaShop extends Component {
       
         const catName = event.target.getAttribute('data-cat-name'); 
         const preLoader = document.getElementById('preLoader');
+        let requestParam ;
         let apiService = new ApiService();
 
+        if ( catName === 'all'){
+            requestParam = '';
+        } else {
+            requestParam = `?category=${catName}`;
+        }
+
         preLoader.style.display = 'block';
-        apiService.getRequest(`${config.api.instashopCategory}?category=${catName}`)
+        apiService.getRequest(`${config.api.instashop}${requestParam}`)
             .then((result) => {  
                 this.setState({
                     'goodsList':result
@@ -76,7 +87,7 @@ class InstaShop extends Component {
                                             onClick={(event) => this.filterByCategory(event)}>
                                             category 2
                                         </div>  
-                                    </li>
+                                    </li>                                   
                                 </ul>
                                 <Link className="basket" to="/basket">basket</Link>    
                                 <div className="clearfix"></div>
