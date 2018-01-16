@@ -129,7 +129,7 @@ class InstaShopItem(models.Model):
         #self.content_part=self.image_id[0:100]
         return u"%s..." % (self.media)
 
-    id          = models.AutoField(primary_key=True)
+    id          = models.AutoField(primary_key=True, verbose_name=u"Id")
     media       = models.ForeignKey(InstaMedia, on_delete=models.CASCADE)
     price       = models.CharField(max_length=256, blank=False, verbose_name=u"Price")
     category    = models.CharField(max_length=256, blank=True, verbose_name=u"Category")
@@ -137,9 +137,34 @@ class InstaShopItem(models.Model):
 
 
 
+class Order(models.Model):
+    class Meta(object):
+        verbose_name = u"Order"
+        verbose_name_plural = u"Orders"
+    def __unicode__(self):
+        #self.content_part=self.image_id[0:100]
+        return u"%s..." % (self.id)
 
+    id      = models.AutoField(primary_key=True)
+    #media   = models.ForeignKey(InstaMedia, on_delete=models.CASCADE)
+    name    = models.CharField(max_length=256, blank=False, verbose_name=u"Name")
+    mail    = models.CharField(max_length=256, blank=False, verbose_name=u"Mail")
+    phone   = models.CharField(max_length=256, blank=False, verbose_name=u"Phone")
+    address = models.CharField(max_length=256, blank=False, verbose_name=u"Address")
+    comment = models.TextField(blank=True, verbose_name=u"Description")
 
+class OrderItem(models.Model):
+    class Meta(object):
+        verbose_name = u"Order Item"
+        verbose_name_plural = u"Order Items"
+    def __unicode__(self):
+        #self.content_part=self.image_id[0:100]
+        return u"%s..." % (self.id)
 
+    #media   = models.ForeignKey(InstaMedia, on_delete=models.CASCADE)
+    order     = models.ForeignKey(Order, related_name='items', on_delete=models.CASCADE)
+    shop_item = models.ForeignKey(InstaShopItem, related_name='items', on_delete=models.CASCADE)
+    count     = models.CharField(max_length=256, blank=False, verbose_name=u"Count")
     
 
     

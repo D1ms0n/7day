@@ -51,4 +51,11 @@ urlpatterns = [
 
     url(r'^api/medias/$',                             app_views.InstaMediaList.as_view(),   name='medias'),
     url(r'^api/shop_items/$',                         app_views.InstaShopItemList.as_view(),   name='shop_items'),
+
+    url(r'^api/orders/$',                             app_views.OrderList.as_view(),   name='orders'),
+    url(r'^api/orders/(?P<id>[0-9]+)/$',         app_views.OrderDetail.as_view(), name='order'),
+
+     #url(r'^api/order_items/$',                        app_views.OrderItemList.as_view(),   name='order_items'),
+
+
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

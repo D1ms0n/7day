@@ -5,6 +5,9 @@ from studioapp.models import InstaUser
 from studioapp.models import InstaBotTask
 from studioapp.models import TaskTarget
 from studioapp.models import InstaMedia
+from studioapp.models import Order
+from studioapp.models import OrderItem
+
 from .models import InstaShopItem
 
 from logger import Logger
@@ -84,3 +87,35 @@ class InstaShopItemSerializer(serializers.ModelSerializer):
                   'price',
                   'description',
                   'category')
+
+class _OrderItemSerializer(serializers.ModelSerializer):
+    shop_item = InstaShopItemSerializer()
+
+    class Meta:
+        model = OrderItem
+        fields = ('shop_item',
+                  'count')
+
+
+
+class OrderSerializer(serializers.ModelSerializer):
+    items =_OrderItemSerializer(many = True, required = False)
+    class Meta:
+        model = Order
+        fields = ('id',
+                  'name',
+                  'mail',
+                  'phone',
+                  'address',
+                  'comment',
+                  'items')
+
+#class OrderItemSerializer(serializers.ModelSerializer):
+#    order = OrderSerializer()
+#    shop_item = InstaShopItemSerializer()
+
+#    class Meta:
+#        model = OrderItem
+#        fields = ('order',
+#                  'shop_item',
+#                  'count')

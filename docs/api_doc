@@ -69,6 +69,28 @@ Insta_shop:
         Example: /api/shop_items/?category=cat1
 
 
+Orders:
+    Get all orders:
+        URL: /api/orders/
+        TYPE: GET
+
+    Get  orders:
+        URL: /api/orders/<id>
+        TYPE: GET
+
+
+    Create new order:
+        URL: /api/orders/
+        TYPE: POST
+            data:
+                {"name":"Viking",
+                 "mail":"dwd@kd.dd",
+                 "phone":"0681111111",
+                 "address":"VikingLand",
+                 "comment":"day pokushat",
+                 "items":[{"id":"8", "count":"3"}]}      <-- id of shop_item
+
+
 #######################################################################################################################
 
 OLD API (DON'T USE IT!!!! I'LL UPDATE OR REMOVE IT!!!!!!!!!!!!!!!!!!!!!!!!):
