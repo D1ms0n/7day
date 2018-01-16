@@ -130,6 +130,7 @@ class InstaShopItem(models.Model):
         return u"%s..." % (self.media)
 
     id          = models.AutoField(primary_key=True, verbose_name=u"Id")
+    name        = models.CharField(max_length=256, blank=True, verbose_name=u"Name")
     media       = models.ForeignKey(InstaMedia, on_delete=models.CASCADE)
     price       = models.CharField(max_length=256, blank=False, verbose_name=u"Price")
     category    = models.CharField(max_length=256, blank=True, verbose_name=u"Category")
