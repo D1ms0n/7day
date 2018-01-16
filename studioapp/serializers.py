@@ -79,7 +79,8 @@ class InstaShopItemSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = InstaShopItem
-        fields = ('media',
+        fields = ('id',
+                  'media',
                   'price',
                   'description',
                   'category')

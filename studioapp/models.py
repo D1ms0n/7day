@@ -84,11 +84,11 @@ class TaskTarget(models.Model):
     def __unicode__(self):
         return u"%s" % (self.task_id)
 
-    map_id =  models.AutoField(primary_key=True)
-    task = models.ForeignKey(InstaBotTask, related_name='targets', on_delete = models.CASCADE)
+    map_id    =  models.AutoField(primary_key=True)
+    task      = models.ForeignKey(InstaBotTask, related_name='targets', on_delete = models.CASCADE)
     user_name = models.CharField(max_length=256, blank=True, verbose_name=u"User_name", null= True)
-    tag_name = models.CharField(max_length=256, blank=True, verbose_name=u"Tag_name", null=True)
-    photo_id = models.CharField(max_length=256, blank=True, verbose_name=u"Photo_id", null=True)
+    tag_name  = models.CharField(max_length=256, blank=True, verbose_name=u"Tag_name",  null=True)
+    photo_id  = models.CharField(max_length=256, blank=True, verbose_name=u"Photo_id",  null=True)
 
 class Relationship(models.Model):
     class Meta(object):
@@ -97,8 +97,7 @@ class Relationship(models.Model):
     def __unicode__(self):
         return u"%s..." % (self.rel_id)
 
-    rel_id =  models.AutoField(primary_key=True)
-    #followed_user_id = models.ForeignKey(Insta_user, on_delete=models.CASCADE, null= True)
+    rel_id           =  models.AutoField(primary_key=True)
     followed_user_id = models.CharField(max_length=256, blank=False, verbose_name=u"Followed user id", null= True)
     user_id          = models.CharField(max_length=256, blank=False, verbose_name=u"User id", null= True)
     
@@ -113,12 +112,12 @@ class InstaMedia(models.Model):
         #self.content_part=self.image_id[0:100]
         return u"%s..." % (self.image_id)
 
-    image_id = models.CharField(max_length=256, blank=False, verbose_name=u"Id")
-    display_src = models.CharField(max_length=256, blank=False, verbose_name=u"Caption")
-    caption  = models.TextField(blank=True, verbose_name=u"Caption")
-    image_author = models.ForeignKey(InstaUser, on_delete=models.CASCADE)
+    image_id           = models.CharField(max_length=256, blank=False, verbose_name=u"Id")
+    display_src        = models.CharField(max_length=256, blank=False, verbose_name=u"Caption")
+    caption            = models.TextField(blank=True, verbose_name=u"Caption")
+    image_author       = models.ForeignKey(InstaUser, on_delete=models.CASCADE)
     images_likes_count = models.CharField(max_length=256, blank=True, verbose_name=u"Likes count")
-    code = models.CharField(max_length=256, blank=True, verbose_name=u"Code")
+    code               = models.CharField(max_length=256, blank=True, verbose_name=u"Code")
 
     #images_tags =  models.ManyToManyField(Insta_tag)
 
@@ -130,10 +129,11 @@ class InstaShopItem(models.Model):
         #self.content_part=self.image_id[0:100]
         return u"%s..." % (self.media)
 
-    media    = models.ForeignKey(InstaMedia, on_delete=models.CASCADE)
-    price  = models.CharField(max_length=256, blank=False, verbose_name=u"Price")
-    category = models.CharField(max_length=256, blank=True, verbose_name=u"Category")
-    description  = models.TextField(blank=True, verbose_name=u"Description")
+    id          = models.AutoField(primary_key=True)
+    media       = models.ForeignKey(InstaMedia, on_delete=models.CASCADE)
+    price       = models.CharField(max_length=256, blank=False, verbose_name=u"Price")
+    category    = models.CharField(max_length=256, blank=True, verbose_name=u"Category")
+    description = models.TextField(blank=True, verbose_name=u"Description")
 
 
 
