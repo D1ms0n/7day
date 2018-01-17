@@ -12,7 +12,8 @@ class InstaShop extends Component {
     constructor(props) {
         super(props);  
         this.state = {
-            goodsList: []
+            goodsList: [],
+            categories: []
         };
         this.getAllGoods = this.getAllGoods.bind(this);  
         this.filterByCategory = this.filterByCategory.bind(this);     
@@ -22,11 +23,9 @@ class InstaShop extends Component {
         apiService.getRequest(`${config.api.instashop}`)
             .then((result) => {  
                 this.setState({
-                    'goodsList':result
+                    'goodsList':result,
+                    'categories':result.map((item) => item.category)
                 }); 
-                for ( let i = 0; i < result.length; i++ ){
-                    console.log(result[i].category)
-                }
             })
             .catch((e) => {
               console.log(e);
@@ -76,18 +75,16 @@ class InstaShop extends Component {
                                             all
                                         </div>  
                                     </li>
-                                    <li>
-                                        <div data-cat-name='cat1' className="category" 
-                                            onClick={(event) => this.filterByCategory(event)}>
-                                            category 1
-                                        </div>  
-                                    </li>
-                                    <li>
-                                        <div data-cat-name='cat2' className="category"
-                                            onClick={(event) => this.filterByCategory(event)}>
-                                            category 2
-                                        </div>  
-                                    </li>                                   
+
+                                    {this.state.categories.map((category,index) =>     
+                                        <li key={index}>
+                                            <div data-cat-name={category} className="category" 
+                                                onClick={(event) => this.filterByCategory(event)}>
+                                                {category}
+                                            </div>  
+                                        </li>
+                                    )}                                   
+                                                                 
                                 </ul>
                                 <Link className="basket" to="/basket">basket</Link>    
                                 <div className="clearfix"></div>

@@ -2,17 +2,40 @@ import React, { Component } from 'react';
 import config from '../../../../configs/index';
 import ApiService from '../../../../services/api/index';
 import { CookiesService } from '../../../../services/cookies';
+import { log } from 'util';
 
 class GoodsList extends Component {
 
     constructor(props) {
         super(props);        
-        this.addGood = this.addGood.bind(this);
+        this.addItem = this.addItem.bind(this);
     }
-    addGood(googsId){
-        let goodsArray =  CookiesService.getCookie('addedGoods');
-        goodsArray.push(googsId);
-        CookiesService.setCookie('goodsArray',goodsArray,'1');
+    addItem(event){
+        const googsId = event.target.getAttribute('data-id');
+        const count = event.target.getAttribute('data-count');
+        let addedItemsList = CookiesService.getCookie('goodsArray');
+        let goodsArray = [];   
+        let goodsItem = {
+            id : googsId,
+            count : count
+        };     
+        if ( addedItemsList.length > 0 ){
+            addedItemsList =JSON.parse(addedItemsList);        
+            for ( let i = 0; i < addedItemsList.length; i++ ){
+                
+                if ( Number(addedItemsList[i].id) === Number(googsId) ){
+                    let newCount = Number(addedItemsList[i].count) + 1;
+                    goodsItem = {
+                        id : googsId,
+                        count : newCount.toString()
+                    };
+                    continue;
+                }
+                goodsArray.push(addedItemsList[i]);
+            }                
+        }
+        goodsArray.push(goodsItem);    
+        CookiesService.setCookie('goodsArray',JSON.stringify(goodsArray),'7');
     }
     render() {
       let goodsList = this.props.goodsList;
@@ -32,14 +55,17 @@ class GoodsList extends Component {
                     </div>
                     <div className="description_float">
                         <div className="description">
+                            <div className="title">
+                                {goodsListItem.name}
+                            </div>
                             <div className="text">
                                 {goodsListItem.description}
                             </div>
                             <div className="price">
                                 {goodsListItem.price}
                             </div>
-                            <button className="btn add_btn" type="button"
-                                    onClick={() => this.addGood('googsId')}>
+                            <button data-count='1' data-id={goodsListItem.id} className="btn add_btn" type="button"
+                                    onClick={(event) => this.addItem(event)}>
                                 add to busket
                             </button>  
                         </div>

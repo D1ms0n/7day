@@ -8,8 +8,20 @@
         float: left;
         padding: 0;
         margin: 0;
+
+        @media screen and (max-width: 500px) {      
+            margin: 0 auto;
+            display: block;      
+            width: 200px;
+            text-align: center;
+            float: none;
+        }
         li{
             display:inline-block;
+            @media screen and (max-width: 500px) {            
+                display: block;
+                margin-bottom: 5px;
+            }
         }
     }
     .basket{
@@ -98,6 +110,15 @@
             }
         }
         .description{
+            .title{
+                color: #737373;
+                font-size: 30px;
+                font-weight: 400;
+                margin-bottom: 20px;
+                @media screen and (max-width: 768px) {
+                    text-align: center;
+                }
+            }
             .text{
                 margin-bottom: 10px;
                 @media screen and (max-width: 768px) {
