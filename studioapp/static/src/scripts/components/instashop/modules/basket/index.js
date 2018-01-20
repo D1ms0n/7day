@@ -3,25 +3,47 @@ import { Link } from 'react-router';
 import config from './../../../../configs/index';
 import ApiService from './../../../../services/api/index';
 import { CookiesService } from './../../../../services/cookies';
+import AddedItemsList from './modules/addeditem/index';
+import { log } from 'util';
 
 class Basket extends Component {
     constructor(props) {
         super(props);  
-        this.getAddedGoods = this.getAddedGoods.bind(this);
+        this.state = {
+            name:'Viking',
+            mail:'dwd@kd.dd',
+            phone:'0681111111',
+            address:'VikingLand',
+            comment:'day pokushat'
+        };
+        this.createOrder = this.createOrder.bind(this);
     }
-    getAddedGoods(){
-        let apiService = new ApiService();
-        const goodsArray =  CookiesService.getCookie('addedGoods');
+    createOrder(){
 
-        apiService.getRequest(`${config.api.instashop}?${goodsArray}`)
+        const addedItemsArray = JSON.parse(CookiesService.getCookie('goodsArray')).map((item)=>(
+            {
+                id:item.id,
+                count:item.count
+            }
+        ));
+
+        const data = {
+            "name": this.state.name,
+            "mail": this.state.mail,
+            "phone": this.state.phone,
+            "address": this.state.address,
+            "comment": this.state.comment,
+            "items": addedItemsArray
+        }
+        let apiService = new ApiService();
+        apiService.postRequest(`${config.api.orders}`,JSON.stringify(data))
             .then((result) => {  
                 console.log(result);            
             })
             .catch((e) => {
                 console.log(e);
             });
-    }
-    componentDidMount(){  
+
     }
     render() {
         return (
@@ -39,26 +61,16 @@ class Basket extends Component {
                 <div className="container-fluid">
                     <div className="container">
                         <div className="row">
-                            <div className="col-md-12">
-                                <ul className="added_goods_list">
-                                    <li className="row">                                    
-                                        <div className="preview"></div>
-                                        <div className="description">
-                                            <h4 className="title">                                                    
-                                                <a href="/">
-                                                    title
-                                                </a>  
-                                            </h4>
-                                            <h4 className="price">
-                                                ₴ 123
-                                            </h4>
-                                            <button className="btn remove_btn" type="button">
-                                                remove
-                                            </button>  
-                                        </div>                                   
-                                    </li>
-                                </ul>
+                            <div className="col-md-6">
+                                <AddedItemsList/>                                
                             </div> 
+                            <div className="col-md-6">
+                               <button 
+                                    onClick={() => this.createOrder()}
+                                    className="btn remove_btn" type="button">
+                                    create order
+                                </button>  
+                            </div>
                         </div> 
                     </div> 
                 </div>                  

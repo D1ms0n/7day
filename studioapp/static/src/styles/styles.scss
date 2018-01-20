@@ -29,6 +29,10 @@ body *{
     position: absolute;
     z-index: 1;
 }
+.fixed{
+    position: fixed;
+    z-index: 1;
+}
 .upper{
     z-index: 2;
 }

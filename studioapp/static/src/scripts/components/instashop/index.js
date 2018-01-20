@@ -57,7 +57,7 @@ class InstaShop extends Component {
               preLoader.style.display='none';
             });
     }  
-    componentDidMount(){    
+    componentDidMount(){
         this.getAllGoods();
     }
     render() {
