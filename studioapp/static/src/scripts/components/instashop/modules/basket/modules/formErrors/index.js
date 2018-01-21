@@ -26,3 +26,5 @@ class FormErrors extends Component {
 
 
 export default FormErrors;
+
+//   https://learnetto.com/blog/how-to-do-simple-form-validation-in-reactjs

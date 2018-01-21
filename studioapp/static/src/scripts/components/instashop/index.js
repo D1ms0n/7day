@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import config from './../../configs/index';
-import ApiService from './../../services/api/index';
 import { Link } from 'react-router';
+import { log } from 'util';
+import config from './../../configs/index';
+import message from './../../services/messages/index';
+import ApiService from './../../services/api/index';
+import { countBasketItems } from './modules/countbasketitems';
 import GoodsList from './modules/goodsitem';
 import Footer from './../footer/';
 import Preloader from './../preloader/';
-import { log } from 'util';
 
 class InstaShop extends Component {
 
@@ -59,6 +61,7 @@ class InstaShop extends Component {
     }  
     componentDidMount(){
         this.getAllGoods();
+        countBasketItems();
     }
     render() {
         return (
@@ -72,7 +75,7 @@ class InstaShop extends Component {
                                     <li>
                                         <div data-cat-name='all' className="category" 
                                             onClick={(event) => this.filterByCategory(event)}>
-                                            all
+                                            {message.message.allCategories}
                                         </div>  
                                     </li>
 
@@ -86,7 +89,10 @@ class InstaShop extends Component {
                                     )}                                   
                                                                  
                                 </ul>
-                                <Link className="basket" to="/basket">basket</Link>    
+                                <div className="basket" id="basket">
+                                    <Link to="/basket"></Link>  
+                                    <div id="basketCount"></div>
+                                </div>
                                 <div className="clearfix"></div>
                             </div> 
                         </div> 

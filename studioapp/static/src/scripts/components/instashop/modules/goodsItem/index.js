@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import config from '../../../../configs/index';
 import ApiService from '../../../../services/api/index';
+import messages from '../../../../services/messages/index';
 import { CookiesService } from '../../../../services/cookies';
+import { countBasketItems } from './../countbasketitems';
+import { showMessage } from './../showmessage';
 import { log } from 'util';
 
 class GoodsList extends Component {
@@ -44,21 +47,24 @@ class GoodsList extends Component {
             }                
         }
         goodsArray.push(goodsItem);    
-        CookiesService.setCookie('goodsArray',JSON.stringify(goodsArray),'7');       
+        CookiesService.setCookie('goodsArray',JSON.stringify(goodsArray),config.api.timeToSaveAddedList);   
+        countBasketItems();    
+        showMessage(messages.messages.addedToBasketMss,'alert-success fixed bottom upper');
     }
     render() {
       let goodsList = this.props.goodsList;
       let notFound = '';
       if ( goodsList.length === 0 ){
         notFound = <div className="absolute alert alert-warning" role="alert">
-                        No results!
+                        {messages.message.noResults}
                     </div>
       }
       return (
-        <div>
+        <div>            
+            <div id="showMassage"></div>
             {notFound}
             {goodsList.map((goodsListItem,index) =>        
-                <div key={index} className="goods_item">    
+                <div key={index} className="goods_item">
                     <div className="preview_float">
                         <div className="preview"  style={{backgroundImage: "url(" + goodsListItem.media.display_src + ")"}}></div>
                     </div>
@@ -81,7 +87,7 @@ class GoodsList extends Component {
                                     data-count='1'
                                     className="btn add_btn" type="button"
                                     onClick={(event) => this.addItem(event)}>
-                                add to busket
+                                {messages.message.addToBasketText}
                             </button>  
                         </div>
                     </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { CookiesService } from './../../../../../../services/cookies';
+import message from './../../../../../../services/messages/index';
 
 class AddedItemsList extends Component {
 
@@ -9,6 +10,7 @@ class AddedItemsList extends Component {
         addedGoodsList: []     
     };
     this.removeItem = this.removeItem.bind(this);
+    this.changeCount = this.changeCount.bind(this);
   }
   removeItem(event){
     const googsId = event.target.getAttribute('data-id');
@@ -31,10 +33,13 @@ class AddedItemsList extends Component {
       }
     }
   }
+  changeCount(){
+
+  }
   componentDidMount(){ 
-      this.setState({
-          'addedGoodsList': JSON.parse(CookiesService.getCookie('goodsArray'))
-      });  
+    this.setState({
+        'addedGoodsList': JSON.parse(CookiesService.getCookie('goodsArray'))
+    });  
   }
   render(){
     const addedGoodsList = this.state.addedGoodsList;
@@ -42,7 +47,7 @@ class AddedItemsList extends Component {
 
     if ( addedGoodsList.length === 0 ){
         notFound = <div className="absolute alert alert-warning" role="alert">
-                      No results!
+                     {message.message.noResults}
                    </div>
     }
 
@@ -62,16 +67,24 @@ class AddedItemsList extends Component {
                     <h4 className="price">
                         ₴ {addedGoodsitem.price}
                     </h4>
-                    <div>
-                      added 
-                      <input type="number" value={addedGoodsitem.count} />
+                    <div className="changeCount">
+                      <div className="minus"
+                        onClick={() => this.changeCount()}>
+                        -
+                      </div>
+                      <div className="allcount">
+                         {addedGoodsitem.count}                      
+                      </div>
+                      <div className="plus"
+                        onClick={() => this.changeCount()}>
+                        +
+                      </div>
                     </div>
-                    <button 
+                    <div 
                         data-id={addedGoodsitem.id} 
                         onClick={(event) => this.removeItem(event)}
-                        className="btn remove_btn" type="button">
-                        remove
-                    </button>  
+                        className="remove_btn" >
+                    </div>  
                 </div> 
             </li>
           )}   

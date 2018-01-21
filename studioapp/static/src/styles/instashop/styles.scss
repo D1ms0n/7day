@@ -3,6 +3,9 @@
     border-bottom: 1px solid rgba(0,0,0,.0975);
     padding: 15px 15px;
     padding-right: 30px;
+    position: fixed;
+    z-index: 10;
+    background: #fff;
     ul{
         list-style-type: none;
         float: left;
@@ -25,9 +28,30 @@
         }
     }
     .basket{
-        position: absolute;
-        right: 10px;
-        top: 10px;
+        float: right;
+        position: relative;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('./../images/shopping_cart.svg');        
+        @include mixin_transition(.2s);
+        &.active{
+            left: -10px;
+        }         
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        div{
+            position: absolute;
+            right: -15px;
+            top: -5px;
+            color: #da2020;
+            font-family: $font_bold;
+        }
     }
     .category{
         border: 1px solid rgba(0,0,0,.0975);
@@ -36,13 +60,14 @@
         font-size: 14px;
         margin-right: 10px;
         cursor: pointer;
+        @include mixin_transition(.2s);
         &:hover{
             background-color: #3897f0;
             color: #ffffff;
         }
         .title{
             font-size: 30px;
-            font-weight: 400;
+            font-family: $font_med;
             margin-bottom: 40px;
         }
         .text{
@@ -51,6 +76,7 @@
     }
 }
 .goods_wrap{
+    margin-top: 70px;
     .goods_item{
         margin-top: 10px;
         border-bottom: 1px solid rgba(0,0,0,.0975);
@@ -91,7 +117,6 @@
                 padding: 0;
             }
         }
-
         .preview{
             width: 100%;
             height: 400px;
@@ -113,7 +138,7 @@
             .title{
                 color: #737373;
                 font-size: 30px;
-                font-weight: 400;
+                font-family: $font_med;                
                 margin-bottom: 20px;
                 @media screen and (max-width: 768px) {
                     text-align: center;
@@ -127,7 +152,7 @@
             }            
             .price{
                 margin: 20px 0;
-                font-weight: 400;
+                font-family: $font_med;
                 line-height: 1.4;
                 @media screen and (max-width: 768px) {
                     text-align: center;
@@ -136,13 +161,14 @@
             .add_btn{
                 width: 100%;
                 background-color: #3897f0;
-                border-radius: 3px;
+                border-radius: 0px;
                 text-transform: uppercase;
-                font-weight: 700;
+                font-family: $font_bold;
                 color: #ffffff;
                 box-shadow:none;
                 outline-color: #fff;
                 opacity: 0.8;
+                @include mixin_transition(.2s);
                 @media screen and (max-width: 768px) {
                     margin: 0 auto;
                     width: 150px;
@@ -156,17 +182,18 @@
     }
 }
 
+.basket_wrap{
+    margin-top: 70px;
+}
 .added_goods_list{
     padding: 0;
-    margin-top: 20px;
     li{
         position: relative;
-        padding-left: 200px;
         margin-bottom: 15px;
+        border: 1px solid rgba(0,0,0,.0975);
         .preview{
-            position: absolute;
-            left: 0;
-            top: 0;
+            float: left;
+            margin-right: 15px;
             width: 150px;
             height: 150px;
             background-color: rgba(0,0,0,.0975);
@@ -177,22 +204,51 @@
         .description{
             .title{
                 color: #737373;
-                font-size: 30px;
-                font-weight: 400;
+                font-size: 22px;
+                font-family: $font_med;
                 margin-bottom: 20px;
             }
             .price{
                 margin: 20px 0;
-                font-weight: 400;
+                font-family: $font_med;
                 line-height: 1.4;
             }
             .remove_btn{
-                background-color: #3897f0;
-                border-radius: 0px;
-                text-transform: uppercase;
-                font-weight: 700;
-                color: #ffffff;
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                width: 20px;
+                height: 20px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url('./../images/close.svg');        
+                @include mixin_transition(.2s);
+                opacity: 0.8;
+                cursor: pointer;
+                &:hover{
+                    opacity: 1;
+                }
+
             }
         }
+    }
+}
+.changeCount{
+    text-align: center;
+    .minus, .plus{
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        border: 1px solid rgba(0,0,0,.0975);
+        text-align: center;
+    }
+    .minus{
+        float: left;
+    }
+    .plus{
+        float: right;
+    }
+    .allcount{
+        display: inline-block;
     }
 }
