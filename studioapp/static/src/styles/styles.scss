@@ -28,7 +28,9 @@ body *{
         color: #ffffff;
     }
 }
-
+.disabled{
+    pointer-events: none;
+}
 .absolute{
     position: absolute;
     z-index: 1;

@@ -54,7 +54,14 @@ class Basket extends Component {
 
         apiService.postRequest(`${config.api.orders}`,JSON.stringify(data))
             .then((result) => {  
-                console.log(result);            
+                document.getElementById('modal').innerHTML = `
+                                                    <div class="modal-result">
+                                                       name ${result.name}
+                                                       email  ${result.mail}
+                                                       phone num ${result.phone}
+                                                       adress ${result.address}  
+                                                    </div>`
+                                               
             })
             .catch((e) => {
                 console.log(e);
@@ -62,9 +69,7 @@ class Basket extends Component {
 
     }
     validateField(fieldName, value) {
-
-        console.log('fieldName',fieldName);
-        console.log('value',value);
+        
         let fieldValidationErrors = this.state.formErrors;
         let nameValid = this.state.nameValid;
         let mailValid = this.state.mailValid;
@@ -119,7 +124,7 @@ class Basket extends Component {
     }
     render() {
         return (
-            <div>                
+            <div>           
                 <div className="container-fluid header_wrap">
                     <div className="container">
                         <div className="row">
@@ -157,7 +162,7 @@ class Basket extends Component {
                                                     placeholder="mail"
                                                     name="mail"
                                                     value={this.state.mail}
-                                                    onChange={(event) => this.handleUserInput(message.message.event)}/>
+                                                    onChange={(event) => this.handleUserInput(event)}/>
                                         </div>                    
                                     </div>
                                     <div className='form-group row'>
@@ -189,8 +194,7 @@ class Basket extends Component {
                                                       onChange={(event) => this.handleUserInput(event)}>
                                             </textarea>
                                         </div>                    
-                                    </div>
-                                    
+                                    </div>                                    
                                     <div className="form-group row">
                                         <div className="col-md-10">
                                             <button disabled={!this.state.formValid}
@@ -201,6 +205,8 @@ class Basket extends Component {
                                     </div>
 
                                     <FormErrors formErrors={this.state.formErrors} />
+
+                                    <div id="modal"></div>  
 
                                 </form>                              
                             </div>

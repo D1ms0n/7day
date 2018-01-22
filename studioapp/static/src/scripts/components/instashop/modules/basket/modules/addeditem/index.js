@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { CookiesService } from './../../../../../../services/cookies';
 import message from './../../../../../../services/messages/index';
+import config from './../../../../../../configs/index';
 
 class AddedItemsList extends Component {
 
@@ -13,7 +14,8 @@ class AddedItemsList extends Component {
     this.changeCount = this.changeCount.bind(this);
   }
   removeItem(event){
-    const googsId = event.target.getAttribute('data-id');
+
+    let googsId =googsId = event.target.getAttribute('data-id');;
     let addedItemsList = CookiesService.getCookie('goodsArray');
 
     if ( addedItemsList.length > 0 ){
@@ -33,17 +35,55 @@ class AddedItemsList extends Component {
       }
     }
   }
-  changeCount(){
+  changeCount(id,action){
 
+    const counter = document.getElementById(`count${id}`);    
+    const minus = document.getElementById(`minus${id}`);
+    const timeSave = config.api.timeToSaveAddedList;
+    let addedItemsList = JSON.parse(CookiesService.getCookie('goodsArray'));
+    let goodsArray = []; 
+    let goodsItem ;      
+        
+    for ( let i = 0; i < addedItemsList.length; i++ ){
+      if ( Number(addedItemsList[i].id) === Number(id) ){
+          let newCount ;        
+          if( action === "inc"){
+            newCount = Number(addedItemsList[i].count) + 1;
+            counter.innerHTML = newCount;
+          }else if( action === "dec"){
+            newCount = Number(addedItemsList[i].count) - 1;
+            counter.innerHTML = newCount;
+          }   
+          if ( Number(newCount) < 2 ){
+            minus.style.pointerEvents = 'none';
+          } else {
+            minus.style.pointerEvents = 'all';
+          }
+          goodsItem = {
+            id : id,
+            count : newCount.toString(),
+            title : addedItemsList[i].title,
+            price : addedItemsList[i].price,
+            image : addedItemsList[i].image
+          };
+          goodsArray.push(goodsItem); 
+          continue;
+      }
+      goodsArray.push(addedItemsList[i]);
+    }  
+    CookiesService.setCookie('goodsArray',JSON.stringify(goodsArray),timeSave);
   }
-  componentDidMount(){ 
-    this.setState({
-        'addedGoodsList': JSON.parse(CookiesService.getCookie('goodsArray'))
-    });  
+  componentDidMount(){
+    const cockie = CookiesService.getCookie('goodsArray');
+    if ( cockie.length >= 0 ){
+      this.setState({
+        'addedGoodsList': JSON.parse(cockie)
+      });
+    }      
   }
   render(){
     const addedGoodsList = this.state.addedGoodsList;
-    let notFound ;
+    let notFound;
 
     if ( addedGoodsList.length === 0 ){
         notFound = <div className="absolute alert alert-warning" role="alert">
@@ -68,15 +108,15 @@ class AddedItemsList extends Component {
                         ₴ {addedGoodsitem.price}
                     </h4>
                     <div className="changeCount">
-                      <div className="minus"
-                        onClick={() => this.changeCount()}>
+                      <div id={"minus" + addedGoodsitem.id} className="minus"
+                        onClick={() => this.changeCount(addedGoodsitem.id,'dec')}>
                         -
                       </div>
-                      <div className="allcount">
+                      <div className="allcount" id={"count" + addedGoodsitem.id} >
                          {addedGoodsitem.count}                      
                       </div>
                       <div className="plus"
-                        onClick={() => this.changeCount()}>
+                        onClick={() => this.changeCount(addedGoodsitem.id,'inc')}>
                         +
                       </div>
                     </div>

@@ -49,17 +49,17 @@ class GoodsList extends Component {
         goodsArray.push(goodsItem);    
         CookiesService.setCookie('goodsArray',JSON.stringify(goodsArray),config.api.timeToSaveAddedList);   
         countBasketItems();    
-        showMessage(messages.messages.addedToBasketMss,'alert-success fixed bottom upper');
+        showMessage(messages.message.addedToBasketMss,'alert-success fixed bottom upper');
     }
     render() {
-      let goodsList = this.props.goodsList;
-      let notFound = '';
-      if ( goodsList.length === 0 ){
+        let goodsList = this.props.goodsList;
+        let notFound = '';
+        if ( goodsList.length === 0 ){
         notFound = <div className="absolute alert alert-warning" role="alert">
                         {messages.message.noResults}
                     </div>
-      }
-      return (
+        }
+        return (
         <div>            
             <div id="showMassage"></div>
             {notFound}
@@ -95,7 +95,7 @@ class GoodsList extends Component {
                 </div>           
             )}
         </div>
-      );
+        );
     }
 }
 
