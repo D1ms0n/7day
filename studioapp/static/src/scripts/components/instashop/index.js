@@ -18,7 +18,8 @@ class InstaShop extends Component {
             categories: []
         };
         this.getAllGoods = this.getAllGoods.bind(this);  
-        this.filterByCategory = this.filterByCategory.bind(this);     
+        this.filterByCategory = this.filterByCategory.bind(this);  
+        this.addFixedheader = this.addFixedheader.bind(this);   
     }
     getAllGoods(){
         let apiService = new ApiService();
@@ -59,14 +60,28 @@ class InstaShop extends Component {
               preLoader.style.display='none';
             });
     }  
+    addFixedheader(){
+        if ( window.scrollY >= 200 ){
+            document.querySelector('.header_wrap').classList.add('fixed');
+        } else {
+            document.querySelector('.header_wrap').classList.remove('fixed');
+        }
+    }
     componentDidMount(){
         this.getAllGoods();
         countBasketItems();
+        window.addEventListener('scroll', this.addFixedheader);
+    }
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.addFixedheader);
     }
     render() {
         return (
             <div>
                 <Preloader/>
+                <div className="top_bg">
+                    <h1>title</h1>
+                </div>
                 <div className="container-fluid header_wrap">
                     <div className="container">
                         <div className="row">

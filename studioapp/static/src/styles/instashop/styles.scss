@@ -1,11 +1,30 @@
  
+ .top_bg{
+     height: 200px;
+     padding-top: 70px;
+     background-repeat: no-repeat;
+     background-size: cover;
+    //  background-image: url('./../images/shopping_cart.svg');        
+     background-color: rgba(0,0,0,.3); 
+     h1{
+        margin: 0;
+        letter-spacing: 2px;
+        text-align: center;
+        font-family: $font_bold;
+        color: #fff;
+     }
+ }
+
 .header_wrap{
     border-bottom: 1px solid rgba(0,0,0,.0975);
     padding: 15px 15px;
     padding-right: 30px;
-    position: fixed;
     z-index: 10;
     background: #fff;
+    @include mixin_transition(.2s);
+    &.fixed{
+        top: 0;
+    }
     ul{
         list-style-type: none;
         float: left;
@@ -119,11 +138,14 @@
         }
         .preview{
             width: 100%;
-            height: 400px;
+            height: 600px;
             background-color: rgba(0,0,0,.0975);
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
+            @media screen and (max-width: 1200зч) {
+                height: 400px;
+            }
             @media screen and (max-width: 768px) {
                 margin: 0 auto;
                 height: 300px;
