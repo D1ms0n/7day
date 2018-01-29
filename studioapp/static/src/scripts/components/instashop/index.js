@@ -6,8 +6,8 @@ import message from './../../services/messages/index';
 import ApiService from './../../services/api/index';
 import { countBasketItems } from './modules/countbasketitems';
 import GoodsList from './modules/goodsitem';
+import Header from './components/header';
 import Footer from './../footer/';
-import Preloader from './../preloader/';
 
 class InstaShop extends Component {
 
@@ -25,9 +25,19 @@ class InstaShop extends Component {
         let apiService = new ApiService();
         apiService.getRequest(`${config.api.instashop}`)
             .then((result) => {  
+                let categories = [];                
+                for ( let i = 0; i < result.length ; i++){
+                    for ( let j = 0; j <= categories.length ; j++){
+                        if ( categories.indexOf(result[i].category) !== -1 ){
+                            continue;
+                        } else {
+                            categories.push(result[i].category);
+                        }
+                    }                    
+                }
                 this.setState({
-                    'goodsList':result,
-                    'categories':result.map((item) => item.category)
+                    'goodsList': result,
+                    'categories': categories
                 }); 
             })
             .catch((e) => {
@@ -36,8 +46,7 @@ class InstaShop extends Component {
     }  
     filterByCategory(event){
       
-        const catName = event.target.getAttribute('data-cat-name'); 
-        const preLoader = document.getElementById('preLoader');
+        const catName = event.target.getAttribute('data-cat-name');      
         let requestParam ;
         let apiService = new ApiService();
 
@@ -47,17 +56,14 @@ class InstaShop extends Component {
             requestParam = `?category=${catName}`;
         }
 
-        preLoader.style.display = 'block';
         apiService.getRequest(`${config.api.instashop}${requestParam}`)
             .then((result) => {  
                 this.setState({
                     'goodsList':result
                 }); 
-                preLoader.style.display='none';
             })
             .catch((e) => {
               console.log(e);
-              preLoader.style.display='none';
             });
     }  
     addFixedheader(){
@@ -77,11 +83,8 @@ class InstaShop extends Component {
     }
     render() {
         return (
-            <div>
-                <Preloader/>
-                <div className="top_bg">
-                    <h1>title</h1>
-                </div>
+            <div>            
+                <Header/>
                 <div className="container-fluid header_wrap">
                     <div className="container">
                         <div className="row">
@@ -93,7 +96,6 @@ class InstaShop extends Component {
                                             {message.message.allCategories}
                                         </div>  
                                     </li>
-
                                     {this.state.categories.map((category,index) =>     
                                         <li key={index}>
                                             <div data-cat-name={category} className="category" 
@@ -101,8 +103,7 @@ class InstaShop extends Component {
                                                 {category}
                                             </div>  
                                         </li>
-                                    )}                                   
-                                                                 
+                                    )}                       
                                 </ul>
                                 <div className="basket" id="basket">
                                     <Link to="/basket"></Link>  
@@ -112,7 +113,7 @@ class InstaShop extends Component {
                             </div> 
                         </div> 
                     </div> 
-                </div>      
+                </div>   
                 <div className="container-fluid">
                     <div className="container">   
                         <div className="goods_wrap">                 

@@ -5,6 +5,7 @@ import ApiService from './../../../../services/api/index';
 import { CookiesService } from './../../../../services/cookies';
 import message from './../../../../services/messages/index';
 import AddedItemsList from './modules/addeditem/index';
+import Header from './../../components/header';
 import FormErrors from './modules/formErrors';
 import { log } from 'util';
 
@@ -17,6 +18,7 @@ class Basket extends Component {
             phone:'',
             address:'',
             comment:'',
+            menushown: false,
             nameValid: false,
             phoneValid: false,
             addressValid: false,
@@ -116,6 +118,11 @@ class Basket extends Component {
           });
     
     }
+    toggleMenu(){
+        this.setState({
+            menushown: !this.state.menushown
+        });
+    }
     handleUserInput (event) {
         const name = event.target.name;
         const value = event.target.value;
@@ -125,12 +132,13 @@ class Basket extends Component {
     }
     render() {
         return (
-            <div>           
+            <div>      
+                <Header />
                 <div className="container-fluid header_wrap">
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12">
-                                <Link to="/instashop">{message.message.backToShop}</Link>     
+                                <Link className="back_to_shop" to="/instashop">{message.message.backToShop}</Link>     
                                 <div className="clearfix"></div>
                             </div> 
                         </div> 
@@ -143,7 +151,7 @@ class Basket extends Component {
                                 <AddedItemsList/>                                
                             </div> 
                             <div className="col-md-6">
-                                <form id="createOrderForm"
+                                <form id="createOrderForm" className="form"
                                     onSubmit={(event) => this.createOrder(event)}>  
 
                                     <div className='form-group row'>

@@ -15,7 +15,7 @@ body *{
     position: absolute;
     width: 100%;
     height: 100vh;
-    background: #337ab7;
+    background: rgba(46, 52, 58, 0.48);
     z-index: 10;
     #preloader_bg{
         width: 100%;
@@ -97,6 +97,7 @@ form {
         margin-bottom: 20px;
         padding-bottom: 15px;
         border-bottom: 1px solid #6c6c6c;
+        min-height: 120px;
         @media screen and (max-width: 500px) {
            padding-left: 0;
         }
@@ -177,3 +178,7 @@ form {
         transform: rotate(-45deg);
     }
   }
+
+.custom-control-label{
+    cursor: pointer;
+}

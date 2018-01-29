@@ -15,22 +15,21 @@ class AddedItemsList extends Component {
   }
   removeItem(event){
 
-    let googsId =googsId = event.target.getAttribute('data-id');;
+    let googsId = event.target.getAttribute('data-id');;
     let addedItemsList = CookiesService.getCookie('goodsArray');
-
+    
     if ( addedItemsList.length > 0 ){
-      addedItemsList =JSON.parse(addedItemsList);     
+      addedItemsList =JSON.parse(addedItemsList);  
+
       for ( let i = 0; i < addedItemsList.length; i++ ){
         if ( Number(addedItemsList[i].id) === Number(googsId) ){   
-          let index = i;
-          if ( i === 0 ){
-            index = 2;
-          }
-          const uptadetList = addedItemsList.splice(index-1, 1);
-          CookiesService.setCookie('goodsArray',JSON.stringify(uptadetList),'7');           
+          
+          addedItemsList.splice(i, 1);
+          CookiesService.setCookie('goodsArray',JSON.stringify(addedItemsList),'7');  
           this.setState({
-            'addedGoodsList': uptadetList
+            'addedGoodsList': addedItemsList
           });  
+
         }
       }
     }
@@ -52,6 +51,9 @@ class AddedItemsList extends Component {
             counter.innerHTML = newCount;
           }else if( action === "dec"){
             newCount = Number(addedItemsList[i].count) - 1;
+            if ( newCount === 0 ){
+              newCount = 1;
+            }
             counter.innerHTML = newCount;
           }   
           if ( Number(newCount) < 2 ){
@@ -100,9 +102,7 @@ class AddedItemsList extends Component {
                 <div className="preview" style={{backgroundImage: "url(" + addedGoodsitem.image + ")"}}></div>
                 <div className="description">
                     <h4 className="title">                                                    
-                        <a href="/">
-                            {addedGoodsitem.title}
-                        </a>  
+                      {addedGoodsitem.title}
                     </h4>
                     <h4 className="price">
                         ₴ {addedGoodsitem.price}

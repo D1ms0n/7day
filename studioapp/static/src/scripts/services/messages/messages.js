@@ -2,7 +2,7 @@ export default {
     allCategories : 'all',
     noResults: ' No results',
     removeBtnTxt: 'remove',
-    backToShop: 'to shop',
+    backToShop: 'back to shop',
     createOrderText: 'create order',
     addToBasketText: 'add to busket',
     addedToBasketMss: 'Added to basket',   
@@ -14,7 +14,9 @@ export default {
     validationName: 'enter the name',
     validationEmail: 'email is invalid',
     validationPhone: 'enter the phone',
-    validationAdress: 'enter the address'
+    validationAdress: 'enter the address',
+    shopTitle: 'title',
+    onSale: 'on sale'
 };
 
 

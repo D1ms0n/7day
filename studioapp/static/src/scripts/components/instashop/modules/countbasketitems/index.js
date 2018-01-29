@@ -20,6 +20,7 @@ export function countBasketItems(){
         basket.classList.add('active');   
         setTimeout(function(){
             basket.classList.remove('active');
-        },200);
+        },1000);
+
     }        
 }

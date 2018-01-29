@@ -70,6 +70,11 @@ class GoodsList extends Component {
                     </div>
                     <div className="description_float">
                         <div className="description">
+
+                            <div className="on_sale hidden">
+                                {messages.message.onSale}
+                            </div>
+
                             <div className="title">
                                 {goodsListItem.name}
                             </div>
