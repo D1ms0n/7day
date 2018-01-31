@@ -10,7 +10,7 @@ Users:
         followers_count__lte
         follow_count__gte
         follow_count__lte
-        follows_viewer
+        follows_viewer                                                                       TO DO: CHECK!!!!
         followed_by_viewer
         task_id (Use it to obtain a list of users related to the task with this task_id)
 
@@ -89,6 +89,20 @@ Orders:
                  "address":"VikingLand",
                  "comment":"day pokushat",
                  "items":[{"id":"8", "count":"3"}]}      <-- id of shop_item
+
+    Registration:
+    TO DO:
+add registration url
+        URL: /api/registration/
+        TYPE: POST
+            data:
+                {"name":"Viking",
+                 "mail":"dwd@kd.dd",
+                 "phone":"0681111111",
+                 "insta_user_name":"VikingLand",
+                 "insta_tag":"#lalala",
+                 "password":"123456",
+                 }
 
 
 #######################################################################################################################
