@@ -5,4 +5,6 @@ export default {
     search: '/users/',
     tasks: '/tasks/',
     instashop: '/shop_items/',
+    orders: '/orders/',
+    timeToSaveAddedList: '7'
 };
