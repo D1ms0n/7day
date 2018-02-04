@@ -171,14 +171,31 @@ class Worker(object):
 
     def get_medias(self, user_name):
         bot = Bot()
+        selenium_bot = selenium_webdriver()
+
         #bot.login_user(self.login, self.password)
         user_info = bot.get_info(user_name, loggined = False)
-        logger.log(user_info['user']['media']['nodes'])
-        return user_info['user']['media']['nodes']
+
+        nodes = user_info['user']['media']['nodes']
+
+        for node in nodes:
+            logger.log('Try to get srcs for ' + str(node['code']))
+            srcs = selenium_bot.get_media_srcs(node['code'])
+            node['srcs'] = srcs
+
+        return nodes
 
     def get_media_info(self, code):
         bot = Bot()
         media_info = bot.get_media_info(code)
+        return media_info
+
+    def get_media_srcs(self, code):
+        selenium_bot = selenium_webdriver()
+        media_page = selenium_bot.open_media(code)
+
+
+        media_src = bot.get_media_info(code)
         return media_info
 
     #@start_thread
