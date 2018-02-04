@@ -60,13 +60,30 @@ Tasks:
                 {"operation": "get_following", "username": "test_name", "targets": ["studio_7_day_2"], "count":15}
 Insta_shop:
 
-    Get all medias:
-        URL: /api/medias/
+    Get all shop_items:
+        URL: /api/shop_items/
         TYPE: GET
     Filters:
         category
 
-        Example: /api/shop_items/?category=cat1
+        Example: /api/shop_items/?category=lapki
+
+        [{"id":27,
+          "name":"",
+          "media":{"srcs":[{"media_src":"https://instagram.fiev4-1.fna.fbcdn.net/vp/410dc3e4388f36f4794723f4532db59d/5B16C03C/t51.2885-15/e35/26868093_564644030621679_1144621999998369792_n.jpg"},
+                           {"media_src":"https://instagram.fiev4-1.fna.fbcdn.net/vp/fda8e96ef069f6f6835b2647dc86b6c6/5B207125/t51.2885-15/e35/26871575_124709678344856_3441363947742035968_n.jpg"}],
+                   "likes_count":"0"},
+          "price":"price: 50",
+          "description":" \n\ntrololo",
+          "category":"lapki"},
+
+          {"id":28,
+           "name":"",
+           "media":{"srcs":[{"media_src":"https://instagram.fiev4-1.fna.fbcdn.net/vp/a5cae0c64ce2477f2e2f2f351722e676/5B0E3413/t51.2885-15/e35/26265920_879538582215829_6867535359207538688_n.jpg"}],
+                    "likes_count":"1"},
+           "price":"No price",
+           "description":"Test.\n",
+           "category":"lapki"}]
 
 
 Orders:
