@@ -16,7 +16,11 @@ export default {
     validationPhone: 'enter the phone',
     validationAdress: 'enter the address',
     shopTitle: 'title',
-    onSale: 'on sale'
+    onSale: 'on sale',
+    contacts:'Contacts',
+    delivery:'Delivery',
+    instashop: 'Shop',
+    cabinet: 'Cabinet'
 };
 
 

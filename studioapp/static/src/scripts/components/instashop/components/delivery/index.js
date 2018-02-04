@@ -5,7 +5,7 @@ import Footer from './../../../footer'
 import message from './../../../../services/messages/index'
 import { countBasketItems } from './../../modules/countbasketitems';
 
-class Contacts extends Component {
+class Delivery extends Component {
 
     constructor(props) {
         super(props); 
@@ -34,7 +34,7 @@ class Contacts extends Component {
                         <div className="row">
                             <div className="col-md-12">
                                 <Link className="back_to_shop" to="/instashop">{message.message.backToShop}</Link>
-                                <div className="basket" id="basket">
+                                <div className="basket" id="basket">  
                                     <Link to="/basket"></Link>  
                                     <div id="basketCount"></div>
                                 </div>
@@ -47,7 +47,7 @@ class Contacts extends Component {
                     <div className="container">   
                         <div className="col-md-12">                 
                             <div className="content_wrap">
-                                Contacts
+                                Delivery
                             </div>
                         </div>
                     </div> 
@@ -58,4 +58,4 @@ class Contacts extends Component {
     }
 }
 
-export default Contacts;
+export default Delivery;

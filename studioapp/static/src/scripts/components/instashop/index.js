@@ -5,7 +5,7 @@ import config from './../../configs/index';
 import message from './../../services/messages/index';
 import ApiService from './../../services/api/index';
 import { countBasketItems } from './modules/countbasketitems';
-import GoodsList from './modules/goodsitem';
+import GoodsList from './components/goodsitem';
 import Header from './components/header';
 import Footer from './../footer/';
 
