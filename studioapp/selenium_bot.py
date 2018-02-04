@@ -23,13 +23,14 @@ screenshot_dir = os.path.join(BASE_DIR, 'studioapp', 'scr')
 insta_main_link  = "https://www.instagram.com/"
 insta_login_link = "https://www.instagram.com/accounts/login/"
 insta_user_link  = "https://www.instagram.com/%s/"   # % username
+insta_media_link  = "https://www.instagram.com/p/%s/"   # % code
 
 filtered_names = ['developer', 'explore']
 
 class selenium_webdriver(object):
     
     def __init__(self):
-        self.logger = Logger('selenium_bot')
+        self.logger = Logger('SELENIUM_BOT')
         self.logger.log('SELENIUM_BOT:init: Create selenium_bot')
         if platform.system() == 'Windows':  
             self.binary = FirefoxBinary(r'C:\Program Files (x86)\Mozilla Firefox\firefox.exe')
@@ -231,11 +232,41 @@ class selenium_webdriver(object):
 
         return direction + 'ed'
 
-        ################################################################################### TESTS ###########################################################################
-     
+    def get_media_srcs(self, code):
+        srcs = []
+
+        self.driver.get(insta_media_link % code)
+
+        imgs = self.driver.find_elements_by_css_selector('img')
+
+        srcs.append(str(imgs[1].get_attribute('src')))
+
+        try_to_find_button = True
+        self.make_screenshot()
+
+        while try_to_find_button == True:
+            try:
+                button = self.driver.find_element_by_class_name('coreSpriteRightChevron')
+                self.logger.log('Button')
+                button.click()
+                time.sleep(1)
+                imgs = self.driver.find_elements_by_css_selector('img')
+                srcs.append(str(imgs[1].get_attribute('src')))
+                self.make_screenshot()
+            except:
+                try_to_find_button = False
+                self.logger.log('No button')
+
+        return srcs
+
+
     def close_bot(self):
         self.driver.close()
         self.logger.log('SELENIUM_BOT: closed')
+
+
+
+################################################################################### TESTS ###########################################################################
 
     def test_get_followers(self):
         self.login_user('studio7day', 'Nopasaran')

@@ -1,14 +1,8 @@
 import time
 
 from rest_framework import serializers
-from studioapp.models import InstaUser
-from studioapp.models import InstaBotTask
-from studioapp.models import TaskTarget
-from studioapp.models import InstaMedia
-from studioapp.models import Order
-from studioapp.models import OrderItem
+from studioapp.models import *
 
-from .models import InstaShopItem
 
 from logger import Logger
 logger = Logger('view')
@@ -32,6 +26,13 @@ class InstaUserSerializer(serializers.ModelSerializer):
                   'has_blocked_viewer',
                   'blocked_by_viewer',
                   'is_private')
+
+class _short_InstaUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = InstaUser
+        fields = ('user_id',
+                  'user_name',
+                  'profile_pic_url_hd')
 
 
 class TaskTargetSerializer(serializers.ModelSerializer):
@@ -65,20 +66,35 @@ class InstaBotTaskSerializer(serializers.ModelSerializer):
         return task
 
 
+class InstaMediaSRCSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = InstaMediaSRC
+        fields = ('media_src',)
+
 class InstaMediaSerializer(serializers.ModelSerializer):
-    image_author = InstaUserSerializer()
+    image_author = _short_InstaUserSerializer()
+    srcs         = InstaMediaSRCSerializer(many = True)
 
     class Meta:
         model = InstaMedia
         fields = ('image_id',
-                  'display_src',
+                  'srcs',
                   'caption',
                   'image_author',
-                  'images_likes_count',
+                  'likes_count',
                   'code')
 
+
+class _short_InstaMediaSerializer(serializers.ModelSerializer):
+    srcs         = InstaMediaSRCSerializer(many = True)
+
+    class Meta:
+        model = InstaMedia
+        fields = ('srcs',
+                  'likes_count')
+
 class InstaShopItemSerializer(serializers.ModelSerializer):
-    media = InstaMediaSerializer()
+    media = _short_InstaMediaSerializer()
 
     class Meta:
         model = InstaShopItem

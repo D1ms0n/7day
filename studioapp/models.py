@@ -74,7 +74,8 @@ class Task_to_user_map(models.Model):
     map_id =  models.AutoField(primary_key=True)
     task_id = models.ForeignKey(InstaBotTask, on_delete = models.CASCADE)
     user_id = models.ForeignKey(InstaUser,     on_delete = models.CASCADE,  null= True)
-    #user_name = models.CharField(max_length=256, blank=False, verbose_name=u"User_login", null= True)                   #TODO: change name to id
+    #user_name = models.CharField(max_length=256, blank=False, verbose_name=u"User_login", null= True)
+
 
 
 class TaskTarget(models.Model):
@@ -97,12 +98,12 @@ class Relationship(models.Model):
     def __unicode__(self):
         return u"%s..." % (self.rel_id)
 
-    rel_id           =  models.AutoField(primary_key=True)
+    rel_id           = models.AutoField(primary_key=True)
     followed_user_id = models.CharField(max_length=256, blank=False, verbose_name=u"Followed user id", null= True)
     user_id          = models.CharField(max_length=256, blank=False, verbose_name=u"User id", null= True)
-    
+    #kind             = models.CharField(max_length=256, blank=False, verbose_name=u"Relation kind", null= True)
 
-        
+
 
 class InstaMedia(models.Model):
     class Meta(object):
@@ -113,11 +114,24 @@ class InstaMedia(models.Model):
         return u"%s..." % (self.image_id)
 
     image_id           = models.CharField(max_length=256, blank=False, verbose_name=u"Id")
-    display_src        = models.CharField(max_length=256, blank=False, verbose_name=u"Caption")
     caption            = models.TextField(blank=True, verbose_name=u"Caption")
     image_author       = models.ForeignKey(InstaUser, on_delete=models.CASCADE)
-    images_likes_count = models.CharField(max_length=256, blank=True, verbose_name=u"Likes count")
+    likes_count        = models.CharField(max_length=256, blank=True, verbose_name=u"Likes count")
     code               = models.CharField(max_length=256, blank=True, verbose_name=u"Code")
+
+class InstaMediaSRC(models.Model):
+    class Meta(object):
+        verbose_name = u"Media src"
+        verbose_name_plural = u"Media srcs"
+    def __unicode__(self):
+        #self.content_part=self.image_id[0:100]
+        return u"%s..." % (self.media_src)
+
+    media_src           = models.CharField(max_length=256, blank=False, verbose_name=u"SRC")
+    insta_media         = models.ForeignKey(InstaMedia, related_name='srcs', on_delete=models.CASCADE)
+
+
+
 
     #images_tags =  models.ManyToManyField(Insta_tag)
 
