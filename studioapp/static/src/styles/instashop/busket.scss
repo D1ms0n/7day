@@ -1,0 +1,88 @@
+.basket_wrap{
+    margin-top: 70px;
+}
+.added_goods_list{
+    padding: 0;
+    li{
+        position: relative;
+        margin-bottom: 15px;
+        border: 1px solid rgba(0,0,0,.0975);
+        .preview{
+            float: left;
+            margin-right: 15px;
+            width: 150px;
+            height: 150px;
+            background-color: rgba(0,0,0,.0975);
+            background-size: cover;
+            background-position: 50%;
+            background-repeat: no-repeat;
+        }
+        .description{
+            .title{
+                color: #737373;
+                font-size: 22px;
+                font-family: $font_med;
+                margin-bottom: 20px;
+            }
+            .price{
+                margin: 20px 0;
+                font-family: $font_med;
+                line-height: 1.4;
+            }
+            .remove_btn{
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                width: 20px;
+                height: 20px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url('./../images/close.svg');        
+                @include mixin_transition(.2s);
+                opacity: 0.8;
+                cursor: pointer;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+.changeCount{
+    text-align: center;
+    .minus, .plus{
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        border: 1px solid rgba(0,0,0,.0975);
+        text-align: center;
+    }
+    .minus{
+        float: left;
+    }
+    .plus{
+        float: right;
+    }
+    .allcount{
+        display: inline-block;
+    }
+}
+.form{
+    input{
+        border-radius: 0px;
+    }
+    textarea{        
+        border-radius: 0px;
+        min-height: 150px;
+        max-height: 300px;
+    }
+    .btn.btn-primary{
+        background-color: #f2c352;
+        border-color: #f2c352;
+        color: #000000;
+        &:hover{
+            background-color: #ca9e35;
+            border-color: #ca9e35;
+        }
+    }
+}

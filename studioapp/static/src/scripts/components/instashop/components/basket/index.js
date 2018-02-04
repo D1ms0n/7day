@@ -57,6 +57,7 @@ class Basket extends Component {
         apiService.postRequest(`${config.api.orders}`,JSON.stringify(data))
             .then((result) => {  
                 CookiesService.setCookie('goodsArray','','1');
+               
                 document.getElementById('modal').innerHTML = `
                                                     <div class="modal-result">
                                                        name ${result.name} <br/>

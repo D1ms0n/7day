@@ -3,9 +3,8 @@ import config from '../../../../configs/index';
 import ApiService from '../../../../services/api/index';
 import messages from '../../../../services/messages/index';
 import { CookiesService } from '../../../../services/cookies';
-import { countBasketItems } from './../countbasketitems';
-import { showMessage } from './../showmessage';
-import { log } from 'util';
+import { countBasketItems } from './../../modules/countbasketitems';
+import { showMessage } from './../../modules/showmessage';
 
 class GoodsList extends Component {
 
