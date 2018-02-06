@@ -6,11 +6,17 @@ import { CookiesService } from '../../../../services/cookies';
 import { countBasketItems } from './../../modules/countbasketitems';
 import { showMessage } from './../../modules/showmessage';
 
+var Slider = require('react-slick');
+
 class GoodsList extends Component {
 
     constructor(props) {
-        super(props);        
+        super(props);    
+        this.state = { 
+            sliderReady: false 
+        }; 
         this.addItem = this.addItem.bind(this);
+        this.initSlider = this.initSlider.bind(this);
     }
     addItem(event){
         const googsId = event.target.getAttribute('data-id');
@@ -50,55 +56,80 @@ class GoodsList extends Component {
         countBasketItems();    
         showMessage(messages.message.addedToBasketMss,'alert-success fixed bottom upper');
     }
+
+    initSlider(selector){  
+        console.log(selector);
+    }
+    componentDidMount(){
+
+        setTimeout(() => {
+            this.setState({ 
+                 sliderReady: true 
+            });
+        }, 100);
+
+        const sliders = document.querySelectorAll('.slides_container')
+        for ( let i = 0; i < sliders.length; i++ ){
+            let data_selector = sliders[i].getAttribute('data-selector');
+            this.initSlider(data_selector);
+        }        
+    }
     render() {
         let goodsList = this.props.goodsList;
         let notFound = '';
         if ( goodsList.length === 0 ){
-        notFound = <div className="absolute alert alert-warning" role="alert">
-                        {messages.message.noResults}
-                    </div>
+            notFound = <div className="absolute alert alert-warning" role="alert">
+                {messages.message.noResults}
+            </div>
         }
         return (
-        <div>            
-            <div id="showMassage"></div>
-            {notFound}
-            {goodsList.map((goodsListItem,index) =>        
-                <div key={index} className="goods_item">
-                    <div className="preview_float">
-                        <div className="preview"  style={{backgroundImage: "url(" + goodsListItem.media.display_src + ")"}}></div>
-                    </div>
-                    <div className="description_float">
-                        <div className="description">
-
-                            <div className="on_sale hidden">
-                                {messages.message.onSale}
-                            </div>
-
-                            <div className="title">
-                                {goodsListItem.name}
-                            </div>
-                            <div className="text">
-                                {goodsListItem.description}
-                            </div>
-                            <div className="price">
-                                {goodsListItem.price}
-                            </div>
-                            <button 
-                                    data-title={goodsListItem.name}
-                                    data-price={goodsListItem.price}
-                                    data-imgUrl={goodsListItem.media.display_src}
-                                    data-id={goodsListItem.id} 
-                                    data-count='1'
-                                    className="btn add_btn" type="button"
-                                    onClick={(event) => this.addItem(event)}>
-                                {messages.message.addToBasketText}
-                            </button>  
+            <div>            
+                <div id="showMassage"></div>
+                {notFound}
+                {goodsList.map((goodsListItem,index) =>        
+                    <div key={index} className="goods_item">
+                        <div className="preview_float">            
+                            <div data-selector={"slider_"+(index)} className={"slides_container slider_" + (index) + " " + this.state.sliderReady}>
+                                {goodsListItem.media.srcs.map((item,index) =>
+                                    <div className="slide fade" data-index={index}>
+                                        <div className="preview"  
+                                            style={{backgroundImage: "url(" + item.media_src + ")"}}></div>
+                                    </div>                               
+                                )} 
+                                <div className="slider__control"></div> 
+                                <div className="slider__control slider__control--right"></div>                                                         
+                            </div> 
                         </div>
-                    </div>
-                    <div className="clearfix"></div>
-                </div>           
-            )}
-        </div>
+                        <div className="description_float">
+                            <div className="description">
+                                <div className="on_sale hidden">
+                                    {messages.message.onSale}
+                                </div>
+                                <div className="title">
+                                    {goodsListItem.name}
+                                </div>
+                                <div className="text">
+                                    {goodsListItem.description}
+                                </div>
+                                <div className="price">
+                                    {goodsListItem.price}
+                                </div>
+                                <button 
+                                        data-title={goodsListItem.name}
+                                        data-price={goodsListItem.price}
+                                        data-imgUrl={goodsListItem.media.display_src}
+                                        data-id={goodsListItem.id} 
+                                        data-count='1'
+                                        className="btn add_btn" type="button"
+                                        onClick={(event) => this.addItem(event)}>
+                                    {messages.message.addToBasketText}
+                                </button>  
+                            </div>
+                        </div>
+                        <div className="clearfix"></div>
+                    </div>           
+                )}
+            </div>
         );
     }
 }

@@ -30,6 +30,7 @@
        a{
            color: #ffffff;
            text-decoration: none;
+           text-transform: uppercase;
        }
     }
 }
@@ -207,6 +208,7 @@
 }
 .nav.menu{
     padding: 20px;
+    padding-right: 0;
     padding-left: 15px;
     margin-top: -99px;
     float: right;
@@ -237,5 +239,30 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-image: url('./../images/left-arrow.svg');   
+    }
+}
+
+$elements: 30;
+
+.animate_title{
+    display: inline-block;
+    min-width: 10px;
+    opacity: 0;        
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+    @include mixin_transition(.5s);  
+    @for $i from 1 to $elements {
+        &:nth-child(#{$i}) {
+            $delay:  $i * .1s;;
+           -webkit-transition-delay: $delay;
+            transition-delay: $delay;
+        }
+    }    
+    &.active{
+        opacity: 1;        
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
     }
 }

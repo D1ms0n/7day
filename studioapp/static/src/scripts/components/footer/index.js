@@ -21,7 +21,7 @@ import { setTimeout } from 'timers';
   }
 
   showScrollToTop(){
-    if ( window.scrollY > 200 ){
+    if ( window.scrollY > 250 ){
       this.setState({
         'scrollToTopIsShowen': true
       });

@@ -15,7 +15,7 @@ export default {
     validationEmail: 'email is invalid',
     validationPhone: 'enter the phone',
     validationAdress: 'enter the address',
-    shopTitle: 'title',
+    shopTitle: 'the best title in the world',
     onSale: 'on sale',
     contacts:'Contacts',
     delivery:'Delivery',

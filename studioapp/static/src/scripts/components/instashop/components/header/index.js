@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import message from './../../../../services/messages/index';
 import { Link } from 'react-router';
+import { setTimeout } from 'timers';
 
 class Header extends Component {
 
@@ -16,7 +17,14 @@ class Header extends Component {
             menushown: !this.state.menushown
         });
     }
-   
+    componentDidMount(){       
+        setTimeout(() => {
+            const animateTitleSpan = document.querySelectorAll('.animate_title');   
+            for ( let i = 0; i < animateTitleSpan.length; i++ ){           
+                animateTitleSpan[i].classList.add('active');           
+            } 
+        }, 0);
+    }
     render() {      
         return (
             <div>                
@@ -24,7 +32,7 @@ class Header extends Component {
                     <div className="filter"></div>
                     <h1>
                         <Link className="nav-item" to="/">
-                            {message.message.shopTitle}
+                            {message.message.shopTitle.split('').map(l => <span className="animate_title">{l}</span>)}
                         </Link>                    
                     </h1>
                 </div>
