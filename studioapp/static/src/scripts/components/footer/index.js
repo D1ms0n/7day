@@ -33,13 +33,13 @@ import { setTimeout } from 'timers';
   }
 
   scrollToTop(){
-    for ( let i = window.scrollY; i >= 0 ; i-- ){
-      if ( i % 5 === 0 ) {
-       setTimeout(function(){
-        window.scrollTo(0, i);  
-       })
-      }  
-    }
+    (function smoothscroll(){
+      var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      if (currentScroll > 0) {
+          window.requestAnimationFrame(smoothscroll);
+          window.scrollTo (0,currentScroll - (currentScroll/5));
+      }
+    })();
   }
 
   render() {
