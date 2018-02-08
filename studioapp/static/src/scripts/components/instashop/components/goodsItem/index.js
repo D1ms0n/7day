@@ -56,23 +56,70 @@ class GoodsList extends Component {
         countBasketItems();    
         showMessage(messages.message.addedToBasketMss,'alert-success fixed bottom upper');
     }
+    initSlider(){
 
-    initSlider(selector){  
-        console.log(selector);
+        const sliders = document.querySelectorAll('.slides_container');        
+        
+        for ( let i = 0; i < sliders.length; i++ ){
+
+            let slideIndex = 1;
+            let data_selector = sliders[i].getAttribute('data-selector');
+            const slides = document.querySelectorAll(`.${data_selector} .slide`);
+            const dots = document.querySelectorAll(`.${data_selector} .dot`);
+            const slide_left = document.querySelector(`.${data_selector} .slide_left`);    
+            const slide_rigth = document.querySelector(`.${data_selector} .slide_rigth`);            
+    
+            if ( dots.length === 1 ){
+                slide_left.style.display = "none"; 
+                slide_rigth.style.display = "none"; 
+                dots[0].style.display = "none"; ;
+            }
+
+            function plusSlides(index) {
+                showSlides(slideIndex += index);
+            }
+            function currentSlide(index) {
+                showSlides(slideIndex = index);
+            }
+            function showSlides(index) {
+                if ( index > slides.length ){
+                    slideIndex = 1
+                }            
+                if ( index< 1 ){
+                    slideIndex = slides.length
+                }
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none"; 
+                }
+                for (let i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block"; 
+                dots[slideIndex-1].className += " active";
+            }
+    
+            slide_left.addEventListener("click", function(){
+                plusSlides(-1);
+            });
+            slide_rigth.addEventListener("click", function(){
+                plusSlides(1);
+            });
+            for ( let i = 0; i < dots.length; i++ ){
+                dots[i].addEventListener("click", function(){
+                    let slide_index = dots[i].getAttribute('data-slide-index');
+                    currentSlide(slide_index);
+                });
+            }    
+        }       
     }
     componentDidMount(){
-
-        setTimeout(() => {
+        setTimeout(() => {    
+            this.initSlider();        
             this.setState({ 
-                 sliderReady: true 
+                sliderReady: true 
             });
         }, 100);
-
-        const sliders = document.querySelectorAll('.slides_container')
-        for ( let i = 0; i < sliders.length; i++ ){
-            let data_selector = sliders[i].getAttribute('data-selector');
-            this.initSlider(data_selector);
-        }        
+       
     }
     render() {
         let goodsList = this.props.goodsList;
@@ -96,8 +143,13 @@ class GoodsList extends Component {
                                             style={{backgroundImage: "url(" + item.media_src + ")"}}></div>
                                     </div>                               
                                 )} 
-                                <div className="slider__control"></div> 
-                                <div className="slider__control slider__control--right"></div>                                                         
+                                <div className="slider__control slide_left"></div> 
+                                <div className="slider__control slider__control--right slide_rigth"></div>         
+                                <div className="dots">
+                                    {goodsListItem.media.srcs.map((item,index) =>
+                                        <span className="dot" data-slide-index={index} ></span>                   
+                                    )}   
+                                </div>                                              
                             </div> 
                         </div>
                         <div className="description_float">
@@ -117,7 +169,7 @@ class GoodsList extends Component {
                                 <button 
                                         data-title={goodsListItem.name}
                                         data-price={goodsListItem.price}
-                                        data-imgUrl={goodsListItem.media.display_src}
+                                        data-imgUrl={goodsListItem.media.srcs[0].media_src}
                                         data-id={goodsListItem.id} 
                                         data-count='1'
                                         className="btn add_btn" type="button"

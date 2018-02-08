@@ -12,6 +12,7 @@ class Cabinet extends Component {
         this.state = {
             name: ''            
         };
+        this.addFixedheader = this.addFixedheader.bind(this);  
     }   
    
     handleUserInput (event) {
@@ -20,6 +21,20 @@ class Cabinet extends Component {
         this.setState({
             [name]: value
         }, () => { this.validateField(name, value) });
+    }
+    addFixedheader(){
+        if ( window.scrollY >= 200 ){
+            document.querySelector('.header_wrap').classList.add('fixed');
+        } else {
+            document.querySelector('.header_wrap').classList.remove('fixed');
+        }
+    }
+    componentDidMount(){
+        countBasketItems();
+        window.addEventListener('scroll', this.addFixedheader);
+    }
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.addFixedheader);
     }
 
     render() {      
