@@ -15,7 +15,10 @@
             float: right;
             width: 100%;
             max-width: 35%;
-            padding: 0 15px 
+            padding: 0 15px;
+            .changeCount{
+                display: none;
+            }
         }
         &:nth-child(even){
             .preview_float{
@@ -62,6 +65,9 @@
             }
         }
         .description{
+            overflow: hidden;
+            position: relative;
+            padding-bottom: 35px;
             .on_sale{
                 background-color: #f26c4f;
                 line-height: 14px;
@@ -97,7 +103,17 @@
                     text-align: center;
                 }
             } 
+            .changeCount{
+                position: absolute;
+                width: 100%;
+                left: 100%;
+                padding: 5px;
+                border: 2px solid #808080;
+                @include mixin_transition(.2s);
+            }
             .add_btn{
+                position: absolute;
+                right: 0;
                 width: 100%;
                 background-color: #f2c352;
                 border-radius: 0px;
@@ -115,6 +131,14 @@
                 }
                 &:hover{
                     background-color: #d39f26;
+                }
+                &.active{
+                    right: 100%;
+                    display: none;
+                }
+                &.active + .changeCount{
+                    display: block;
+                    left: 0;
                 }
             }
         }
@@ -218,7 +242,7 @@ $sliderReadyTrans: all $animTime/2 $animTime;
         border-radius: 50%;
         display: inline-block;
         transition: background-color 0.6s ease;     
-        opacity: 5;   
+        opacity: .5;   
         &.active{
             opacity: 1;
         }

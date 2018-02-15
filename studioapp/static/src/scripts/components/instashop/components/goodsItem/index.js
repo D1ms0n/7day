@@ -5,6 +5,7 @@ import messages from '../../../../services/messages/index';
 import { CookiesService } from '../../../../services/cookies';
 import { countBasketItems } from './../../modules/countbasketitems';
 import { showMessage } from './../../modules/showmessage';
+import { initSlider } from './../../modules/initSlider';
 
 var Slider = require('react-slick');
 
@@ -16,7 +17,7 @@ class GoodsList extends Component {
             sliderReady: false 
         }; 
         this.addItem = this.addItem.bind(this);
-        this.initSlider = this.initSlider.bind(this);
+        this.changeCount = this.changeCount.bind(this);
     }
     addItem(event){
         const googsId = event.target.getAttribute('data-id');
@@ -51,70 +52,57 @@ class GoodsList extends Component {
                 goodsArray.push(addedItemsList[i]);
             }                
         }
+        event.target.classList.add('active');
         goodsArray.push(goodsItem);    
         CookiesService.setCookie('goodsArray',JSON.stringify(goodsArray),config.api.timeToSaveAddedList);   
         countBasketItems();    
         showMessage(messages.message.addedToBasketMss,'alert-success fixed bottom upper');
     }
-    initSlider(){
+    changeCount(id,action){
 
-        const sliders = document.querySelectorAll('.slides_container');        
-        
-        for ( let i = 0; i < sliders.length; i++ ){
-
-            let slideIndex = 1;
-            let data_selector = sliders[i].getAttribute('data-selector');
-            const slides = document.querySelectorAll(`.${data_selector} .slide`);
-            const dots = document.querySelectorAll(`.${data_selector} .dot`);
-            const slide_left = document.querySelector(`.${data_selector} .slide_left`);    
-            const slide_rigth = document.querySelector(`.${data_selector} .slide_rigth`);            
-    
-            if ( dots.length === 1 ){
-                slide_left.style.display = "none"; 
-                slide_rigth.style.display = "none"; 
-                dots[0].style.display = "none"; ;
-            }
-
-            function plusSlides(index) {
-                showSlides(slideIndex += index);
-            }
-            function currentSlide(index) {
-                showSlides(slideIndex = index);
-            }
-            function showSlides(index) {
-                if ( index > slides.length ){
-                    slideIndex = 1
-                }            
-                if ( index< 1 ){
-                    slideIndex = slides.length
+        const counter = document.getElementById(`count${id}`);    
+        const minus = document.getElementById(`minus${id}`);
+        const timeSave = config.api.timeToSaveAddedList;
+        let addedItemsList = JSON.parse(CookiesService.getCookie('goodsArray'));
+        let goodsArray = []; 
+        let goodsItem ;      
+            
+        for ( let i = 0; i < addedItemsList.length; i++ ){
+          if ( Number(addedItemsList[i].id) === Number(id) ){
+              let newCount ;        
+              if( action === "inc"){
+                newCount = Number(addedItemsList[i].count) + 1;
+                counter.innerHTML = newCount;
+              }else if( action === "dec"){
+                newCount = Number(addedItemsList[i].count) - 1;
+                if ( newCount === 0 ){
+                  newCount = 1;
                 }
-                for (let i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none"; 
-                }
-                for (let i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex-1].style.display = "block"; 
-                dots[slideIndex-1].className += " active";
-            }
-    
-            slide_left.addEventListener("click", function(){
-                plusSlides(-1);
-            });
-            slide_rigth.addEventListener("click", function(){
-                plusSlides(1);
-            });
-            for ( let i = 0; i < dots.length; i++ ){
-                dots[i].addEventListener("click", function(){
-                    let slide_index = dots[i].getAttribute('data-slide-index');
-                    currentSlide(slide_index);
-                });
-            }    
-        }       
+                counter.innerHTML = newCount;
+              }   
+              if ( Number(newCount) < 2 ){
+                minus.style.pointerEvents = 'none';
+              } else {
+                minus.style.pointerEvents = 'all';
+              }
+              goodsItem = {
+                id : id,
+                count : newCount.toString(),
+                title : addedItemsList[i].title,
+                price : addedItemsList[i].price,
+                image : addedItemsList[i].image
+              };
+              goodsArray.push(goodsItem); 
+              continue;
+          }
+          goodsArray.push(addedItemsList[i]);
+        }  
+        CookiesService.setCookie('goodsArray',JSON.stringify(goodsArray),timeSave);
+        countBasketItems();
     }
     componentDidMount(){
         setTimeout(() => {    
-            this.initSlider();        
+            initSlider('.slides_container');        
             this.setState({ 
                 sliderReady: true 
             });
@@ -175,7 +163,21 @@ class GoodsList extends Component {
                                         className="btn add_btn" type="button"
                                         onClick={(event) => this.addItem(event)}>
                                     {messages.message.addToBasketText}
-                                </button>  
+                                </button>    
+                                <div className="changeCount">
+                                    <div id={"minus" + goodsListItem.id} className="minus"
+                                        onClick={() => this.changeCount(goodsListItem.id,'dec')}>
+                                        -
+                                    </div>
+                                    <div className="allcount" id={"count" + goodsListItem.id} >
+                                        1                   
+                                    </div>
+                                    <div className="plus"
+                                        onClick={() => this.changeCount(goodsListItem.id,'inc')}>
+                                        +
+                                    </div>
+                                </div>      
+
                             </div>
                         </div>
                         <div className="clearfix"></div>
