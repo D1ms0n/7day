@@ -13,8 +13,7 @@ class Cabinet extends Component {
             name: ''            
         };
         this.addFixedheader = this.addFixedheader.bind(this);  
-    }   
-   
+    }      
     handleUserInput (event) {
         const name = event.target.name;
         const value = event.target.value;

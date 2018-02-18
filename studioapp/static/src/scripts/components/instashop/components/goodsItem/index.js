@@ -18,6 +18,17 @@ class GoodsList extends Component {
         }; 
         this.addItem = this.addItem.bind(this);
         this.changeCount = this.changeCount.bind(this);
+        this.updateCounters = this.updateCounters.bind(this); 
+    }
+    
+    updateCounters(){
+        const addedItemsList = JSON.parse(CookiesService.getCookie('goodsArray'));
+        for ( let i = 0; i < addedItemsList.length; i++ ){
+            const counter = document.getElementById(`count${addedItemsList[i].id}`);
+            if ( counter ){
+                counter.innerHTML = Number(addedItemsList[i].count);
+            } 
+        }
     }
     addItem(event){
         const googsId = event.target.getAttribute('data-id');
@@ -56,7 +67,8 @@ class GoodsList extends Component {
         goodsArray.push(goodsItem);    
         CookiesService.setCookie('goodsArray',JSON.stringify(goodsArray),config.api.timeToSaveAddedList);   
         countBasketItems();    
-        showMessage(messages.message.addedToBasketMss,'alert-success fixed bottom upper');
+        showMessage(messages.message.addedToBasketMss,'alert-success fixed bottom upper');        
+        this.updateCounters();
     }
     changeCount(id,action){
 
@@ -118,71 +130,77 @@ class GoodsList extends Component {
             </div>
         }
         return (
-            <div>            
-                <div id="showMassage"></div>
-                {notFound}
-                {goodsList.map((goodsListItem,index) =>        
-                    <div key={index} className="goods_item">
-                        <div className="preview_float">            
-                            <div data-selector={"slider_"+(index)} className={"slides_container slider_" + (index) + " " + this.state.sliderReady}>
-                                {goodsListItem.media.srcs.map((item,index) =>
-                                    <div className="slide fade" data-index={index}>
-                                        <div className="preview"  
-                                            style={{backgroundImage: "url(" + item.media_src + ")"}}></div>
-                                    </div>                               
-                                )} 
-                                <div className="slider__control slide_left"></div> 
-                                <div className="slider__control slider__control--right slide_rigth"></div>         
-                                <div className="dots">
-                                    {goodsListItem.media.srcs.map((item,index) =>
-                                        <span className="dot" data-slide-index={index} ></span>                   
-                                    )}   
-                                </div>                                              
-                            </div> 
-                        </div>
-                        <div className="description_float">
-                            <div className="description">
-                                <div className="on_sale hidden">
-                                    {messages.message.onSale}
-                                </div>
-                                <div className="title">
-                                    {goodsListItem.name}
-                                </div>
-                                <div className="text">
-                                    {goodsListItem.description}
-                                </div>
-                                <div className="price">
-                                    {goodsListItem.price}
-                                </div>
-                                <button 
-                                        data-title={goodsListItem.name}
-                                        data-price={goodsListItem.price}
-                                        data-imgUrl={goodsListItem.media.srcs[0].media_src}
-                                        data-id={goodsListItem.id} 
-                                        data-count='1'
-                                        className="btn add_btn" type="button"
-                                        onClick={(event) => this.addItem(event)}>
-                                    {messages.message.addToBasketText}
-                                </button>    
-                                <div className="changeCount">
-                                    <div id={"minus" + goodsListItem.id} className="minus"
-                                        onClick={() => this.changeCount(goodsListItem.id,'dec')}>
-                                        -
+            <div>        
+                <div className="container-fluid">
+                    <div className="container">   
+                        <div className="goods_wrap">                 
+                            <div id="showMassage"></div>
+                            {notFound}
+                            {goodsList.map((goodsListItem,index) =>        
+                                <div key={index} className="goods_item">
+                                    <div className="preview_float">            
+                                        <div data-selector={"slider_"+(index)} className={"slides_container slider_" + (index) + " " + this.state.sliderReady}>
+                                            {goodsListItem.media.srcs.map((item,index) =>
+                                                <div className="slide fade" data-index={index}>
+                                                    <div className="preview"  
+                                                        style={{backgroundImage: "url(" + item.media_src + ")"}}></div>
+                                                </div>                               
+                                            )} 
+                                            <div className="slider__control slide_left"></div> 
+                                            <div className="slider__control slider__control--right slide_rigth"></div>         
+                                            <div className="dots hidden">
+                                                {goodsListItem.media.srcs.map((item,index) =>
+                                                    <span className="dot" data-slide-index={index} ></span>                   
+                                                )}   
+                                            </div>                                              
+                                        </div> 
                                     </div>
-                                    <div className="allcount" id={"count" + goodsListItem.id} >
-                                        1                   
-                                    </div>
-                                    <div className="plus"
-                                        onClick={() => this.changeCount(goodsListItem.id,'inc')}>
-                                        +
-                                    </div>
-                                </div>      
+                                    <div className="description_float">
+                                        <div className="description">
+                                            <div className="on_sale hidden">
+                                                {messages.message.onSale}
+                                            </div>
+                                            <div className="title">
+                                                {goodsListItem.name}
+                                            </div>
+                                            <div className="text">
+                                                {goodsListItem.description}
+                                            </div>
+                                            <div className="price">
+                                                {goodsListItem.price}
+                                            </div>
+                                            <button 
+                                                    data-title={goodsListItem.name}
+                                                    data-price={goodsListItem.price}
+                                                    data-imgUrl={goodsListItem.media.srcs[0].media_src}
+                                                    data-id={goodsListItem.id} 
+                                                    data-count='1'
+                                                    className="btn add_btn" type="button"
+                                                    onClick={(event) => this.addItem(event)}>
+                                                {messages.message.addToBasketText}
+                                            </button>    
+                                            <div className="changeCount">
+                                                <div id={"minus" + goodsListItem.id} className="minus"
+                                                    onClick={() => this.changeCount(goodsListItem.id,'dec')}>
+                                                    -
+                                                </div>
+                                                <div className="allcount" id={"count" + goodsListItem.id} >
+                                                    1                   
+                                                </div>
+                                                <div className="plus"
+                                                    onClick={() => this.changeCount(goodsListItem.id,'inc')}>
+                                                    +
+                                                </div>
+                                            </div>      
 
-                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="clearfix"></div>
+                                </div>           
+                            )}
                         </div>
-                        <div className="clearfix"></div>
-                    </div>           
-                )}
+                    </div> 
+                </div>                
             </div>
         );
     }

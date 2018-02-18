@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+
 import config from './../../../../configs/index';
 import ApiService from './../../../../services/api/index';
 import { CookiesService } from './../../../../services/cookies';
 import message from './../../../../services/messages/index';
+
 import AddedItemsList from './modules/addeditem/index';
 import Header from './../../components/header';
 import FormErrors from './modules/formErrors';
-import { log } from 'util';
 
 class Basket extends Component {
     constructor(props) {
@@ -124,7 +125,7 @@ class Basket extends Component {
             menushown: !this.state.menushown
         });
     }
-    handleUserInput (event) {
+    handleUserInput(event) {
         const name = event.target.name;
         const value = event.target.value;
         this.setState({
@@ -139,7 +140,11 @@ class Basket extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12">
-                                <Link className="back_to_shop" to="/instashop">{message.message.backToShop}</Link>     
+                                <Link className="back_to_shop" to="/instashop">{message.message.backToShop}</Link> 
+                                <div className="basket hidden" id="basket">
+                                    <Link to="/basket"></Link>  
+                                    <div id="basketCount"></div>
+                                </div>
                                 <div className="clearfix"></div>
                             </div> 
                         </div> 

@@ -105,7 +105,7 @@ class AddedItemsList extends Component {
                       {addedGoodsitem.title}
                     </h4>
                     <h4 className="price">
-                        ₴ {addedGoodsitem.price}
+                        ₴ <span className="total_price_count">{addedGoodsitem.price}</span>
                     </h4>
                     <div className="changeCount">
                       <div id={"minus" + addedGoodsitem.id} className="minus"
@@ -124,6 +124,7 @@ class AddedItemsList extends Component {
                         data-id={addedGoodsitem.id} 
                         onClick={(event) => this.removeItem(event)}
                         className="remove_btn" >
+                        {message.message.removeBtnText}
                     </div>  
                 </div> 
             </li>

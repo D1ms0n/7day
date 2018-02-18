@@ -2,10 +2,9 @@ export default {
     allCategories : 'all',
     noResults: ' No results',
     removeBtnTxt: 'remove',
-    backToShop: 'back to shop',
     createOrderText: 'create order',
-    addToBasketText: 'add to busket',
-    addedToBasketMss: 'Added to basket',   
+    addToBasketText: 'add to cart',
+    addedToBasketMss: 'Added to cart',   
     name: 'Name',
     mail: 'mail',
     phone: 'phone',
@@ -20,7 +19,8 @@ export default {
     contacts:'Contacts',
     delivery:'Delivery',
     instashop: 'Shop',
-    cabinet: 'Cabinet'
+    cabinet: 'Cabinet',
+    removeBtnText: 'remove'
 };
 
 

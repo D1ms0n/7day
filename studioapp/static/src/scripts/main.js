@@ -6,8 +6,6 @@ import Search from './components/search';
 import Tasks from './components/tasks';
 import Register from './components/register';
 import InstaShop from './components/instashop';
-import Contacts from './components/instashop/components/contacts';
-import Delivery from './components/instashop/components/delivery';
 import Cabinet from './components/instashop/components/Cabinet';
 import Basket from './components/instashop/components/basket';
 
@@ -23,9 +21,7 @@ ReactDOM.render(
         <Route path="/register" component={Register}/>     
 
         <Route path="/instashop" component={InstaShop}/>      
-        <Route path="/basket" component={Basket}/>   
-        <Route path="/contacts" component={Contacts}/>  
-        <Route path="/delivery" component={Delivery}/>  
+        <Route path="/basket" component={Basket}/>           
         <Route path="/cabinet" component={Cabinet}/>  
     </Router>,
   document.getElementById('page-content')

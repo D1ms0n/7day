@@ -6,12 +6,17 @@
     li{
         position: relative;
         margin-bottom: 15px;
+        padding-left: 120px;
+        min-height: 120px;
         border: 1px solid rgba(0,0,0,.0975);
         .preview{
-            float: left;
+            position: absolute;
+            left: 10px;
+            top: 10px;
             margin-right: 15px;
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
             background-color: rgba(0,0,0,.0975);
             background-size: cover;
             background-position: 50%;
@@ -20,7 +25,7 @@
         .description{
             .title{
                 color: #737373;
-                font-size: 22px;
+                font-size: 18px;
                 font-family: $font_med;
                 margin-bottom: 20px;
             }
@@ -28,19 +33,19 @@
                 margin: 20px 0;
                 font-family: $font_med;
                 line-height: 1.4;
+                font-size: 16px;
             }
             .remove_btn{
                 position: absolute;
-                right: 15px;
-                top: 15px;
-                width: 20px;
-                height: 20px;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-image: url('./../images/close.svg');        
-                @include mixin_transition(.2s);
-                opacity: 0.8;
+                right: 10px;
+                bottom: 10px;
+                padding: 0px 10px;
+                text-align: center;
+                color: #ffffff;
+                background-color: #d41818; 
                 cursor: pointer;
+                @include mixin_transition(.2s);
+                opacity: 0.6;
                 &:hover{
                     opacity: 1;
                 }
@@ -50,6 +55,7 @@
 }
 .changeCount{
     text-align: center;
+    width: 90px;
     .minus, .plus{
         cursor: pointer;
         width: 20px;

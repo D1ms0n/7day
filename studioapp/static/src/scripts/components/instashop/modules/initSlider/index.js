@@ -47,17 +47,23 @@ export function initSlider(selector){
             dots[slideIndex-1].className += " active";
         }
 
-        slide_left.addEventListener("click", function(){
-            plusSlides(-1);
-        });
-        slide_rigth.addEventListener("click", function(){
-            plusSlides(1);
-        });
-        for ( let i = 0; i < dots.length; i++ ){
-            dots[i].addEventListener("click", function(){
-                let slide_index = dots[i].getAttribute('data-slide-index');
-                currentSlide(slide_index);
+        if ( slide_left ){
+            slide_left.addEventListener("click", function(){
+                plusSlides(-1);
             });
-        }    
+        }
+        if ( slide_rigth ){
+            slide_rigth.addEventListener("click", function(){
+                plusSlides(1);
+            });
+        }
+        if ( dots ){
+            for ( let i = 0; i < dots.length; i++ ){
+                dots[i].addEventListener("click", function(){
+                    let slide_index = dots[i].getAttribute('data-slide-index');
+                    currentSlide(slide_index);
+                });
+            }
+        }            
     }
 }
