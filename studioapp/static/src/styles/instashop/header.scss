@@ -5,7 +5,10 @@
     padding-top: 70px;
     background-repeat: no-repeat;
     background-size: cover;   
-    background-image: url('./../images/bg.jpg'); 
+    background-position: center center;
+    // background-image: url('./../images/bg.jpg'); 
+    background-image: url('./../images/bg2.jpg');
+    z-index: 10;
     .filter{
         position: absolute;
         left: 0;

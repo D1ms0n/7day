@@ -134,6 +134,7 @@ body{
                 letter-spacing: 2px;
                 @include mixin_transition(.2s);
                 @media screen and (max-width: 768px) {
+                    position: static;
                     margin: 0 auto;
                     width: 150px;
                     display: block;

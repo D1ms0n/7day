@@ -10,7 +10,7 @@ import AddedItemsList from './modules/addeditem/index';
 import Header from './../../components/header';
 import FormErrors from './modules/formErrors';
 
-class Basket extends Component {
+class Cart extends Component {
     constructor(props) {
         super(props);  
         this.state = {
@@ -58,7 +58,7 @@ class Basket extends Component {
         apiService.postRequest(`${config.api.orders}`,JSON.stringify(data))
             .then((result) => {  
                 CookiesService.setCookie('goodsArray','','1');
-               
+
                 document.getElementById('modal').innerHTML = `
                                                     <div class="modal-result">
                                                        name ${result.name} <br/>
@@ -142,28 +142,29 @@ class Basket extends Component {
                             <div className="col-md-12">
                                 <Link className="back_to_shop" to="/instashop">{message.message.backToShop}</Link> 
                                 <div className="basket hidden" id="basket">
-                                    <Link to="/basket"></Link>  
+                                    <Link to="/cart"></Link>  
                                     <div id="basketCount"></div>
                                 </div>
                                 <div className="clearfix"></div>
                             </div> 
                         </div> 
                     </div> 
-                </div>      
+                </div>   
                 <div className="container-fluid">
-                    <div className="container basket_wrap">
+                    <div className="container cart_wrap">
                         <div className="row">
-                            <div className="col-md-6">
-                                <AddedItemsList/>                                
+                            <div className="col-md-12">
+                               <h3>{message.message.cartTitle}</h3>
                             </div> 
                             <div className="col-md-6">
                                 <form id="createOrderForm" className="form"
                                     onSubmit={(event) => this.createOrder(event)}>  
 
                                     <div className='form-group row'>
-                                        <label className="col-md-3 col-sm-4 col-form-label">{message.message.name}</label> 
+                                        <label htmlFor="name" className="col-md-3 col-sm-4 col-form-label requaired">{message.message.name}</label> 
                                         <div className="col-md-9 col-sm-8">
-                                            <input type="text" className="form-control"
+                                            <input type="text" id="name"
+                                                    className="form-control"
                                                     placeholder="name"
                                                     name="name"
                                                     value={this.state.name}
@@ -171,19 +172,21 @@ class Basket extends Component {
                                         </div>                    
                                     </div>                     
                                     <div className='form-group row'>
-                                        <label className="col-md-3 col-sm-4 col-form-label">{message.message.mail}</label> 
+                                        <label htmlFor="email" className="col-md-3 col-sm-4 col-form-label requaired">{message.message.mail}</label> 
                                         <div className="col-md-9 col-sm-8">
-                                            <input type="text" className="form-control"
-                                                    placeholder="mail"
+                                            <input type="text" id="email"
+                                                    className="form-control"
+                                                    placeholder="email"
                                                     name="mail"
                                                     value={this.state.mail}
                                                     onChange={(event) => this.handleUserInput(event)}/>
                                         </div>                    
                                     </div>
                                     <div className='form-group row'>
-                                        <label className="col-md-3 col-sm-4 col-form-label">{message.message.phone}</label> 
+                                        <label htmlFor="phone" className="col-md-3 col-sm-4 col-form-label requaired">{message.message.phone}</label> 
                                         <div className="col-md-9 col-sm-8">
-                                            <input type="text" className="form-control"
+                                            <input type="text" id="phone"
+                                                    className="form-control"
                                                     placeholder="phone"
                                                     name="phone"
                                                     value={this.state.phone}
@@ -191,9 +194,10 @@ class Basket extends Component {
                                         </div>                    
                                     </div>
                                     <div className='form-group row'>
-                                        <label className="col-md-3 col-sm-4 col-form-label">{message.message.address}</label> 
+                                        <label htmlFor="adress" className="col-md-3 col-sm-4 col-form-label requaired">{message.message.address}</label> 
                                         <div className="col-md-9 col-sm-8">
-                                            <input type="text" className="form-control"
+                                            <input type="text" id="adress"
+                                                    className="form-control"
                                                     placeholder="address"
                                                     name="address"
                                                     value={this.state.address}
@@ -225,6 +229,9 @@ class Basket extends Component {
 
                                 </form>                              
                             </div>
+                            <div className="col-md-6">
+                                <AddedItemsList/>                                
+                            </div> 
                         </div> 
                     </div> 
                 </div>                  
@@ -233,4 +240,4 @@ class Basket extends Component {
     }
 }
 
-export default Basket;
+export default Cart;

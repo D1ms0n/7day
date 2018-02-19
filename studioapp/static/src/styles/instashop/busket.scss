@@ -1,5 +1,12 @@
-.basket_wrap{
+.cart_wrap{
     margin-top: 70px;
+    @media screen and (max-width: 768px) {
+       margin-top: 25px;
+    }
+    h3{
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
 }
 .added_goods_list{
     padding: 0;
@@ -90,5 +97,20 @@
             background-color: #ca9e35;
             border-color: #ca9e35;
         }
+    }
+}
+
+label.requaired{
+    position: relative;
+    &:after{
+        content: '*';
+        display: block;
+        color: #d41818;
+        position: absolute;
+        right: 0;
+        top: 0;  
+        @media screen and (max-width: 768px) {
+            right: 20px;
+        }    
     }
 }

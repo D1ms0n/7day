@@ -1,4 +1,7 @@
 
 .content_wrap{
     padding-top: 90px;
+    @media screen and (max-width: 768px) {
+        padding-top: 200px;
+    }
 }

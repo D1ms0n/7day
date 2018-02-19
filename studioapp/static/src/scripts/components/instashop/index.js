@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import { log } from 'util';
 import config from './../../configs/index';
 import message from './../../services/messages/index';
 import ApiService from './../../services/api/index';
 import { CookiesService } from './../../services/cookies';
 import { countBasketItems } from './modules/countbasketitems';
-import GoodsList from './components/goodsitem';
 import Header from './components/header';
+import GoodsList from './components/goodsitem';
 import Delivery from './components/delivery/index';
 import Contacts from './components/contacts/index';
 import Footer from './components/footer/';
@@ -90,7 +89,7 @@ class InstaShop extends Component {
             for ( let i = 0; i < elementPosition; i++){
                 setTimeout(()=>{
                     window.scrollTo(0,i);
-                },10)
+                })
             }
         }
     }
@@ -146,7 +145,7 @@ class InstaShop extends Component {
                                     )}                       
                                 </ul>
                                 <div className="basket" id="basket">
-                                    <Link to="/basket"></Link>  
+                                    <Link to="/order"></Link>  
                                     <div id="basketCount"></div>
                                 </div>
                                 <div className="clearfix"></div>

@@ -12,6 +12,7 @@ class AddedItemsList extends Component {
     };
     this.removeItem = this.removeItem.bind(this);
     this.changeCount = this.changeCount.bind(this);
+    this.updateTotalPrice = this.updateTotalPrice.bind(this);
   }
   removeItem(event){
 
@@ -33,6 +34,7 @@ class AddedItemsList extends Component {
         }
       }
     }
+    this.updateTotalPrice();
   }
   changeCount(id,action){
 
@@ -74,9 +76,25 @@ class AddedItemsList extends Component {
       goodsArray.push(addedItemsList[i]);
     }  
     CookiesService.setCookie('goodsArray',JSON.stringify(goodsArray),timeSave);
+    this.updateTotalPrice();
+  }
+  updateTotalPrice(){
+    const totalPrice = document.getElementById('totalPrice');
+    const goodsArray = JSON.parse(CookiesService.getCookie('goodsArray'));
+    const pricesArray = goodsArray.map((item)=>{item.price});
+    let totalPriceNum = 0;
+    for ( let i = 0; i < pricesArray.length; i++ ){
+      totalPriceNum = totalPriceNum + pricesArray[i];
+    }
+    if ( totalPrice ){
+      totalPrice.innerHTML = `${message.message.totalPrice} ${totalPriceNum}`;
+    }
   }
   componentDidMount(){
     const cockie = CookiesService.getCookie('goodsArray');
+    setTimeout(()=>{
+      this.updateTotalPrice();
+    })
     if ( cockie.length >= 0 ){
       this.setState({
         'addedGoodsList': JSON.parse(cockie)
@@ -86,11 +104,12 @@ class AddedItemsList extends Component {
   render(){
     const addedGoodsList = this.state.addedGoodsList;
     let notFound;
+    let totalPrice = <div className="total_price"><span id="totalPrice"></span></div>;
 
     if ( addedGoodsList.length === 0 ){
-        notFound = <div className="absolute alert alert-warning" role="alert">
-                     {message.message.noResults}
-                   </div>
+      notFound = <div className="absolute alert alert-warning" role="alert">
+                    {message.message.noResults}
+                  </div>
     }
 
     return (
@@ -130,6 +149,7 @@ class AddedItemsList extends Component {
             </li>
           )}   
         </ul>
+        {totalPrice}        
       </div>
     )
   }

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
-import message from './../../../../services/messages/index'
 
 class Contacts extends Component {
 

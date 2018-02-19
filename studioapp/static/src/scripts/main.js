@@ -7,7 +7,7 @@ import Tasks from './components/tasks';
 import Register from './components/register';
 import InstaShop from './components/instashop';
 import Cabinet from './components/instashop/components/Cabinet';
-import Basket from './components/instashop/components/basket';
+import Cart from './components/instashop/components/cart';
 
 
 import '../styles/styles.scss';
@@ -21,7 +21,7 @@ ReactDOM.render(
         <Route path="/register" component={Register}/>     
 
         <Route path="/instashop" component={InstaShop}/>      
-        <Route path="/basket" component={Basket}/>           
+        <Route path="/order" component={Cart}/>           
         <Route path="/cabinet" component={Cabinet}/>  
     </Router>,
   document.getElementById('page-content')

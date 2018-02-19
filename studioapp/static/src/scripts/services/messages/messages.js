@@ -1,3 +1,4 @@
+
 export default {
     allCategories : 'all',
     noResults: ' No results',
@@ -6,13 +7,13 @@ export default {
     addToBasketText: 'add to cart',
     addedToBasketMss: 'Added to cart',   
     name: 'Name',
-    mail: 'mail',
-    phone: 'phone',
-    address: 'address',
-    comment: 'comment',
+    mail: 'Email',
+    phone: 'Phone',
+    address: 'Address',
+    comment: 'Comment',
     validationName: 'enter the name',
     validationEmail: 'email is invalid',
-    validationPhone: 'enter the phone',
+    validationPhone: 'pnone is invalid',
     validationAdress: 'enter the address',
     shopTitle: 'the best title in the world',
     onSale: 'on sale',
@@ -20,7 +21,7 @@ export default {
     delivery:'Delivery',
     instashop: 'Shop',
     cabinet: 'Cabinet',
-    removeBtnText: 'remove'
+    removeBtnText: 'remove',
+    cartTitle: 'Create order',
+    totalPrice: 'Total price :'
 };
-
-
