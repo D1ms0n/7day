@@ -80,10 +80,24 @@
         background-size: cover;
         background-image: url('./../images/shopping_cart.svg');        
         @include mixin_transition(.2s);
+        &:before{
+          content:'';
+          display: block;
+          background-color: rgba(0, 0, 0, 0.09);
+          border-radius: 50%;
+          position: absolute;                
+          width: 50px;
+          height: 50px;          
+          left: -13px;
+          top: -16px;
+          transform: scale(0);
+        }
         &.active{
-            animation-name: left_rigth;
-            animation-timing-function: linear;
-            animation-duration: 0.7s;
+            &:before{
+                animation-name: circle;
+                animation-timing-function: linear;
+                animation-duration: 0.3s;
+            }
         }         
         a{
             display: block;
@@ -119,6 +133,11 @@
         .text{
             color: #737373;
         }       
+    }
+}
+@keyframes circle {
+    100% { 
+        transform: scale(1);
     }
 }
 @keyframes left_rigth {
@@ -236,11 +255,11 @@
     font-family: $font_bold;
     &:before{
         content: '';
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 31px;
         position: absolute;
-        left: -25px;
-        top: -2px;
+        left: -6px;
+        top: -6px;
         background-repeat: no-repeat;
         background-size: cover;
         background-image: url('./../images/left-arrow.svg');   

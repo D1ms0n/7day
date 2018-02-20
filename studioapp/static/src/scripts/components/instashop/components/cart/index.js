@@ -140,11 +140,7 @@ class Cart extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12">
-                                <Link className="back_to_shop" to="/instashop">{message.message.backToShop}</Link> 
-                                <div className="basket hidden" id="basket">
-                                    <Link to="/cart"></Link>  
-                                    <div id="basketCount"></div>
-                                </div>
+                                <Link className="back_to_shop" to="/instashop">{message.message.backToShop}</Link>                                
                                 <div className="clearfix"></div>
                             </div> 
                         </div> 

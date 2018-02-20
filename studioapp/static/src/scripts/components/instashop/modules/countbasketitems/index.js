@@ -15,12 +15,16 @@ export function countBasketItems(){
         if ( count === 0 ){
             count = '';
         }
-        basketCount.innerHTML = count;
-
-        basket.classList.add('active');   
-        setTimeout(function(){
-            basket.classList.remove('active');
-        },1000);
+        if ( basketCount ){
+            basketCount.innerHTML = count;
+        }
+        if ( basket ){
+            basket.classList.add('active');   
+            setTimeout(()=>{
+                basket.classList.remove('active');
+            },500);
+        }
+        
 
     }        
 }
