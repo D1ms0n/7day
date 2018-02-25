@@ -12,14 +12,23 @@ class TasksList extends Component {
     detailTask(event){
 
       const preLoader = document.getElementById('preLoader');
+      const detailsModal = document.getElementById('detailsModal');
       const taskId = event.target.value;    
       let apiService = new ApiService();
       
       preLoader.style.display='block';
       apiService.getRequest(`${config.api.tasks}${taskId}`)
         .then((result) => {
-          console.log(result);
           preLoader.style.display='none';
+
+          const targetsList = document.createElement('ul');
+          for ( let i; i < result.targets.length; i++ ){            
+            let targetsListItem = document.createElement('li');
+            targetsListItem.innerHTML = result.targets[i].user_name;
+            targetsList.appendChild(targetsListItem);
+          }         
+          detailsModal.innerHTML = targetsList;
+
         })
         .catch((e) => {
           console.log(e);
@@ -40,7 +49,7 @@ class TasksList extends Component {
                   <th scope="col">Operation</th>
                   <th scope="col">Start time</th>
                   <th scope="col">Status</th>
-                  <th scope="col">Actions</th>
+                  <th scope="col" className="hidden">Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -59,7 +68,7 @@ class TasksList extends Component {
                         <td>
                             {tasksListItem.status}
                         </td>
-                        <td>
+                        <td className="hidden">
                             <button className="btn btn-info"
                               value={tasksListItem.task_id}                              
                               onClick={this.detailTask}>details</button>
@@ -69,6 +78,7 @@ class TasksList extends Component {
               </tbody>
             </table>
           </div>
+          <div className="details_modal" id="detailsModal"></div>
         </div>
       );
     }

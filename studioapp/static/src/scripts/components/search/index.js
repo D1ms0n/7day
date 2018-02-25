@@ -54,17 +54,19 @@ class Search extends Component {
         <Menu/>
         <div className="container">
           <div className="row">
-            <div className="col-md-4">
-              <div className={"btn btn-primar showFilters " + (this.state.filtersShown === true ? 'active' : '')} 
+            <div className="left_sidebar">
+              <div className={"showFilters " + (this.state.filtersShown === true ? 'active' : '')}
                 onClick={this.showFilters}>  
                 {(this.state.filtersShown === true ? 'Hide Filters' : 'Show Filters')} 
               </div>           
               <form id="searchForm" className="searchFormOnMobile" onSubmit={this.searchSubmit}>                 
                 <SearchForm/> 
-              </form>                                    
+              </form>      
+              <div className={"action_form " + (this.state.filtersShown === true ? 'active' : '')}>
+                <ActionsForm/>
+              </div>                              
             </div> 
-            <div className="col-md-8">
-              <ActionsForm/>               
+            <div className="rigth_sidebar">
               <SearchResult list={this.state.resultList} />
             </div>            
           </div>
@@ -76,4 +78,3 @@ class Search extends Component {
 }
 
 export default Search;
-

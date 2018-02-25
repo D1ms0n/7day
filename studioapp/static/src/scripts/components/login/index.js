@@ -5,6 +5,7 @@ import Footer from './../footer/';
 import config from './../../configs/index';
 import ApiService from './../../services/api/index';
 import { CookiesService } from './../../services/cookies';
+import message from './../../services/messages/index';
 
 class Login extends Component {
 
@@ -56,13 +57,14 @@ class Login extends Component {
         <Menu/>
         <div className="container">
           <div className="row">
-            <div className="col-md-12">
-              <h2>Sign in</h2>              
+            <div className="col-md-3"></div>
+            <div className="col-md-6">
+              <h2>{message.message.signIn}</h2>              
               <form id="loginForm"
                     onSubmit={(event) => this.loginSubmit(event)}>
                 <div className='form-group row'>
-                  <label className="col-md-2 col-form-label">Username</label> 
-                  <div className="col-md-10">
+                  <label className="col-md-3 col-form-label">{message.message.username}</label> 
+                  <div className="col-md-9">
                     <input type="text"
                           className="form-control"
                           name="username"
@@ -72,8 +74,8 @@ class Login extends Component {
                   </div>                    
                 </div>    
                 <div className='form-group row'>
-                  <label className="col-md-2 col-form-label">Password</label> 
-                  <div className="col-md-10">
+                  <label className="col-md-3 col-form-label">{message.message.password}</label> 
+                  <div className="col-md-9">
                     <input type="password"
                             className="form-control"
                             name="password"
@@ -83,13 +85,15 @@ class Login extends Component {
                   </div>                    
                 </div>                      
                 <div className="form-group row">
-                  <div className="col-md-10">
-                   <button type="submit" className="btn btn-primary">Sign in</button>
+                  <div className="col-md-12">
+                   <button type="submit" className="btn btn-primary">{message.message.signIn}</button>
+                     {message.message.or}                    
+                   <Link className="btn btn-primary" to="/register">{message.message.signUp}</Link>  
                   </div>
                 </div>                              
-              </form>         
-              <Link className="btn btn-primary" to="/register">or Sign up</Link>              
+              </form>                     
             </div>
+            <div className="col-md-3"></div>
           </div>
         </div>
         <Footer/>

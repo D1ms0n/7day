@@ -1,10 +1,8 @@
 
-
 @import "~bootstrap/scss/bootstrap";
 @import "./fonts/styles";
 @import "var";
 @import "./instashop/styles";
-
 
 body *{
     word-break: break-word;
@@ -63,31 +61,104 @@ body *{
         display: none;
     }
 }  
+.showFilters{
+    display: none;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: none;
+    cursor: pointer;
+    position: relative;
+    padding-right: 30px;
+    @media screen and (max-width: 768px) {
+       display: block;
+    }
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('../images/filter.svg');
+    }
+}
 .showFilters.active {
     &+.searchFormOnMobile {
         display: block;
     }
 }
-
 select{
     -webkit-appearance: none;
 }
 input[type=checkbox], input[type=radio]{
     cursor: pointer
 }
-#searchForm{
+
+.left_sidebar{
     position: fixed;
-    width: 25%;
+    width: 300px;
+    padding-left: 15px;
+    padding-right: 15px;
+    @media screen and (max-width: 992px) {
+        width: 250px;
+    }
     @media screen and (max-width: 768px) {
         position: static;
         width: 100%;
     }
+    .searchFormOnMobile{
+        @media screen and (max-width: 768px) {
+            float: left;
+            width: 49%;
+        }        
+    }
 }
+.rigth_sidebar{
+    padding-left: 320px;
+    padding-right: 15px;
+    @media screen and (max-width: 992px) {
+        padding-left: 250px;
+    }
+    @media screen and (max-width: 768px) {
+        padding-left: 15px;
+    }
+}
+.action_form{
+    @media screen and (max-width: 768px) {
+        display: none;
+        float: right;
+        width: 49%;
+        &.active{
+            display: block;
+            .panel-default{
+                border: none;
+            }
+            .panel-body{
+                padding: 0;
+            }
+        }
+    }
+}
+
+.details_modal{
+
+}
+
 form {
     label{
         cursor: pointer
     }
 }
+
 .users-list {
     list-style-type: none;
     padding-left: 0;
@@ -122,6 +193,7 @@ form {
             @media screen and (max-width: 500px) {
                 position: static;
                 margin-bottom: 10px;
+                margin: 0 auto;
             }
         }
         div {
@@ -133,6 +205,7 @@ form {
         }
     }
 }
+
 .scrollToTop {
     width: 50px;
     height: 50px;
@@ -177,7 +250,7 @@ form {
         -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
     }
-  }
+}
 
 .custom-control-label{
     cursor: pointer;

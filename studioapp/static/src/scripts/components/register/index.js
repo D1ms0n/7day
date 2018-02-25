@@ -4,6 +4,7 @@ import Footer from './../footer/';
 import FormErrors from './modules/formErrors';
 import config from './../../configs/index';
 import ApiService from './../../services/api/index';
+import message from './../../services/messages/index';
 
 class Register extends Component {
 
@@ -134,65 +135,66 @@ class Register extends Component {
         <Menu/>
         <div className="container">
           <div className="row">
-            <div className="col-md-12">             
-              <h2>Sign up</h2>  
+            <div className="col-md-3"></div>
+            <div className="col-md-6">
+              <h2>{message.message.signUp}</h2>  
               <form id="registerForm"
                 onSubmit={(event) => this.registerSubmit(event)}>                
                 <div className='form-group row'>
-                  <label className="col-md-2 col-form-label">name</label> 
-                  <div className="col-md-10">
-                    <input type="text" className="form-control"
-                            placeholder="name"
+                  <label htmlFor="username" className="col-md-3 col-form-label">{message.message.username}</label> 
+                  <div className="col-md-9">
+                    <input type="text" id="username" className="form-control"
+                            placeholder={message.message.username}
                             name="name"
                             value={this.state.name}
                             onChange={(event) => this.handleUserInput(event)}/>
                   </div>                    
                 </div>                      
                 <div className='form-group row'>
-                  <label className="col-md-2 col-form-label">email</label> 
-                  <div className="col-md-10">
-                    <input type="email" className="form-control"
-                            placeholder="email"
+                  <label htmlFor="email" className="col-md-3 col-form-label">{message.message.email}</label> 
+                  <div className="col-md-9">
+                    <input type="email" id="email" className="form-control"
+                            placeholder={message.message.email}
                             name="email"
                             value={this.state.email}
                             onChange={(event) => this.handleUserInput(event)}/>
                   </div>                    
                 </div>                    
                 <div className='form-group row'>
-                  <label className="col-md-2 col-form-label">password</label> 
-                  <div className="col-md-10">
-                    <input type="password" className="form-control"
-                            placeholder="password"
+                  <label htmlFor="password" className="col-md-3 col-form-label">{message.message.password}</label> 
+                  <div className="col-md-9">
+                    <input type="password" id="password" className="form-control"
+                            placeholder={message.message.password}
                             name="password"
                             value={this.state.password}
                             onChange={(event) => this.handleUserInput(event)}/>      
                   </div>                    
                 </div>                    
                 <div className='form-group row'>
-                  <label className="col-md-2 col-form-label">instaLogin</label> 
-                  <div className="col-md-10">
-                    <input type="text" className="form-control"
-                            placeholder="instaLogin"
+                  <label htmlFor="instaLogin" className="col-md-3 col-form-label">{message.message.instaLogin}</label> 
+                  <div className="col-md-9">
+                    <input type="text" id="instaLogin" className="form-control"
+                            placeholder={message.message.instaLogin}
                             name="instaLogin"
                             value={this.state.instaLogin}
                             onChange={(event) => this.handleUserInput(event)}/>
                   </div>                    
                 </div>  
                 <div className='form-group row'>
-                  <label className="col-md-2 col-form-label">instaPass</label> 
-                  <div className="col-md-10">
-                    <input type="password" className="form-control"
-                            placeholder="instaPass"
+                  <label htmlFor="instaPass" className="col-md-3 col-form-label">{message.message.instaPass}</label> 
+                  <div className="col-md-9">
+                    <input type="password" id="instaPass" className="form-control"
+                            placeholder={message.message.instaPass}
                             name="instaPass"
                             value={this.state.instaPass}
                             onChange={(event) => this.handleUserInput(event)}/>
                   </div>                    
                 </div>        
                 <div className="form-group row">
-                  <div className="col-md-10">
+                  <div className="col-md-12">
                     <button disabled={!this.state.formValid}
                             className="btn btn-primary">
-                            Sign up
+                            {message.message.signUp}
                     </button>
                   </div>
                 </div>
@@ -201,6 +203,7 @@ class Register extends Component {
                 </div>
               </form>              
             </div>
+            <div className="col-md-3"></div>
           </div>
         </div>
         <Footer/>

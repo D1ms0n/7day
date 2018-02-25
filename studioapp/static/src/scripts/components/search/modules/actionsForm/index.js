@@ -49,7 +49,6 @@ class ActionsForm extends Component {
         this.showMassage('Please choose someone','alert-danger');
         return false;
       }
-      // decodeURIComponent(CookiesService.getCookie('userId'))
       for( let i = 0; i < usersList.length; i++){
           if ( usersList[i].followedbyviewer === true) { continue; }
           targets.push(usersList[i].value);
@@ -66,56 +65,49 @@ class ActionsForm extends Component {
       preLoader.style.display='block';
       apiService.postRequest(config.api.tasks,targetsJSON)
         .then((result) => {                    
-          preLoader.style.display='none';
-          if ( result.task_id ){
-            this.showMassage('Task created !','alert-success');                 
-          } else {
-            this.showMassage(result,'alert-danger');  
-          }  
+          preLoader.style.display='none';         
+          window.location.href = '/tasks';
         })
         .catch((e) => {
             console.log(e);
             preLoader.style.display='none';
         });
-    }
-    
+    }    
     render() {
       return (
         <div> 
           <div id="showMassage" role="alert"></div>
           <div className="panel panel-default">
             <div className="panel-body">
-              <div className="row">
-                <div className="col-md-6">
-                  <div className="form-group">
-                    <label>Select action</label>
-                    <select id="actions" className="custom-select custom-select-lg" name="action">
-                      <option value="follow">follow</option>
-                      <option value="unfollow">unfollow</option>
-                      <option value="get_following">get following</option>
-                      <option value="get_followers">get followers</option>                  
-                    </select>   
-                  </div> 
-                  <button
-                    className="btn btn-success"                     
-                    onClick={() => this.createTask()}>
-                      Create task
-                  </button>
+              <div className="">
+                <div className="form-group">
+                  <label>Select action</label>
+                  <select id="actions" className="custom-select custom-select-lg" name="action">
+                    <option value="follow">follow</option>
+                    <option value="unfollow">unfollow</option>
+                    <option value="get_following">get following</option>
+                    <option value="get_followers">get followers</option>                  
+                  </select>   
+                </div> 
+                <div className="form-group">
+                  <div className="custom-control custom-checkbox">
+                    <input onChange={this.checkUnCheckAll}
+                    type="checkbox" name="checkbox" className="custom-control-input" id="checkUncheck" />
+                    <label className="custom-control-label" htmlFor="checkUncheck">Check/unCheckAll</label>
+                  </div>   
+                </div>                  
+              </div>
+              <div className="">                
+                <div className="form-group">
+                  <label>Count</label>
+                  <input id="count" type="number" className="form-control" />
                 </div>
-                <div className="col-md-6">                
-                  <div className="form-group">
-                    <label>Count</label>
-                    <input id="count" type="number" className="form-control" />
-                  </div>
-                  <div className="form-group">
-                    <div className="custom-control custom-checkbox">
-                      <input onChange={this.checkUnCheckAll}
-                      type="checkbox" name="checkbox" className="custom-control-input" id="checkUncheck" />
-                      <label className="custom-control-label" htmlFor="checkUncheck">Check/unCheckAll</label>
-                    </div>   
-                  </div>
-                </div>
-              </div>  
+                <button
+                  className="btn btn-success"                     
+                  onClick={() => this.createTask()}>
+                    Create task
+                </button>
+              </div>
             </div>
           </div>  
         </div>

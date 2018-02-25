@@ -1,5 +1,13 @@
 
 export default {
+    signIn : 'Sign in',
+    username : 'Username',
+    password : 'Password',
+    signUp : 'Sign up',
+    or : ' or ',
+    email : 'email',
+    instaLogin : 'instaLogin',
+    instaPass: 'instaPass',
     allCategories : 'all',
     noResults: ' No results',
     removeBtnTxt: 'remove',
